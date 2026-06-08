@@ -114,7 +114,7 @@ class WorkbenchAnalyzer:
                 "Tab Name",
                 "Field Name",
                 "Formula Logic",
-                "Depends On",
+                "Depends On (Source Fields)",
                 "Named Range Dependencies",
                 "Cell Ref"
             ],
@@ -423,6 +423,60 @@ class WorkbenchAnalyzer:
 
         return sorted(set(found))
 
+    def extract_source_field_dependencies(self, ws, formula):
+        """
+        Resolve formula references into source field labels.
+
+        This keeps the dependency output at the field level instead of sheet level
+        for the Calculated Fields export.
+        """
+        formula_str = str(formula)
+        deps = []
+        seen = set()
+
+        def add_dep(sheet_name, row_num, col_letter):
+            if sheet_name not in self.wb.sheetnames:
+                return
+
+            source_ws = self.wb[sheet_name]
+            col_idx = openpyxl.utils.column_index_from_string(col_letter)
+            label = self.find_field_label(source_ws, row_num, col_idx)
+            value = label if label else f"{sheet_name}!{col_letter}{row_num}"
+
+            if value not in seen:
+                seen.add(value)
+                deps.append(value)
+
+        # Sheet-qualified ranges and single-cell refs.
+        sheet_ref_pattern = r"(?:'([^']+)'|([A-Za-z0-9_ .\-]+))!\$?([A-Za-z]+)\$?([0-9]+)(?::\$?([A-Za-z]+)\$?([0-9]+))?"
+        for quoted_sheet, unquoted_sheet, start_col, start_row, end_col, end_row in re.findall(sheet_ref_pattern, formula_str):
+            sheet_name = quoted_sheet if quoted_sheet else unquoted_sheet
+            if not sheet_name:
+                continue
+
+            try:
+                min_col, min_row = openpyxl.utils.column_index_from_string(start_col), int(start_row)
+                if end_col and end_row:
+                    max_col, max_row = openpyxl.utils.column_index_from_string(end_col), int(end_row)
+                else:
+                    max_col, max_row = min_col, min_row
+            except Exception:
+                continue
+
+            for row_num in range(min_row, max_row + 1):
+                for col_idx in range(min_col, max_col + 1):
+                    add_dep(sheet_name.strip(), row_num, get_column_letter(col_idx))
+
+        # Same-sheet cell refs, e.g. =A1 + B2
+        same_sheet_pattern = r"(?<![A-Z0-9_!])\$?([A-Z]{1,3})\$?([0-9]+)(?![A-Z0-9_])"
+        for col_letter, row_num in re.findall(same_sheet_pattern, formula_str):
+            try:
+                add_dep(ws.title, int(row_num), col_letter)
+            except Exception:
+                continue
+
+        return deps
+
     def extract_dependencies_from_formula(self, formula):
         """
         Extract sheet-level dependencies from formulas.
@@ -645,6 +699,7 @@ class WorkbenchAnalyzer:
                         )
 
                     if is_formula:
+                        source_fields = self.extract_source_field_dependencies(ws, val)
                         deps = self.extract_dependencies_from_formula(val)
                         named_deps = self.extract_named_range_dependencies(val)
 
@@ -654,7 +709,7 @@ class WorkbenchAnalyzer:
                                 sheet_name,
                                 label,
                                 val,
-                                ", ".join(deps),
+                                ", ".join(source_fields),
                                 ", ".join(named_deps),
                                 coord
                             ]
