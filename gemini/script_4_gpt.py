@@ -9,8 +9,8 @@ import openpyxl
 from openpyxl.utils import get_column_letter, range_boundaries
 
 # --- CONFIGURATION ---
-FILE_PATH = "Mixed Use Copy zip real.xlsm"  # Ensure this points to your file
-OUTPUT_DIR = "Workbench_Analysis_gpt1"
+FILE_PATH = "/Users/tshah/Documents/PVA Mappings/gemini/Mixed Use Copy zip real.xlsm"  # Ensure this points to your file
+OUTPUT_DIR = "Workbench_Analysis_gpt4"
 
 TARGET_TABS = [
     "File Info", "Settings", "Dates, Premises", "Contracts, History", "Scope",
@@ -37,12 +37,17 @@ class WorkbenchAnalyzer:
         self.named_range_map = {}
         self.named_range_cell_map = {}
         self.named_range_usage = defaultdict(lambda: {"tabs": set(), "csvs": set()})
+        self.effective_value_cache = {}
+        self.field_label_cache = {}
+        self.merged_cell_lookup = {}
 
         # Track relationships between tabs and their types
         self.relationships = defaultdict(set)
 
         # Track how many named ranges each sheet has
         self.sheet_named_range_count = defaultdict(int)
+        self.csv_handles = {}
+        self.csv_writers = {}
 
         if os.path.exists(out_dir):
             self._clear_existing_csvs()
@@ -149,16 +154,51 @@ class WorkbenchAnalyzer:
             with open(filepath, "w", newline="", encoding="utf-8") as f:
                 csv.writer(f).writerow(cols)
 
+        for filename in headers:
+            filepath = os.path.join(self.out_dir, filename)
+            handle = open(filepath, "a", newline="", encoding="utf-8")
+            self.csv_handles[filename] = handle
+            self.csv_writers[filename] = csv.writer(handle)
+
     def _append_to_csv(self, filename, row_data):
-        filepath = os.path.join(self.out_dir, filename)
-        with open(filepath, "a", newline="", encoding="utf-8") as f:
-            csv.writer(f).writerow([str(item) if item is not None else "" for item in row_data])
+        writer = self.csv_writers.get(filename)
+        if writer is None:
+            filepath = os.path.join(self.out_dir, filename)
+            with open(filepath, "a", newline="", encoding="utf-8") as f:
+                csv.writer(f).writerow([str(item) if item is not None else "" for item in row_data])
+            return
+
+        writer.writerow([str(item) if item is not None else "" for item in row_data])
+
+    def _close_csv_handles(self):
+        for handle in self.csv_handles.values():
+            try:
+                handle.flush()
+                handle.close()
+            except Exception:
+                pass
+        self.csv_handles.clear()
+        self.csv_writers.clear()
 
     def load_workbook(self):
         logging.info(f"Loading workbook {self.filepath} (This may take several minutes)...")
         self.wb = openpyxl.load_workbook(self.filepath, data_only=False, keep_vba=True)
         logging.info("Workbook loaded successfully.")
+        self._build_merged_cell_lookup()
         self._build_named_range_map()
+
+    def _build_merged_cell_lookup(self):
+        """
+        Cache merged-cell coordinates so effective value lookups are O(1).
+        """
+        self.merged_cell_lookup.clear()
+
+        for ws in self.wb.worksheets:
+            for merged in ws.merged_cells.ranges:
+                top_left = ws.cell(merged.min_row, merged.min_col).value
+                for row in range(merged.min_row, merged.max_row + 1):
+                    for col in range(merged.min_col, merged.max_col + 1):
+                        self.merged_cell_lookup[f"{ws.title}!{get_column_letter(col)}{row}"] = top_left
 
     def _iter_defined_names(self):
         """
@@ -501,9 +541,15 @@ class WorkbenchAnalyzer:
         self.relationships[(source_tab, target_tab)].add(relationship_type or "Formula Reference")
 
     def find_field_label(self, ws, row, col):
+        cache_key = f"{ws.title}!{row}!{col}"
+        if cache_key in self.field_label_cache:
+            return self.field_label_cache[cache_key]
+
         coord_key = f"{ws.title}!{get_column_letter(col)}{row}"
         if coord_key in self.named_range_map:
-            return self.named_range_map[coord_key]
+            label = self.named_range_map[coord_key]
+            self.field_label_cache[cache_key] = label
+            return label
 
         candidates = []
 
@@ -531,9 +577,12 @@ class WorkbenchAnalyzer:
 
         if candidates:
             candidates.sort()
-            return candidates[0][1]
+            label = candidates[0][1]
+        else:
+            label = f"Unknown_Field_{get_column_letter(col)}{row}"
 
-        return f"Unknown_Field_{get_column_letter(col)}{row}"
+        self.field_label_cache[cache_key] = label
+        return label
 
     def is_pass_through(self, formula):
         """
@@ -715,14 +764,21 @@ class WorkbenchAnalyzer:
         return sorted(deps)
 
     def get_effective_value(self, ws, row, col):
+        cache_key = f"{ws.title}!{get_column_letter(col)}{row}"
+        if cache_key in self.effective_value_cache:
+            return self.effective_value_cache[cache_key]
+
         cell = ws.cell(row=row, column=col)
         if cell.value is not None:
+            self.effective_value_cache[cache_key] = cell.value
             return cell.value
 
-        for merged in ws.merged_cells.ranges:
-            if (row, col) in merged.cells:
-                return ws.cell(merged.min_row, merged.min_col).value
+        if cache_key in self.merged_cell_lookup:
+            value = self.merged_cell_lookup[cache_key]
+            self.effective_value_cache[cache_key] = value
+            return value
 
+        self.effective_value_cache[cache_key] = None
         return None
 
     def export_named_ranges(self):
@@ -757,21 +813,24 @@ class WorkbenchAnalyzer:
                 pass
 
     def analyze(self):
-        self.load_workbook()
+        try:
+            self.load_workbook()
 
-        for sheet_name in self.target_tabs:
-            if sheet_name not in self.wb.sheetnames:
-                logging.warning(f"Tab '{sheet_name}' not found. Skipping.")
-                continue
+            for sheet_name in self.target_tabs:
+                if sheet_name not in self.wb.sheetnames:
+                    logging.warning(f"Tab '{sheet_name}' not found. Skipping.")
+                    continue
 
-            logging.info(f"Analyzing sheet: {sheet_name}")
-            ws = self.wb[sheet_name]
-            self.analyze_sheet(ws)
-            logging.info(f"Finished saving data for: {sheet_name}")
+                logging.info(f"Analyzing sheet: {sheet_name}")
+                ws = self.wb[sheet_name]
+                self.analyze_sheet(ws)
+                logging.info(f"Finished saving data for: {sheet_name}")
 
-        self.export_named_ranges()
-        logging.info("Analysis complete! Generating final Tab Relationships...")
-        self._write_relationships()
+            self.export_named_ranges()
+            logging.info("Analysis complete! Generating final Tab Relationships...")
+            self._write_relationships()
+        finally:
+            self._close_csv_handles()
 
     def analyze_sheet(self, ws):
         sheet_name = ws.title

@@ -26,7 +26,7 @@ SERVICE_ACCOUNT_FILE = Path(
     r"/Users/tshah/Documents/PVA Mappings/service_account.json"
 )
 SPREADSHEET_ID = "1UkVoXcVWArr1s3gR73hU1DDL79XAV_ULWrhsEXS6UR0"
-INPUT_DIR = Path("Workbench_Analysis_gpt1")
+INPUT_DIR = Path("/Users/tshah/Documents/PVA Mappings/gemini/colab_csv_files")
 
 # Google auth scopes for Sheets + Drive
 SCOPES = [
