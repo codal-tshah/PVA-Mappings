@@ -1,0 +1,31 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Credentials
+service_account.json
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Logs and outputs
+logs
+*.log
+Extracted_Workbench_Data/
+excel_metadata/
+
+# Excel temp
+~$*
+
+documents/
+.txt/
