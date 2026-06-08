@@ -3,6 +3,7 @@ import logging
 import os
 import re
 from collections import defaultdict
+from datetime import date, datetime
 
 import openpyxl
 from openpyxl.utils import get_column_letter, range_boundaries
@@ -34,6 +35,7 @@ class WorkbenchAnalyzer:
 
         # Map "Sheet!A1" -> named range name
         self.named_range_map = {}
+        self.named_range_cell_map = {}
 
         # Track relationships between tabs
         self.relationships = set()
@@ -89,8 +91,7 @@ class WorkbenchAnalyzer:
                 "Dropdown",
                 "Formula Type",
                 "Data Type",
-                "Row Hidden",
-                "Column Hidden",
+                "Required",
                 "Notes",
                 "Cell Ref"
             ],
@@ -299,6 +300,8 @@ class WorkbenchAnalyzer:
     def _build_named_range_map(self):
         """Maps named ranges to cell coordinates (e.g., 'File Info!I13' -> 'Z_FileInfo_Date')."""
         logging.info("Building Named Range index...")
+        self.named_range_map.clear()
+        self.named_range_cell_map.clear()
 
         for name, dn in self._iter_defined_names():
             try:
@@ -313,14 +316,21 @@ class WorkbenchAnalyzer:
                     self.sheet_named_range_count[sheet_name] += 1
 
                     # For field-label lookup, exact single-cell destinations are most useful.
-                    # If a range is defined, map the top-left cell.
+                    # If a range is defined, map the top-left cell and every covered cell.
                     top_left = coord
                     if ":" in coord:
                         try:
                             min_col, min_row, _, _ = range_boundaries(coord)
                             top_left = f"{get_column_letter(min_col)}{min_row}"
+                            max_col, max_row = range_boundaries(coord)[2], range_boundaries(coord)[3]
+                            for row in range(min_row, max_row + 1):
+                                for col in range(min_col, max_col + 1):
+                                    cell_key = f"{sheet_name}!{get_column_letter(col)}{row}"
+                                    self.named_range_cell_map.setdefault(cell_key, name)
                         except Exception:
                             continue
+                    else:
+                        self.named_range_cell_map.setdefault(f"{sheet_name}!{top_left}", name)
 
                     key = f"{sheet_name}!{top_left}"
                     # Keep the first named range encountered for a cell
@@ -330,6 +340,89 @@ class WorkbenchAnalyzer:
                 continue
 
         logging.info(f"Named range index built: {len(self.named_range_map)} cell mappings found.")
+
+    def get_named_range_for_cell(self, ws, row, col):
+        coord_key = f"{ws.title}!{get_column_letter(col)}{row}"
+        return self.named_range_cell_map.get(coord_key, "")
+
+    def infer_data_type(self, cell, is_dropdown=False):
+        """
+        Infer a human-readable field data type from cell value and formatting.
+        """
+        if is_dropdown:
+            return "dropdown"
+
+        value = cell.value
+        if value is None:
+            return ""
+
+        if isinstance(value, str) and value.startswith("="):
+            fmt = (cell.number_format or "").lower()
+            if self._looks_like_currency_format(fmt):
+                return "currency"
+            if self._looks_like_date_format(fmt):
+                return "date"
+            if "%" in fmt:
+                return "percentage"
+            return "formula"
+
+        if isinstance(value, bool):
+            return "boolean"
+
+        if getattr(cell, "is_date", False) or self._looks_like_date_format(cell.number_format):
+            return "date"
+
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            fmt = (cell.number_format or "").lower()
+            if self._looks_like_currency_format(fmt):
+                return "currency"
+            if "%" in fmt:
+                return "percentage"
+            if isinstance(value, int) or (isinstance(value, float) and value.is_integer()):
+                return "integer"
+            return "decimal"
+
+        if isinstance(value, (datetime, date)):
+            return "date"
+
+        if isinstance(value, str):
+            return "text"
+
+        return "text"
+
+    def _looks_like_date_format(self, number_format):
+        fmt = (number_format or "").lower()
+        if not fmt:
+            return False
+
+        # Skip plain numeric formats that use "m" as minute/month in other contexts.
+        return any(token in fmt for token in ["yy", "yyyy", "dd", "mmm", "hh", "mm/dd", "dd/mm", "m/d"])
+
+    def _looks_like_currency_format(self, number_format):
+        fmt = (number_format or "").lower()
+        return any(symbol in fmt for symbol in ["$", "€", "£", "¥", "₹"])
+
+    def infer_required_status(self, cell, is_formula=False, is_dropdown=False, dropdown_meta=None):
+        """
+        Classify a field as required, optional, calculated, or conditional.
+        """
+        if is_formula:
+            formula = str(cell.value or "").upper()
+            if any(token in formula for token in ["IF(", "IFS(", "SWITCH(", "CHOOSE(", "INDIRECT("]):
+                return "conditional"
+            return "calculated"
+
+        if is_dropdown:
+            if dropdown_meta and not dropdown_meta.get("resolved", True):
+                return "conditional"
+            return "required"
+
+        if not cell.protection.locked:
+            if cell.value is None or str(cell.value).strip() == "":
+                return "optional"
+            return "required"
+
+        return "optional"
 
     def find_field_label(self, ws, row, col):
         coord_key = f"{ws.title}!{get_column_letter(col)}{row}"
@@ -649,8 +742,6 @@ class WorkbenchAnalyzer:
                 #   - unlocked cells (text or numeric inputs)
                 if is_formula or is_dropdown or is_unlocked:
                     label = self.find_field_label(ws, row, col)
-                    data_type = cell.data_type
-
                     notes = []
                     if is_hidden_row or is_hidden_col:
                         notes.append("[HIDDEN CELL]")
@@ -659,10 +750,16 @@ class WorkbenchAnalyzer:
 
                     notes_str = " | ".join(notes)
 
-                    coord_key = f"{sheet_name}!{coord}"
-                    named_range = self.named_range_map.get(coord_key, "")
+                    named_range = self.get_named_range_for_cell(ws, row, col)
 
                     formula_type = self.classify_formula(val) if is_formula else ""
+                    required_status = self.infer_required_status(
+                        cell,
+                        is_formula=is_formula,
+                        is_dropdown=is_dropdown,
+                        dropdown_meta=dropdowns.get(coord)
+                    )
+                    inferred_data_type = self.infer_data_type(cell, is_dropdown=is_dropdown)
 
                     self._append_to_csv(
                         "Field Inventory.csv",
@@ -674,9 +771,8 @@ class WorkbenchAnalyzer:
                             "Yes" if is_formula else "No",
                             "Yes" if is_dropdown else "No",
                             formula_type,
-                            data_type,
-                            "Yes" if is_hidden_row else "No",
-                            "Yes" if is_hidden_col else "No",
+                            inferred_data_type,
+                            required_status,
                             notes_str,
                             coord
                         ]
