@@ -570,6 +570,58 @@ class WorkbenchAnalyzer:
 
         return deps
 
+    def extract_field_mappings_from_formula(self, ws, formula):
+        """
+        Resolve formula references into (source tab, source field) pairs.
+
+        This is used for Field Mapping.csv so the Source Field column contains
+        actual labels instead of a placeholder.
+        """
+        formula_str = str(formula)
+        mappings = []
+        seen = set()
+
+        def add_mapping(sheet_name, row_num, col_letter):
+            if sheet_name not in self.wb.sheetnames:
+                return
+
+            source_ws = self.wb[sheet_name]
+            col_idx = openpyxl.utils.column_index_from_string(col_letter)
+            label = self.find_field_label(source_ws, row_num, col_idx)
+            source_field = label if label else f"{sheet_name}!{col_letter}{row_num}"
+            key = (sheet_name, source_field)
+            if key not in seen:
+                seen.add(key)
+                mappings.append(key)
+
+        sheet_ref_pattern = r"(?:'([^']+)'|([A-Za-z0-9_ .\-]+))!\$?([A-Za-z]+)\$?([0-9]+)(?::\$?([A-Za-z]+)\$?([0-9]+))?"
+        for quoted_sheet, unquoted_sheet, start_col, start_row, end_col, end_row in re.findall(sheet_ref_pattern, formula_str):
+            sheet_name = quoted_sheet if quoted_sheet else unquoted_sheet
+            if not sheet_name:
+                continue
+
+            try:
+                min_col, min_row = openpyxl.utils.column_index_from_string(start_col), int(start_row)
+                if end_col and end_row:
+                    max_col, max_row = openpyxl.utils.column_index_from_string(end_col), int(end_row)
+                else:
+                    max_col, max_row = min_col, min_row
+            except Exception:
+                continue
+
+            for row_num in range(min_row, max_row + 1):
+                for col_idx in range(min_col, max_col + 1):
+                    add_mapping(sheet_name.strip(), row_num, get_column_letter(col_idx))
+
+        same_sheet_pattern = r"(?<![A-Z0-9_!])\$?([A-Z]{1,3})\$?([0-9]+)(?![A-Z0-9_])"
+        for col_letter, row_num in re.findall(same_sheet_pattern, formula_str):
+            try:
+                add_mapping(ws.title, int(row_num), col_letter)
+            except Exception:
+                continue
+
+        return mappings
+
     def extract_dependencies_from_formula(self, formula):
         """
         Extract sheet-level dependencies from formulas.
@@ -842,15 +894,18 @@ class WorkbenchAnalyzer:
                         for dep in deps:
                             if dep != sheet_name:
                                 self.relationships.add((dep, sheet_name))
-                                self._append_to_csv(
-                                    "Field Mapping.csv",
-                                    [
-                                        dep,
-                                        "Extracted from formula",
-                                        sheet_name,
-                                        f"Used in {label} ({coord})"
-                                    ]
-                                )
+                        for source_tab, source_field in self.extract_field_mappings_from_formula(ws, val):
+                            if source_tab != sheet_name:
+                                self.relationships.add((source_tab, sheet_name))
+                            self._append_to_csv(
+                                "Field Mapping.csv",
+                                [
+                                    source_tab,
+                                    source_field,
+                                    sheet_name,
+                                    ""
+                                ]
+                            )
 
     def _write_relationships(self):
         for source, target in sorted(self.relationships):
