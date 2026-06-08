@@ -36,6 +36,7 @@ class WorkbenchAnalyzer:
         # Map "Sheet!A1" -> named range name
         self.named_range_map = {}
         self.named_range_cell_map = {}
+        self.named_range_usage = defaultdict(lambda: {"tabs": set(), "csvs": set()})
 
         # Track relationships between tabs and their types
         self.relationships = defaultdict(set)
@@ -113,7 +114,12 @@ class WorkbenchAnalyzer:
             "Named Ranges.csv": [
                 "Named Range",
                 "Sheet",
-                "Cell",
+                "Start Cell",
+                "End Cell",
+                "Cell Count",
+                "Values Preview",
+                "Used By Tabs",
+                "Used In CSVs",
                 "Reference"
             ],
 
@@ -330,6 +336,65 @@ class WorkbenchAnalyzer:
     def get_named_range_for_cell(self, ws, row, col):
         coord_key = f"{ws.title}!{get_column_letter(col)}{row}"
         return self.named_range_cell_map.get(coord_key, "")
+
+    def record_named_range_usage(self, named_range, sheet_name, csv_name):
+        if not named_range:
+            return
+        self.named_range_usage[named_range]["tabs"].add(sheet_name)
+        self.named_range_usage[named_range]["csvs"].add(csv_name)
+
+    def _resolve_named_range_value_preview(self, dn, limit=10):
+        """
+        Return a compact preview of the values a named range points to.
+        """
+        preview_values = []
+
+        try:
+            for sheet_name, coord in self._iter_defined_name_destinations(dn):
+                if sheet_name not in self.wb.sheetnames:
+                    continue
+
+                ws = self.wb[sheet_name]
+                if ":" in coord:
+                    for row in ws[coord]:
+                        for cell in row:
+                            if cell.value is not None:
+                                preview_values.append(str(cell.value).strip())
+                                if len(preview_values) >= limit:
+                                    return preview_values
+                else:
+                    value = ws[coord].value
+                    if value is not None:
+                        preview_values.append(str(value).strip())
+                        if len(preview_values) >= limit:
+                            return preview_values
+        except Exception:
+            return preview_values
+
+        return preview_values
+
+    def _coord_span(self, coord):
+        """
+        Return a human readable start/end span and total cell count for one destination.
+        """
+        start_cell = ""
+        end_cell = ""
+        cell_count = 0
+
+        try:
+            if ":" in coord:
+                min_col, min_row, max_col, max_row = range_boundaries(coord)
+                start_cell = f"{get_column_letter(min_col)}{min_row}"
+                end_cell = f"{get_column_letter(max_col)}{max_row}"
+                cell_count = (max_col - min_col + 1) * (max_row - min_row + 1)
+            else:
+                start_cell = coord
+                end_cell = coord
+                cell_count = 1
+        except Exception:
+            pass
+
+        return start_cell, end_cell, cell_count
 
     def infer_data_type(self, cell, is_dropdown=False):
         """
@@ -667,14 +732,23 @@ class WorkbenchAnalyzer:
             try:
                 raw = getattr(dn, "value", None) or getattr(dn, "attr_text", None) or str(dn)
                 raw = str(raw)
+                values_preview = ", ".join(self._resolve_named_range_value_preview(dn))
+                usage_tabs = ", ".join(sorted(self.named_range_usage.get(name, {}).get("tabs", set())))
+                usage_csvs = ", ".join(sorted(self.named_range_usage.get(name, {}).get("csvs", set())))
 
                 for sheet_name, coord in self._iter_defined_name_destinations(dn):
+                    start_cell, end_cell, cell_count = self._coord_span(coord)
                     self._append_to_csv(
                         "Named Ranges.csv",
                         [
                             name,
                             sheet_name,
-                            coord,
+                            start_cell or coord,
+                            end_cell or coord,
+                            cell_count,
+                            values_preview,
+                            usage_tabs,
+                            usage_csvs,
                             raw
                         ]
                     )
@@ -684,7 +758,6 @@ class WorkbenchAnalyzer:
 
     def analyze(self):
         self.load_workbook()
-        self.export_named_ranges()
 
         for sheet_name in self.target_tabs:
             if sheet_name not in self.wb.sheetnames:
@@ -696,6 +769,7 @@ class WorkbenchAnalyzer:
             self.analyze_sheet(ws)
             logging.info(f"Finished saving data for: {sheet_name}")
 
+        self.export_named_ranges()
         logging.info("Analysis complete! Generating final Tab Relationships...")
         self._write_relationships()
 
@@ -778,6 +852,8 @@ class WorkbenchAnalyzer:
                     notes_str = " | ".join(notes)
 
                     named_range = self.get_named_range_for_cell(ws, row, col)
+                    if named_range:
+                        self.record_named_range_usage(named_range, sheet_name, "Field Inventory.csv")
 
                     formula_type = self.classify_formula(val) if is_formula else ""
                     required_status = self.infer_required_status(
@@ -809,6 +885,8 @@ class WorkbenchAnalyzer:
                         dropdown_meta = dropdowns[coord]
                         if not dropdown_meta["resolved"]:
                             continue
+                        if dropdown_meta["named_ranges"]:
+                            self.record_named_range_usage(dropdown_meta["named_ranges"], sheet_name, "Dropdown Values.csv")
 
                         self._append_to_csv(
                             "Dropdown Values.csv",
@@ -826,6 +904,8 @@ class WorkbenchAnalyzer:
                         deps = self.extract_dependencies_from_formula(val)
                         named_deps = self.extract_named_range_dependencies(val)
                         relationship_type = self.infer_relationship_type(val)
+                        for named_dep in named_deps:
+                            self.record_named_range_usage(named_dep, sheet_name, "Calculated Fields.csv")
 
                         self._append_to_csv(
                             "Calculated Fields.csv",
@@ -847,6 +927,7 @@ class WorkbenchAnalyzer:
                         if "_SHOWHIDE" in str(val).upper() or showhide_named_deps:
                             if showhide_named_deps:
                                 for dep in showhide_named_deps:
+                                    self.record_named_range_usage(dep, sheet_name, "ShowHide Usage.csv")
                                     self._append_to_csv(
                                         "ShowHide Usage.csv",
                                         [
