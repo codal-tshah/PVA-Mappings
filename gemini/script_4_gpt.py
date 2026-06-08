@@ -37,8 +37,8 @@ class WorkbenchAnalyzer:
         self.named_range_map = {}
         self.named_range_cell_map = {}
 
-        # Track relationships between tabs
-        self.relationships = set()
+        # Track relationships between tabs and their types
+        self.relationships = defaultdict(set)
 
         # Track how many named ranges each sheet has
         self.sheet_named_range_count = defaultdict(int)
@@ -142,6 +142,7 @@ class WorkbenchAnalyzer:
             "Tab Relationships.csv": [
                 "Source Tab",
                 "Target Tab",
+                "Relationship Type",
                 "Relationship"
             ],
 
@@ -423,6 +424,31 @@ class WorkbenchAnalyzer:
             return "required"
 
         return "optional"
+
+    def infer_relationship_type(self, formula):
+        """
+        Classify the relationship implied by a formula.
+        """
+        formula_str = str(formula)
+        if self.is_pass_through(formula_str):
+            return "Pass-Through"
+
+        formula_upper = formula_str.upper()
+        if any(token in formula_upper for token in ["XLOOKUP(", "VLOOKUP(", "INDEX(", "MATCH("]):
+            return "Lookup"
+        if any(token in formula_upper for token in ["SUM(", "AVERAGE(", "COUNT(", "COUNTA(", "MIN(", "MAX("]):
+            return "Aggregation"
+        if any(token in formula_upper for token in ["IF(", "IFS(", "SWITCH(", "CHOOSE(", "INDIRECT("]):
+            return "Conditional"
+        return "Formula Reference"
+
+    def add_relationship(self, source_tab, target_tab, relationship_type):
+        """
+        Store a typed relationship between two tabs.
+        """
+        if not source_tab or not target_tab:
+            return
+        self.relationships[(source_tab, target_tab)].add(relationship_type or "Formula Reference")
 
     def find_field_label(self, ws, row, col):
         coord_key = f"{ws.title}!{get_column_letter(col)}{row}"
@@ -850,6 +876,7 @@ class WorkbenchAnalyzer:
                         source_fields = self.extract_source_field_dependencies(ws, val)
                         deps = self.extract_dependencies_from_formula(val)
                         named_deps = self.extract_named_range_dependencies(val)
+                        relationship_type = self.infer_relationship_type(val)
 
                         self._append_to_csv(
                             "Calculated Fields.csv",
@@ -893,10 +920,10 @@ class WorkbenchAnalyzer:
 
                         for dep in deps:
                             if dep != sheet_name:
-                                self.relationships.add((dep, sheet_name))
+                                self.add_relationship(dep, sheet_name, relationship_type)
                         for source_tab, source_field in self.extract_field_mappings_from_formula(ws, val):
                             if source_tab != sheet_name:
-                                self.relationships.add((source_tab, sheet_name))
+                                self.add_relationship(source_tab, sheet_name, relationship_type)
                             self._append_to_csv(
                                 "Field Mapping.csv",
                                 [
@@ -909,11 +936,13 @@ class WorkbenchAnalyzer:
 
     def _write_relationships(self):
         for source, target in sorted(self.relationships):
+            relationship_types = ", ".join(sorted(self.relationships[(source, target)]))
             self._append_to_csv(
                 "Tab Relationships.csv",
                 [
                     source,
                     target,
+                    relationship_types,
                     f"'{target}' pulls data from '{source}'"
                 ]
             )
