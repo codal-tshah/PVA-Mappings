@@ -62,16 +62,6 @@ class WorkbenchAnalyzer:
     def _init_csv_headers(self):
         """Initializes the CSV files with their headers."""
         headers = {
-            "Workbook Inventory.csv": [
-                "Sheet",
-                "Visibility",
-                "Hidden",
-                "Rows",
-                "Columns",
-                "Formula Count",
-                "Named Range Count"
-            ],
-
             "Tab Inventory.csv": [
                 "Tab Name",
                 "Category",
@@ -124,11 +114,6 @@ class WorkbenchAnalyzer:
                 "Named Range",
                 "Sheet",
                 "Cell",
-                "Reference"
-            ],
-
-            "ShowHide Controls.csv": [
-                "Named Range",
                 "Reference"
             ],
 
@@ -694,48 +679,12 @@ class WorkbenchAnalyzer:
                         ]
                     )
 
-                # if "_SHOWHIDE" in name.upper():
-                #     self._append_to_csv(
-                #         "ShowHide Controls.csv",
-                #         [
-                #             name,
-                #             raw
-                #         ]
-                #     )
-
             except Exception:
                 pass
-
-    # def export_workbook_inventory(self):
-    #     for ws in self.wb.worksheets:
-    #         formula_count = 0
-
-    #         for row in ws.iter_rows():
-    #             for cell in row:
-    #                 if isinstance(cell.value, str) and cell.value.startswith("="):
-    #                     formula_count += 1
-
-    #         # visibility = ws.sheet_state
-    #         # hidden = visibility != "visible"
-    #         # named_range_count = self.sheet_named_range_count.get(ws.title, 0)
-
-    #         # self._append_to_csv(
-    #         #     "Workbook Inventory.csv",
-    #         #     [
-    #         #         ws.title,
-    #         #         visibility,
-    #         #         "Yes" if hidden else "No",
-    #         #         ws.max_row,
-    #         #         ws.max_column,
-    #         #         formula_count,
-    #         #         named_range_count
-    #         #     ]
-    #         # )
 
     def analyze(self):
         self.load_workbook()
         self.export_named_ranges()
-        # self.export_workbook_inventory()
 
         for sheet_name in self.target_tabs:
             if sheet_name not in self.wb.sheetnames:
