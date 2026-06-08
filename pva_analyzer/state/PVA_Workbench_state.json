@@ -1,0 +1,231 @@
+{
+  "started_at": "2026-06-05T13:30:39.742495",
+  "completed": [
+    "File Info",
+    "Settings",
+    "Dates, Premises",
+    "Contracts, History",
+    "Scope",
+    "Site",
+    "Zoning",
+    "Improvements",
+    "Assessment",
+    "Land Grid",
+    "Land Valuation",
+    "Land Comp Profiles",
+    "Cost Approach Setup",
+    "Sales Grid",
+    "Sale Comp Profiles",
+    "Income Approach",
+    "Rent Roll Input",
+    "Rent Roll Config",
+    "Lease Grid",
+    "Market Rent",
+    "MF Market Rent",
+    "Rent Comp Profiles",
+    "Capitalization and Multipliers",
+    "Investor Survey Input",
+    "Investor Survey Output",
+    "MF Lease Up",
+    "DirectCapConclusion"
+  ],
+  "failed": [],
+  "skipped": [
+    {
+      "tab": "Sale Approach",
+      "reason": "Sheet not found in workbook"
+    }
+  ],
+  "tab_stats": {
+    "File Info": {
+      "fields": 1577,
+      "dropdowns": 13,
+      "formulas": 0,
+      "elapsed_s": 4.1,
+      "finished_at": "2026-06-05T13:30:44.313696"
+    },
+    "Settings": {
+      "fields": 216,
+      "dropdowns": 24,
+      "formulas": 0,
+      "elapsed_s": 0.9,
+      "finished_at": "2026-06-05T13:30:45.240009"
+    },
+    "Dates, Premises": {
+      "fields": 162,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 0.8,
+      "finished_at": "2026-06-05T13:30:46.030352"
+    },
+    "Contracts, History": {
+      "fields": 277,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 1.1,
+      "finished_at": "2026-06-05T13:30:47.147432"
+    },
+    "Scope": {
+      "fields": 337,
+      "dropdowns": 3,
+      "formulas": 0,
+      "elapsed_s": 1.3,
+      "finished_at": "2026-06-05T13:30:48.454094"
+    },
+    "Site": {
+      "fields": 4564,
+      "dropdowns": 3,
+      "formulas": 0,
+      "elapsed_s": 16.2,
+      "finished_at": "2026-06-05T13:31:04.658386"
+    },
+    "Zoning": {
+      "fields": 1220,
+      "dropdowns": 1,
+      "formulas": 0,
+      "elapsed_s": 6.1,
+      "finished_at": "2026-06-05T13:31:10.736217"
+    },
+    "Improvements": {
+      "fields": 10528,
+      "dropdowns": 6,
+      "formulas": 0,
+      "elapsed_s": 69.7,
+      "finished_at": "2026-06-05T13:32:20.387701"
+    },
+    "Assessment": {
+      "fields": 1893,
+      "dropdowns": 3,
+      "formulas": 24,
+      "elapsed_s": 17.6,
+      "finished_at": "2026-06-05T13:32:38.029484"
+    },
+    "Land Grid": {
+      "fields": 3213,
+      "dropdowns": 2,
+      "formulas": 0,
+      "elapsed_s": 32.6,
+      "finished_at": "2026-06-05T13:33:10.608523"
+    },
+    "Land Valuation": {
+      "fields": 1479,
+      "dropdowns": 1,
+      "formulas": 0,
+      "elapsed_s": 16.9,
+      "finished_at": "2026-06-05T13:33:27.538044"
+    },
+    "Land Comp Profiles": {
+      "fields": 2730,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 31.2,
+      "finished_at": "2026-06-05T13:33:58.778601"
+    },
+    "Cost Approach Setup": {
+      "fields": 36,
+      "dropdowns": 6,
+      "formulas": 0,
+      "elapsed_s": 2.8,
+      "finished_at": "2026-06-05T13:34:01.565572"
+    },
+    "Sales Grid": {
+      "fields": 6284,
+      "dropdowns": 2,
+      "formulas": 0,
+      "elapsed_s": 81.3,
+      "finished_at": "2026-06-05T13:35:22.828524"
+    },
+    "Sale Comp Profiles": {
+      "fields": 4111,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 61.1,
+      "finished_at": "2026-06-05T13:36:23.935913"
+    },
+    "Income Approach": {
+      "fields": 76,
+      "dropdowns": 8,
+      "formulas": 0,
+      "elapsed_s": 4.3,
+      "finished_at": "2026-06-05T13:36:28.191479"
+    },
+    "Rent Roll Input": {
+      "fields": 2511,
+      "dropdowns": 1,
+      "formulas": 0,
+      "elapsed_s": 42.2,
+      "finished_at": "2026-06-05T13:37:10.348962"
+    },
+    "Rent Roll Config": {
+      "fields": 310,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 8.5,
+      "finished_at": "2026-06-05T13:37:18.846211"
+    },
+    "Lease Grid": {
+      "fields": 7854,
+      "dropdowns": 22,
+      "formulas": 1,
+      "elapsed_s": 141.7,
+      "finished_at": "2026-06-05T13:39:40.552946"
+    },
+    "Market Rent": {
+      "fields": 3275,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 66.1,
+      "finished_at": "2026-06-05T13:40:46.633203"
+    },
+    "MF Market Rent": {
+      "fields": 16898,
+      "dropdowns": 1,
+      "formulas": 0,
+      "elapsed_s": 387.0,
+      "finished_at": "2026-06-05T13:47:13.598634"
+    },
+    "Rent Comp Profiles": {
+      "fields": 4785,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 132.5,
+      "finished_at": "2026-06-05T13:49:26.092867"
+    },
+    "Capitalization and Multipliers": {
+      "fields": 1622,
+      "dropdowns": 3,
+      "formulas": 11,
+      "elapsed_s": 50.4,
+      "finished_at": "2026-06-05T13:50:16.495962"
+    },
+    "Investor Survey Input": {
+      "fields": 210,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 11.9,
+      "finished_at": "2026-06-05T13:50:28.391358"
+    },
+    "Investor Survey Output": {
+      "fields": 1183,
+      "dropdowns": 0,
+      "formulas": 8,
+      "elapsed_s": 38.7,
+      "finished_at": "2026-06-05T13:51:07.076912"
+    },
+    "MF Lease Up": {
+      "fields": 1001,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 34.2,
+      "finished_at": "2026-06-05T13:51:41.272222"
+    },
+    "DirectCapConclusion": {
+      "fields": 972,
+      "dropdowns": 0,
+      "formulas": 0,
+      "elapsed_s": 33.8,
+      "finished_at": "2026-06-05T13:52:15.062886"
+    }
+  },
+  "updated_at": "2026-06-05T13:52:15.062894"
+}

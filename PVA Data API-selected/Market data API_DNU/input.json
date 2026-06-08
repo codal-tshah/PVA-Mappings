@@ -1,0 +1,7 @@
+{
+    "property_type" : "Office",
+    "line_items": true,
+    "source":["PVA_Export", "Trepp"],
+    "state": ["IL"],
+    "latest_stmt": true
+}

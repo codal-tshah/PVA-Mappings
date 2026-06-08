@@ -1,0 +1,368 @@
+{
+    "geographies": [
+        {
+            "id": "01",
+            "name": "Alabama",
+            "type": "State",
+            "variables": [
+                {
+                    "id": "TOTPOP_FY",
+                    "name": "2030 Total Population",
+                    "startDate": "2030-01-01",
+                    "endDate": "2030-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 5227133.0
+                },
+                {
+                    "id": "TOTPOP_CY",
+                    "name": "2025 Total Population",
+                    "startDate": "2025-01-01",
+                    "endDate": "2025-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 5135592.0
+                },
+                {
+                    "id": "TOTPOP20",
+                    "name": "2020 Total Population",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 5024279.0
+                },
+                {
+                    "id": "TOTPOP10",
+                    "name": "2010 Total Population",
+                    "startDate": "2010-01-01",
+                    "endDate": "2010-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 4779736.0
+                },
+                {
+                    "id": "TOTPOP00",
+                    "name": "2000 Total Population",
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 4447100.0
+                }
+            ]
+        },
+        {
+            "id": "01",
+            "name": "United States",
+            "type": "Country",
+            "variables": [
+                {
+                    "id": "TOTPOP_FY",
+                    "name": "2030 Total Population",
+                    "startDate": "2030-01-01",
+                    "endDate": "2030-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 347149422.0
+                },
+                {
+                    "id": "TOTPOP_CY",
+                    "name": "2025 Total Population",
+                    "startDate": "2025-01-01",
+                    "endDate": "2025-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 339887819.0
+                },
+                {
+                    "id": "TOTPOP20",
+                    "name": "2020 Total Population",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 331449281.0
+                },
+                {
+                    "id": "TOTPOP10",
+                    "name": "2010 Total Population",
+                    "startDate": "2010-01-01",
+                    "endDate": "2010-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 308745538.0
+                },
+                {
+                    "id": "TOTPOP00",
+                    "name": "2000 Total Population",
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 281421906.0
+                }
+            ]
+        },
+        {
+            "id": "11260",
+            "name": "Anchorage, AK Metropolitan Statistical Area",
+            "type": "CBSA",
+            "variables": [
+                {
+                    "id": "TOTPOP_FY",
+                    "name": "2030 Total Population",
+                    "startDate": "2030-01-01",
+                    "endDate": "2030-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 410618.0
+                },
+                {
+                    "id": "TOTPOP_CY",
+                    "name": "2025 Total Population",
+                    "startDate": "2025-01-01",
+                    "endDate": "2025-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 404080.0
+                },
+                {
+                    "id": "TOTPOP20",
+                    "name": "2020 Total Population",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 398328.0
+                },
+                {
+                    "id": "TOTPOP10",
+                    "name": "2010 Total Population",
+                    "startDate": "2010-01-01",
+                    "endDate": "2010-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 380821.0
+                },
+                {
+                    "id": "TOTPOP00",
+                    "name": "2000 Total Population",
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 319605.0
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "name": "Georgia",
+            "type": "State",
+            "variables": [
+                {
+                    "id": "TOTPOP_FY",
+                    "name": "2030 Total Population",
+                    "startDate": "2030-01-01",
+                    "endDate": "2030-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 11683868.0
+                },
+                {
+                    "id": "TOTPOP_CY",
+                    "name": "2025 Total Population",
+                    "startDate": "2025-01-01",
+                    "endDate": "2025-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 11269916.0
+                },
+                {
+                    "id": "TOTPOP20",
+                    "name": "2020 Total Population",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 10711908.0
+                },
+                {
+                    "id": "TOTPOP10",
+                    "name": "2010 Total Population",
+                    "startDate": "2010-01-01",
+                    "endDate": "2010-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 9687659.0
+                },
+                {
+                    "id": "TOTPOP00",
+                    "name": "2000 Total Population",
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 8186453.0
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "name": "New Hampshire",
+            "type": "State",
+            "variables": [
+                {
+                    "id": "TOTPOP_FY",
+                    "name": "2030 Total Population",
+                    "startDate": "2030-01-01",
+                    "endDate": "2030-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 1423372.0
+                },
+                {
+                    "id": "TOTPOP_CY",
+                    "name": "2025 Total Population",
+                    "startDate": "2025-01-01",
+                    "endDate": "2025-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 1394392.0
+                },
+                {
+                    "id": "TOTPOP20",
+                    "name": "2020 Total Population",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 1377529.0
+                },
+                {
+                    "id": "TOTPOP10",
+                    "name": "2010 Total Population",
+                    "startDate": "2010-01-01",
+                    "endDate": "2010-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 1316418.0
+                },
+                {
+                    "id": "TOTPOP00",
+                    "name": "2000 Total Population",
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 1235728.0
+                }
+            ]
+        },
+        {
+            "id": "48540",
+            "name": "Wheeling, WV-OH Metropolitan Statistical Area",
+            "type": "CBSA",
+            "variables": [
+                {
+                    "id": "TOTPOP_FY",
+                    "name": "2030 Total Population",
+                    "startDate": "2030-01-01",
+                    "endDate": "2030-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 131416.0
+                },
+                {
+                    "id": "TOTPOP_CY",
+                    "name": "2025 Total Population",
+                    "startDate": "2025-01-01",
+                    "endDate": "2025-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 137670.0
+                },
+                {
+                    "id": "TOTPOP20",
+                    "name": "2020 Total Population",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 139513.0
+                },
+                {
+                    "id": "TOTPOP10",
+                    "name": "2010 Total Population",
+                    "startDate": "2010-01-01",
+                    "endDate": "2010-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 147950.0
+                },
+                {
+                    "id": "TOTPOP00",
+                    "name": "2000 Total Population",
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 153172.0
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "name": "Utah",
+            "type": "State",
+            "variables": [
+                {
+                    "id": "TOTPOP_FY",
+                    "name": "2030 Total Population",
+                    "startDate": "2030-01-01",
+                    "endDate": "2030-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 3755740.0
+                },
+                {
+                    "id": "TOTPOP_CY",
+                    "name": "2025 Total Population",
+                    "startDate": "2025-01-01",
+                    "endDate": "2025-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 3538233.0
+                },
+                {
+                    "id": "TOTPOP20",
+                    "name": "2020 Total Population",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 3271616.0
+                },
+                {
+                    "id": "TOTPOP10",
+                    "name": "2010 Total Population",
+                    "startDate": "2010-01-01",
+                    "endDate": "2010-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 2763879.0
+                },
+                {
+                    "id": "TOTPOP00",
+                    "name": "2000 Total Population",
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31",
+                    "decimals": 0,
+                    "units": "count",
+                    "value": 2233164.0
+                }
+            ]
+        }
+    ]
+}

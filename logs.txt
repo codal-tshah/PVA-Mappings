@@ -1,0 +1,191 @@
+Monday
+- 8hrs mappings of all other fields 
+- I had prepared Property Type Mastersheet which includes 
+    Property type data mappings 
+    Have fields mapping of Consilated ERD fields, LighBoxDataDisctionary and CoStar
+    Also added all fields mappings by Category Wise
+     - it includes so many steps 
+     - property type data distribution of various data of ERD / LighBoxDataDisctionary  and costar 
+     - alighning each data columnn one by one starting from consolated ERD with lighboxdata 
+     - then created python scirpt for source field of 2 column and conapre it with costar data 
+     - create one property type mastersheet for all property type data there are 5 
+
+
+Tuesday
+- 50% PVA
+- Just exploring stuff on PVA
+- checking on workbench and its fields and mappings 
+- chekcing on how can i work on it 
+- did review how can i use keebola to fetch data and use keebola and apis structuring
+
+- 50% CIT learning
+
+Wednesday
+- sync up with siva and undertsand a bit of ERD stuff
+- try to understadn ERD and entities how its been prepared
+- extracting ERD enrtities and its attributes of new ERD fields 
+- mapp those based on Entity names 
+- Try to do same for Costar data to align with updated ERD fields 
+- checking any external data source I can found out and got a GreenST market data 
+- checking that on mapping those based on Entity name 
+- did list it out property type data 
+- feed in excel data for that field
+- aligned data for columns and created script for that 
+- alighning GreenST market data fields 
+
+Thursday
+- understand how can I extract data from costar 
+- connect with Harsh and give me steps to do it 
+- I did extracted data excel files in VM
+- checked Harsh given me approach havent got actual correct data
+- did trial and error and found exact steps by property type to fetch data 
+- fetch all data 
+- mapp again costar fields Entity wise reshaping and feed in sheet 
+- Exploring pVA data api and external data sources that I can get any data for to map 
+- Only get 1 Trepp feilds data based on property type 
+    - some apis are missing 
+    - some have no fields that we can use for mappings 
+    - some missing with body data that we can fetch from
+- Added all fields of external sources mapping with GreenST data 
+
+
+
+Friday
+- Preparing logic of python script that can map data fields for each columns
+- adding dyanmic logic to work on 
+- tried few script to but not working 
+- keeping everything align based on entity name is little bit difficult 
+- build few scripts and try to use normalization logic and semantic
+- prepared Entity mapping sheets script ready tried and works fine 
+- prepared 4 sheets by property type name : <Retail/Industrial/Office/MF> Entity Mappings
+
+
+## Weekly Work Logs
+
+### Monday
+
+* Worked on mappings of all required fields.
+* Prepared a Property Type Master Sheet that includes:
+
+  * Property type data mappings.
+  * Field mappings between Consolidated ERD fields, LightBox Data Dictionary, and CoStar.
+  * Category-wise field mappings.
+* Performed detailed property type data distribution analysis across:
+
+  * Consolidated ERD
+  * LightBox Data Dictionary
+  * CoStar
+* Aligned each data column step-by-step starting from Consolidated ERD with LightBox data.
+* Developed Python scripts to compare source fields across multiple columns with CoStar data.
+* Created a unified Property Type Master Sheet covering all 5 property types.
+
+---
+
+### Tuesday
+
+* Spent 50% of the time exploring PVA-related workflows and data structure.
+* Worked on:
+
+  * Understanding Workbench fields and mappings.
+  * Exploring approaches to work on PVA datasets.
+  * Reviewing Keboola usage for data extraction and API structuring.
+* Spent remaining 50% of the time on CIT learning activities.
+
+---
+
+### Wednesday
+
+* Had a sync-up session with Siva to understand ERD concepts and structure.
+* Explored how ERD entities and attributes are prepared.
+* Extracted entities and attributes for newly added ERD fields.
+* Mapped fields based on entity names.
+* Performed similar alignment for CoStar data with updated ERD fields.
+* Explored external data sources and identified Green Street market data.
+* Worked on mapping Green Street market data using entity names.
+* Organized property type datasets and updated corresponding Excel sheets.
+* Created scripts for column alignment and field mapping.
+* Continued alignment of Green Street market data fields.
+
+---
+
+### Thursday
+
+* Worked on understanding the CoStar data extraction process.
+* Connected with Harsh to understand the extraction steps and workflow.
+* Successfully extracted CoStar Excel data files in the VM environment.
+* Reviewed Harsh’s approach and refined the process through multiple trial-and-error attempts.
+* Identified the correct property type-wise steps to fetch accurate data.
+* Extracted and consolidated all required data.
+* Remapped CoStar fields entity-wise, reshaped datasets, and updated sheets accordingly.
+* Explored PVA APIs and external data sources for additional mapping opportunities.
+* Retrieved limited Trepp field data based on property type.
+* Observed limitations in external APIs:
+
+  * Some APIs were unavailable.
+  * Some APIs lacked usable mapping fields.
+  * Some APIs had missing request body data.
+* Added external source mappings alongside Green Street data.
+
+---
+
+### Friday
+
+* Worked on preparing Python script logic for automated field mapping.
+* Added dynamic logic handling for column-wise mappings.
+* Tested multiple scripts and troubleshooting approaches.
+* Faced challenges in maintaining alignment purely based on entity names.
+* Implemented normalization and semantic matching logic in scripts.
+* Successfully prepared and tested entity mapping scripts.
+* Created 4 entity mapping sheets for:
+
+  * Retail
+  * Industrial
+  * Office
+  * Multifamily (MF)
+
+
+
+June 1 
+Monday
+- 50% for workbench and check spike worked by siva 
+- 50% External data sources and findings to check 
+
+June 2 
+Tuesday
+- 50% PVA Workbench Mapping 
+  - can add 8hrs but have to chunk the work in description 
+  - did so far architect of sheets 
+  - have 3 excel files to evaluate 
+
+- 50% actual CIT / builder
+  - havent did anything so far in these
+
+- 1hr meeting PVA DSM 
+
+
+
+03/06
+work planning 
+- make a doc that can actually have insights regarding external data sources
+  - actual try out with postman and keebola
+- have to try and test 2 tools that given by farsh
+- peers selection 
+- work on excel workbench mappings
+- find out some things that can be workout 
+- 
+
+4 june 
+tasks 
+- EXCEL grant access request: https://gocodal.atlassian.net/servicedesk/customer/portal/20/CD-7079 - in progress
+- create a doc for apis and external data sources - done 
+- give update to scott in thread - 
+- buy claude if possible
+- work on excel mapping 
+
+
+8 june 
+- fill timesheet 
+- watch out lightbox data videos (Pva-16)
+- 11-12 videos of lightbox 
+- 12 work
+- 

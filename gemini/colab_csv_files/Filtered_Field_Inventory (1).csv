@@ -1,0 +1,3109 @@
+Tab Name,Field Name,Named Range,Input,Calculated,Dropdown,Formula Type,Data Type,Row Hidden,Column Hidden,Notes,Cell Ref
+File Info,REPORT WRITER,,No,Yes,No,Conditional,f,No,No,,F5
+File Info,"Project, Property, & Contact Information",,Yes,No,No,,s,No,No,,R7
+File Info,Project Information,,Yes,No,No,,s,No,No,,R10
+File Info,Source,,Yes,No,No,,s,No,No,,T10
+File Info,Version Number,,Yes,No,No,,s,No,No,,U10
+File Info,New import/export buttons in top-left of Partner Ribbon,,Yes,No,No,,s,No,No,,R12
+File Info,Partner Ribbon,,Yes,No,No,,s,No,No,,T12
+File Info,1.203_09_24_25,,Yes,No,No,,d,No,No,,U12
+File Info,Subject ID,,Yes,No,No,,n,No,No,,I13
+File Info,SyncLynx,,Yes,No,No,,s,No,No,,T13
+File Info,V1.201,,Yes,No,No,,d,No,No,,U13
+File Info,Office File / Number,,No,Yes,No,Calculation,f,No,No,,G15
+File Info,Template,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],T15
+File Info,Excel Uploader,,Yes,No,No,,s,No,No,,T17
+File Info,V46.00 (1.34.2),,Yes,No,No,,s,No,No,,U17
+File Info,,,Yes,No,No,,s,No,No,,K19
+File Info,Invoice Information,,Yes,No,Yes,,s,No,No,,M29
+File Info,Workbook Set Up,,Yes,No,Yes,,s,No,No,,M50
+File Info,Property Name,,Yes,No,No,,s,No,No,,I87
+File Info,Property Major Type,,Yes,No,Yes,,s,No,No,,I100
+File Info,Property Type,,Yes,No,Yes,,s,No,No,,I102
+File Info,Is there Multi-Family Affordable?,,Yes,No,Yes,,s,No,No,,U104
+File Info,Owner Name,,Yes,No,No,,s,No,No,,I108
+File Info,Is this a Market Study?,,Yes,No,Yes,,s,No,No,,U108
+File Info,Address,,Yes,No,No,,s,No,No,,I110
+File Info,City,,Yes,No,No,,s,No,No,,I112
+File Info,Full Address,,No,Yes,No,Conditional,f,No,No,,T112
+File Info,County,,Yes,No,No,,s,No,No,,I114
+File Info,Market Analysis Address Overwrite,,Yes,No,No,,s,No,No,,V114
+File Info,Country,,Yes,No,Yes,,s,No,No,,I116
+File Info,State Abbreviation,,Yes,No,No,,s,No,No,,I118
+File Info,State Name,,No,Yes,No,Lookup,f,No,No,,I120
+File Info,Zip/Postal Code,,Yes,No,No,,s,No,No,,I122
+File Info,Census Tract,,Yes,No,No,,s,No,No,,I124
+File Info,Census Block,,Yes,No,No,,s,No,No,,I126
+File Info,CBSA Name,,Yes,No,No,,s,No,No,,I130
+File Info,Market,,Yes,No,No,,s,No,No,,I132
+File Info,Sub Market,,Yes,No,No,,s,No,No,,I134
+File Info,This row hidden by default,,Yes,No,No,,s,No,No,,N140
+File Info,Client 1 File Number,,Yes,No,No,,s,No,No,,L142
+File Info,Salutation,,No,Yes,No,Conditional,f,No,No,,R146
+File Info,First Last,,No,Yes,No,Calculation,f,No,No,,I154
+File Info,Client Display Name,,No,Yes,No,Conditional,f,No,No,,I158
+File Info,Title,,Yes,No,No,,s,No,No,,I160
+File Info,Address2,,Yes,No,No,,s,No,No,,I164
+File Info,Do Client Appraisal Requirements apply?,,Yes,No,Yes,,s,No,No,,I184
+File Info,Is FIRREA Language required?,,Yes,No,Yes,,s,No,No,,I186
+File Info,Second Client Information,,Yes,No,Yes,,s,No,No,,M190
+File Info,Client 2 File Number,,Yes,No,No,,s,No,No,,K194
+File Info,Company Name,,No,Yes,No,Lookup,f,No,No,,I196
+File Info,First Name,,No,Yes,No,Lookup,f,No,No,,I200
+File Info,Middle Name,,No,Yes,No,Lookup,f,No,No,,I202
+File Info,Last Name,,No,Yes,No,Lookup,f,No,No,,I204
+File Info,Designation,,No,Yes,No,Lookup,f,No,No,,I206
+File Info,Display Name,,No,Yes,No,Conditional,f,No,No,,I208
+File Info,State/Province,,No,Yes,No,Lookup,f,No,No,,I218
+File Info,Phone Number,,No,Yes,No,Lookup,f,No,No,,I224
+File Info,Phone Number2,,No,Yes,No,Lookup,f,No,No,,I226
+File Info,Fax Number,,No,Yes,No,Lookup,f,No,No,,I228
+File Info,E-mail,,No,Yes,No,Lookup,f,No,No,,I230
+File Info,Web Site,,No,Yes,No,Lookup,f,No,No,,I232
+File Info,Property Contact Information,,Yes,No,Yes,,s,No,No,,M236
+File Info,First Appraiser Information,,Yes,No,Yes,,s,No,No,,M273
+File Info,"If needed, Refresh Data with Appraiser Button in Top-Left of Ribbon.",,No,Yes,No,Calculation,f,No,No,,Q277
+File Info,Certification State,,No,Yes,Yes,Lookup,f,No,No,,I297
+File Info,Appraiser Inspection,,Yes,No,Yes,,s,No,No,,I307
+File Info,Appraiser Inspection Date,,No,Yes,No,Conditional,f,No,No,,I309
+File Info,within the three-year period immediately preceding acceptance of this assignment for,,No,Yes,No,Lookup,f,No,No,,W314
+File Info,N1_txtAppraiser1PriorServices >,,No,Yes,No,Conditional,f,No,No,,U315
+File Info,Appraisal Firm,,Yes,No,Yes,,s,No,No,,M319
+File Info,Second Appraiser,,Yes,No,Yes,,s,No,No,,M346
+File Info,N1_txtAppraiser2PriorServices >,,No,Yes,No,Conditional,f,No,No,,U386
+File Info,Third Appraiser,,Yes,No,Yes,,s,No,No,,M390
+File Info,N1_txtAppraiser3PriorServices >,,No,Yes,No,Conditional,f,No,No,,U430
+File Info,Fourth Appraiser,,Yes,No,Yes,,s,No,No,,M434
+File Info,N1_txtAppraiser4PriorServices >,,No,Yes,No,Conditional,f,No,No,,U474
+File Info,Significant Assistance 1,,No,Yes,No,Calculation,f,No,No,,Q478
+File Info,N1_txtCertSignificantAssistance >,,No,Yes,No,Conditional,f,No,No,,U478
+File Info,Significant Assistance 2,,Yes,No,No,,s,No,No,,U479
+File Info,Authors Perspective,,Yes,No,Yes,,s,No,No,,I485
+File Info,Author My/Our Upper Case,,No,Yes,No,Conditional,f,No,No,,I487
+File Info,Author My/Our Lower Case,,No,Yes,No,Calculation,f,No,No,,I489
+File Info,Authors Perspective Lower Case,,No,Yes,No,Conditional,f,No,No,,I491
+File Info,Navigate,,Yes,No,Yes,,s,No,No,,T497
+File Info,Date of Inspection,,Yes,No,No,,s,No,No,,Y501
+File Info,Choose ->,,No,Yes,Yes,Calculation,f,No,No,,T502
+File Info,Toggle Display,,Yes,No,Yes,,s,No,No,,AK541
+File Info,Subject,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],B558
+File Info,Contacts,,Yes,No,No,,s,No,No,,B562
+File Info,ID,,Yes,No,No,,s,No,No,,C562
+File Info,Contact Role,,Yes,No,No,,s,No,No,,L562
+File Info,Certification Type,,Yes,No,No,,s,No,No,,N562
+File Info,Certification Number,,Yes,No,No,,s,No,No,,O562
+File Info,Certification Expiration Date,,Yes,No,No,,s,No,No,,Q562
+File Info,Tax ID,,Yes,No,No,,s,No,No,,X562
+File Info,Comments,,Yes,No,No,,s,No,No,,AM562
+File Info,N1_txtMAIAppraisers,,Yes,No,No,,f,No,No,,AU597
+File Info,N1_txtMAIAppraisersHasHave,,No,Yes,No,Conditional,f,No,No,,AU598
+File Info,Populated?,,Yes,No,No,,s,No,No,,AY607
+File Info,Populated and MAI?,,No,Yes,No,Conditional,f,No,No,,AY610
+File Info,N1_txtPriorAppraisers,,Yes,No,No,,f,No,No,,AU613
+File Info,N1_txtPriorAppraisersHasHave,,No,Yes,No,Conditional,f,No,No,,AU614
+File Info,Populated and Prior Services?,,No,Yes,No,Conditional,f,No,No,,AY626
+File Info,N1_txtInspectedAppraisers,,Yes,No,No,,f,No,No,,AU629
+File Info,N1_txtInspectedAppraisersHasHave,,No,Yes,No,Conditional,f,No,No,,AU630
+Settings,What is the PVA Property Type?,,Yes,No,Yes,,s,No,No,,G6
+Settings,What agency is this job for?,,Yes,No,Yes,,s,No,No,,G10
+Settings,Rounding: Formula (recommended) or Set Multiple,,Yes,No,Yes,,s,No,No,,G28
+Settings,File-wide Rounding Multiple,,No,Yes,No,Lookup,f,No,No,,G29
+Settings,File-wide Rounding Multiple per UOM,,No,Yes,No,Lookup,f,No,No,,G30
+Settings,Subject Unit of Comparison,,No,Yes,Yes,Lookup,f,No,No,,G31
+Settings,For Multi-Family: Unit Count Unit of Comparison (MF Market Rent),,No,Yes,No,Lookup,f,No,No,,G32
+Settings,For Mixed-Use: Include Commercial units in total unit count?,,Yes,No,Yes,,s,No,No,,G33
+Settings,Do you need External Obsolescence Analysis,,Yes,No,Yes,,s,No,No,,G62
+Settings,Do you have Cost Comparables?,,Yes,No,Yes,,s,No,No,,G63
+Settings,Do your Cost Comps have Indirect/Soft Costs?,,Yes,No,Yes,,s,No,No,,G64
+Settings,Do you have a Construction Budget?,,Yes,No,Yes,,s,No,No,,G65
+Settings,Is it a Going Concern Value?,,Yes,No,Yes,,s,No,No,,G67
+Settings,Include EGIM Analysis?,,Yes,No,Yes,,s,No,No,,G72
+Settings,How many Lease Grids do you need?,,Yes,No,No,,n,No,No,,G78
+Settings,How many historical financials will you spread?,,Yes,No,No,,n,No,No,,G79
+Settings,How does your market quote rental rates?,,Yes,No,Yes,,s,No,No,,G80
+Settings,Do you have a budget to spread?,,Yes,No,Yes,,s,No,No,,G81
+Settings,Do you need to present Lease Abstracts?,,Yes,No,Yes,,s,No,No,,G82
+Settings,Is the subject stabilized?,,Yes,No,Yes,,s,No,No,,G83
+Settings,How many projections are needed?,,Yes,No,Yes,,n,No,No,,G84
+Settings,Include Reserves in Operating Expense Ratio?,,Yes,No,Yes,,s,No,No,,G85
+Settings,"Do you need a Direct Cap, DCF, or both",,Yes,No,Yes,,s,No,No,,G86
+Settings,Deal Identifier,,No,Yes,No,Calculation,f,No,No,,G105
+"Dates, Premises",Report Date,,Yes,No,No,,d,No,No,,I13
+"Dates, Premises",Exposure Time,,No,Yes,No,Calculation,f,No,No,,Y22
+"Dates, Premises",As Is,,No,Yes,No,Calculation,f,No,No,,G23
+"Dates, Premises",Upon Stabilization,,Yes,No,Yes,,s,No,No,,F26
+"Dates, Premises",As Completed,,Yes,No,Yes,,s,No,No,,F27
+"Dates, Premises",As-If Completed,,Yes,No,Yes,,s,No,No,,F28
+"Dates, Premises",As Stable,,Yes,No,Yes,,s,No,No,,F29
+"Dates, Premises",As-If Stabilized,,Yes,No,Yes,,s,No,No,,F30
+"Dates, Premises",Hypothetical,,Yes,No,Yes,,s,No,No,,F31
+"Dates, Premises",Liquidation,,Yes,No,Yes,,s,No,No,,F32
+"Dates, Premises",Prior Services,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],I61
+"Contracts, History",Oldest Sale,,No,Yes,No,Calculation,f,No,No,,U14
+"Contracts, History",Transaction,,Yes,No,No,,s,No,No,,F15
+"Contracts, History",Price,,No,Yes,No,Conditional,f,No,No,,G15
+"Contracts, History",< Type,,Yes,No,No,,s,No,No,,V15
+"Contracts, History",Date,,Yes,No,No,,d,No,No,,G16
+"Contracts, History",< Price,,Yes,No,No,,s,No,No,,V16
+"Contracts, History",Days on Market,,No,Yes,No,Conditional,f,No,No,,G17
+"Contracts, History",< Date,,Yes,No,No,,s,No,No,,V17
+"Contracts, History",Book/Page or Reference Doc.,,Yes,No,No,,s,No,No,,G18
+"Contracts, History",25864756,,Yes,No,No,,s,No,No,,V18
+"Contracts, History",Grantor,,Yes,No,No,,s,No,No,,G19
+"Contracts, History",MARKHAM APARTMENTS LP,,Yes,No,No,,s,No,No,,V19
+"Contracts, History",MARKHAM OWNER LLC,,Yes,No,No,,s,No,No,,V20
+"Contracts, History",Grantee,,Yes,No,No,,s,No,No,,F21
+"Contracts, History",Property Rights,,Yes,No,Yes,,s,No,No,,G21
+"Contracts, History",Financing,,Yes,No,No,,s,No,No,,F23
+"Contracts, History",Conditions of Sale,,Yes,No,No,,s,No,No,,F24
+"Contracts, History",< Conditions,,Yes,No,No,,s,No,No,,V24
+"Contracts, History",Legal Description,,Yes,No,No,,s,No,No,,F25
+"Contracts, History",< Legal Desc.,,Yes,No,No,,s,No,No,,V25
+"Contracts, History",Verification Source,,Yes,No,No,,s,No,No,,F26
+"Contracts, History",Listing Agency,,Yes,No,No,,s,No,No,,F27
+"Contracts, History",Listing/MLS #,,Yes,No,No,,s,No,No,,F28
+"Contracts, History",< Verification,,Yes,No,No,,s,No,No,,V28
+"Contracts, History",Sales History,,No,Yes,No,Conditional,f,No,No,,G32
+"Contracts, History",Export Subject to Database,,Yes,No,Yes,,s,No,No,,G39
+"Contracts, History",Price Display in Grids?,,No,Yes,No,Conditional,f,No,No,,F45
+"Contracts, History",Transfer,,No,Yes,No,Conditional,f,No,No,,G45
+"Contracts, History",Price Per Usable Acres,,No,Yes,No,Conditional,f,No,No,,G55
+"Contracts, History",Price Per Usable Land SF,,No,Yes,No,Conditional,f,No,No,,G57
+"Contracts, History",Price Per Buildable SF,,No,Yes,No,Conditional,f,No,No,,G61
+"Contracts, History",Price Per Primary Frontage,,No,Yes,No,Conditional,f,No,No,,G63
+"Contracts, History",Price Per FAR,,No,Yes,No,Conditional,f,No,No,,G65
+"Contracts, History",Price Per Room,,No,Yes,No,Conditional,f,No,No,,G67
+"Contracts, History",Price Per Bedroom,,No,Yes,No,Conditional,f,No,No,,G69
+"Contracts, History",Price Per Bed,,No,Yes,No,Conditional,f,No,No,,G71
+"Contracts, History",Price Per Bay,,No,Yes,No,Conditional,f,No,No,,G73
+"Contracts, History",Price Per Spaces,,No,Yes,No,Conditional,f,No,No,,G75
+"Contracts, History",Price Per Land Sq. Meters,,No,Yes,No,Calculation,f,No,No,,G77
+"Contracts, History",Price Per Land Hectares,,No,Yes,No,Calculation,f,No,No,,G79
+"Contracts, History",Price Per GBA Meters,,No,Yes,No,Calculation,f,No,No,,G81
+"Contracts, History",Price Per RA Meters,,No,Yes,No,Calculation,f,No,No,,G83
+"Contracts, History",Customize,,Yes,No,Yes,,s,No,No,,AC89
+"Contracts, History",Transaction Records,,No,Yes,No,Conditional,f,No,No,,AC92
+"Contracts, History",Contracts_SaleHistoryTable_Toggle,,Yes,No,Yes,,s,No,No,,Z96
+"Contracts, History",Concluded Value,,No,Yes,No,Calculation,f,No,No,,AP142
+"Contracts, History",N1_txtConclValuePctDiffFromContract >>,,No,Yes,No,Calculation,f,No,No,,AP143
+"Contracts, History",N1_txtConclValuePctDiffFromContractText >>,,No,Yes,No,Conditional,f,No,No,,AP144
+Scope,The problem to be solved is,,No,Yes,No,Calculation,f,No,No,,H13
+Scope,The intended user(s) of the appraisal is/are the,,No,Yes,Yes,Conditional,f,No,No,,H17
+Scope,Intended users,,No,Yes,No,Conditional,f,No,No,,H19
+Scope,Report Format,,No,Yes,No,Conditional,f,No,No,,H28
+Scope,USPAP Report Type Description,,No,Yes,No,Conditional,f,No,No,,H30
+Scope,Restricted Appraisal Report,,Yes,No,No,,s,No,No,,E36
+Scope,Evaluation Appraisal Report,,Yes,No,No,,s,No,No,,E39
+Scope,A Cost Approach was considered and,,Yes,No,Yes,,s,No,No,,H72
+Scope,was,,Yes,No,No,,s,No,No,,H76
+Scope,A Sales/Direct Comparison Approach was considered and,,Yes,No,Yes,,s,No,No,,H78
+Scope,Is this a 'Land Only' appraisal?,,Yes,No,Yes,,s,No,No,,H84
+Scope,An Income Approach was considered and,,Yes,No,Yes,,s,No,No,,H88
+Scope,A unit sales approach (Subdivision/Development) was considered and,,Yes,No,Yes,,s,No,No,,H92
+Scope,Canadian,,No,Yes,No,Conditional,f,No,No,,E96
+Scope,An Extraordinary Limiting Condition,,Yes,No,Yes,,s,No,No,,H96
+Scope,Client,,No,Yes,No,Calculation,f,No,No,,S110
+Scope,Purpose of the Appraisal,,No,Yes,No,Calculation,f,No,No,,S111
+Scope,Intended Use,,No,Yes,No,Calculation,f,No,No,,S112
+Scope,Intended User(s),,No,Yes,No,Conditional,f,No,No,,S113
+Scope,Property Rights Definition,,No,Yes,No,Lookup,f,No,No,,S117
+Scope,N1_chtScopeDisplayTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],R123
+Scope,Cost Approach,,Yes,No,Yes,,s,No,No,,Z149
+Scope,Sales Comparison Approach,,Yes,No,Yes,,s,No,No,,Z150
+Scope,Applicable,,Yes,No,Yes,,s,No,No,,AA150
+Scope,Income Capitalization Approach,,Yes,No,Yes,,s,No,No,,Z151
+Scope,Utilized Approaches to Value,,Yes,No,No,,s,No,No,,AL161
+Scope,Income Approach,,No,Yes,No,Conditional,f,No,No,,AM169
+Scope,Market Data,,Yes,No,No,,s,No,No,,AO182
+Scope,Subject Ownership & Transaction History,,Yes,No,No,,s,No,No,,AO183
+Scope,Subject Assessment & Tax Data,,No,Yes,No,Calculation,f,No,No,,AO184
+Scope,Subject Site Data,,Yes,No,No,,s,No,No,,AO185
+Scope,Subject Zoning Data,,No,Yes,No,Calculation,f,No,No,,AO186
+Scope,Subject Improved Data,,Yes,No,No,,s,No,No,,AO187
+Scope,Sale Comparables,,Yes,No,No,,s,No,No,,AO188
+Scope,Lease Comparables,,Yes,No,No,,s,No,No,,AO189
+Scope,Expense Comparables,,Yes,No,No,,s,No,No,,AO190
+Scope,Subject Construction Estimates,,Yes,No,No,,s,No,No,,AO191
+Scope,Subject Operating Data,,Yes,No,No,,s,No,No,,AO192
+Scope,Certification Required Language,,No,Yes,No,Conditional,f,No,No,,AS214
+Site,Column,,Yes,No,No,,s,No,No,,W10
+Site,Choose Number of Parcels,,Yes,No,Yes,,f,No,No,,AC12
+Site,Active PropertyType,,No,Yes,No,Conditional,f,No,No,,U19
+Site,Multi-Family|Mobile/Manufactured Home Park,,Yes,No,Yes,,s,No,No,,A20
+Site,Parcel ID,,No,Yes,No,Calculation,f,No,No,,AB20
+Site,Parcel 13,,No,Yes,No,Conditional,f,No,No,,AO20
+Site,Parcel 14,,No,Yes,No,Conditional,f,No,No,,AP20
+Site,Parcel 15,,No,Yes,No,Conditional,f,No,No,,AQ20
+Site,Parcel 16,,No,Yes,No,Conditional,f,No,No,,AR20
+Site,Parcel 17,,No,Yes,No,Conditional,f,No,No,,AS20
+Site,Parcel 18,,No,Yes,No,Conditional,f,No,No,,AT20
+Site,Parcel 19,,No,Yes,No,Conditional,f,No,No,,AU20
+Site,Parcel 20,,No,Yes,No,Conditional,f,No,No,,AV20
+Site,Location,,No,Yes,No,Conditional,f,No,No,,Z21
+Site,Parcel 1,,No,Yes,No,Calculation,f,No,No,,AB21
+Site,Land Use,,No,Yes,No,Conditional,f,No,No,,Z22
+Site,Current Use,,No,Yes,No,Conditional,f,No,No,,Z23
+Site,Proposed Use,,No,Yes,No,Conditional,f,No,No,,Z24
+Site,Highest and Best Use Site as Vacant,,No,Yes,No,Conditional,f,No,No,,Z25
+Site,Highest and Best Use Comments Site as Vacant,,No,Yes,No,Calculation,f,No,No,,AB26
+Site,Highest and Best Use Site as Improved,,No,Yes,No,Calculation,f,No,No,,AB27
+Site,Highest and Best Use Comments Site as Improved,,No,Yes,No,Conditional,f,No,No,,Z28
+Site,Traffic Count (Primary Frontage),,No,Yes,No,Conditional,f,No,No,,Z29
+Site,Traffic Count (Secondary Frontage),,No,Yes,No,Conditional,f,No,No,,Z30
+Site,Traffic Count (Tertiary Frontage),,No,Yes,No,Conditional,f,No,No,,Z31
+Site,Traffic Count Date,,No,Yes,No,Conditional,f,No,No,,Z32
+Site,Concatenate,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AB33
+Site,Map Latitude,,No,Yes,No,Conditional,f,No,No,,Z35
+Site,Map Longitude,,No,Yes,No,Conditional,f,No,No,,Z36
+Site,Gross Land Area (Sq Ft),,No,Yes,No,Conditional,f,No,No,,Z38
+Site,Gross Land Area (Acres),,No,Yes,No,Conditional,f,No,No,,Z39
+Site,Excess Land Area (Sq Ft),,No,Yes,No,Conditional,f,No,No,,Z40
+Site,Excess Land Area (Acres),,No,Yes,No,Conditional,f,No,No,,Z41
+Site,Usable Land Area (Sq Ft),,No,Yes,No,Conditional,f,No,No,,Z42
+Site,Usable Land Area (Acres),,No,Yes,No,Conditional,f,No,No,,Z43
+Site,Easement Land Area (Sq Ft),,No,Yes,No,Conditional,f,No,No,,Z44
+Site,Easement Land Area (Acres),,No,Yes,No,Conditional,f,No,No,,Z45
+Site,Source for Land Area,,No,Yes,No,Conditional,f,No,No,,Z46
+Site,Proposed SF,,No,Yes,No,Conditional,f,No,No,,Z51
+Site,Proposed Units,,No,Yes,No,Conditional,f,No,No,,Z52
+Site,Gross Land Area (Hectares),,No,Yes,No,Conditional,f,No,No,,Z54
+Site,Gross Land Area (Sq Meters),,No,Yes,No,Conditional,f,No,No,,Z55
+Site,Excess Land Area (Hectares),,No,Yes,No,Aggregation,f,No,No,,AB56
+Site,Excess Land Area (Sq Meters),,No,Yes,No,Aggregation,f,No,No,,AB57
+Site,Usable Land Area (Hectares),,No,Yes,No,Aggregation,f,No,No,,AB58
+Site,Usable Land Area (Sq Meters),,No,Yes,No,Aggregation,f,No,No,,AB59
+Site,Excess Land Area Comments,,No,Yes,No,Calculation,f,No,No,,AB60
+Site,Usable Land Area Comments,,No,Yes,No,Calculation,f,No,No,,AB61
+Site,Land Units,,No,Yes,No,Conditional,f,No,No,,Z62
+Site,Land Unit Type,,No,Yes,No,Conditional,f,No,No,,Z63
+Site,Approved or Zoned,,No,Yes,No,Conditional,f,No,No,,Z64
+Site,Corner Lot,,No,Yes,No,Conditional,f,No,No,,Z65
+Site,Dimensions,,No,Yes,No,Conditional,f,No,No,,Z66
+Site,Primary Frontage Street Name,,No,Yes,No,Conditional,f,No,No,,Z67
+Site,Secondary Frontage Street Name,,No,Yes,No,Conditional,f,No,No,,Z68
+Site,Tertiary Frontage Street Name,,No,Yes,No,Conditional,f,No,No,,Z69
+Site,Road Frontage,,No,Yes,No,Conditional,f,No,No,,Z70
+Site,Frontage - Primary Street (Feet),,No,Yes,No,Conditional,f,No,No,,Z71
+Site,Frontage - Secondary Street (Feet),,No,Yes,No,Conditional,f,No,No,,Z72
+Site,Frontage - Tertiary Street (Feet),,No,Yes,No,Conditional,f,No,No,,Z73
+Site,Average Depth (Feet),,No,Yes,No,Conditional,f,No,No,,Z74
+Site,Water Frontage (Feet),,No,Yes,No,Conditional,f,No,No,,Z75
+Site,Effective Water Frontage (Feet),,No,Yes,No,Conditional,f,No,No,,Z76
+Site,Metric  Measures,,No,Yes,No,Conditional,f,No,No,,Z77
+Site,Frontage - Primary Street (Meters),,No,Yes,No,Conditional,f,No,No,,Z78
+Site,Frontage - Secondary Street (Meters),,No,Yes,No,Conditional,f,No,No,,Z79
+Site,Average Depth (Meters),,No,Yes,No,Conditional,f,No,No,,Z80
+Site,Water Frontage (Meters),,No,Yes,No,Conditional,f,No,No,,Z81
+Site,Effective Water Frontage (Meters),,No,Yes,No,Conditional,f,No,No,,Z82
+Site,View,,No,Yes,No,Conditional,f,No,No,,Z83
+Site,Access,,No,Yes,No,Conditional,f,No,No,,Z84
+Site,Site Visibility,,No,Yes,No,Conditional,f,No,No,,Z85
+Site,Street Lighting,,No,Yes,No,Calculation,f,No,No,,AB86
+Site,Sidewalks,,No,Yes,No,Calculation,f,No,No,,AB87
+Site,Curb and Gutter,,No,Yes,No,Calculation,f,No,No,,AB88
+Site,Drainage,,No,Yes,No,Conditional,f,No,No,,Z89
+Site,Landscaping,,No,Yes,No,Conditional,f,No,No,,Z90
+Site,Topography,,No,Yes,No,Conditional,f,No,No,,Z92
+Site,Shape,,No,Yes,No,Conditional,f,No,No,,Z94
+Site,Soil Conditions,,No,Yes,No,Calculation,f,No,No,,AB96
+Site,FEMA Map #,,No,Yes,No,Conditional,f,No,No,,Z98
+Site,FEMA Map Date,,No,Yes,No,Conditional,f,No,No,,Z99
+Site,Flood Zone,,No,Yes,No,Conditional,f,No,No,,Z100
+Site,In Flood Plain,,No,Yes,No,Conditional,f,No,No,,Z101
+Site,Area in Flood Zone,,No,Yes,No,Conditional,f,No,No,,Z102
+Site,Flood Zone Comments,,No,Yes,No,Calculation,f,No,No,,AB103
+Site,Site in Earthquake Zone,,No,Yes,No,Calculation,f,No,No,,AB104
+Site,Earthquake Hazard Risk,,No,Yes,No,Conditional,f,No,No,,Z105
+Site,Earthquake Zone Comments,,No,Yes,No,Conditional,f,No,No,,Z106
+Site,Encumbrance / Easement Description,,No,Yes,No,Conditional,f,No,No,,Z107
+Site,Environmental Issues,,No,Yes,No,Conditional,f,No,No,,Z108
+Site,Wetlands Type,,No,Yes,No,Conditional,f,No,No,,Z109
+Site,Wetland Acres,,No,Yes,No,Conditional,f,No,No,,Z110
+Site,Percent Wetlands,,No,Yes,No,Conditional,f,No,No,,Z111
+Site,Wetlands and Watershed Comments,,No,Yes,No,Calculation,f,No,No,,AB112
+Site,Adequacy of Utilities,,No,Yes,No,Conditional,f,No,No,,Z115
+Site,Public Electricity,,No,Yes,No,Calculation,f,No,No,,AB116
+Site,Water Supply Type,,No,Yes,No,Calculation,f,No,No,,AB117
+Site,Sewer Type,,No,Yes,No,Calculation,f,No,No,,AB118
+Site,Natural Gas,,No,Yes,No,Calculation,f,No,No,,AB119
+Site,Utilities,,No,Yes,No,Conditional,f,No,No,,Z120
+Site,Underground Utilities,,No,Yes,No,Calculation,f,No,No,,AB121
+Site,Irrigation Water,,No,Yes,No,Calculation,f,No,No,,AB122
+Site,Irrigation Water Description,,No,Yes,No,Calculation,f,No,No,,AB123
+Site,Rail Access,,No,Yes,No,Conditional,f,No,No,,Z124
+Site,Water/Port Access,,No,Yes,No,Calculation,f,No,No,,AB125
+Site,Water/Port Access Description,,No,Yes,No,Calculation,f,No,No,,AB126
+Site,Entitlements,,No,Yes,No,Conditional,f,No,No,,Z127
+Site,Distance from Campus,,No,Yes,No,Conditional,f,No,No,,Z128
+Site,On/Off Hospital Campus,,No,Yes,No,Conditional,f,No,No,,Z129
+Site,HSPI Index,,No,Yes,No,Conditional,f,No,No,,Z130
+Site,Site Analysis & Comments,,No,Yes,No,Conditional,f,No,No,,Z131
+Site,Soil Type,,No,Yes,No,Conditional,f,No,No,,Z139
+Site,Productivity Index,,No,Yes,No,Conditional,f,No,No,,Z140
+Site,Tillable Acres,,No,Yes,No,Conditional,f,No,No,,Z141
+Site,Percent Tillable,,No,Yes,No,Conditional,f,No,No,,Z142
+Site,Woodland Acres,,No,Yes,No,Conditional,f,No,No,,Z143
+Site,Other Acres,,No,Yes,No,Conditional,f,No,No,,Z144
+Site,Waste Acres,,No,Yes,No,Conditional,f,No,No,,Z145
+Site,Home Site Acres,,No,Yes,No,Conditional,f,No,No,,Z146
+Site,Ctrl+Home to top,,Yes,No,No,,s,No,No,,Y149
+Site,Banded Rows,,Yes,No,Yes,,s,No,No,,BR157
+Site,Multi-Family|Student-Oriented Housing,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],BC159
+Site,Multi-Family|Affordable,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],BD159
+Site,Tip: Change column width and row height to fit data (unprotect sheet first),,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BT163
+Site,Totals,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],CO182
+Site,Parcel 2,,No,Yes,No,Calculation,f,No,No,,BV183
+Site,Parcel 3,,No,Yes,No,Calculation,f,No,No,,BW183
+Site,Parcel 4,,No,Yes,No,Calculation,f,No,No,,BX183
+Site,Parcel 5,,No,Yes,No,Calculation,f,No,No,,BY183
+Site,Parcel 6,,No,Yes,No,Calculation,f,No,No,,BZ183
+Site,Parcel 7,,No,Yes,No,Calculation,f,No,No,,CA183
+Site,Parcel 8,,No,Yes,No,Calculation,f,No,No,,CB183
+Site,Parcel 9,,No,Yes,No,Calculation,f,No,No,,CC183
+Site,Parcel 10,,No,Yes,No,Calculation,f,No,No,,CD183
+Site,Parcel 11,,No,Yes,No,Calculation,f,No,No,,CE183
+Site,Parcel 12,,No,Yes,No,Calculation,f,No,No,,CF183
+Site,N1SiteSizeTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BT201
+Site,N1SiteCharacteristicsTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BT229
+Site,Percent in Flood Zone,,No,Yes,No,Calculation,f,No,No,,BU234
+Site,N1SiteHazardsTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BT248
+Site,N1SiteUtilitiesTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BT263
+Site,Row Display,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],CS304
+Site,Source for Land Area:,,No,Yes,No,Calculation,f,No,No,,CZ324
+Site,Usable Land,,No,Yes,No,Calculation,f,No,No,,DW334
+Site,Unusable Land,,No,Yes,No,Calculation,f,No,No,,DW335
+Site,Excess Land,,No,Yes,No,Calculation,f,No,No,,DW336
+Site,Surplus Land,,No,Yes,No,Calculation,f,No,No,,DW337
+Site,Easement,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DW338
+Site,Total Site Area,,No,Yes,No,Calculation,f,No,No,,DW339
+Site,Difference,,No,Yes,No,Aggregation,f,No,No,,DW342
+Site,"Zoning Code, District",,No,Yes,No,Calculation,f,No,No,,EI356
+Site,Permitted Uses,,No,Yes,No,Calculation,f,No,No,,EI357
+Site,Zoning Change Likely?,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],EI358
+Site,Land Size,,No,Yes,No,Calculation,f,No,No,,EI360
+Site,Visibility,,No,Yes,No,Calculation,f,No,No,,EI365
+Site,Highest and Best Use as Vacant:,,No,Yes,No,Calculation,f,No,No,,EI372
+Site,Zoning Code District,,No,Yes,No,Calculation,f,No,No,,EI382
+Site,Improvement Size,,No,Yes,No,Conditional,f,No,No,,EI386
+Site,Condition,,No,Yes,No,Calculation,f,No,No,,EI387
+Site,Quality,,No,Yes,No,Calculation,f,No,No,,EI388
+Site,Highest and Best Use as Improved:,,No,Yes,No,Calculation,f,No,No,,EI396
+Site,Most Likely Buyer,,No,Yes,No,Conditional,f,No,No,,EL400
+Site,N1_txtMostProbableBuyer,,No,Yes,No,Lookup,f,No,No,,EL401
+Site,N1_txtMostProbableBuyerInvestorType,,No,Yes,No,Lookup,f,No,No,,EI403
+Site,N1_txtMostProbableBuyerOccupancy,,No,Yes,No,Lookup,f,No,No,,EI404
+Zoning,Choose Number of Zones,,Yes,No,Yes,,n,No,No,,AA12
+Zoning,Zoning,,Yes,No,No,,s,No,No,,AA18
+Zoning,Zoning Authority,,No,Yes,No,Conditional,f,No,No,,Z20
+Zoning,Zoning District,,No,Yes,No,Conditional,f,No,No,,Z21
+Zoning,Zoning Code,,No,Yes,No,Conditional,f,No,No,,Z22
+Zoning,Zoning Type/Description,,No,Yes,No,Conditional,f,No,No,,Z23
+Zoning,Zoning Change Requested,,No,Yes,No,Conditional,f,No,No,,Z26
+Zoning,Zoning Change Description,,No,Yes,No,Conditional,f,No,No,,Z27
+Zoning,Zoning Change Likely,,No,Yes,No,Conditional,f,No,No,,Z28
+Zoning,Zoning Density/FAR,,No,Yes,No,Conditional,f,No,No,,Z29
+Zoning,Likely Zoning,,No,Yes,No,Conditional,f,No,No,,Z31
+Zoning,Maximum Site Coverage,,No,Yes,No,Conditional,f,No,No,,Z34
+Zoning,Minimum Lot Area,,No,Yes,No,Conditional,f,No,No,,Z35
+Zoning,Front Set Back Distance,,No,Yes,No,Conditional,f,No,No,,Z36
+Zoning,Side Yard Distance,,No,Yes,No,Conditional,f,No,No,,Z37
+Zoning,Back Yard Distance,,No,Yes,No,Conditional,f,No,No,,Z38
+Zoning,Maximum Building Height,,No,Yes,No,Conditional,f,No,No,,Z39
+Zoning,Zoning Parking Requirements,,No,Yes,No,Conditional,f,No,No,,Z40
+Zoning,Zoning Data Source,,No,Yes,No,Conditional,f,No,No,,Z41
+Zoning,Link to Ordinance Document,,No,Yes,No,Conditional,f,No,No,,Z42
+Zoning,Zoning Comments,,No,Yes,No,Conditional,f,No,No,,Z43
+Zoning,N1_txtPermittedUsesLowerCase >>,,No,Yes,No,Conditional,f,No,No,,AA45
+Zoning,Actual Density of Use,,No,Yes,No,Lookup,f,No,No,,BI57
+Zoning,Zoning Density/FAR (Metric),,No,Yes,No,Lookup,f,No,No,,BI63
+Zoning,Jurisdiction,,No,Yes,No,Calculation,f,No,No,,CP152
+Zoning,Conforming Status,,No,Yes,No,Calculation,f,No,No,,CP154
+Zoning,Zoning Change,,No,Yes,No,Calculation,f,No,No,,CP156
+Zoning,Density - Units/Acre,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],CP158
+Zoning,Front Yard,,No,Yes,No,Calculation,f,No,No,,CP160
+Zoning,Back Yard,,No,Yes,No,Calculation,f,No,No,,CP161
+Zoning,Side Yard,,No,Yes,No,Calculation,f,No,No,,CP162
+Zoning,Building Height Limit,,No,Yes,No,Calculation,f,No,No,,CP163
+Zoning,Parking Requirement (Space per Unit),,No,Yes,No,Calculation,f,No,No,,CP165
+Zoning,Parking Spaces Required,,No,Yes,No,Calculation,f,No,No,,CQ166
+Improvements,System,,Yes,No,No,,s,No,No,,W10
+Improvements,Choose Number of Buildings,,Yes,No,Yes,,n,No,No,,AB12
+Improvements,Capsule Description,,No,Yes,No,Lookup,f,No,No,,AB20
+Improvements,Number of Buildings,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],Y24
+Improvements,Construction Quality,,No,Yes,No,Conditional,f,No,No,,Y27
+Improvements,Year Built Range,,No,Yes,No,Conditional,f,No,No,,Y28
+Improvements,Effective Age Range,,No,Yes,No,Conditional,f,No,No,,AB30
+Improvements,Land to Building Ratio (Metric),,No,Yes,No,Calculation,f,No,No,,AB33
+Improvements,Total Number of Parking Spaces,,No,Yes,No,Conditional,f,No,No,,AB37
+Improvements,Source For Parking,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AB38
+Improvements,Parking Ratio Type,,No,Yes,Yes,Conditional,f,No,No,,AB40
+Improvements,Parking Ratio,,No,Yes,No,Calculation,f,No,No,,Y41
+Improvements,Parking Ratio (Metric),,No,Yes,No,Conditional,f,No,No,,AB42
+Improvements,Parking Adequacy,,No,Yes,No,Conditional,f,No,No,,AB43
+Improvements,Source For Square Foot Areas,,No,Yes,No,Calculation,f,No,No,,AB44
+Improvements,"Furniture, Fixtures & Equipment (FF&E) Description",,No,Yes,No,Conditional,f,No,No,,Y48
+Improvements,"Furniture, Fixtures & Equipment (FF&E) Estimated Value",,No,Yes,No,Conditional,f,No,No,,Y49
+Improvements,Building Name/ID,,No,Yes,No,Lookup,f,No,No,,Y59
+Improvements,Building Description,,No,Yes,No,Lookup,f,No,No,,Y60
+Improvements,Unique Values,,No,Yes,No,Calculation,f,No,No,,AA60
+Improvements,Building Class,,No,Yes,No,Lookup,f,No,No,,Y61
+Improvements,MHC Type,,No,Yes,No,Lookup,f,No,No,,Y62
+Improvements,Building 1,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AA62
+Improvements,MHC Class Rating,,No,Yes,No,Lookup,f,No,No,,Y63
+Improvements,Pad Site Mix: Single-wide,,No,Yes,No,Lookup,f,No,No,,Y64
+Improvements,Pad Site Mix: Double-wide,,No,Yes,No,Lookup,f,No,No,,Y65
+Improvements,Hotel Class,,No,Yes,No,Lookup,f,No,No,,Y66
+Improvements,PVA Property Type,,No,Yes,No,Lookup,f,No,No,,Y67
+Improvements,Construction Class,,No,Yes,No,Lookup,f,No,No,,Y68
+Improvements,Construction,,No,Yes,No,Lookup,f,No,No,,Y69
+Improvements,Building Landscaping,,No,Yes,No,Calculation,f,No,No,,AA71
+Improvements,Year Built,,No,Yes,No,Lookup,f,No,No,,Y72
+Improvements,Average,,No,Yes,No,Calculation,f,No,No,,AA74
+Improvements,Effective Age,,No,Yes,No,Lookup,f,No,No,,Y76
+Improvements,Appeal and Appearance,,No,Yes,No,Lookup,f,No,No,,Y80
+Improvements,Personal Property,,No,Yes,No,Lookup,f,No,No,,Y81
+Improvements,Property Amenities,,No,Yes,No,Lookup,f,No,No,,Y82
+Improvements,Tenant Improvements,,No,Yes,No,Lookup,f,No,No,,Y83
+Improvements,Number of Stories,,No,Yes,No,Lookup,f,No,No,,Y84
+Improvements,Multi-Family GBA,,No,Yes,No,Lookup,f,No,No,,Y85
+Improvements,Office GBA,,No,Yes,No,Lookup,f,No,No,,Y86
+Improvements,Retail GBA,,No,Yes,No,Lookup,f,No,No,,Y87
+Improvements,Industrial GBA,,No,Yes,No,Lookup,f,No,No,,Y88
+Improvements,Other GBA,,No,Yes,No,Lookup,f,No,No,,Y89
+Improvements,Gross Building Area,,No,Yes,No,Lookup,f,No,No,,Y90
+Improvements,Percent Retail,,No,Yes,No,Calculation,f,No,No,,Y91
+Improvements,Retail GBA/GBA,,No,Yes,No,Calculation,f,No,No,,AA91
+Improvements,Multi-Family RA,,No,Yes,No,Lookup,f,No,No,,Y92
+Improvements,Office RA,,No,Yes,No,Lookup,f,No,No,,Y93
+Improvements,Industrial RA,,No,Yes,No,Lookup,f,No,No,,Y94
+Improvements,Other RA,,No,Yes,No,Lookup,f,No,No,,Y95
+Improvements,Rentable Area,,No,Yes,No,Lookup,f,No,No,,Y96
+Improvements,Gross Leasable Area (Retail GLA),,No,Yes,No,Lookup,f,No,No,,Y97
+Improvements,Gross Building Area (Meters),,No,Yes,No,Lookup,f,No,No,,Y98
+Improvements,Rentable Area (Meters),,No,Yes,No,Lookup,f,No,No,,Y99
+Improvements,Gross Leasable Area (Meters),,No,Yes,No,Lookup,f,No,No,,Y100
+Improvements,Usable Area,,No,Yes,No,Lookup,f,No,No,,Y101
+Improvements,Source for SF Area,,No,Yes,No,Lookup,f,No,No,,Y102
+Improvements,Percent Office,,No,Yes,No,Calculation,f,No,No,,Y103
+Improvements,Office GBA/GBA,,No,Yes,No,Calculation,f,No,No,,AA103
+Improvements,Percent Office RA,,No,Yes,No,Calculation,f,No,No,,Y104
+Improvements,Office RA/Total RA,,No,Yes,No,Calculation,f,No,No,,AA104
+Improvements,Load Factor,,No,Yes,No,Calculation,f,No,No,,Y105
+Improvements,(RA/Usable Area)-1,,No,Yes,No,Calculation,f,No,No,,AA105
+Improvements,Perimeter SF,,No,Yes,No,Lookup,f,No,No,,Y106
+Improvements,Building Efficiency Ratio,,No,Yes,No,Calculation,f,No,No,,Y107
+Improvements,Building Efficiency Ratio (Metric > ),,No,Yes,No,Calculation,f,No,No,,Y108
+Improvements,Land to Building Ratio,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],Y109
+Improvements,Surface Parking Spaces,,No,Yes,No,Lookup,f,No,No,,Y110
+Improvements,Covered Parking Spaces,,No,Yes,No,Lookup,f,No,No,,Y111
+Improvements,Garage Parking Spaces,,No,Yes,No,Lookup,f,No,No,,Y112
+Improvements,Parking Spaces,,No,Yes,No,Lookup,f,No,No,,Y113
+Improvements,Parking Type,,No,Yes,No,Lookup,f,No,No,,Y114
+Improvements,Parking Condition,,No,Yes,No,Lookup,f,No,No,,Y116
+Improvements,Source for Parking Count,,No,Yes,No,Lookup,f,No,No,,Y117
+Improvements,Parking Comments,,No,Yes,No,Lookup,f,No,No,,Y118
+Improvements,Multi-Family Units,,No,Yes,No,Lookup,f,No,No,,Y119
+Improvements,Office Units,,No,Yes,No,Lookup,f,No,No,,Y120
+Improvements,Retail Units,,No,Yes,No,Lookup,f,No,No,,Y121
+Improvements,Industrial Units,,No,Yes,No,Lookup,f,No,No,,Y122
+Improvements,Other Units,,No,Yes,No,Lookup,f,No,No,,Y123
+Improvements,Number of Units,,No,Yes,No,Lookup,f,No,No,,Y124
+Improvements,Number of Rooms,,No,Yes,No,Lookup,f,No,No,,Y125
+Improvements,Number of Bedrooms,,No,Yes,No,Lookup,f,No,No,,Y126
+Improvements,Number of Bathrooms,,No,Yes,No,Lookup,f,No,No,,Y127
+Improvements,Number of Half Bathrooms,,No,Yes,No,Lookup,f,No,No,,Y128
+Improvements,Number of Beds,,No,Yes,No,Lookup,f,No,No,,Y129
+Improvements,Number of Seats,,No,Yes,No,Lookup,f,No,No,,Y130
+Improvements,Number of Bays,,No,Yes,No,Lookup,f,No,No,,Y131
+Improvements,Number of Golf Holes,,No,Yes,No,Lookup,f,No,No,,Y132
+Improvements,Number of Spaces,,No,Yes,No,Lookup,f,No,No,,Y133
+Improvements,Number of Climate Controlled Units,,No,Yes,No,Lookup,f,No,No,,Y134
+Improvements,Foundation Frame/Ext.,,No,Yes,No,Conditional,f,No,No,,AB138
+Improvements,Foundation,,No,Yes,No,Lookup,f,No,No,,Y141
+Improvements,Basement Size (SF),,No,Yes,No,Lookup,f,No,No,,Y142
+Improvements,Basement Size (Meters),,No,Yes,No,Lookup,f,No,No,,Y143
+Improvements,Number of Sublevels,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],Y144
+Improvements,Basement Use/Finish,,No,Yes,No,Lookup,f,No,No,,Y145
+Improvements,Frame,,No,Yes,No,Lookup,f,No,No,,Y146
+Improvements,Column Spacing (Feet),,No,Yes,No,Lookup,f,No,No,,Y147
+Improvements,Column Spacing (Meters),,No,Yes,No,Lookup,f,No,No,,Y148
+Improvements,Typical Bay Depth (Feet),,No,Yes,No,Lookup,f,No,No,,Y149
+Improvements,Typical Bay Depth (Meters),,No,Yes,No,Lookup,f,No,No,,Y150
+Improvements,Windows,,No,Yes,No,Lookup,f,No,No,,Y152
+Improvements,Roof Type,,No,Yes,No,Lookup,f,No,No,,Y153
+Improvements,Roof Cover,,No,Yes,No,Lookup,f,No,No,,Y154
+Improvements,Number of Truck Doors,,No,Yes,No,Lookup,f,No,No,,Y155
+Improvements,Number of Truck Doors With Levelers,,No,Yes,No,Lookup,f,No,No,,Y156
+Improvements,Clear Height,,No,Yes,No,Lookup,f,No,No,,Y157
+Improvements,MAX,,No,Yes,No,Calculation,f,No,No,,AA157
+Improvements,Craneways,,No,Yes,No,Lookup,f,No,No,,Y158
+Improvements,TextJoin,,No,Yes,No,Calculation,f,No,No,,AA158
+Improvements,Interior,,No,Yes,No,Conditional,f,No,No,,AB162
+Improvements,Floor Plan Layout,,No,Yes,No,Lookup,f,No,No,,Y165
+Improvements,Floor Covering,,No,Yes,No,Lookup,f,No,No,,Y166
+Improvements,Ceiling Cover,,No,Yes,No,Lookup,f,No,No,,Y168
+Improvements,"Ceiling Height (Effective, Feet)",,No,Yes,No,Lookup,f,No,No,,Y169
+Improvements,"Ceiling Height (Effective, Metric > )",,No,Yes,No,Conditional,f,No,No,,Y170
+Improvements,Interior Lighting,,No,Yes,No,Lookup,f,No,No,,Y171
+Improvements,Restrooms,,No,Yes,No,Lookup,f,No,No,,Y172
+Improvements,Mechanical Systems,,No,Yes,No,Conditional,f,No,No,,AB176
+Improvements,Heating,,No,Yes,No,Lookup,f,No,No,,Y179
+Improvements,Cooling,,No,Yes,No,Lookup,f,No,No,,Y180
+Improvements,Electrical,,No,Yes,No,Lookup,f,No,No,,Y181
+Improvements,Plumbing Condition,,No,Yes,No,Lookup,f,No,No,,Y182
+Improvements,Fire Sprinkler,,No,Yes,No,Lookup,f,No,No,,Y183
+Improvements,Number of Elevators,,No,Yes,No,Lookup,f,No,No,,Y184
+Improvements,Number of Escalators,,No,Yes,No,Lookup,f,No,No,,Y185
+Improvements,Security,,No,Yes,No,Lookup,f,No,No,,Y186
+Improvements,Deferred Maintenance,,No,Yes,No,Lookup,f,No,No,,Y187
+Improvements,FF & E Description,,No,Yes,No,Lookup,f,No,No,,Y188
+Improvements,Building Description Comments,,No,Yes,No,Lookup,f,No,No,,Y189
+Improvements,Single Family Residential,,No,Yes,No,Conditional,f,No,No,,AB193
+Improvements,Design,,No,Yes,No,Lookup,f,No,No,,Y197
+Improvements,Fireplace/Woodstove,,No,Yes,No,Lookup,f,No,No,,Y201
+Improvements,Porch/Deck,,No,Yes,No,Lookup,f,No,No,,Y202
+Improvements,Garage,,No,Yes,No,Lookup,f,No,No,,Y203
+Improvements,Ancillary Buildings/Shed,,No,Yes,No,Lookup,f,No,No,,Y204
+Improvements,Dock/Boathouse,,No,Yes,No,Lookup,f,No,No,,Y205
+Improvements,Other Amenities,,No,Yes,No,Lookup,f,No,No,,Y206
+Improvements,Other,,No,Yes,No,Lookup,f,No,No,,Y207
+Improvements,PropertyTypeKey,,No,Yes,No,Lookup,f,No,No,,AP220
+Improvements,"Property Subtype, Chain Scale",,No,Yes,No,Calculation,f,No,No,,BJ225
+Improvements,Pad Mix (SW vs. DW),,No,Yes,No,Conditional,f,No,No,,BJ230
+Improvements,% Climate-Controlled,,No,Yes,No,Calculation,f,No,No,,BJ233
+Improvements,Land Area (Acres),,No,Yes,No,Calculation,f,No,No,,BJ234
+Improvements,Land Area (Sq Ft),,No,Yes,No,Calculation,f,No,No,,BJ235
+Improvements,Density (Units/Acre),,No,Yes,No,Calculation,f,No,No,,BJ236
+Improvements,Estimated Useful Life,,No,Yes,No,Calculation,f,No,No,,BJ240
+Improvements,Most Recent Exterior Update,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI272
+Improvements,"Furniture, Fixtures & Equipment (FF&E) Replacement Cost",,No,Yes,No,Calculation,f,No,No,,BJ277
+Improvements,Personal Property Depreciated Value,,No,Yes,No,Calculation,f,No,No,,BJ279
+Improvements,Back of House,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI291
+Improvements,Building 7,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BP296
+Improvements,Building 8,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BQ296
+Improvements,Building 9,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BR296
+Improvements,Building 10,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BS296
+Improvements,Building 2,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BK298
+Improvements,Building 3,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BL298
+Improvements,Building 4,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BM298
+Improvements,Building 5,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BN298
+Improvements,Building 6,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BO298
+Improvements,Functional Utility,,No,Yes,No,Calculation,f,No,No,,BJ310
+Improvements,N1ImprovSizeTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI345
+Improvements,N1ImprovParkingTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI357
+Improvements,N1ImprovNumberOfUnitsTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI375
+Improvements,N1ImprovFoundationFrameExtTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI394
+Improvements,N1ImprovInteriorTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI404
+Improvements,N1ImprovMechanicalTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI415
+Improvements,N1ImprovOtherTable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BI421
+Improvements,N1_chtMultifamilyInventory,,Yes,No,No,,s,No,No,,DC493
+Improvements,Go To Rent Roll,,Yes,No,No,,s,No,No,,DC495
+Improvements,Active Property Type,,Yes,No,No,,s,No,No,,EE508
+Improvements,Include in FF&E Sentence?,,No,Yes,No,Calculation,f,No,No,,EN508
+Improvements,Washer/Dryer In Unit,,Yes,No,Yes,,s,No,No,,EM509
+Improvements,Dishwasher,,Yes,No,Yes,,s,No,No,,EM511
+Improvements,Stainless Steel Appliances,,Yes,No,Yes,,s,No,No,,EM514
+Improvements,Refrigerator,,Yes,No,Yes,,s,No,No,,EM515
+Improvements,Stove/Oven,,Yes,No,Yes,,s,No,No,,EM516
+Improvements,Microwave,,Yes,No,Yes,,s,No,No,,EM517
+Improvements,At Subject,,Yes,No,Yes,,s,No,No,,EK551
+Improvements,Lobby Workstation/Business Center,,No,Yes,Yes,Conditional,f,No,No,,EI641
+Improvements,City Water,,No,Yes,Yes,Conditional,f,No,No,,EI732
+Improvements,City Sewer,,No,Yes,Yes,Conditional,f,No,No,,EI733
+Improvements,Populate from Table Above,,Yes,No,No,,s,No,No,,EH736
+Improvements,Project Amenities Description,,Yes,No,No,,s,No,No,,EH742
+Improvements,Unit Features Checklist,,No,Yes,No,Lookup,f,No,No,,EJ742
+Improvements,Proj Amenities Checklist,,No,Yes,No,Lookup,f,No,No,,EJ743
+Improvements,Category,,No,Yes,No,Calculation,f,No,No,,EW749
+Improvements,Total,,No,Yes,No,Calculation,f,No,No,,FH749
+Improvements,Reserve for Replacement,,No,Yes,No,Conditional,f,No,No,,EW771
+Improvements,Net Rounded Capital Deduction,,No,Yes,No,Calculation,f,No,No,,FH773
+Improvements,N1_chtCapEx,,No,Yes,No,Calculation,f,No,No,,EV782
+Improvements,Adjustment to Value,,No,Yes,No,Calculation,f,No,No,,GI800
+Improvements,Lease Up,,Yes,No,No,,f,No,No,,GI803
+Improvements,QIPP Income,,No,Yes,No,Conditional,f,No,No,,GI804
+Improvements,NPV of Above/Below Market Rent,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GI805
+Improvements,MF Lease Up Source,,Yes,No,Yes,,s,No,No,,GH811
+Improvements,Appliance Package,,No,Yes,No,Calculation,f,No,No,,GU817
+Improvements,Leasing Office Furniture,,No,Yes,No,Calculation,f,No,No,,GW818
+Improvements,Clubhouse Furniture,,No,Yes,No,Calculation,f,No,No,,GW819
+Improvements,Pool Equipment,,No,Yes,No,Calculation,f,No,No,,GW820
+Improvements,Exercise Equipment,,No,Yes,No,Calculation,f,No,No,,GW821
+Improvements,FF&E: Appliance Package Unit Features,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GU834
+Improvements,FF&E: Other,,No,Yes,No,Aggregation,f,No,No,,GU835
+Improvements,Sentence Part 1>>,,No,Yes,No,Calculation,f,No,No,,GU836
+Improvements,Sentence Part 2>>,,No,Yes,No,Calculation,f,No,No,,GU837
+Improvements,"Final Sentence, N1_txtFFE_Detail >>",,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GU840
+Assessment,"System Row, Hidden By Default",,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],K15
+Assessment,Taxing Authority/Jurisdiction,,No,Yes,No,Conditional,f,No,No,,G17
+Assessment,Assessment Year(s),,No,Yes,No,Conditional,f,No,No,,G18
+Assessment,Land,,No,Yes,No,Conditional,f,No,No,,G20
+Assessment,Improvements,,No,Yes,No,Conditional,f,No,No,,G21
+Assessment,Total Assessment,,No,Yes,No,Conditional,f,No,No,,G23
+Assessment,Per SF GBA,,Yes,No,Yes,,s,No,No,,H24
+Assessment,Per Acre,,No,Yes,No,Conditional,f,No,No,,I25
+Assessment,Per Square Meter,,No,Yes,No,Conditional,f,No,No,,I26
+Assessment,Tax Year(s),,No,Yes,No,Conditional,f,No,No,,G27
+Assessment,Tax Rate Code,,No,Yes,No,Conditional,f,No,No,,G28
+Assessment,Tax Rate,,No,Yes,No,Conditional,f,No,No,,G32
+Assessment,Tax Rate Per,,No,Yes,No,Conditional,f,No,No,,G33
+Assessment,Ad Valorem Taxes,,No,Yes,No,Conditional,f,No,No,,G34
+Assessment,Special Assessments,,No,Yes,No,Conditional,f,No,No,,G35
+Assessment,FF&E Taxes,,No,Yes,No,Conditional,f,No,No,,G36
+Assessment,Total Taxes,,No,Yes,No,Conditional,f,No,No,,G37
+Assessment,Taxes/SF GBA,,No,Yes,No,Conditional,f,No,No,,G38
+Assessment,Taxes/SF RA,,No,Yes,No,Conditional,f,No,No,,G39
+Assessment,Taxes/Unit,,No,Yes,No,Conditional,f,No,No,,G40
+Assessment,Taxes/Land SF,,No,Yes,No,Conditional,f,No,No,,G41
+Assessment,Taxes/Acre,,No,Yes,No,Conditional,f,No,No,,G42
+Assessment,Taxes/Land Unit,,No,Yes,No,Conditional,f,No,No,,G43
+Assessment,Taxes/M2 GBA,,No,Yes,No,Conditional,f,No,No,,G44
+Assessment,Taxes/M2 RA,,No,Yes,No,Conditional,f,No,No,,G45
+Assessment,Taxes/Land M2,,No,Yes,No,Conditional,f,No,No,,G46
+Assessment,Taxes/Hectares,,No,Yes,No,Conditional,f,No,No,,G47
+Assessment,Market Value,,No,Yes,No,Conditional,f,No,No,,G48
+Assessment,Equalization Ratio,,No,Yes,No,Conditional,f,No,No,,G49
+Assessment,Implied Value,,No,Yes,No,Conditional,f,No,No,,G50
+Assessment,Assessment Comments,,No,Yes,No,Calculation,f,No,No,,G54
+Assessment,Banded,,Yes,No,No,,s,No,No,,AK64
+Assessment,Subject Assessing Jurisdiction,,No,Yes,No,Calculation,f,No,No,,AN66
+Assessment,Total Tax Rate,,No,Yes,No,Calculation,f,No,No,,AN68
+Assessment,Reassessment Cycle,,No,Yes,No,Calculation,f,No,No,,AH70
+Assessment,Most Recent Reassessment,,No,Yes,No,Calculation,f,No,No,,AH71
+Assessment,Next Reassessment,,No,Yes,No,Calculation,f,No,No,,AH72
+Assessment,Sale Trigger Reassessment?,,No,Yes,No,Calculation,f,No,No,,AH73
+Assessment,Taxes Paid to Date?,,No,Yes,No,Calculation,f,No,No,,AH75
+Assessment,Tax Authority Website,,Yes,No,No,,s,No,No,,AN77
+Assessment,County Rate,,Yes,No,Yes,,s,No,No,,BF87
+Assessment,Other Rate,,Yes,No,Yes,,s,No,No,,BG87
+Assessment,Special Assessment,,No,Yes,No,Conditional,f,No,No,,BV115
+Assessment,Amount,,Yes,No,No,,f,No,No,,CF116
+Assessment,Year,,No,Yes,No,Conditional,f,No,No,,DH167
+Assessment,Assessment Ratio,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DL167
+Assessment,Taxes,,No,Yes,No,Aggregation,f,No,No,,DR167
+Assessment,%,,No,Yes,No,Calculation,f,No,No,,DS167
+Assessment,Land Assessment,,No,Yes,No,Conditional,f,No,No,,DI171
+Assessment,Imprv Assessment,,No,Yes,No,Conditional,f,No,No,,DJ171
+Assessment,Assessment,,No,Yes,No,Conditional,f,No,No,,DK171
+Assessment,Franchise Tax,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],DR177
+Assessment,Assessed Year,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DH178
+Assessment,Improvements Assessment,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DJ178
+Assessment,% Change,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DS178
+Assessment,Comp Name,,Yes,No,No,,s,No,No,,EJ208
+Assessment,Pads,,Yes,No,No,,s,No,No,,EU208
+Assessment,Current Assessment,,Yes,No,No,,s,No,No,,FA208
+Assessment,Step 1.,,Yes,No,No,,s,No,No,,EE210
+Assessment,Refresh Comp Data,,No,Yes,No,Calculation,f,No,No,,FB215
+Assessment,?,,No,Yes,No,Conditional,f,No,No,,FI215
+Assessment,Current Taxes,,No,Yes,No,Lookup,f,No,No,,FA216
+Assessment,GBA,,No,Yes,Yes,Calculation,f,No,No,,EJ218
+Assessment,Land SF,,Yes,No,Yes,,s,No,No,,EL218
+Assessment,Acres,,Yes,No,Yes,,s,No,No,,EM218
+Assessment,Assessment Year,,Yes,No,Yes,,s,No,No,,EO218
+Assessment,Base Taxes,,Yes,No,Yes,,s,No,No,,EU218
+Assessment,Assmt. Year,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],EO220
+Assessment,Ad Val. Tax / SF GBA,,No,Yes,No,Calculation,f,No,No,,EQ220
+Assessment,Ad Val. Tax / Land Unit,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],EU220
+Assessment,Assmt. / SF GBA,,No,Yes,No,Calculation,f,No,No,,EW220
+Assessment,Assmt. / Land Unit,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FA220
+Assessment,Taxes / SF GBA,,No,Yes,No,Calculation,f,No,No,,FC220
+Assessment,FF&E Total (Last Year),,No,Yes,No,Calculation,f,No,No,,FH220
+Assessment,Ad Val. Tax / Land SF,,No,Yes,No,Calculation,f,No,No,,ER221
+Assessment,Ad Val. Tax / Acre,,No,Yes,No,Calculation,f,No,No,,ES221
+Assessment,Assmt. / Land SF,,No,Yes,No,Calculation,f,No,No,,EX221
+Assessment,Assmt. / Acre,,No,Yes,No,Calculation,f,No,No,,EY221
+Assessment,Taxes / Land SF,,No,Yes,No,Calculation,f,No,No,,FD221
+Assessment,Taxes / Acre,,No,Yes,No,Calculation,f,No,No,,FE221
+Assessment,Taxes / Land Unit,,No,Yes,No,Calculation,f,No,No,,FF221
+Assessment,HT Row,,No,Yes,No,Lookup,f,No,No,,DZ222
+Assessment,Minimum,,No,Yes,No,Calculation,f,No,No,,EH232
+Assessment,Maximum,,No,Yes,No,Calculation,f,No,No,,EH234
+Assessment,Is a second Tax Comp chart needed?,,Yes,No,Yes,,s,No,No,,DW239
+Assessment,Projected Assessment Ratio,,No,Yes,No,Calculation,s,No,No,,FY278
+Assessment,+,,No,Yes,No,Conditional,f,No,No,,GH278
+Assessment,x,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FX279
+Assessment,Projected Tax Liability,,No,Yes,No,Calculation,f,No,No,,GL281
+Assessment,Net Tax Projection,,No,Yes,No,Aggregation,f,No,No,,GL282
+Assessment,Market Value Conclusion,,No,Yes,No,Calculation,f,No,No,,FV290
+Assessment,Vacancy,,No,Yes,No,Lookup,f,No,No,,GU318
+Assessment,Collection Loss,,No,Yes,No,Lookup,f,No,No,,GU319
+Assessment,Projected Real Estate Tax,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GU324
+Assessment,Current Real Estate Tax,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GU325
+Assessment,Real Estate Tax Pass-Through,,No,Yes,No,Calculation,f,No,No,,GU326
+Assessment,Less: Vacancy & Collection Loss,,No,Yes,No,Conditional,f,No,No,,GU327
+Assessment,Real Estate Tax Pass-Through Net of Vacancy,,No,Yes,No,Aggregation,f,No,No,,GU328
+Assessment,Incremental Real Estate Tax Pass-Through,,No,Yes,No,Aggregation,f,No,No,,GU330
+Assessment,Pro Forma Market Value,,No,Yes,No,Calculation,f,No,No,,HH340
+Assessment,Pro Forma / Unit,,No,Yes,No,Calculation,f,No,No,,HH341
+Assessment,Value to Assessment Ratio,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],HH342
+Assessment,Pro Forma Assessor's Market Value,,No,Yes,No,Calculation,f,No,No,,HH343
+Assessment,Pro Forma Assessment / Unit,,No,Yes,No,Calculation,f,No,No,,HH344
+Assessment,Taxable Value,,No,Yes,No,Calculation,f,No,No,,HH346
+Assessment,Real Estate Taxes,,No,Yes,No,Calculation,f,No,No,,HH348
+Assessment,Pro Forma Tax Liability,,No,Yes,No,Calculation,f,No,No,,HH350
+Assessment,S1Header,,No,Yes,No,Calculation,f,No,No,,HP360
+Assessment,S1P1,,No,Yes,No,Calculation,f,No,No,,HP361
+Assessment,S1B1,,No,Yes,No,Calculation,f,No,No,,HP362
+Assessment,S1B2,,No,Yes,No,Calculation,f,No,No,,HP363
+Assessment,S1B3,,No,Yes,No,Calculation,f,No,No,,HP364
+Assessment,S1P2,,No,Yes,No,Calculation,f,No,No,,HP365
+Assessment,S1P3,,No,Yes,No,Calculation,f,No,No,,HP366
+Assessment,S1P4,,No,Yes,No,Calculation,f,No,No,,HP367
+Assessment,S1P5,,No,Yes,No,Calculation,f,No,No,,HP368
+Assessment,S1P6,,No,Yes,No,Calculation,f,No,No,,HP369
+Assessment,S2Header,,No,Yes,No,Calculation,f,No,No,,HP370
+Assessment,S2P1,,No,Yes,No,Calculation,f,No,No,,HP371
+Assessment,S2P2,,No,Yes,No,Calculation,f,No,No,,HP372
+Assessment,S2B1,,No,Yes,No,Calculation,f,No,No,,HP373
+Assessment,S2B2,,No,Yes,No,Calculation,f,No,No,,HP374
+Assessment,S2B3,,No,Yes,No,Calculation,f,No,No,,HP375
+Assessment,S2B4,,No,Yes,No,Calculation,f,No,No,,HP376
+Assessment,S2P3,,No,Yes,No,Calculation,f,No,No,,HP377
+Assessment,S3Header,,No,Yes,No,Calculation,f,No,No,,HP378
+Assessment,Assessment_NavCompTable,,Yes,No,No,,s,No,No,,A379
+Assessment,S3P1,,No,Yes,No,Calculation,f,No,No,,HP379
+Assessment,S3P2,,No,Yes,No,Calculation,f,No,No,,HP380
+Assessment,Assessment_CompTableDatabase,,Yes,No,No,,s,No,No,,A390
+Assessment,Subject Data,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],A391
+Assessment,N1_chtAssessment_WriteUp,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],HT391
+Assessment,Assessment Comp Table,,Yes,No,No,,s,No,No,,A397
+Assessment,Name,,Yes,No,No,,s,No,No,,C397
+Assessment,Advertising And Marketing,,Yes,No,No,,s,No,No,,H397
+Assessment,Anchor Tenants,,Yes,No,No,,s,No,No,,I397
+Assessment,Ancillary Buildings,,Yes,No,No,,s,No,No,,J397
+Assessment,Appraisal Date,,Yes,No,No,,s,No,No,,K397
+Assessment,Appraisal File,,Yes,No,No,,s,No,No,,L397
+Assessment,Appraised Value,,Yes,No,No,,s,No,No,,M397
+Assessment,Basement Size,,Yes,No,No,,s,No,No,,P397
+Assessment,Basement Use and Finish,,Yes,No,No,,s,No,No,,Q397
+Assessment,Building Improvs,,Yes,No,No,,s,No,No,,AC397
+Assessment,Building Improvs Per SF,,Yes,No,No,,s,No,No,,AF397
+Assessment,Building Improvs Per Unit,,Yes,No,No,,s,No,No,,AG397
+Assessment,CAM,,Yes,No,No,,s,No,No,,AS397
+Assessment,Cap Rate,,Yes,No,No,,s,No,No,,AT397
+Assessment,Ceiling Height,,Yes,No,No,,s,No,No,,AU397
+Assessment,Cleaning and Janitorial,,Yes,No,No,,s,No,No,,AW397
+Assessment,Column Spacing,,Yes,No,No,,s,No,No,,AX397
+Assessment,Com Lease Type,,Yes,No,No,,s,No,No,,AY397
+Assessment,Comm Lease Comments,,Yes,No,No,,s,No,No,,AZ397
+Assessment,Comm Lease Survey Date,,Yes,No,No,,s,No,No,,BB397
+Assessment,Comm Lease Terms,,Yes,No,No,,s,No,No,,BC397
+Assessment,Comm Rent Concessions,,Yes,No,No,,s,No,No,,BD397
+Assessment,Comm Rent Per SF Max,,Yes,No,No,,s,No,No,,BE397
+Assessment,Comm Rent Per Sf Min,,Yes,No,No,,s,No,No,,BF397
+Assessment,Comm Size Max,,Yes,No,No,,s,No,No,,BG397
+Assessment,Comm Size Min,,Yes,No,No,,s,No,No,,BH397
+Assessment,Comp Entered By,,Yes,No,No,,s,No,No,,BM397
+Assessment,Conditions Of Sale,,Yes,No,No,,s,No,No,,BO397
+Assessment,Confidential TF,,Yes,No,No,,s,No,No,,BP397
+Assessment,Contingency Costs,,Yes,No,No,,s,No,No,,CI397
+Assessment,Contingency Costs Per SF,,Yes,No,No,,s,No,No,,CJ397
+Assessment,Contingency Costs Per Unit,,Yes,No,No,,s,No,No,,CK397
+Assessment,Cost Source And Comments,,Yes,No,No,,s,No,No,,CM397
+Assessment,Days On Market,,Yes,No,No,,s,No,No,,CQ397
+Assessment,Deferred Maintance,,Yes,No,No,,s,No,No,,CR397
+Assessment,Density,,Yes,No,No,,s,No,No,,CS397
+Assessment,Depth,,Yes,No,No,,s,No,No,,CT397
+Assessment,Design Appeal,,Yes,No,No,,s,No,No,,CU397
+Assessment,Developers Fee,,Yes,No,No,,s,No,No,,CV397
+Assessment,Developers Fee Per SF,,Yes,No,No,,s,No,No,,CW397
+Assessment,Developers Fee Per Unit,,Yes,No,No,,s,No,No,,CX397
+Assessment,Dock or Boathouse,,Yes,No,No,,s,No,No,,CY397
+Assessment,Effective Water Frontage,,Yes,No,No,,s,No,No,,DA397
+Assessment,EGI,,Yes,No,No,,s,No,No,,DB397
+Assessment,EGI Per SF,,Yes,No,No,,s,No,No,,DC397
+Assessment,EGI Per Unit,,Yes,No,No,,s,No,No,,DD397
+Assessment,Expense Per SF,,Yes,No,No,,s,No,No,,EB397
+Assessment,Expense Per Unit,,Yes,No,No,,s,No,No,,EC397
+Assessment,Expense Ratio,,Yes,No,No,,s,No,No,,ED397
+Assessment,FAR,,Yes,No,No,,s,No,No,,EE397
+Assessment,FFandE,,Yes,No,No,,s,No,No,,EF397
+Assessment,FFE Costs,,Yes,No,No,,s,No,No,,EG397
+Assessment,FFE Costs Per SF,,Yes,No,No,,s,No,No,,EN397
+Assessment,FFE Costs Per Unit,,Yes,No,No,,s,No,No,,EO397
+Assessment,GLA,,Yes,No,No,,s,No,No,,EP397
+Assessment,Fire Sprinkler Type,,Yes,No,No,,s,No,No,,FC397
+Assessment,Fireplace or WoodStove,,Yes,No,No,,s,No,No,,FD397
+Assessment,Improvement Assessment,,Yes,No,No,,s,No,No,,FK397
+Assessment,Improvement Comments,,Yes,No,No,,s,No,No,,FL397
+Assessment,Inc Exp Comments,,Yes,No,No,,s,No,No,,FM397
+Assessment,Insurance,,Yes,No,No,,s,No,No,,FP397
+Assessment,Land Cost Per Unit,,Yes,No,No,,s,No,No,,FR397
+Assessment,Land Costs,,Yes,No,No,,s,No,No,,FS397
+Assessment,Land Costs Per SF,,Yes,No,No,,s,No,No,,FT397
+Assessment,Land To Building Ratio,,Yes,No,No,,s,No,No,,FV397
+Assessment,Land Unit Approved Or Zoned,,Yes,No,No,,s,No,No,,FW397
+Assessment,Latitude,,Yes,No,No,,s,No,No,,GA397
+Assessment,Longitude,,Yes,No,No,,s,No,No,,GC397
+Assessment,Management,,Yes,No,No,,s,No,No,,GD397
+Assessment,MF BR Max,,Yes,No,No,,s,No,No,,GF397
+Assessment,MF BR Min,,Yes,No,No,,s,No,No,,GG397
+Assessment,MF Lease Comments,,Yes,No,No,,s,No,No,,GL397
+Assessment,MF Lease Survey Date,,Yes,No,No,,s,No,No,,GN397
+Assessment,MF Rent Concessions,,Yes,No,No,,s,No,No,,GO397
+Assessment,MF Rent Per SF Max,,Yes,No,No,,s,No,No,,GP397
+Assessment,MF Rent Per SF Min,,Yes,No,No,,s,No,No,,GQ397
+Assessment,MF Rent Per Sf Per Mo Max,,Yes,No,No,,s,No,No,,GR397
+Assessment,MF Rent Per Sf Per Mo Min,,Yes,No,No,,s,No,No,,GS397
+Assessment,MF Rent Type,,Yes,No,No,,s,No,No,,GT397
+Assessment,MF Size SF Max,,Yes,No,No,,s,No,No,,GU397
+Assessment,MF Size SF Min,,Yes,No,No,,s,No,No,,GV397
+Assessment,Multifamily Amenities,,Yes,No,No,,s,No,No,,GX397
+Assessment,Multifamily GBA,,Yes,No,No,,s,No,No,,GY397
+Assessment,Multifamily Project Amenities,,Yes,No,No,,s,No,No,,GZ397
+Assessment,Multifamily RA,,Yes,No,No,,s,No,No,,HA397
+Assessment,Multifamily Unit Amenities,,Yes,No,No,,s,No,No,,HB397
+Assessment,Net Operating Income Per SF,,Yes,No,No,,s,No,No,,HC397
+Assessment,NIM,,Yes,No,No,,s,No,No,,HD397
+Assessment,Occupancy,,Yes,No,No,,s,No,No,,HV397
+Assessment,Off Site Improv Costs,,Yes,No,No,,s,No,No,,HW397
+Assessment,Off Site Improv Costs Per SF,,Yes,No,No,,s,No,No,,HX397
+Assessment,Off Site Improv Costs Per Unit,,Yes,No,No,,s,No,No,,HY397
+Assessment,Other Assessment,,Yes,No,No,,s,No,No,,IB397
+Assessment,Other Costs,,Yes,No,No,,s,No,No,,IC397
+Assessment,Other Costs Per SF,,Yes,No,No,,s,No,No,,ID397
+Assessment,Other Costs Per Unit,,Yes,No,No,,s,No,No,,IE397
+Assessment,Other Income,,Yes,No,No,,s,No,No,,II397
+Assessment,Other Income Desc,,Yes,No,No,,s,No,No,,IJ397
+Assessment,Painting And Decorating,,Yes,No,No,,s,No,No,,IL397
+Assessment,Parking,,Yes,No,No,,s,No,No,,IN397
+Assessment,Payroll,,Yes,No,No,,s,No,No,,IP397
+Assessment,PGI,,Yes,No,No,,s,No,No,,IR397
+Assessment,PGI Per SF,,Yes,No,No,,s,No,No,,IS397
+Assessment,PGI Per Unit,,Yes,No,No,,s,No,No,,IT397
+Assessment,PGIM,,Yes,No,No,,s,No,No,,IU397
+Assessment,Porch or Deck,,Yes,No,No,,s,No,No,,IV397
+Assessment,Price Per Acre,,Yes,No,No,,s,No,No,,IX397
+Assessment,Price Per Land SF,,Yes,No,No,,s,No,No,,IY397
+Assessment,Price Per Land Unit,,Yes,No,No,,s,No,No,,IZ397
+Assessment,Price Per SF,,Yes,No,No,,s,No,No,,JA397
+Assessment,Price Per Unit,,Yes,No,No,,s,No,No,,JB397
+Assessment,Project Style,,Yes,No,No,,s,No,No,,JC397
+Assessment,Property Sub Type,,Yes,No,No,,s,No,No,,JF397
+Assessment,Rent Per Sf Per Mo Max,,Yes,No,No,,s,No,No,,JL397
+Assessment,Rent Per Sf Per Mo Min,,Yes,No,No,,s,No,No,,JM397
+Assessment,Rental Income,,Yes,No,No,,s,No,No,,JO397
+Assessment,Repairs And Maintenance,,Yes,No,No,,s,No,No,,JP397
+Assessment,Reserves,,Yes,No,No,,s,No,No,,JQ397
+Assessment,Residential Amenities,,Yes,No,No,,s,No,No,,JR397
+Assessment,Residential Design,,Yes,No,No,,s,No,No,,JS397
+Assessment,Residential GLA,,Yes,No,No,,s,No,No,,JT397
+Assessment,Roads and Grounds,,Yes,No,No,,s,No,No,,JW397
+Assessment,Sale Comments,,Yes,No,No,,s,No,No,,JZ397
+Assessment,Sale Supporting Files,,Yes,No,No,,s,No,No,,KB397
+Assessment,sample,,Yes,No,No,,s,No,No,,KC397
+Assessment,Site Comments,,Yes,No,No,,s,No,No,,KF397
+Assessment,Site Improv Costs Per SF,,Yes,No,No,,s,No,No,,KG397
+Assessment,Site Improv Costs Per Unit,,Yes,No,No,,s,No,No,,KH397
+Assessment,Site Improvement Costs,,Yes,No,No,,s,No,No,,KI397
+Assessment,Soft Costs,,Yes,No,No,,s,No,No,,KJ397
+Assessment,Soft Costs Per SF,,Yes,No,No,,s,No,No,,KK397
+Assessment,Soft Costs Per Unit,,Yes,No,No,,s,No,No,,KL397
+Assessment,Source For SF Area,,Yes,No,No,,s,No,No,,KM397
+Assessment,State,,Yes,No,No,,s,No,No,,KN397
+Assessment,Supporting Files,,Yes,No,No,,s,No,No,,KO397
+Assessment,Tenant Improvs,,Yes,No,No,,s,No,No,,KY397
+Assessment,Test 1234,,Yes,No,No,,s,No,No,,KZ397
+Assessment,Test Number,,Yes,No,No,,s,No,No,,LA397
+Assessment,TestingNarrative1,,Yes,No,No,,s,No,No,,LB397
+Assessment,Tim Stamp,,Yes,No,No,,s,No,No,,LC397
+Assessment,Time Stamp,,Yes,No,No,,s,No,No,,LD397
+Assessment,Time Stamp 2,,Yes,No,No,,s,No,No,,LE397
+Assessment,time stamp Test,,Yes,No,No,,s,No,No,,LF397
+Assessment,Total Costs,,Yes,No,No,,s,No,No,,LI397
+Assessment,Total Costs Per SF,,Yes,No,No,,s,No,No,,LJ397
+Assessment,Total Costs Per Unit,,Yes,No,No,,s,No,No,,LK397
+Assessment,Total Expenses,,Yes,No,No,,s,No,No,,LM397
+Assessment,Total Utilities,,Yes,No,No,,s,No,No,,LN397
+Assessment,Transaction Type,,Yes,No,No,,s,No,No,,LO397
+Assessment,Typical Bay Depth,,Yes,No,No,,s,No,No,,LP397
+Assessment,Unspecified GBA,,Yes,No,No,,s,No,No,,LT397
+Assessment,Unspecified RA,,Yes,No,No,,s,No,No,,LU397
+Assessment,Usable Acres,,Yes,No,No,,s,No,No,,LV397
+Assessment,Usable Land SF,,Yes,No,No,,s,No,No,,LW397
+Assessment,Utilities Paid By Owner,,Yes,No,No,,s,No,No,,LY397
+Assessment,Vacancy  Per SF,,Yes,No,No,,s,No,No,,MA397
+Assessment,Vacancy Amount,,Yes,No,No,,s,No,No,,MB397
+Assessment,Vacancy Per Unit,,Yes,No,No,,s,No,No,,MC397
+Assessment,Verification,,Yes,No,No,,s,No,No,,MD397
+Assessment,Water Frontage,,Yes,No,No,,s,No,No,,MF397
+Assessment,Zip,,Yes,No,No,,s,No,No,,MH397
+Assessment,Zoning Type,,Yes,No,No,,s,No,No,,MJ397
+Assessment,Unit Type 1,,Yes,No,No,,s,No,No,,MK397
+Assessment,Type 1 SF,,Yes,No,No,,s,No,No,,MM397
+Assessment,Type 1 BR,,Yes,No,No,,s,No,No,,MO397
+Assessment,Type 1 Baths,,Yes,No,No,,s,No,No,,MP397
+Assessment,Type 1 Rent/Mo.,,Yes,No,No,,s,No,No,,MQ397
+Assessment,Type 1 Rent/SF,,Yes,No,No,,s,No,No,,MR397
+Assessment,Type 1 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,MS397
+Assessment,Unit Type 2,,Yes,No,No,,s,No,No,,MT397
+Assessment,Type 2 SF,,Yes,No,No,,s,No,No,,MV397
+Assessment,Type 2 BR,,Yes,No,No,,s,No,No,,MX397
+Assessment,Type 2 Baths,,Yes,No,No,,s,No,No,,MY397
+Assessment,Type 2 Rent/Mo.,,Yes,No,No,,s,No,No,,MZ397
+Assessment,Type 2 Rent/SF,,Yes,No,No,,s,No,No,,NA397
+Assessment,Type 2 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,NB397
+Assessment,Unit Type 3,,Yes,No,No,,s,No,No,,NC397
+Assessment,Type 3 SF,,Yes,No,No,,s,No,No,,NE397
+Assessment,Type 3 BR,,Yes,No,No,,s,No,No,,NG397
+Assessment,Type 3 Baths,,Yes,No,No,,s,No,No,,NH397
+Assessment,Type 3 Rent/Mo.,,Yes,No,No,,s,No,No,,NI397
+Assessment,Type 3 Rent/SF,,Yes,No,No,,s,No,No,,NJ397
+Assessment,Type 3 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,NK397
+Assessment,Unit Type 4,,Yes,No,No,,s,No,No,,NL397
+Assessment,Type 4 SF,,Yes,No,No,,s,No,No,,NN397
+Assessment,Type 4 BR,,Yes,No,No,,s,No,No,,NP397
+Assessment,Type 4 Baths,,Yes,No,No,,s,No,No,,NQ397
+Assessment,Type 4 Rent/Mo.,,Yes,No,No,,s,No,No,,NR397
+Assessment,Type 4 Rent/SF,,Yes,No,No,,s,No,No,,NS397
+Assessment,Type 4 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,NT397
+Assessment,Unit Type 5,,Yes,No,No,,s,No,No,,NU397
+Assessment,Type 5 SF,,Yes,No,No,,s,No,No,,NW397
+Assessment,Type 5 BR,,Yes,No,No,,s,No,No,,NY397
+Assessment,Type 5 Baths,,Yes,No,No,,s,No,No,,NZ397
+Assessment,Type 5 Rent/Mo.,,Yes,No,No,,s,No,No,,OA397
+Assessment,Type 5 Rent/SF,,Yes,No,No,,s,No,No,,OB397
+Assessment,Type 5 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,OC397
+Assessment,Comm 1 Lessee,,Yes,No,No,,s,No,No,,OD397
+Assessment,Comm 1 Lease Date,,Yes,No,No,,s,No,No,,OE397
+Assessment,Comm 1 Lease Term,,Yes,No,No,,s,No,No,,OF397
+Assessment,Comm 1 Lease Type,,Yes,No,No,,s,No,No,,OG397
+Assessment,Comm 1 SF,,Yes,No,No,,s,No,No,,OH397
+Assessment,Comm 1 Rent/SF,,Yes,No,No,,s,No,No,,OI397
+Assessment,Comm 1 Rent/Mo.,,Yes,No,No,,s,No,No,,OJ397
+Assessment,Comm 1 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,OK397
+Assessment,Comm 1 Escalations,,Yes,No,No,,s,No,No,,OL397
+Assessment,Comm 1 Percent Rent,,Yes,No,No,,s,No,No,,OM397
+Assessment,Comm 2 Lessee,,Yes,No,No,,s,No,No,,ON397
+Assessment,Comm 2 Lease Date,,Yes,No,No,,s,No,No,,OO397
+Assessment,Comm 2 Lease Term,,Yes,No,No,,s,No,No,,OP397
+Assessment,Comm 2 Lease Type,,Yes,No,No,,s,No,No,,OQ397
+Assessment,Comm 2 SF,,Yes,No,No,,s,No,No,,OR397
+Assessment,Comm 2 Rent/SF,,Yes,No,No,,s,No,No,,OS397
+Assessment,Comm 2 Rent/Mo.,,Yes,No,No,,s,No,No,,OT397
+Assessment,Comm 2 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,OU397
+Assessment,Comm 2 Escalations,,Yes,No,No,,s,No,No,,OV397
+Assessment,Comm 2 Percent Rent,,Yes,No,No,,s,No,No,,OW397
+Assessment,Comm 3 Lessee,,Yes,No,No,,s,No,No,,OX397
+Assessment,Comm 3 Lease Date,,Yes,No,No,,s,No,No,,OY397
+Assessment,Comm 3 Lease Term,,Yes,No,No,,s,No,No,,OZ397
+Assessment,Comm 3 Lease Type,,Yes,No,No,,s,No,No,,PA397
+Assessment,Comm 3 SF,,Yes,No,No,,s,No,No,,PB397
+Assessment,Comm 3 Rent/SF,,Yes,No,No,,s,No,No,,PC397
+Assessment,Comm 3 Rent/Mo.,,Yes,No,No,,s,No,No,,PD397
+Assessment,Comm 3 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,PE397
+Assessment,Comm 3 Escalations,,Yes,No,No,,s,No,No,,PF397
+Assessment,Comm 3 Percent Rent,,Yes,No,No,,s,No,No,,PG397
+Assessment,Comm 4 Lessee,,Yes,No,No,,s,No,No,,PH397
+Assessment,Comm 4 Lease Date,,Yes,No,No,,s,No,No,,PI397
+Assessment,Comm 4 Lease Term,,Yes,No,No,,s,No,No,,PJ397
+Assessment,Comm 4 Lease Type,,Yes,No,No,,s,No,No,,PK397
+Assessment,Comm 4 SF,,Yes,No,No,,s,No,No,,PL397
+Assessment,Comm 4 Rent/SF,,Yes,No,No,,s,No,No,,PM397
+Assessment,Comm 4 Rent/Mo.,,Yes,No,No,,s,No,No,,PN397
+Assessment,Comm 4 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,PO397
+Assessment,Comm 4 Escalations,,Yes,No,No,,s,No,No,,PP397
+Assessment,Comm 4 Percent Rent,,Yes,No,No,,s,No,No,,PQ397
+Assessment,Comm 5 Lessee,,Yes,No,No,,s,No,No,,PR397
+Assessment,Comm 5 Lease Date,,Yes,No,No,,s,No,No,,PS397
+Assessment,Comm 5 Lease Term,,Yes,No,No,,s,No,No,,PT397
+Assessment,Comm 5 Lease Type,,Yes,No,No,,s,No,No,,PU397
+Assessment,Comm 5 SF,,Yes,No,No,,s,No,No,,PV397
+Assessment,Comm 5 Rent/SF,,Yes,No,No,,s,No,No,,PW397
+Assessment,Comm 5 Rent/Mo.,,Yes,No,No,,s,No,No,,PX397
+Assessment,Comm 5 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,PY397
+Assessment,Comm 5 Escalations,,Yes,No,No,,s,No,No,,PZ397
+Assessment,Comm 5 Percent Rent,,Yes,No,No,,s,No,No,,QA397
+Assessment,Comm 6 Lessee,,Yes,No,No,,s,No,No,,QB397
+Assessment,Comm 6 Lease Date,,Yes,No,No,,s,No,No,,QC397
+Assessment,Comm 6 Lease Term,,Yes,No,No,,s,No,No,,QD397
+Assessment,Comm 6 Lease Type,,Yes,No,No,,s,No,No,,QE397
+Assessment,Comm 6 SF,,Yes,No,No,,s,No,No,,QF397
+Assessment,Comm 6 Rent/SF,,Yes,No,No,,s,No,No,,QG397
+Assessment,Comm 6 Rent/Mo.,,Yes,No,No,,s,No,No,,QH397
+Assessment,Comm 6 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,QI397
+Assessment,Comm 6 Escalations,,Yes,No,No,,s,No,No,,QJ397
+Assessment,Comm 6 Percent Rent,,Yes,No,No,,s,No,No,,QK397
+Assessment,Comm 7 Lessee,,Yes,No,No,,s,No,No,,QL397
+Assessment,Comm 7 Lease Date,,Yes,No,No,,s,No,No,,QM397
+Assessment,Comm 7 Lease Term,,Yes,No,No,,s,No,No,,QN397
+Assessment,Comm 7 Lease Type,,Yes,No,No,,s,No,No,,QO397
+Assessment,Comm 7 SF,,Yes,No,No,,s,No,No,,QP397
+Assessment,Comm 7 Rent/SF,,Yes,No,No,,s,No,No,,QQ397
+Assessment,Comm 7 Rent/Mo.,,Yes,No,No,,s,No,No,,QR397
+Assessment,Comm 7 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,QS397
+Assessment,Comm 7 Escalations,,Yes,No,No,,s,No,No,,QT397
+Assessment,Comm 7 Percent Rent,,Yes,No,No,,s,No,No,,QU397
+Assessment,Comm 8 Lessee,,Yes,No,No,,s,No,No,,QV397
+Assessment,Comm 8 Lease Date,,Yes,No,No,,s,No,No,,QW397
+Assessment,Comm 8 Lease Term,,Yes,No,No,,s,No,No,,QX397
+Assessment,Comm 8 Lease Type,,Yes,No,No,,s,No,No,,QY397
+Assessment,Comm 8 SF,,Yes,No,No,,s,No,No,,QZ397
+Assessment,Comm 8 Rent/SF,,Yes,No,No,,s,No,No,,RA397
+Assessment,Comm 8 Rent/Mo.,,Yes,No,No,,s,No,No,,RB397
+Assessment,Comm 8 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,RC397
+Assessment,Comm 8 Escalations,,Yes,No,No,,s,No,No,,RD397
+Assessment,Comm 8 Percent Rent,,Yes,No,No,,s,No,No,,RE397
+Assessment,Comm 9 Lessee,,Yes,No,No,,s,No,No,,RF397
+Assessment,Comm 9 Lease Date,,Yes,No,No,,s,No,No,,RG397
+Land Grid,Land Sale Analysis Grid,,Yes,No,No,,s,No,No,,F10
+Land Grid,Add Comparables for Analysis,,Yes,No,No,,s,No,No,,R10
+Land Grid,Subject Parcel(s):,,Yes,No,Yes,,s,No,No,,C12
+Land Grid,Subject Building(s):,,Yes,No,Yes,,s,No,No,,C13
+Land Grid,"4,19",,No,Yes,No,Aggregation,f,No,No,,F18
+Land Grid,three,,No,Yes,No,Lookup,f,No,No,,I18
+Land Grid,Job Assigned Comps:,,Yes,No,No,,s,No,No,,F19
+Land Grid,Select comps to populate grid >,,Yes,No,No,,s,No,No,,F20
+Land Grid,Database IDs,,No,Yes,No,Calculation,f,No,No,,G20
+Land Grid,Land Analysis Grid,,Yes,No,Yes,,s,No,No,,F23
+Land Grid,Comp 8,,No,Yes,No,Lookup,f,No,No,,W23
+Land Grid,Comp 9,,No,Yes,No,Lookup,f,No,No,,Y23
+Land Grid,Comp 10,,No,Yes,No,Lookup,f,No,No,,AA23
+Land Grid,Price Adjustment,,Yes,No,No,,n,No,No,,G28
+Land Grid,Adjusted Price,,No,Yes,No,Calculation,f,No,No,,G29
+Land Grid,Adjustments to:,,Yes,No,Yes,,s,No,No,,C32
+Land Grid,",",,Yes,No,No,,s,No,No,,AD34
+Land Grid,Fee Simple,,No,Yes,No,Lookup,f,No,No,,I35
+Land Grid,Conventional,,No,Yes,No,Lookup,f,No,No,,I36
+Land Grid,Cash,,No,Yes,No,Lookup,f,No,No,,I37
+Land Grid,Expend. After Sale,,Yes,No,No,,n,No,No,,I39
+Land Grid,Market Trends Through,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],G42
+Land Grid,Subsequent Trends,,Yes,No,No,,s,No,No,,C44
+Land Grid,Subsequent Trends Ending,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],G44
+Land Grid,Adjustment Format:,,Yes,No,Yes,,s,No,No,,C46
+Land Grid,Characteristics Adjustments,,Yes,No,Yes,,s,No,No,,F47
+Land Grid,Quant,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],E48
+Land Grid,% Adjustment,,Yes,No,No,,n,No,No,,I48
+Land Grid,Qual,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],E49
+Land Grid,Qualitative,,No,Yes,Yes,Conditional,f,No,No,,I49
+Land Grid,$ Adjustment,,No,Yes,No,Calculation,f,No,No,,I50
+Land Grid,Measured From,,Yes,No,No,,s,No,No,,C96
+Land Grid,Net Adjustments,,No,Yes,No,Conditional,f,No,No,,I96
+Land Grid,Gross Adjustments,,No,Yes,No,Calculation,f,No,No,,I97
+Land Grid,Measured From Price,,Yes,No,No,,s,No,No,,C98
+Land Grid,>,,Yes,No,No,,s,No,No,,F98
+Land Grid,Choose Premise:,,Yes,No,Yes,,s,No,No,,G102
+Land Grid,Number of Comparables:,,No,Yes,No,Calculation,f,No,No,,H105
+Land Grid,Low:,,No,Yes,No,Conditional,f,No,No,,I106
+Land Grid,High:,,No,Yes,No,Conditional,f,No,No,,I107
+Land Grid,Average:,,No,Yes,No,Aggregation,f,No,No,,I108
+Land Grid,Median:,,No,Yes,No,Conditional,f,No,No,,I109
+Land Grid,Reconciled Value/Unit Value:,,No,Yes,No,Calculation,f,No,No,,I110
+Land Grid,Subject Size:,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],K111
+Land Grid,Indicated Value:,,No,Yes,No,Calculation,f,No,No,,K112
+Land Grid,Toggle Adjustments,,No,Yes,No,Conditional,f,No,No,,C113
+Land Grid,External Obsolescence:,,Yes,No,No,,s,No,No,,N118
+Land Grid,Contamination:,,Yes,No,No,,s,No,No,,N119
+Land Grid,Other:,,Yes,No,No,,s,No,No,,N120
+Land Grid,Total Adjustments,,No,Yes,No,Aggregation,f,No,No,,K125
+Land Grid,N1LandGridRangesAndReconciledValue,,Yes,No,No,,s,No,No,,F131
+Land Grid,Unadjusted and Adjusted Price Chart,,No,Yes,No,Calculation,f,No,No,,F133
+Land Grid,Land Grid Comparable Ranking Table,,Yes,No,No,,s,No,No,,AW156
+Land Grid,Rank,,Yes,No,No,,s,No,No,,AM161
+Land Grid,#,,Yes,No,No,,s,No,No,,AN161
+Land Grid,Unadjusted Price,,Yes,No,No,,s,No,No,,AO161
+Land Grid,Comparable,,No,Yes,No,Calculation,f,No,No,,AS161
+Land Grid,Sort,,Yes,No,No,,n,No,No,,AP163
+Land Grid,Land Sales Comparison,,No,Yes,No,Lookup,f,No,No,,AS163
+Land Grid,Emphasis?,,Yes,No,No,,s,No,No,,AR176
+Land Grid,Primary,,Yes,No,No,,s,No,No,,AR177
+Land Grid,Secondary,,Yes,No,No,,s,No,No,,AR178
+Land Grid,Land Sale 1,,No,Yes,No,Calculation,f,No,No,,BO187
+Land Grid,Similarity,,No,Yes,No,Lookup,f,No,No,,BI192
+Land Grid,Comp Data,,No,Yes,No,Lookup,f,No,No,,BI193
+Land Grid,Comp Adj.,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BJ193
+Land Grid,Net Adjustment,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BJ210
+Land Grid,Gross Adjustment,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BJ211
+Land Grid,Emphasis,,No,Yes,No,Lookup,f,No,No,,BI212
+Land Grid,Land Sale 2,,No,Yes,No,Calculation,f,No,No,,BO214
+Land Grid,One,,No,Yes,No,Conditional,f,No,No,,BN220
+Land Grid,Land Sale 3,,No,Yes,No,Calculation,f,No,No,,BO241
+Land Grid,Two,,No,Yes,No,Conditional,f,No,No,,BN247
+Land Grid,Land Sale 4,,No,Yes,No,Calculation,f,No,No,,BO268
+Land Grid,Three,,No,Yes,No,Conditional,f,No,No,,BN274
+Land Grid,Land Sale 5,,No,Yes,No,Calculation,f,No,No,,BO295
+Land Grid,Four,,No,Yes,No,Conditional,f,No,No,,BN301
+Land Grid,Land Sale 6,,No,Yes,No,Calculation,f,No,No,,BO322
+Land Grid,Five,,No,Yes,No,Conditional,f,No,No,,BN328
+Land Grid,Land Sale 7,,No,Yes,No,Calculation,f,No,No,,BO349
+Land Grid,Six,,No,Yes,No,Conditional,f,No,No,,BN355
+Land Grid,Land Sale 8,,No,Yes,No,Calculation,f,No,No,,BO376
+Land Grid,Seven,,No,Yes,No,Conditional,f,No,No,,BN382
+Land Grid,Land Sale 9,,No,Yes,No,Calculation,f,No,No,,BO403
+Land Grid,Land Sale 10,,No,Yes,No,Calculation,f,No,No,,BO430
+Land Grid,Comp,,Yes,No,Yes,,s,No,No,,BX467
+Land Grid,2 Rows,,Yes,No,Yes,,s,No,No,,BU469
+Land Grid,1st Row,,Yes,No,Yes,,s,No,No,,BU491
+Land Grid,Comparable High:,,No,Yes,No,Calculation,f,No,No,,BY493
+Land Grid,Comparable Average:,,No,Yes,No,Conditional,f,No,No,,CK495
+Land Grid,Comparable Median:,,No,Yes,No,Calculation,f,No,No,,BY497
+Land Grid,Insert Full Width Images,,Yes,No,No,,s,No,No,,CS505
+Land Grid,Step 3. Choose a default display for empty Database fields,,Yes,No,Yes,,s,No,No,,CS510
+Land Grid,Step 4. Refresh Data from the Database as necessary,,Yes,No,No,,s,No,No,,CS514
+Land Grid,Land Comparable 1,,Yes,No,No,,s,No,No,,CT521
+Land Grid,Price per Acre,,No,Yes,No,Lookup,f,No,No,,CT542
+Land Grid,Price per Land SF,,No,Yes,No,Lookup,f,No,No,,CT543
+Land Grid,Site,,Yes,No,Yes,,s,No,No,,CQ550
+Land Grid,Encumbrance or Easement,,No,Yes,No,Lookup,f,No,No,,CT553
+Land Grid,<-Choose Comments to Display,,No,Yes,No,Conditional,f,No,No,,CW564
+Land Grid,Land Comparable 2,,No,Yes,No,Conditional,f,No,No,,CQ578
+Land Grid,Land Comparable 3,,No,Yes,No,Conditional,f,No,No,,CQ634
+Land Grid,Land Comparable 4,,No,Yes,No,Conditional,f,No,No,,CQ690
+Land Grid,Land Comparable 5,,No,Yes,No,Conditional,f,No,No,,CQ746
+Land Grid,Land Comparable 6,,No,Yes,No,Conditional,f,No,No,,CQ802
+Land Grid,Land Comparable 7,,No,Yes,No,Conditional,f,No,No,,CQ858
+Land Grid,Land Comparable 8,,No,Yes,No,Conditional,f,No,No,,CQ914
+Land Grid,Land Comparable 9,,No,Yes,No,Conditional,f,No,No,,CQ970
+Land Grid,Land Comparable 10,,No,Yes,No,Conditional,f,No,No,,CQ1026
+Land Grid,N1Comp10Land,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],CP1078
+Land Grid,SubjectCompDataLand,,Yes,No,No,,s,No,No,,A1083
+Land Grid,Land Value,,Yes,No,No,,s,No,No,,HS1084
+Land Grid,Land Value Per SF,,Yes,No,No,,s,No,No,,HT1084
+Land Grid,Leasing Commissions,,Yes,No,No,,s,No,No,,HW1084
+Land Grid,Lender,,Yes,No,No,,s,No,No,,HY1084
+Land Grid,Location Description,,Yes,No,No,,s,No,No,,IA1084
+Land Grid,Lodging Occupancy,,Yes,No,No,,s,No,No,,IB1084
+Land Grid,Maintenance Salaries,,Yes,No,No,,s,No,No,,ID1084
+Land Grid,Management Company,,Yes,No,No,,s,No,No,,IF1084
+Land Grid,Manager and Leasing Salaries,,Yes,No,No,,s,No,No,,IG1084
+Land Grid,Max Site Coverage,,Yes,No,No,,s,No,No,,IJ1084
+Land Grid,Median Home Value,,Yes,No,No,,s,No,No,,IL1084
+Land Grid,Median Household Income,,Yes,No,No,,s,No,No,,IM1084
+Land Grid,Medicaid Percentage,,Yes,No,No,,s,No,No,,IN1084
+Land Grid,Medicare Percentage,,Yes,No,No,,s,No,No,,IO1084
+Land Grid,Memory Care Community Fee,,Yes,No,No,,s,No,No,,IP1084
+Land Grid,Memory Care Entry Fee,,Yes,No,No,,s,No,No,,IQ1084
+Land Grid,Memory Care Monthly Second Person Fee,,Yes,No,No,,s,No,No,,IR1084
+Land Grid,Memory Care Occupancy Percentage,,Yes,No,No,,s,No,No,,IS1084
+Land Grid,Memory Care Unit Count,,Yes,No,No,,s,No,No,,IT1084
+Land Grid,MF Occupancy,,Yes,No,No,,s,No,No,,IY1084
+Land Grid,MF Rent Per Mo Max,,Yes,No,No,,s,No,No,,JA1084
+Land Grid,MF Rent Per Mo Min,,Yes,No,No,,s,No,No,,JB1084
+Land Grid,MF Total Annual Rent,,Yes,No,No,,s,No,No,,JJ1084
+Land Grid,MF Total Rent Per Month,,Yes,No,No,,s,No,No,,JK1084
+Land Grid,MF Verification Source,,Yes,No,No,,s,No,No,,JL1084
+Land Grid,MF Weighted Avg Rent/SF/Mo.,,Yes,No,No,,s,No,No,,JM1084
+Land Grid,MF Weighted Avg Rent/SF/Year,,Yes,No,No,,s,No,No,,JN1084
+Land Grid,MF Weighted Avg Rent/Unit,,Yes,No,No,,s,No,No,,JO1084
+Land Grid,Monthly Carport Fee,,Yes,No,No,,s,No,No,,JQ1084
+Land Grid,Monthly Garage Fee,,Yes,No,No,,s,No,No,,JR1084
+Land Grid,MSA,,Yes,No,No,,s,No,No,,JS1084
+Land Grid,Multifamily GBA Meters,,Yes,No,No,,s,No,No,,JV1084
+Land Grid,MultiFamily RA Meters,,Yes,No,No,,s,No,No,,JY1084
+Land Grid,Municipality,,Yes,No,No,,s,No,No,,KA1084
+Land Grid,Neighborhood,,Yes,No,No,,s,No,No,,KB1084
+Land Grid,Neighborhood Comments,,Yes,No,No,,s,No,No,,KC1084
+Land Grid,Net Parking Income,,Yes,No,No,,s,No,No,,KE1084
+Land Grid,Office GBA Meters,,Yes,No,No,,s,No,No,,LS1084
+Land Grid,Office RA Meters,,Yes,No,No,,s,No,No,,LU1084
+Land Grid,On Site Management,,Yes,No,No,,s,No,No,,LV1084
+Land Grid,Opportunity Zone,,Yes,No,No,,s,No,No,,LW1084
+Land Grid,Ordinance Document,,Yes,No,No,,s,No,No,,LX1084
+Land Grid,Original List Price,,Yes,No,No,,s,No,No,,LY1084
+Land Grid,Original List Price Difference,,Yes,No,No,,s,No,No,,LZ1084
+Land Grid,Other Adjustment,,Yes,No,No,,s,No,No,,MB1084
+Land Grid,Other Community Fee,,Yes,No,No,,s,No,No,,MD1084
+Land Grid,Other DB Refs,,Yes,No,No,,s,No,No,,MH1084
+Land Grid,Other Entry Fee,,Yes,No,No,,s,No,No,,MI1084
+Land Grid,Other Expenses,,Yes,No,No,,s,No,No,,MJ1084
+Land Grid,Other GBA Meters,,Yes,No,No,,s,No,No,,ML1084
+Land Grid,Other Monthly Second Person Fee,,Yes,No,No,,s,No,No,,MO1084
+Land Grid,Other Occupancy Percentage,,Yes,No,No,,s,No,No,,MP1084
+Land Grid,Other Percentage,,Yes,No,No,,s,No,No,,MQ1084
+Land Grid,Other RA Meters,,Yes,No,No,,s,No,No,,MS1084
+Land Grid,Other Repairs,,Yes,No,No,,s,No,No,,MT1084
+Land Grid,Other Salaries,,Yes,No,No,,s,No,No,,MU1084
+Land Grid,Other Unit Count,,Yes,No,No,,s,No,No,,MV1084
+Land Grid,Override Rent Detail TF,,Yes,No,No,,s,No,No,,MW1084
+Land Grid,Owner,,Yes,No,No,,s,No,No,,MX1084
+Land Grid,Parking Ratio GBA,,Yes,No,No,,s,No,No,,ND1084
+Land Grid,Parking Ratio RA,,Yes,No,No,,s,No,No,,NE1084
+Land Grid,Parking Ratio Unit,,Yes,No,No,,s,No,No,,NF1084
+Land Grid,Parking Requirements,,Yes,No,No,,s,No,No,,NG1084
+Land Grid,Payroll Taxes and Health Benefits,,Yes,No,No,,s,No,No,,NK1084
+Land Grid,Percent Diminution in Value,,Yes,No,No,,s,No,No,,NL1084
+Land Grid,Percent Stigma,,Yes,No,No,,s,No,No,,NP1084
+Land Grid,Percentage Rent,,Yes,No,No,,s,No,No,,NS1084
+Land Grid,Price Per MF Bedroom,,Yes,No,No,,s,No,No,,ON1084
+Land Grid,Price Per MF Room,,Yes,No,No,,s,No,No,,OO1084
+Land Grid,Price Per Primary Frontage Feet,,Yes,No,No,,s,No,No,,OP1084
+Land Grid,Price Per RA,,Yes,No,No,,s,No,No,,OQ1084
+Land Grid,Price Per Space,,Yes,No,No,,s,No,No,,OU1084
+Land Grid,Price Per Usable Acre,,Yes,No,No,,s,No,No,,OW1084
+Land Grid,Primary Frontage Feet,,Yes,No,No,,s,No,No,,OY1084
+Land Grid,Primary Frontage Street,,Yes,No,No,,s,No,No,,OZ1084
+Land Grid,Private Pay Percentage,,Yes,No,No,,s,No,No,,PA1084
+Land Grid,Product Segment,,Yes,No,No,,s,No,No,,PB1084
+Land Grid,Professional Services,,Yes,No,No,,s,No,No,,PD1084
+Land Grid,Property Included,,Yes,No,No,,s,No,No,,PG1084
+Land Grid,Rail Service,,Yes,No,No,,s,No,No,,PR1084
+Land Grid,Ready For Use,,Yes,No,No,,s,No,No,,PS1084
+Land Grid,Responsible Party,,Yes,No,No,,s,No,No,,QD1084
+Land Grid,Retail GBA Meters,,Yes,No,No,,s,No,No,,QF1084
+Land Grid,Retail GLA Meters,,Yes,No,No,,s,No,No,,QG1084
+Land Grid,RevPAR,,Yes,No,No,,s,No,No,,QH1084
+Land Grid,Risk Profile,,Yes,No,No,,s,No,No,,QI1084
+Land Grid,Room Revenue Multiplier,,Yes,No,No,,s,No,No,,QN1084
+Land Grid,Sale Data Source,,Yes,No,No,,s,No,No,,QP1084
+Land Grid,Sale Verification Phone,,Yes,No,No,,s,No,No,,QS1084
+Land Grid,Sale Verification Source,,Yes,No,No,,s,No,No,,QT1084
+Land Grid,School District,,Yes,No,No,,s,No,No,,QU1084
+Land Grid,Secondary Frontage Feet,,Yes,No,No,,s,No,No,,QV1084
+Land Grid,Secondary Frontage Street,,Yes,No,No,,s,No,No,,QW1084
+Land Grid,Secondary Traffic Count,,Yes,No,No,,s,No,No,,QX1084
+Land Grid,Sewer Expense,,Yes,No,No,,s,No,No,,QZ1084
+Land Grid,SF Leased,,Yes,No,No,,s,No,No,,RA1084
+Land Grid,Shadow Anchors,,Yes,No,No,,s,No,No,,RB1084
+Land Grid,Skilled Nursing Community Fee,,Yes,No,No,,s,No,No,,RI1084
+Land Grid,Skilled Nursing Entry Fee,,Yes,No,No,,s,No,No,,RJ1084
+Land Grid,Skilled Nursing Monthly Second Person Fee,,Yes,No,No,,s,No,No,,RK1084
+Land Grid,Skilled Nursing Occupancy Percentage,,Yes,No,No,,s,No,No,,RL1084
+Land Grid,Skilled Nursing Unit Count,,Yes,No,No,,s,No,No,,RM1084
+Land Grid,South Boundary,,Yes,No,No,,s,No,No,,RS1084
+Land Grid,Storage Fee,,Yes,No,No,,s,No,No,,RV1084
+Land Grid,Student Teacher Ratio,,Yes,No,No,,s,No,No,,RW1084
+Land Grid,Submarket,,Yes,No,No,,s,No,No,,RX1084
+Land Grid,Surveyed Unit Count,,Yes,No,No,,s,No,No,,SA1084
+Land Grid,Tax Expense,,Yes,No,No,,s,No,No,,SB1084
+Land Grid,Tax Years,,Yes,No,No,,s,No,No,,SG1084
+Land Grid,Taxes Per GBA M2,,Yes,No,No,,s,No,No,,SI1084
+Land Grid,Taxes Per Hectares,,Yes,No,No,,s,No,No,,SJ1084
+Land Grid,Taxes Per Land M2,,Yes,No,No,,s,No,No,,SK1084
+Land Grid,Taxes Per RA,,Yes,No,No,,s,No,No,,SL1084
+Land Grid,Taxes Per RA M2,,Yes,No,No,,s,No,No,,SM1084
+Land Grid,Taxing Authority,,Yes,No,No,,s,No,No,,SS1084
+Land Grid,Tenant Improvements Expense,,Yes,No,No,,s,No,No,,SU1084
+Land Grid,Terminal Cap Rate,,Yes,No,No,,s,No,No,,SV1084
+Land Grid,Tertiary Frontage Feet,,Yes,No,No,,s,No,No,,SW1084
+Land Grid,Tertiary Frontage Street,,Yes,No,No,,s,No,No,,SX1084
+Land Grid,Tertiary Traffic Count,,Yes,No,No,,s,No,No,,SY1084
+Land Grid,TOS Cap Rate,,Yes,No,No,,s,No,No,,TB1084
+Land Grid,TOS Effective Age,,Yes,No,No,,s,No,No,,TC1084
+Land Grid,TOS EGIM,,Yes,No,No,,s,No,No,,TD1084
+Land Grid,TOS Number Of Tenants,,Yes,No,No,,s,No,No,,TF1084
+Land Grid,TOS Occupancy Rate,,Yes,No,No,,s,No,No,,TG1084
+Land Grid,TOS Price Per Rentable Space,,Yes,No,No,,s,No,No,,TH1084
+Land Grid,TOS Price Per Usable Acre Land,,Yes,No,No,,s,No,No,,TI1084
+Land Grid,TOS Price Per Usable SF Land,,Yes,No,No,,s,No,No,,TJ1084
+Land Grid,TOS Tenancy Type,,Yes,No,No,,s,No,No,,TK1084
+Land Grid,TOS Vacancy Rate,,Yes,No,No,,s,No,No,,TL1084
+Land Grid,TOS Weighted Avg. Lease Term,,Yes,No,No,,s,No,No,,TM1084
+Land Grid,Total GBA Meters,,Yes,No,No,,s,No,No,,TT1084
+Land Grid,Total RA Meters,,Yes,No,No,,s,No,No,,TU1084
+Land Grid,Township/Range,,Yes,No,No,,s,No,No,,TW1084
+Land Grid,Traffic Count,,Yes,No,No,,s,No,No,,TX1084
+Land Grid,Trash Expense,,Yes,No,No,,s,No,No,,TZ1084
+Land Grid,Type of Contamination,,Yes,No,No,,s,No,No,,UA1084
+Land Grid,VA Percentage,,Yes,No,No,,s,No,No,,UL1084
+Land Grid,Vacancy Rate,,Yes,No,No,,s,No,No,,UQ1084
+Land Grid,Vacant Units,,Yes,No,No,,s,No,No,,UR1084
+Land Grid,Water Expense,,Yes,No,No,,s,No,No,,UW1084
+Land Grid,West Boundary,,Yes,No,No,,s,No,No,,UY1084
+Land Grid,Within 100 Year Flood Plain,,Yes,No,No,,s,No,No,,VB1084
+Land Grid,Year Built Numeric,,Yes,No,No,,s,No,No,,VE1084
+Land Grid,Zoned Density,,Yes,No,No,,s,No,No,,VG1084
+Land Grid,Bulk Discounted Value S1,,Yes,No,No,,s,No,No,,VN1084
+Land Grid,Bulk Discounted Value S2,,Yes,No,No,,s,No,No,,VO1084
+Land Grid,Bulk Discounted Value S3,,Yes,No,No,,s,No,No,,VP1084
+Land Grid,Business Enterprise S1,,Yes,No,No,,s,No,No,,VQ1084
+Land Grid,Business Enterprise S2,,Yes,No,No,,s,No,No,,VR1084
+Land Grid,Business Enterprise S3,,Yes,No,No,,s,No,No,,VS1084
+Land Grid,Cost Approach Value Per Index S1,,Yes,No,No,,s,No,No,,VT1084
+Land Grid,Cost Approach Value Per Index S2,,Yes,No,No,,s,No,No,,VU1084
+Land Grid,Cost Approach Value Per Index S3,,Yes,No,No,,s,No,No,,VV1084
+Land Grid,Cost Approach Value S1,,Yes,No,No,,s,No,No,,VW1084
+Land Grid,Cost Approach Value S2,,Yes,No,No,,s,No,No,,VX1084
+Land Grid,Cost Approach Value S3,,Yes,No,No,,s,No,No,,VY1084
+Land Grid,Data Period Type S1,,Yes,No,No,,s,No,No,,VZ1084
+Land Grid,Data Period Type S2,,Yes,No,No,,s,No,No,,WA1084
+Land Grid,Data Period Type S3,,Yes,No,No,,s,No,No,,WB1084
+Land Grid,Direct Cap Method Applied Cap Rate S1,,Yes,No,No,,s,No,No,,WC1084
+Land Grid,Direct Cap Method Applied Cap Rate S2,,Yes,No,No,,s,No,No,,WD1084
+Land Grid,Direct Cap Method Applied Cap Rate S3,,Yes,No,No,,s,No,No,,WE1084
+Land Grid,Effective Gross Income S1,,Yes,No,No,,s,No,No,,WF1084
+Land Grid,Effective Gross Income S2,,Yes,No,No,,s,No,No,,WG1084
+Land Grid,Effective Gross Income S3,,Yes,No,No,,s,No,No,,WH1084
+Land Grid,Effective OAR S1,,Yes,No,No,,s,No,No,,WI1084
+Land Grid,Effective OAR S2,,Yes,No,No,,s,No,No,,WJ1084
+Land Grid,Effective OAR S3,,Yes,No,No,,s,No,No,,WK1084
+Land Grid,Excess Land Value S1,,Yes,No,No,,s,No,No,,WL1084
+Land Grid,Excess Land Value S2,,Yes,No,No,,s,No,No,,WM1084
+Land Grid,Excess Land Value S3,,Yes,No,No,,s,No,No,,WN1084
+Land Grid,Financial Information Data Source S1,,Yes,No,No,,s,No,No,,WO1084
+Land Grid,Financial Information Data Source S2,,Yes,No,No,,s,No,No,,WP1084
+Land Grid,Financial Information Data Source S3,,Yes,No,No,,s,No,No,,WQ1084
+Land Grid,Improvements Value S1,,Yes,No,No,,s,No,No,,WR1084
+Land Grid,Improvements Value S2,,Yes,No,No,,s,No,No,,WS1084
+Land Grid,Improvements Value S3,,Yes,No,No,,s,No,No,,WT1084
+Land Grid,Income Approach Effective OAR S1,,Yes,No,No,,s,No,No,,WU1084
+Land Grid,Income Approach Effective OAR S2,,Yes,No,No,,s,No,No,,WV1084
+Land Grid,Income Approach Effective OAR S3,,Yes,No,No,,s,No,No,,WW1084
+Land Grid,Income Approach Value Per Index S1,,Yes,No,No,,s,No,No,,WX1084
+Land Grid,Income Approach Value Per Index S2,,Yes,No,No,,s,No,No,,WY1084
+Land Grid,Income Approach Value Per Index S3,,Yes,No,No,,s,No,No,,WZ1084
+Land Grid,Income Approach Value S1,,Yes,No,No,,s,No,No,,XA1084
+Land Grid,Income Approach Value S2,,Yes,No,No,,s,No,No,,XB1084
+Land Grid,Income Approach Value S3,,Yes,No,No,,s,No,No,,XC1084
+Land Grid,Internal Rate of Return Discount Rate S1,,Yes,No,No,,s,No,No,,XD1084
+Land Grid,Internal Rate of Return Discount Rate S2,,Yes,No,No,,s,No,No,,XE1084
+Land Grid,Internal Rate of Return Discount Rate S3,,Yes,No,No,,s,No,No,,XF1084
+Land Grid,Net Operating Income S1,,Yes,No,No,,s,No,No,,XG1084
+Land Grid,Net Operating Income S2,,Yes,No,No,,s,No,No,,XH1084
+Land Grid,Net Operating Income S3,,Yes,No,No,,s,No,No,,XI1084
+Land Grid,Occupancy Rate S1,,Yes,No,No,,s,No,No,,XJ1084
+Land Grid,Occupancy Rate S2,,Yes,No,No,,s,No,No,,XK1084
+Land Grid,Occupancy Rate S3,,Yes,No,No,,s,No,No,,XL1084
+Land Grid,Operating Expenses S1,,Yes,No,No,,s,No,No,,XM1084
+Land Grid,Operating Expenses S2,,Yes,No,No,,s,No,No,,XN1084
+Land Grid,Operating Expenses S3,,Yes,No,No,,s,No,No,,XO1084
+Land Grid,Period S1,,Yes,No,No,,s,No,No,,XV1084
+Land Grid,Period S2,,Yes,No,No,,s,No,No,,XW1084
+Land Grid,Period S3,,Yes,No,No,,s,No,No,,XX1084
+Land Grid,Period Type Qualifier S1,,Yes,No,No,,s,No,No,,XY1084
+Land Grid,Period Type Qualifier S2,,Yes,No,No,,s,No,No,,XZ1084
+Land Grid,Period Type Qualifier S3,,Yes,No,No,,s,No,No,,YA1084
+Land Grid,Permanent Equipment Real Property S1,,Yes,No,No,,s,No,No,,YB1084
+Land Grid,Permanent Equipment Real Property S2,,Yes,No,No,,s,No,No,,YC1084
+Land Grid,Permanent Equipment Real Property S3,,Yes,No,No,,s,No,No,,YD1084
+Land Grid,Personal Property FFandE S1,,Yes,No,No,,s,No,No,,YE1084
+Land Grid,Personal Property FFandE S2,,Yes,No,No,,s,No,No,,YF1084
+Land Grid,Personal Property FFandE S3,,Yes,No,No,,s,No,No,,YG1084
+Land Grid,Potential Gross Income S1,,Yes,No,No,,s,No,No,,YH1084
+Land Grid,Potential Gross Income S2,,Yes,No,No,,s,No,No,,YI1084
+Land Grid,Potential Gross Income S3,,Yes,No,No,,s,No,No,,YJ1084
+Land Grid,Premise S1,,Yes,No,No,,s,No,No,,YK1084
+Land Grid,Premise S2,,Yes,No,No,,s,No,No,,YL1084
+Land Grid,Premise S3,,Yes,No,No,,s,No,No,,YM1084
+Land Grid,Primary Improvement Size Type S1,,Yes,No,No,,s,No,No,,YN1084
+Land Grid,Primary Improvement Size Type S2,,Yes,No,No,,s,No,No,,YO1084
+Land Grid,Primary Improvement Size Type S3,,Yes,No,No,,s,No,No,,YP1084
+Land Grid,Primary Land Value S1,,Yes,No,No,,s,No,No,,YQ1084
+Land Grid,Primary Land Value S2,,Yes,No,No,,s,No,No,,YR1084
+Land Grid,Primary Land Value S3,,Yes,No,No,,s,No,No,,YS1084
+Land Grid,Sales Approach Value per Index S1,,Yes,No,No,,s,No,No,,YT1084
+Land Grid,Sales Approach Value per Index S2,,Yes,No,No,,s,No,No,,YU1084
+Land Grid,Sales Approach Value per Index S3,,Yes,No,No,,s,No,No,,YV1084
+Land Grid,Sales Approach Value S1,,Yes,No,No,,s,No,No,,YW1084
+Land Grid,Sales Approach Value S2,,Yes,No,No,,s,No,No,,YX1084
+Land Grid,Sales Approach Value S3,,Yes,No,No,,s,No,No,,YY1084
+Land Grid,SchedulerJobId,,Yes,No,No,,s,No,No,,YZ1084
+Land Grid,Terminal Cap Rate S1,,Yes,No,No,,s,No,No,,ZA1084
+Land Grid,Terminal Cap Rate S2,,Yes,No,No,,s,No,No,,ZB1084
+Land Grid,Terminal Cap Rate S3,,Yes,No,No,,s,No,No,,ZC1084
+Land Grid,Total Value of Real Property S1,,Yes,No,No,,s,No,No,,ZG1084
+Land Grid,Total Value of Real Property S2,,Yes,No,No,,s,No,No,,ZH1084
+Land Grid,Total Value of Real Property S3,,Yes,No,No,,s,No,No,,ZI1084
+Land Grid,Valuation Interest S1,,Yes,No,No,,s,No,No,,ZJ1084
+Land Grid,Valuation Interest S2,,Yes,No,No,,s,No,No,,ZK1084
+Land Grid,Valuation Interest S3,,Yes,No,No,,s,No,No,,ZL1084
+Land Grid,Valuation Perspective S1,,Yes,No,No,,s,No,No,,ZM1084
+Land Grid,Valuation Perspective S2,,Yes,No,No,,s,No,No,,ZN1084
+Land Grid,Valuation Perspective S3,,Yes,No,No,,s,No,No,,ZO1084
+Land Grid,Valuation Type S1,,Yes,No,No,,s,No,No,,ZP1084
+Land Grid,Valuation Type S2,,Yes,No,No,,s,No,No,,ZQ1084
+Land Grid,Valuation Type S3,,Yes,No,No,,s,No,No,,ZR1084
+Land Grid,Demographics Survey Date,,Yes,No,No,,s,No,No,,ZV1084
+Land Grid,Inc/Exp Survey Date,,Yes,No,No,,s,No,No,,ZX1084
+Land Grid,Recording Date,,Yes,No,No,,s,No,No,,ZZ1084
+Land Grid,Sale Verification Date,,Yes,No,No,,s,No,No,,AAA1084
+Land Grid,Traffic Survey Date,,Yes,No,No,,s,No,No,,AAB1084
+Land Grid,Effective Date of Value S1,,Yes,No,No,,s,No,No,,AAC1084
+Land Grid,Effective Date of Value S2,,Yes,No,No,,s,No,No,,AAD1084
+Land Grid,Effective Date of Value S3,,Yes,No,No,,s,No,No,,AAE1084
+Land Grid,Type 1 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AAQ1084
+Land Grid,Type 1 Market Rent/SF,,Yes,No,No,,s,No,No,,AAR1084
+Land Grid,Type 1 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,AAS1084
+Land Grid,Type 1 M2,,Yes,No,No,,s,No,No,,AAT1084
+Land Grid,Type 1 Rent/M2,,Yes,No,No,,s,No,No,,AAU1084
+Land Grid,Type 1 Floor,,Yes,No,No,,s,No,No,,AAV1084
+Land Grid,Type 1 Vacant Units,,Yes,No,No,,s,No,No,,AAW1084
+Land Grid,Type 1 Category,,Yes,No,No,,s,No,No,,AAX1084
+Land Grid,Type 2 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ABI1084
+Land Grid,Type 2 Market Rent/SF,,Yes,No,No,,s,No,No,,ABJ1084
+Land Grid,Type 2 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ABK1084
+Land Grid,Type 2 M2,,Yes,No,No,,s,No,No,,ABL1084
+Land Grid,Type 2 Rent/M2,,Yes,No,No,,s,No,No,,ABM1084
+Land Grid,Type 2 Floor,,Yes,No,No,,s,No,No,,ABN1084
+Land Grid,Type 2 Vacant Units,,Yes,No,No,,s,No,No,,ABO1084
+Land Grid,Type 2 Category,,Yes,No,No,,s,No,No,,ABP1084
+Land Grid,Type 3 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ACA1084
+Land Grid,Type 3 Market Rent/SF,,Yes,No,No,,s,No,No,,ACB1084
+Land Grid,Type 3 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ACC1084
+Land Grid,Type 3 M2,,Yes,No,No,,s,No,No,,ACD1084
+Land Grid,Type 3 Rent/M2,,Yes,No,No,,s,No,No,,ACE1084
+Land Grid,Type 3 Floor,,Yes,No,No,,s,No,No,,ACF1084
+Land Grid,Type 3 Vacant Units,,Yes,No,No,,s,No,No,,ACG1084
+Land Grid,Type 3 Category,,Yes,No,No,,s,No,No,,ACH1084
+Land Grid,Type 4 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ACS1084
+Land Grid,Type 4 Market Rent/SF,,Yes,No,No,,s,No,No,,ACT1084
+Land Grid,Type 4 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ACU1084
+Land Grid,Type 4 M2,,Yes,No,No,,s,No,No,,ACV1084
+Land Grid,Type 4 Rent/M2,,Yes,No,No,,s,No,No,,ACW1084
+Land Grid,Type 4 Floor,,Yes,No,No,,s,No,No,,ACX1084
+Land Grid,Type 4 Vacant Units,,Yes,No,No,,s,No,No,,ACY1084
+Land Grid,Type 4 Category,,Yes,No,No,,s,No,No,,ACZ1084
+Land Grid,Type 5 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ADK1084
+Land Grid,Type 5 Market Rent/SF,,Yes,No,No,,s,No,No,,ADL1084
+Land Grid,Type 5 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ADM1084
+Land Grid,Type 5 M2,,Yes,No,No,,s,No,No,,ADN1084
+Land Grid,Type 5 Rent/M2,,Yes,No,No,,s,No,No,,ADO1084
+Land Grid,Type 5 Floor,,Yes,No,No,,s,No,No,,ADP1084
+Land Grid,Type 5 Vacant Units,,Yes,No,No,,s,No,No,,ADQ1084
+Land Grid,Type 5 Category,,Yes,No,No,,s,No,No,,ADR1084
+Land Valuation,Adj Index,,No,Yes,No,Calculation,f,No,No,,B7
+Land Valuation,isVisible,,No,Yes,No,Lookup,f,No,No,,D7
+Land Valuation,UniqueName,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],P37
+Land Valuation,target,,No,Yes,No,Calculation,f,No,No,,Q37
+Land Valuation,markers,,No,Yes,No,Calculation,f,No,No,,R37
+Land Valuation,maptype,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],S37
+Land Valuation,center,,No,Yes,No,Lookup,f,No,No,,T37
+Land Valuation,zoom,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],U37
+Land Valuation,height,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],V37
+Land Valuation,width,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],W37
+Land Valuation,MinDistAwayPct,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],X37
+Land Valuation,Map Type,,Yes,No,Yes,,s,No,No,,AR37
+Land Valuation,Height,,Yes,No,No,,n,No,No,,AR40
+Land Valuation,Width,,Yes,No,No,,n,No,No,,AR41
+Land Valuation,Pin Min. % Away,,Yes,No,No,,n,No,No,,AR42
+Land Valuation,CompImage,,No,Yes,No,Calculation,f,No,No,,AA44
+Land Valuation,Comps Used>>,,No,Yes,No,Calculation,f,No,No,,X57
+Land Valuation,HT row,,No,Yes,No,Calculation,f,No,No,,AA58
+Land Valuation,Primary Land Unit Formatting,,No,Yes,No,Calculation,f,No,No,,R59
+Land Valuation,Secondary Land Unit Formatting,,No,Yes,No,Lookup,f,No,No,,S59
+Land Valuation,GridNum,,No,Yes,No,Calculation,f,No,No,,U59
+Land Valuation,CompNum,,No,Yes,No,Calculation,f,No,No,,V60
+Land Valuation,CompID,,No,Yes,No,Lookup,f,No,No,,W60
+Land Valuation,Sale Date,,No,Yes,No,Conditional,f,No,No,,AE60
+Land Valuation,Sale Price,,No,Yes,No,Lookup,f,No,No,,AJ60
+Land Valuation,Geography,,No,Yes,No,Conditional,f,No,No,,AD85
+Land Valuation,Label,,Yes,No,Yes,,n,No,No,,AE85
+Land Valuation,Size,,Yes,No,Yes,,s,No,No,,AG85
+Land Valuation,red,,No,Yes,Yes,Conditional,f,No,No,,AI85
+Land Valuation,S,,Yes,No,Yes,,s,No,No,,AG91
+Land Valuation,blue,,No,Yes,Yes,Conditional,f,No,No,,AI91
+Land Valuation,Index,,No,Yes,No,Calculation,f,No,No,,AV101
+Land Valuation,Characteristic,,No,Yes,No,Lookup,f,No,No,,AX101
+Land Valuation,isVisibleByDefault,,No,Yes,No,Lookup,f,No,No,,AY101
+Land Valuation,BandedRowColor,,No,Yes,No,Calculation,f,No,No,,AZ101
+Land Valuation,Holding Tank Row>,,No,Yes,No,Lookup,f,No,No,,CF129
+Land Valuation,Value,,Yes,No,Yes,,s,No,No,,CD131
+Land Valuation,UOC_SubjectValue,,No,Yes,No,Lookup,f,No,No,,BU132
+Land Valuation,UOC_Plural,,No,Yes,No,Lookup,f,No,No,,BU133
+Land Valuation,UOC_Lowercase,,No,Yes,No,Lookup,f,No,No,,BU134
+Land Valuation,Holding Tank Field,,Yes,No,Yes,,s,No,No,,BQ135
+Land Valuation,UOC_ShortPerUOC,,No,Yes,No,Lookup,f,No,No,,BU136
+Land Valuation,UOC_LongPerUOC,,No,Yes,No,Lookup,f,No,No,,BU137
+Land Valuation,"City, State",,No,Yes,No,Calculation,f,No,No,,CE137
+Land Valuation,UOC_CurrencyFormat,,No,Yes,No,Lookup,f,No,No,,BU138
+Land Valuation,UOC_DBField,,No,Yes,No,Lookup,f,No,No,,BU139
+Land Valuation,Holding Tank Column,,No,Yes,No,Lookup,f,No,No,,BR140
+Land Valuation,UOC_NumberFormat,,No,Yes,No,Lookup,f,No,No,,BU140
+Land Valuation,Retail,,No,Yes,No,Calculation,f,No,No,,BZ144
+Land Valuation,"GBA/1,000",,No,Yes,No,Conditional,f,No,No,,CE145
+Land Valuation,MHC,,No,Yes,No,Calculation,f,No,No,,BZ146
+Land Valuation,# of Occupied Pads,,No,Yes,No,Aggregation,f,No,No,,CE147
+Land Valuation,Site Acreage,,No,Yes,No,Conditional,f,No,No,,CE148
+Land Valuation,MF,,No,Yes,No,Calculation,f,No,No,,BZ149
+Land Valuation,Occupancy @ Sale,,No,Yes,No,Calculation,f,No,No,,CE150
+Land Valuation,Buildable SF,,No,Yes,No,Lookup,f,No,No,,BR153
+Land Valuation,pvaGridUOC_CurrencyFormatRange >>,,No,Yes,No,Calculation,f,No,No,,BX163
+Land Valuation,Transactional Adj,,No,Yes,No,Calculation,f,No,No,,BM164
+Land Valuation,–,,No,Yes,No,Conditional,f,No,No,,CG164
+Land Valuation,FINAL Text Link,,No,Yes,No,Conditional,f,No,No,,CV164
+Land Valuation,Trim final comma,,No,Yes,No,Conditional,f,No,No,,CY164
+Land Valuation,"Sub ""And""",,No,Yes,No,Conditional,f,No,No,,CZ164
+Land Valuation,Subject/Verb,,No,Yes,No,Conditional,f,No,No,,DA164
+Land Valuation,Downward Sentence Override,,No,Yes,No,Calculation,f,No,No,,DF164
+Land Valuation,Upward Sentence Override,,No,Yes,No,Calculation,f,No,No,,DP164
+Land Valuation,$ Adj,,No,Yes,No,Calculation,f,No,No,,CF165
+Land Valuation,market conditions,,Yes,No,No,,f,No,No,,BP172
+Land Valuation,tblCompAdjustment,,No,Yes,No,Conditional,f,No,No,,BY172
+Land Valuation,MatchType,,No,Yes,No,Calculation,f,No,No,,BX173
+Land Valuation,Cumulative Market Adjusted Price,,No,Yes,No,Calculation,f,No,No,,CF173
+Land Valuation,Grid Number,,No,Yes,No,Calculation,f,No,No,,BK174
+Land Valuation,Section Index,,No,Yes,No,Conditional,f,No,No,,BM174
+Land Valuation,tblGridSetup Row,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BN174
+Land Valuation,Physcial Adjustment Text Links,,No,Yes,No,Conditional,f,No,No,,CV174
+Land Valuation,Physical Adj,,No,Yes,No,Conditional,f,No,No,,BM175
+Land Valuation,Range of Unadjusted Prices,,No,Yes,No,Conditional,f,No,No,,CE210
+Land Valuation,Range of Adjusted Prices,,No,Yes,No,Conditional,f,No,No,,CE211
+Land Valuation,Average Adjusted Price,,No,Yes,No,Conditional,f,No,No,,CE213
+Land Valuation,Round to Nearest,,No,Yes,No,Conditional,f,No,No,,CE219
+Land Valuation,Average of Comps Relied Upon,,No,Yes,No,Calculation,f,No,No,,CD224
+Land Valuation,Final Text Link,,No,Yes,No,Calculation,f,No,No,,CD234
+Land Valuation,N1_txtConclusionPerUOC,,No,Yes,No,Calculation,f,No,No,,CD238
+Land Valuation,Time on Market,,No,Yes,No,Calculation,f,No,No,,EA240
+Land Valuation,List Price,,No,Yes,No,Calculation,f,No,No,,EC240
+Land Valuation,Listing 1,,No,Yes,No,Calculation,f,No,No,,EC241
+Land Valuation,Listing 2,,No,Yes,No,Calculation,f,No,No,,EC242
+Land Valuation,Listing 3,,No,Yes,No,Calculation,f,No,No,,EC243
+Land Valuation,Listing 4,,No,Yes,No,Calculation,f,No,No,,EC244
+Land Valuation,Listing 5,,No,Yes,No,Calculation,f,No,No,,EC245
+Land Valuation,Listing 6,,No,Yes,No,Calculation,f,No,No,,EC246
+Land Valuation,Indicated Value,,No,Yes,No,Calculation,f,No,No,,EL256
+Land Valuation,"Otherwise, Clone Land Valuation Section and complete.",,Yes,No,No,,s,No,No,,ES266
+Land Valuation,Excess Land Value,,No,Yes,No,Calculation,f,No,No,,EV266
+Land Valuation,Value Indication - Rounded,,No,Yes,No,Calculation,f,No,No,,FC270
+Land Valuation,Deflated Stabilized Rooms Revenue,,No,Yes,No,Calculation,f,No,No,,FK285
+Land Valuation,Lease Income,,No,Yes,No,Calculation,f,No,No,,FK287
+Land Valuation,Price per Square Foot,,No,Yes,No,Calculation,f,No,No,,FK291
+Land Valuation,Land Sales Comparison Approach,,No,Yes,No,Calculation,f,No,No,,FU305
+Land Valuation,Ground Lease Approach,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FU306
+Land Valuation,Land Value as % of As Is Value,,No,Yes,No,Conditional,f,No,No,,FU310
+Land Comp Profiles,"City, State  Zip",,No,Yes,No,Lookup,f,No,No,,AA6
+Land Comp Profiles,image,,No,Yes,No,Lookup,f,No,No,,AA12
+Land Comp Profiles,Project Amenities,,No,Yes,No,Lookup,f,No,No,,Y42
+Land Comp Profiles,Unit Features,,No,Yes,No,Lookup,f,No,No,,Y45
+Land Comp Profiles,Major Tenants,,No,Yes,No,Lookup,f,No,No,,Y48
+Land Comp Profiles,Field Row,,No,Yes,No,Calculation,f,No,No,,E196
+Land Comp Profiles,Rev Unit1,,No,Yes,No,Lookup,f,No,No,,Y263
+Land Comp Profiles,Rev Unit2,,No,Yes,No,Lookup,f,No,No,,Z263
+Land Comp Profiles,Occupied Units,,No,Yes,No,Conditional,f,No,No,,AJ263
+Land Comp Profiles,Totals / Wtd. Average,,No,Yes,No,Aggregation,f,No,No,,P283
+Cost Approach Setup,Are you doing a full Cost Approach or just an Insurable Value?,,No,Yes,No,Conditional,f,No,No,,J6
+Sales Grid,Sales Analysis Grid,,Yes,No,No,,s,No,No,,F10
+Sales Grid,zero,,No,Yes,No,Lookup,f,No,No,,I18
+Sales Grid,3313 Camvic Ter,,Yes,No,Yes,,s,No,No,,K19
+Sales Grid,2955-2965 W McMicken Ave,,Yes,No,Yes,,s,No,No,,M19
+Sales Grid,2453 Red Coach Drive,,Yes,No,Yes,,s,No,No,,O19
+Sales Grid,4812 Lee Road,,Yes,No,Yes,,s,No,No,,Q19
+Sales Grid,Analysis Grid,,Yes,No,Yes,,s,No,No,,F23
+Sales Grid,-,,No,Yes,No,Conditional,f,No,No,,F32
+Sales Grid,Expenditures After Sale,,Yes,No,No,,n,No,No,,I38
+Sales Grid,Number of Comps:,,No,Yes,No,Calculation,f,No,No,,H104
+Sales Grid,Deferred Maintenance:,,Yes,No,No,,s,No,No,,N113
+Sales Grid,Capital Expenditures:,,Yes,No,No,,s,No,No,,N114
+Sales Grid,Lease-Up Costs:,,Yes,No,No,,s,No,No,,N115
+Sales Grid,Entrepreneurial Profit:,,Yes,No,No,,s,No,No,,N116
+Sales Grid,FF and E:,,Yes,No,No,,s,No,No,,N117
+Sales Grid,Business Value:,,Yes,No,No,,s,No,No,,N118
+Sales Grid,N1SalesGridRangesAndReconciledValue,,Yes,No,No,,s,No,No,,F126
+Sales Grid,Sale Grid Comparable Ranking Table,,Yes,No,No,,s,No,No,,AV153
+Sales Grid,Improved Sales Comparison,,No,Yes,No,Lookup,f,No,No,,AR160
+Sales Grid,Improved Sale 1,,No,Yes,No,Calculation,f,No,No,,BN184
+Sales Grid,Improved Sale 2,,No,Yes,No,Calculation,f,No,No,,BN211
+Sales Grid,Improved Sale 3,,No,Yes,No,Calculation,f,No,No,,BN238
+Sales Grid,Improved Sale 4,,No,Yes,No,Calculation,f,No,No,,BN265
+Sales Grid,Improved Sale 5,,No,Yes,No,Calculation,f,No,No,,BN292
+Sales Grid,Improved Sale 6,,No,Yes,No,Calculation,f,No,No,,BN319
+Sales Grid,Improved Sale 7,,No,Yes,No,Calculation,f,No,No,,BN346
+Sales Grid,Improved Sale 8,,No,Yes,No,Calculation,f,No,No,,BN373
+Sales Grid,Improved Sale 9,,No,Yes,No,Calculation,f,No,No,,BN400
+Sales Grid,Improved Sale 10,,No,Yes,No,Calculation,f,No,No,,BN427
+Sales Grid,EGIM,,Yes,No,Yes,,s,No,No,,CO465
+Sales Grid,Comparable Low:,,Yes,No,No,,f,No,No,,CF489
+Sales Grid,Comp 4,,No,Yes,No,Lookup,f,No,No,,DO508
+Sales Grid,Comp 5,,No,Yes,No,Lookup,f,No,No,,DS508
+Sales Grid,Comp 6,,No,Yes,No,Lookup,f,No,No,,DW508
+Sales Grid,Comp 7,,No,Yes,No,Lookup,f,No,No,,EA508
+Sales Grid,Toggle,,Yes,No,Yes,,s,No,No,,FA569
+Sales Grid,WDIU,,No,Yes,No,Conditional,f,No,No,,FD569
+Sales Grid,WDH,,No,Yes,No,Conditional,f,No,No,,FD570
+Sales Grid,DW,,No,Yes,No,Conditional,f,No,No,,FD571
+Sales Grid,DSP,,No,Yes,No,Conditional,f,No,No,,FD572
+Sales Grid,TC,,No,Yes,No,Conditional,f,No,No,,FD573
+Sales Grid,SSA,,No,Yes,No,Conditional,f,No,No,,FD574
+Sales Grid,RF,,No,Yes,No,Conditional,f,No,No,,FD575
+Sales Grid,SO,,No,Yes,No,Conditional,f,No,No,,FD576
+Sales Grid,MW,,No,Yes,No,Conditional,f,No,No,,FD577
+Sales Grid,CDB,,No,Yes,No,Conditional,f,No,No,,FD578
+Sales Grid,FCC,,No,Yes,No,Conditional,f,No,No,,FD579
+Sales Grid,FCO,,No,Yes,No,Conditional,f,No,No,,FD580
+Sales Grid,FCW,,No,Yes,No,Conditional,f,No,No,,FD581
+Sales Grid,FWC,,No,Yes,No,Conditional,f,No,No,,FD582
+Sales Grid,FCV,,No,Yes,No,Conditional,f,No,No,,FD583
+Sales Grid,FCT,,No,Yes,No,Conditional,f,No,No,,FD584
+Sales Grid,WCB,,No,Yes,No,Conditional,f,No,No,,FD585
+Sales Grid,WCS,,No,Yes,No,Conditional,f,No,No,,FD586
+Sales Grid,WCD,,No,Yes,No,Conditional,f,No,No,,FD587
+Sales Grid,AC,,No,Yes,No,Conditional,f,No,No,,FD588
+Sales Grid,CEN,,No,Yes,No,Conditional,f,No,No,,FD589
+Sales Grid,WIWU,,No,Yes,No,Conditional,f,No,No,,FD590
+Sales Grid,WIC,,No,Yes,No,Conditional,f,No,No,,FD591
+Sales Grid,SIU,,No,Yes,No,Conditional,f,No,No,,FD592
+Sales Grid,PB,,No,Yes,No,Conditional,f,No,No,,FD593
+Sales Grid,FP,,No,Yes,No,Conditional,f,No,No,,FD594
+Sales Grid,VC,,No,Yes,No,Conditional,f,No,No,,FD595
+Sales Grid,GC,,No,Yes,No,Conditional,f,No,No,,FD596
+Sales Grid,CF,,No,Yes,No,Conditional,f,No,No,,FD597
+Sales Grid,AF,,No,Yes,No,Conditional,f,No,No,,FD598
+Sales Grid,EPC,,No,Yes,No,Conditional,f,No,No,,FD599
+Sales Grid,SEC,,No,Yes,No,Conditional,f,No,No,,FD600
+Sales Grid,Comparison to Subject,,Yes,No,Yes,,s,No,No,,FF605
+Sales Grid,Similar,,Yes,No,Yes,,s,No,No,,FG605
+Sales Grid,GUB,,No,Yes,No,Conditional,f,No,No,,FD608
+Sales Grid,CP,,No,Yes,No,Conditional,f,No,No,,FD609
+Sales Grid,CSS,,No,Yes,No,Conditional,f,No,No,,FD610
+Sales Grid,PL,,No,Yes,No,Conditional,f,No,No,,FD611
+Sales Grid,BC,,No,Yes,No,Conditional,f,No,No,,FD612
+Sales Grid,MR,,No,Yes,No,Conditional,f,No,No,,FD613
+Sales Grid,FR,,No,Yes,No,Conditional,f,No,No,,FD614
+Sales Grid,VB,,No,Yes,No,Conditional,f,No,No,,FD616
+Sales Grid,BB,,No,Yes,No,Conditional,f,No,No,,FD617
+Sales Grid,RQB,,No,Yes,No,Conditional,f,No,No,,FD618
+Sales Grid,BR,,No,Yes,No,Conditional,f,No,No,,FD619
+Sales Grid,DR,,No,Yes,No,Conditional,f,No,No,,FD620
+Sales Grid,CRB,,No,Yes,No,Conditional,f,No,No,,FD621
+Sales Grid,PG,,No,Yes,No,Conditional,f,No,No,,FD622
+Sales Grid,MTR,,No,Yes,No,Conditional,f,No,No,,FD623
+Sales Grid,SP,,No,Yes,No,Conditional,f,No,No,,FD624
+Sales Grid,SHT,,No,Yes,No,Conditional,f,No,No,,FD625
+Sales Grid,SNA,,No,Yes,No,Conditional,f,No,No,,FD626
+Sales Grid,GE,,No,Yes,No,Conditional,f,No,No,,FD628
+Sales Grid,NN,,No,Yes,No,Conditional,f,No,No,,FD629
+Sales Grid,SC,,No,Yes,No,Conditional,f,No,No,,FD630
+Sales Grid,NSS,,No,Yes,No,Conditional,f,No,No,,FD631
+Sales Grid,LF,,No,Yes,No,Conditional,f,No,No,,FD632
+Sales Grid,STG,,No,Yes,No,Conditional,f,No,No,,FD633
+Sales Grid,Package Management System,,No,Yes,No,Conditional,f,No,No,,FE634
+Sales Grid,Print Tips,,Yes,No,No,,s,No,No,,GC664
+Sales Grid,Comparable 1,,Yes,No,No,,s,No,No,,FZ665
+Sales Grid,Book/Page or Reference Doc,,No,Yes,No,Lookup,f,No,No,,FX692
+Sales Grid,Corner,,No,Yes,No,Lookup,f,No,No,,FX700
+Sales Grid,Improvements & Financial Data,,Yes,No,Yes,,s,No,No,,FW702
+Sales Grid,Office,,No,Yes,No,Conditional,f,No,No,,FT711
+Sales Grid,Retail / SC,,No,Yes,No,Conditional,f,No,No,,FT717
+Sales Grid,Industrial / OW,,No,Yes,No,Conditional,f,No,No,,FT723
+Sales Grid,SH,,No,Yes,No,Conditional,f,No,No,,FT733
+Sales Grid,L & H,,No,Yes,No,Conditional,f,No,No,,FT739
+Sales Grid,ADR,,No,Yes,No,Lookup,f,No,No,,FX740
+Sales Grid,Hotel Flag,,No,Yes,No,Lookup,f,No,No,,FZ741
+Sales Grid,Description,,No,Yes,No,Lookup,f,No,No,,FW744
+Sales Grid,Unit Size,,No,Yes,No,Lookup,f,No,No,,FY744
+Sales Grid,Averages,,No,Yes,No,Conditional,f,No,No,,FY755
+Sales Grid,Comparable 2,,No,Yes,No,Conditional,f,No,No,,FW771
+Sales Grid,Comparable 3,,No,Yes,No,Conditional,f,No,No,,FW876
+Sales Grid,Comparable 4,,No,Yes,No,Conditional,f,No,No,,FW981
+Sales Grid,Comparable 5,,No,Yes,No,Conditional,f,No,No,,FW1086
+Sales Grid,Comparable 6,,No,Yes,No,Conditional,f,No,No,,FW1191
+Sales Grid,Comparable 7,,No,Yes,No,Conditional,f,No,No,,FW1296
+Sales Grid,Comparable 8,,No,Yes,No,Conditional,f,No,No,,FW1401
+Sales Grid,Comparable 9,,No,Yes,No,Conditional,f,No,No,,FW1506
+Sales Grid,Comparable 10,,No,Yes,No,Conditional,f,No,No,,FW1611
+Sales Grid,N1Comp10,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FV1716
+Sales Approach,PVA EBITDA,,Yes,No,Yes,,s,No,No,,AN29
+Sales Approach,PVA Hotel RevPAR,,Yes,No,Yes,,s,No,No,,AO30
+Sales Approach,PVA Hotel RRM,,No,Yes,No,Lookup,f,No,No,,AO31
+Sales Approach,Hotels,,No,Yes,No,Lookup,f,No,No,,AH32
+Sales Approach,Yr. Built,,No,Yes,No,Calculation,f,No,No,,AH58
+Sales Approach,SF/Unit,,No,Yes,No,Calculation,f,No,No,,AL59
+Sales Approach,Remain.,,No,Yes,No,Lookup,f,No,No,,AJ60
+Sales Approach,EBITDA,,No,Yes,No,Lookup,f,No,No,,AM60
+Sales Approach,RRM,,No,Yes,No,Lookup,f,No,No,,AO60
+Sales Approach,Yoga Room,,No,Yes,No,Lookup,f,No,No,,LM125
+Sales Approach,Air Conditioning,,No,Yes,No,Lookup,f,No,No,,FU126
+Sales Approach,Air Conditioning Central,,No,Yes,No,Lookup,f,No,No,,FV126
+Sales Approach,Airport Shuttle,,No,Yes,No,Lookup,f,No,No,,FX126
+Sales Approach,Ancillary Sports_Activities_Services,,No,Yes,No,Lookup,f,No,No,,FY126
+Sales Approach,Bar_Lounge,,No,Yes,No,Lookup,f,No,No,,GA126
+Sales Approach,BBQ_Grill_Picnic Area,,No,Yes,No,Lookup,f,No,No,,GC126
+Sales Approach,Beach_Direct Access,,No,Yes,No,Lookup,f,No,No,,GD126
+Sales Approach,Beach Services,,No,Yes,No,Lookup,f,No,No,,GE126
+Sales Approach,Bike Room,,No,Yes,No,Lookup,f,No,No,,GF126
+Sales Approach,Billiards,,No,Yes,No,Lookup,f,No,No,,GG126
+Sales Approach,Bistro,,No,Yes,No,Lookup,f,No,No,,GH126
+Sales Approach,Boardrooms,,No,Yes,No,Lookup,f,No,No,,GI126
+Sales Approach,Boutique,,No,Yes,No,Lookup,f,No,No,,GK126
+Sales Approach,Breakfast Dining Area,,No,Yes,No,Lookup,f,No,No,,GL126
+Sales Approach,Business Center,,No,Yes,No,Lookup,f,No,No,,GM126
+Sales Approach,Cafe,,No,Yes,No,Lookup,f,No,No,,GN126
+Sales Approach,Car Rental Desk,,No,Yes,No,Lookup,f,No,No,,GO126
+Sales Approach,Carpet_Drapes_Blinds,,No,Yes,No,Lookup,f,No,No,,GP126
+Sales Approach,Ceiling Fans,,No,Yes,No,Lookup,f,No,No,,GR126
+Sales Approach,Clubhouse_Rec Building,,No,Yes,No,Lookup,f,No,No,,GS126
+Sales Approach,Coffee Station,,No,Yes,No,Lookup,f,No,No,,GT126
+Sales Approach,Complimentary Services Area,,No,Yes,No,Lookup,f,No,No,,GU126
+Sales Approach,Concierge,,No,Yes,No,Lookup,f,No,No,,GV126
+Sales Approach,Covered Parking,,No,Yes,No,Lookup,f,No,No,,GW126
+Sales Approach,Dry Cleaning,,No,Yes,No,Lookup,f,No,No,,GY126
+Sales Approach,Electric Vehicle Chargers,,No,Yes,No,Lookup,f,No,No,,GZ126
+Sales Approach,Elevators,,No,Yes,No,Lookup,f,No,No,,HA126
+Sales Approach,Escalators,,No,Yes,No,Lookup,f,No,No,,HB126
+Sales Approach,FedEx_Leased,,No,Yes,No,Lookup,f,No,No,,HC126
+Sales Approach,Fine Dining Restaurant,,No,Yes,No,Lookup,f,No,No,,HD126
+Sales Approach,Fireplace,,No,Yes,No,Lookup,f,No,No,,HE126
+Sales Approach,Fishing,,No,Yes,No,Lookup,f,No,No,,HF126
+Sales Approach,Fitness Center,,No,Yes,No,Lookup,f,No,No,,HG126
+Sales Approach,Fitness Classes,,No,Yes,No,Lookup,f,No,No,,HH126
+Sales Approach,Fitness Room,,No,Yes,No,Lookup,f,No,No,,HI126
+Sales Approach,Five Fixture Bathrooms,,No,Yes,No,Lookup,f,No,No,,HJ126
+Sales Approach,Floor Covering_Carpet,,No,Yes,No,Lookup,f,No,No,,HK126
+Sales Approach,Floor Covering_Other,,No,Yes,No,Lookup,f,No,No,,HL126
+Sales Approach,Floor Covering_Tile,,No,Yes,No,Lookup,f,No,No,,HM126
+Sales Approach,Floor Covering_Vinyl,,No,Yes,No,Lookup,f,No,No,,HN126
+Sales Approach,Floor Covering_Wood,,No,Yes,No,Lookup,f,No,No,,HO126
+Sales Approach,Floor Covering_Wood Composite,,No,Yes,No,Lookup,f,No,No,,HP126
+Sales Approach,Full Service Spa,,No,Yes,No,Lookup,f,No,No,,HQ126
+Sales Approach,Fully Equipped Kitchen,,No,Yes,No,Lookup,f,No,No,,HR126
+Sales Approach,Furnished Units,,No,Yes,No,Lookup,f,No,No,,HS126
+Sales Approach,Garage_Under Building,,No,Yes,No,Lookup,f,No,No,,HT126
+Sales Approach,Gated Entrance,,No,Yes,No,Lookup,f,No,No,,HU126
+Sales Approach,Gift Shop,,No,Yes,No,Lookup,f,No,No,,HV126
+Sales Approach,Golf Course,,No,Yes,No,Lookup,f,No,No,,HW126
+Sales Approach,Granite_Stone Countertops,,No,Yes,No,Lookup,f,No,No,,HX126
+Sales Approach,Guest Laundry,,No,Yes,No,Lookup,f,No,No,,HY126
+Sales Approach,Hearing Accessible,,No,Yes,No,Lookup,f,No,No,,HZ126
+Sales Approach,Horseshoes,,No,Yes,No,Lookup,f,No,No,,IA126
+Sales Approach,Indoor Swimming Pool,,No,Yes,No,Lookup,f,No,No,,IB126
+Sales Approach,Indoor Waterpark,,No,Yes,No,Lookup,f,No,No,,IC126
+Sales Approach,Kids Club,,No,Yes,No,Lookup,f,No,No,,ID126
+Sales Approach,Lake_Pond_Beach,,No,Yes,No,Lookup,f,No,No,,IE126
+Sales Approach,Leased Business Center_Shipping,,No,Yes,No,Lookup,f,No,No,,IF126
+Sales Approach,Leased Nightclub,,No,Yes,No,Lookup,f,No,No,,IG126
+Sales Approach,Leased Restaurant,,No,Yes,No,Lookup,f,No,No,,IH126
+Sales Approach,LEED Certified,,No,Yes,No,Lookup,f,No,No,,II126
+Sales Approach,LEED Certified_Gold,,No,Yes,No,Lookup,f,No,No,,IJ126
+Sales Approach,LEED Certified_Silver,,No,Yes,No,Lookup,f,No,No,,IK126
+Sales Approach,Library,,No,Yes,No,Lookup,f,No,No,,IL126
+Sales Approach,Lobby Workstation,,No,Yes,No,Lookup,f,No,No,,IM126
+Sales Approach,Lobby Workstation_Business Center,,No,Yes,No,Lookup,f,No,No,,IN126
+Sales Approach,Local Shuttle,,No,Yes,No,Lookup,f,No,No,,IO126
+Sales Approach,Market Pantry,,No,Yes,No,Lookup,f,No,No,,IP126
+Sales Approach,Marina_Dock,,No,Yes,No,Lookup,f,No,No,,IQ126
+Sales Approach,Meditation_Relaxation Room,,No,Yes,No,Lookup,f,No,No,,IR126
+Sales Approach,Meeting Room,,No,Yes,No,Lookup,f,No,No,,IS126
+Sales Approach,Meeting Space,,No,Yes,No,Lookup,f,No,No,,IT126
+Sales Approach,Mini Refrigerator,,No,Yes,No,Lookup,f,No,No,,IV126
+Sales Approach,Movement Studio,,No,Yes,No,Lookup,f,No,No,,IW126
+Sales Approach,Movie_Theater Room,,No,Yes,No,Lookup,f,No,No,,IX126
+Sales Approach,Multiple Pools,,No,Yes,No,Lookup,f,No,No,,IY126
+Sales Approach,Nightclub,,No,Yes,No,Lookup,f,No,No,,IZ126
+Sales Approach,Outdoor Patio,,No,Yes,No,Lookup,f,No,No,,JA126
+Sales Approach,Outdoor Patio and Fire Pit,,No,Yes,No,Lookup,f,No,No,,JB126
+Sales Approach,Outdoor Swimming Pool,,No,Yes,No,Lookup,f,No,No,,JC126
+Sales Approach,Outdoor Waterpark,,No,Yes,No,Lookup,f,No,No,,JD126
+Sales Approach,Park,,No,Yes,No,Lookup,f,No,No,,JE126
+Sales Approach,Parking_Lot,,No,Yes,No,Lookup,f,No,No,,JF126
+Sales Approach,Patios_Balcony,,No,Yes,No,Lookup,f,No,No,,JG126
+Sales Approach,Pet Area,,No,Yes,No,Lookup,f,No,No,,JH126
+Sales Approach,Pet Friendly,,No,Yes,No,Lookup,f,No,No,,JI126
+Sales Approach,Playground,,No,Yes,No,Lookup,f,No,No,,JK126
+Sales Approach,Pool Lift,,No,Yes,No,Lookup,f,No,No,,JL126
+Sales Approach,Putting Green,,No,Yes,No,Lookup,f,No,No,,JM126
+Sales Approach,Restaurant,,No,Yes,No,Lookup,f,No,No,,JO126
+Sales Approach,Restaurant and Lounge,,No,Yes,No,Lookup,f,No,No,,JP126
+Sales Approach,Retail Outlet_Leased,,No,Yes,No,Lookup,f,No,No,,JQ126
+Sales Approach,Retail Outlet_Operated,,No,Yes,No,Lookup,f,No,No,,JR126
+Sales Approach,Rooftop Bar,,No,Yes,No,Lookup,f,No,No,,JT126
+Sales Approach,Rooftop Terrace,,No,Yes,No,Lookup,f,No,No,,JU126
+Sales Approach,Room Service,,No,Yes,No,Lookup,f,No,No,,JV126
+Sales Approach,Salon_Barber Shop,,No,Yes,No,Lookup,f,No,No,,JW126
+Sales Approach,Sauna,,No,Yes,No,Lookup,f,No,No,,JX126
+Sales Approach,Screened Porches,,No,Yes,No,Lookup,f,No,No,,JY126
+Sales Approach,Security Alarm,,No,Yes,No,Lookup,f,No,No,,JZ126
+Sales Approach,Self Parking,,No,Yes,No,Lookup,f,No,No,,KA126
+Sales Approach,Signature Restaurant,,No,Yes,No,Lookup,f,No,No,,KB126
+Sales Approach,Ski In,,No,Yes,No,Lookup,f,No,No,,KD126
+Sales Approach,Ski In_Ski Out,,No,Yes,No,Lookup,f,No,No,,KE126
+Sales Approach,Ski Out,,No,Yes,No,Lookup,f,No,No,,KF126
+Sales Approach,Slot Machines,,No,Yes,No,Lookup,f,No,No,,KG126
+Sales Approach,Smoke_Free,,No,Yes,No,Lookup,f,No,No,,KH126
+Sales Approach,Spa Retail,,No,Yes,No,Lookup,f,No,No,,KI126
+Sales Approach,Spa Treatment Rooms,,No,Yes,No,Lookup,f,No,No,,KJ126
+Sales Approach,Sport Court,,No,Yes,No,Lookup,f,No,No,,KK126
+Sales Approach,Sport Field,,No,Yes,No,Lookup,f,No,No,,KL126
+Sales Approach,Staffed Business Center,,No,Yes,No,Lookup,f,No,No,,KM126
+Sales Approach,Steam Room,,No,Yes,No,Lookup,f,No,No,,KO126
+Sales Approach,Storm Shelter,,No,Yes,No,Lookup,f,No,No,,KP126
+Sales Approach,Stove_Oven,,No,Yes,No,Lookup,f,No,No,,KQ126
+Sales Approach,Sundries Counter,,No,Yes,No,Lookup,f,No,No,,KR126
+Sales Approach,Table Games,,No,Yes,No,Lookup,f,No,No,,KS126
+Sales Approach,Tennis Court,,No,Yes,No,Lookup,f,No,No,,KT126
+Sales Approach,Town Car,,No,Yes,No,Lookup,f,No,No,,KU126
+Sales Approach,Truck Parking,,No,Yes,No,Lookup,f,No,No,,KV126
+Sales Approach,UPS_Leased,,No,Yes,No,Lookup,f,No,No,,KW126
+Sales Approach,Valet Laundry,,No,Yes,No,Lookup,f,No,No,,KX126
+Sales Approach,Valet Parking,,No,Yes,No,Lookup,f,No,No,,KY126
+Sales Approach,Vaulted Ceilings,,No,Yes,No,Lookup,f,No,No,,KZ126
+Sales Approach,Walk In Closets,,No,Yes,No,Lookup,f,No,No,,LB126
+Sales Approach,Water Access,,No,Yes,No,Lookup,f,No,No,,LC126
+Sales Approach,Waterslide,,No,Yes,No,Lookup,f,No,No,,LD126
+Sales Approach,Wedding Venue,,No,Yes,No,Lookup,f,No,No,,LE126
+Sales Approach,Whirlpool,,No,Yes,No,Lookup,f,No,No,,LF126
+Sales Approach,Window Coverings_Blinds,,No,Yes,No,Lookup,f,No,No,,LG126
+Sales Approach,Window Coverings_Drapes,,No,Yes,No,Lookup,f,No,No,,LH126
+Sales Approach,Window Coverings_Shades,,No,Yes,No,Lookup,f,No,No,,LI126
+Sales Approach,Temporary Hotels UDF String,,No,Yes,No,Lookup,f,No,No,,LS126
+Sales Approach,PctDiff,,No,Yes,No,Conditional,f,No,No,,LL127
+Sales Approach,Row,,No,Yes,No,Lookup,f,No,No,,LM127
+Sales Approach,Weighting >>,,Yes,No,No,,n,No,No,,BS135
+Sales Approach,Community Name,,No,Yes,No,Lookup,f,No,No,,BR139
+Sales Approach,Comparability to Subject,,Yes,No,Yes,,f,No,No,,LK139
+Sales Approach,Adj. %,,No,Yes,No,Lookup,f,No,No,,LL139
+Sales Approach,Public Water,,No,Yes,No,Conditional,f,No,No,,LM139
+Sales Approach,Public Sewer,,No,Yes,No,Conditional,f,No,No,,LN139
+Sales Approach,Subject Property:,,No,Yes,No,Lookup,f,No,No,,BS145
+Sales Approach,Threshold for narrative,,No,Yes,No,Calculation,f,No,No,,BQ148
+Sales Approach,AA,,No,Yes,No,Lookup,f,No,No,,OO178
+Sales Approach,IL,,No,Yes,No,Lookup,f,No,No,,OO179
+Sales Approach,AL,,No,Yes,No,Lookup,f,No,No,,OO180
+Sales Approach,MC,,No,Yes,No,Lookup,f,No,No,,OO181
+Sales Approach,NC,,No,Yes,No,Lookup,f,No,No,,OO182
+Sales Approach,Grid Prop Type,,No,Yes,No,Conditional,f,No,No,,OQ188
+Sales Approach,IsMultifamily,,No,Yes,No,Calculation,f,No,No,,OF197
+Sales Approach,IsMHC,,No,Yes,No,Calculation,f,No,No,,OF198
+Sales Approach,IsSelfStorage,,No,Yes,No,Calculation,f,No,No,,OF199
+Sales Approach,MHC & SS,,No,Yes,No,Calculation,f,No,No,,OK205
+Sales Approach,Pad Site Mix Single Wide,,No,Yes,No,Lookup,f,No,No,,OC207
+Sales Approach,Pad Site Mix Double Wide,,No,Yes,No,Lookup,f,No,No,,OE207
+Sales Approach,Pad Mix (SW / DW),,No,Yes,No,Conditional,f,No,No,,OP207
+Sales Approach,MF & SS,,No,Yes,No,Calculation,f,No,No,,OK208
+Sales Approach,MF & Seniors & SS,,No,Yes,No,Calculation,f,No,No,,OK209
+Sales Approach,Student Housing,,No,Yes,No,Calculation,f,No,No,,OK210
+Sales Approach,MF Affordable,,No,Yes,No,Calculation,f,No,No,,OK211
+Sales Approach,MF Affordable & SH & SS,,No,Yes,No,Calculation,f,No,No,,OK213
+Sales Approach,MF Affordable & SS,,No,Yes,No,Calculation,f,No,No,,OK214
+Sales Approach,Building Area,,No,Yes,No,Conditional,f,No,No,,OP217
+Sales Approach,Unit Count,,No,Yes,No,Lookup,f,No,No,,OC218
+Sales Approach,Seniors,,No,Yes,No,Calculation,f,No,No,,OK218
+Sales Approach,Bed Count,,No,Yes,No,Lookup,f,No,No,,OC219
+Sales Approach,Year Built Effective,,No,Yes,No,Conditional,f,No,No,,OP221
+Sales Approach,Seniors & SS,,No,Yes,No,Calculation,f,No,No,,OK224
+Sales Approach,Quality/Class,,No,Yes,No,Conditional,f,No,No,,OP229
+Sales Approach,Subtotal Row,,No,Yes,No,Calculation,f,No,No,,OI235
+Sales Approach,Annual Adj.,,No,Yes,No,Conditional,f,No,No,,OJ240
+Sales Approach,Individual Adjs.,,No,Yes,No,Calculation,f,No,No,,OI241
+Sales Approach,SH Adj.,,No,Yes,No,Conditional,f,No,No,,OJ242
+Sales Approach,This area is,,Yes,No,No,,s,No,No,,OO268
+Sales Approach,Pads/Acre,,No,Yes,No,Calculation,f,No,No,,OP268
+Sales Approach,for adjustment,,Yes,No,No,,s,No,No,,OO269
+Sales Approach,Public Water/Sewer,,No,Yes,No,Lookup,f,No,No,,OP269
+Sales Approach,exceptions with,,No,Yes,No,Conditional,f,No,No,,OO270
+Sales Approach,formulas.,,Yes,No,No,,s,No,No,,OO271
+Sales Approach,Average Unit Size,,No,Yes,No,Conditional,f,No,No,,OP272
+Sales Approach,Submarket Rent,,No,Yes,No,Lookup,f,No,No,,OR273
+Sales Approach,Econ. Characteristics - EBITDA Per Available Room,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],OP274
+Sales Approach,Final Adjusted Price,,No,Yes,No,Calculation,f,No,No,,OQ278
+Sales Approach,Median Adjusted Price,,No,Yes,No,Calculation,f,No,No,,OP285
+Sales Approach,Average v,,No,Yes,No,Conditional,f,No,No,,OF287
+Sales Approach,DEPRECATED,,No,Yes,No,Calculation,f,No,No,,OP292
+Sales Approach,Reliance Methodology,,No,Yes,Yes,Conditional,f,No,No,,OO297
+Sales Approach,Comp ID,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],QL319
+Sales Approach,Sale Date Q,,No,Yes,No,Calculation,f,No,No,,QL322
+Sales Approach,Comp Geo Code,,No,Yes,No,Lookup,f,No,No,,QL323
+Sales Approach,Current Price Index,,No,Yes,No,Lookup,f,No,No,,QL352
+Sales Approach,Sale Date Price Index,,No,Yes,No,Lookup,f,No,No,,QL353
+Sales Approach,Index % Change,,No,Yes,No,Calculation,f,No,No,,QL354
+Sales Approach,Current Market Rent,,No,Yes,No,Lookup,f,No,No,,QL376
+Sales Approach,Sale Date Market Rent,,No,Yes,No,Lookup,f,No,No,,QL377
+Sales Approach,Market Rent % Change,,No,Yes,No,Calculation,f,No,No,,QL378
+Sales Approach,Current Q #,,No,Yes,No,Lookup,f,No,No,,QL382
+Sales Approach,Sale Q #,,No,Yes,No,Lookup,f,No,No,,QL383
+Sales Approach,Apply Rent Growth?,,Yes,No,Yes,,s,No,No,,QX386
+Sales Approach,Date of Peak Pricing?,,Yes,No,No,,d,No,No,,QX387
+Sales Approach,Cap Rate Scenario,,No,Yes,No,Conditional,f,No,No,,QY392
+Sales Approach,Market Sale Price Index Change,,No,Yes,No,Calculation,f,No,No,,RM411
+Sales Approach,Market Rent Growth Change,,No,Yes,No,Calculation,f,No,No,,RM412
+Sales Approach,Cap Rate Sensitivity - Low,,No,Yes,No,Calculation,f,No,No,,RM413
+Sales Approach,Cap Rate Sensitivity - Average,,No,Yes,No,Aggregation,f,No,No,,RM414
+Sales Approach,Cap Rate Sensitivity - High,,No,Yes,No,Calculation,f,No,No,,RM415
+Sales Approach,Room Revenue,,No,Yes,No,Lookup,f,No,No,,TN449
+Sales Approach,HTrow,,No,Yes,No,Lookup,f,No,No,,SV455
+Sales Approach,Lat,,No,Yes,No,Lookup,f,No,No,,TE455
+Sales Approach,Lng,,No,Yes,No,Lookup,f,No,No,,TF455
+Sales Approach,Rooms,,No,Yes,No,Lookup,f,No,No,,TI455
+Sales Approach,Date of Sale,,No,Yes,No,Lookup,f,No,No,,TJ455
+Sales Approach,Price /Key,,No,Yes,No,Conditional,f,No,No,,TL455
+Sales Approach,Supplemental Sales,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],TA462
+Sales Approach,Subject Operating Expense Ratio,,No,Yes,No,Lookup,f,No,No,,TM468
+Sales Approach,Low,,No,Yes,No,Calculation,f,No,No,,TL469
+Sales Approach,High,,No,Yes,No,Calculation,f,No,No,,TL471
+Sales Approach,Enter custom sentence here.,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],TB481
+Sales Approach,N1_txtEGIM_ExpRatioCoefficient,,No,Yes,No,Calculation,f,No,No,,TC484
+Sales Approach,Exp Ratio,,No,Yes,No,Conditional,f,No,No,,TS489
+Sales Approach,Year-1,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],UD509
+Sales Approach,GRRM Interval,,Yes,No,Yes,,s,No,No,,UC512
+Sales Approach,Rooms Revenue,,No,Yes,No,Lookup,f,No,No,,TW513
+Sales Approach,Stabilized Year >,,Yes,No,No,,f,No,No,,UE513
+Sales Approach,Date >,,No,Yes,No,Calculation,f,No,No,,UK514
+Sales Approach,Subject Property Period,,Yes,No,No,,f,No,No,,UC516
+Sales Approach,Gross Rooms Revenue Multipler Conclusion,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],UC517
+Sales Approach,Subject Rooms Revenue,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],UK518
+Sales Approach,Indicated Value - GRRM Approach,,No,Yes,No,Calculation,f,No,No,,UC519
+Sales Approach,Value Indication Rounded,,No,Yes,No,Calculation,f,No,No,,UB521
+Sales Approach,"Indicated Value - GRRM Approach, Prior to Deduct",,No,Yes,No,Calculation,f,No,No,,UC536
+Sales Approach,Less Capital Deduction,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],UC537
+Sales Approach,Indicated Value - After Deduction,,No,Yes,No,Calculation,f,No,No,,UC538
+Sales Approach,Reonciled Column,,No,Yes,No,Lookup,f,No,No,,TW548
+Sales Approach,Reconciled Value,,Yes,No,Yes,,s,No,No,,TY548
+Sales Approach,Projection 1,,Yes,No,Yes,,s,No,No,,TY549
+Sales Approach,GRRM_Deduction,,No,Yes,No,Calculation,f,No,No,,UB549
+Sales Approach,Include EGIM,,No,Yes,Yes,Conditional,f,No,No,,UY569
+Sales Approach,Effective Gross Income Multiplier Value Indication,,No,Yes,No,Conditional,f,No,No,,UU574
+Sales Approach,Sale Price Value Indication,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],UU601
+Sale Comp Profiles,bandedRow,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],H253
+Sale Comp Profiles,Revenue Unit,,No,Yes,No,Calculation,f,No,No,,P262
+Income Approach Setup,How many Lease Grids are needed?,,Yes,No,No,,n,No,No,,H8
+Income Approach Setup,Both,,No,Yes,No,Conditional,f,No,No,,B17
+Income Approach Setup,Narrative associated from choice above,,No,Yes,No,Lookup,f,No,No,,H17
+Income Approach Setup,Which DCF Software are you using?,,Yes,No,Yes,,f,No,No,,H18
+Income Approach Setup,Keep only most recent P&L stmt per property,,Yes,No,Yes,,s,No,No,,H26
+Income Approach Setup,pvaIncomeApproach_KeepOnlyMostRecentStmt,,No,Yes,No,Calculation,f,No,No,,M26
+Income Approach Setup,Import financials in this year and newer than this year,,No,Yes,Yes,Lookup,f,No,No,,H27
+Income Approach Setup,State(s): comma-separate multiple states,,Yes,No,No,,f,No,No,,H33
+Income Approach Setup,MSA (1 only),,No,Yes,No,Calculation,f,No,No,,G35
+Rent Roll Input,1st source row of unit data (excluding headers):,,Yes,No,No,,n,No,No,,F2
+Rent Roll Input,Select Headers>>,,Yes,No,Yes,,f,No,No,,C5
+Rent Roll Input,Source Row,,No,Yes,No,Calculation,f,No,No,,A8
+Rent Roll Config,RR Bed,,No,Yes,Yes,Lookup,f,No,No,,Y3
+Rent Roll Config,RR Bath,,No,Yes,Yes,Lookup,f,No,No,,AB3
+Rent Roll Config,RR Type,,No,Yes,Yes,Lookup,f,No,No,,Y4
+Rent Roll Config,SF,,Yes,No,Yes,,s,No,No,,Y5
+Rent Roll Config,→,,Yes,No,Yes,,s,No,No,,AA5
+Rent Roll Config,Up,,Yes,No,No,,n,No,No,,AB5
+Rent Roll Config,Unit Name Label Source,,No,Yes,Yes,Lookup,f,No,No,,Y6
+Rent Roll Config,Detect Class from Floorplan ending in,,Yes,No,No,,s,No,No,,AB7
+Rent Roll Config,Affordable Label,,Yes,No,No,,s,No,No,,AB8
+Rent Roll Config,# Rent Roll Rows,,No,Yes,No,Calculation,f,No,No,,P15
+Rent Roll Config,Bed,,No,Yes,No,Lookup,f,No,No,,E16
+Rent Roll Config,Bath,,No,Yes,No,Lookup,f,No,No,,F16
+Rent Roll Config,Rank Score,,No,Yes,No,Conditional,f,No,No,,I16
+Rent Roll Config,UnitMix_ConfigID,,No,Yes,No,Lookup,f,No,No,,N16
+Rent Roll Config,Rounded Size,,No,Yes,No,Lookup,f,No,No,,X16
+Rent Roll Config,Avg Size,,No,Yes,No,Conditional,f,No,No,,Y16
+Rent Roll Config,Min Size,,No,Yes,No,Conditional,f,No,No,,Z16
+Rent Roll Config,Max Size,,No,Yes,No,Conditional,f,No,No,,AA16
+Rent Roll Config,# Units,,No,Yes,No,Conditional,f,No,No,,AB16
+Rent Roll Config,Unit Grid,,No,Yes,No,Conditional,f,No,No,,AL16
+Rent Roll Config,Unit Type,,No,Yes,No,Conditional,f,No,No,,AN16
+Rent Roll Config,Unit Name,,No,Yes,No,Conditional,f,No,No,,AP16
+Rent Roll Config,Unit Type Unit Name,,No,Yes,No,Conditional,f,No,No,,AU16
+Rent Roll Config,Unit Mix,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AV16
+Rent Roll Config,Comp Unit Grid,,No,Yes,No,Conditional,f,No,No,,AW16
+Rent Roll Config,Aff Comp Unit Grid,,No,Yes,No,Conditional,f,No,No,,AY16
+Rent Roll Config,Score,,No,Yes,No,Conditional,f,No,No,,I121
+Rent Roll Config,EXCLUDE,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AL121
+Rent Roll Config,10 Grids Sorted,,No,Yes,No,Calculation,f,No,No,,A122
+Lease Grid,Lease Analysis Grid,,Yes,No,No,,s,No,No,,F10
+Lease Grid,Step 3.,,No,Yes,No,Calculation,f,No,No,,K18
+Lease Grid,View Maps,,No,Yes,No,Calculation,f,No,No,,AA18
+Lease Grid,Selected rent from comp,,No,Yes,No,Lookup,f,No,No,,I19
+Lease Grid,Lease,,Yes,No,No,,s,No,No,,G20
+Lease Grid,Configure for MF Lease,,Yes,No,No,,s,No,No,,B25
+Lease Grid,Select Unit Type >,,No,Yes,No,Calculation,f,No,No,,G26
+Lease Grid,Tenant,,No,Yes,No,Lookup,f,No,No,,I32
+Lease Grid,Start Date,,No,Yes,No,Lookup,f,No,No,,I33
+Lease Grid,Format Currency,,Yes,No,Yes,,s,No,No,,F34
+Lease Grid,Eff. Rent/SF,,No,Yes,No,Lookup,f,No,No,,I34
+Lease Grid,Lease Type,,No,Yes,No,Lookup,f,No,No,,I35
+Lease Grid,Lease Term,,No,Yes,No,Lookup,f,No,No,,I36
+Lease Grid,Unit Size (SF),,No,Yes,No,Lookup,f,No,No,,G40
+Lease Grid,Go To MF Inventory Table,,Yes,No,No,,s,No,No,,B41
+Lease Grid,Go To MF Comparison Tables,,Yes,No,Yes,,s,No,No,,F41
+Lease Grid,Rent/Mo.,,No,Yes,No,Lookup,f,No,No,,I41
+Lease Grid,Unadjusted Rent,,No,Yes,No,Conditional,f,No,No,,I43
+Lease Grid,Conditions of Lease,,Yes,No,Yes,,s,No,No,,I45
+Lease Grid,Adjusted Rent,,No,Yes,No,Conditional,f,No,No,,I47
+Lease Grid,Market Trends/Year,,Yes,No,No,,n,No,No,,G48
+Lease Grid,Expenses,,Yes,No,No,,n,No,No,,I50
+Lease Grid,Measured From Rent,,Yes,No,No,,s,No,No,,C104
+Lease Grid,System Table >>,,Yes,No,No,,s,No,No,,H107
+Lease Grid,Type 1,,No,Yes,No,Lookup,f,No,No,,I107
+Lease Grid,Type 2,,No,Yes,No,Lookup,f,No,No,,I108
+Lease Grid,Type 3,,No,Yes,No,Lookup,f,No,No,,I109
+Lease Grid,Type 4,,No,Yes,No,Lookup,f,No,No,,I110
+Lease Grid,Type 5,,No,Yes,No,Lookup,f,No,No,,I111
+Lease Grid,Type 6,,No,Yes,No,Lookup,f,No,No,,I112
+Lease Grid,Type 7,,No,Yes,No,Lookup,f,No,No,,I113
+Lease Grid,Type 8,,No,Yes,No,Lookup,f,No,No,,I114
+Lease Grid,Type 9,,No,Yes,No,Lookup,f,No,No,,I115
+Lease Grid,Type 10,,No,Yes,No,Lookup,f,No,No,,I116
+Lease Grid,Type 11,,No,Yes,No,Lookup,f,No,No,,I117
+Lease Grid,Type 12,,No,Yes,No,Lookup,f,No,No,,I118
+Lease Grid,Type 13,,No,Yes,No,Lookup,f,No,No,,I119
+Lease Grid,Type 14,,No,Yes,No,Lookup,f,No,No,,I120
+Lease Grid,Type 15,,No,Yes,No,Lookup,f,No,No,,I121
+Lease Grid,Reconciled Market Rent:,,Yes,No,No,,n,No,No,,K131
+Lease Grid,N1LeaseGridRangesAndReconciledRent,,Yes,No,No,,s,No,No,,F135
+Lease Grid,Lease Grid Comparable Ranking Table,,Yes,No,No,,s,No,No,,AW163
+Lease Grid,Unadjusted,,Yes,No,No,,s,No,No,,AO168
+Lease Grid,Adjusted,,Yes,No,No,,s,No,No,,AP168
+Lease Grid,Lease Comps Comparison,,No,Yes,No,Lookup,f,No,No,,AS170
+Lease Grid,"Tip: If you want to change the sentences, copy and paste them as text in the word document and adjust to your liking.",,No,Yes,No,Conditional,f,No,No,,BH189
+Lease Grid,a rent per month,,No,Yes,No,Conditional,f,No,No,,BO191
+Lease Grid,a market rent per month,,No,Yes,No,Calculation,f,No,No,,BO193
+Lease Grid,conditions of lease,,No,Yes,No,Lookup,f,No,No,,BI197
+Lease Grid,other,,No,Yes,No,Lookup,f,No,No,,BI198
+Lease Grid,Daily Rate/Unit,,No,Yes,No,Aggregation,f,No,No,,BM202
+Lease Grid,a daily rate per unit,,No,Yes,No,Conditional,f,No,No,,BN202
+Lease Grid,Commercial Lease Table,,Yes,No,No,,s,No,No,,BX472
+Lease Grid,Lessee,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],CB475
+Lease Grid,Rows,,Yes,No,Yes,,s,No,No,,BV476
+Lease Grid,Comparison,,Yes,No,Yes,,s,No,No,,CL477
+Lease Grid,Inferior,,No,Yes,No,Lookup,f,No,No,,CM493
+Lease Grid,Superior,,No,Yes,No,Lookup,f,No,No,,CM509
+Lease Grid,Toggle Columns,,Yes,No,Yes,,s,No,No,,DN667
+Lease Grid,Comparable Lease Properties Overview,,Yes,No,Yes,,s,No,No,,DM670
+Lease Grid,Select Metric >,,Yes,No,Yes,,s,No,No,,DQ684
+Lease Grid,Subject >>,,No,Yes,No,Calculation,f,No,No,,DL686
+Lease Grid,Choose Comp Unit Type,,Yes,No,Yes,,s,No,No,,DI688
+Lease Grid,Premium,,No,Yes,No,Lookup,f,No,No,,DJ688
+Lease Grid,Standard,,No,Yes,No,Lookup,f,No,No,,DJ689
+Lease Grid,Employee,,No,Yes,No,Lookup,f,No,No,,DJ690
+Lease Grid,Floor,,No,Yes,No,Lookup,f,No,No,,DR691
+Lease Grid,Baths,,No,Yes,No,Lookup,f,No,No,,DU691
+Lease Grid,é,,Yes,No,No,,s,No,No,,DI700
+Lease Grid,Align Comp unit type with subject unit type,,Yes,No,No,,s,No,No,,DV701
+Lease Grid,Click for list,,No,Yes,No,Lookup,f,No,No,,DJ708
+Lease Grid,Enter Market Rent Here,,No,Yes,No,Lookup,f,No,No,,DV709
+Lease Grid,Unit Type 6,,Yes,No,No,,s,No,No,,DI787
+Lease Grid,Unit Type 7,,Yes,No,No,,s,No,No,,DI807
+Lease Grid,Unit Type 8,,Yes,No,No,,s,No,No,,DI827
+Lease Grid,Unit Type 9,,Yes,No,No,,s,No,No,,DI847
+Lease Grid,Unit Type 10,,Yes,No,No,,s,No,No,,DI867
+Lease Grid,Unit Type 11,,Yes,No,No,,s,No,No,,DI887
+Lease Grid,Unit Type 12,,Yes,No,No,,s,No,No,,DI907
+Lease Grid,Unit Type 13,,Yes,No,No,,s,No,No,,DI927
+Lease Grid,Unit Type 14,,Yes,No,No,,s,No,No,,DI947
+Lease Grid,Unit Type 15,,Yes,No,No,,s,No,No,,DI966
+Lease Grid,Water,,No,Yes,No,Conditional,f,No,No,,EH1060
+Lease Grid,Sewer,,No,Yes,No,Conditional,f,No,No,,EH1061
+Lease Grid,Electric,,No,Yes,No,Conditional,f,No,No,,EH1062
+Lease Grid,Trash,,No,Yes,No,Conditional,f,No,No,,EH1063
+Lease Grid,Hot Water,,No,Yes,No,Conditional,f,No,No,,EH1064
+Lease Grid,Gas,,No,Yes,No,Conditional,f,No,No,,EH1065
+Lease Grid,Heat,,No,Yes,No,Conditional,f,No,No,,EH1066
+Lease Grid,Cable/Satellite,,No,Yes,No,Conditional,f,No,No,,EH1067
+Lease Grid,Internet,,No,Yes,No,Conditional,f,No,No,,EH1068
+Lease Grid,Insert Full-Width Images,,Yes,No,No,,s,No,No,,FI1086
+Lease Grid,Step 2. Overwrite a Header Prefix,,Yes,No,No,,s,No,No,,FG1089
+Lease Grid,Step 4. Choose a default display for empty Database fields,,Yes,No,Yes,,s,No,No,,FI1093
+Lease Grid,Step 6. Refresh Data from the Database as necessary,,Yes,No,No,,s,No,No,,FH1099
+Lease Grid,Building,,No,Yes,No,Lookup,f,No,No,,FK1132
+Lease Grid,Assisted Living Unit Count,,No,Yes,No,Lookup,f,No,No,,FK1158
+Lease Grid,Independent Living Unit Count,,No,Yes,No,Lookup,f,No,No,,FK1159
+Lease Grid,Type,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],FL1167
+Lease Grid,Leases,,No,Yes,No,Lookup,f,No,No,,FG1168
+Lease Grid,Term,,No,Yes,No,Lookup,f,No,No,,FM1168
+Lease Grid,Rent/Month,,No,Yes,No,Calculation,f,No,No,,FM1201
+Lease Grid,Rms,,No,Yes,No,Lookup,f,No,No,,FH1202
+Lease Grid,Units & Rent,,No,Yes,No,Lookup,f,No,No,,FM1202
+Lease Grid,Commercial Lease Comments,,No,Yes,No,Conditional,f,No,No,,FP1221
+Lease Grid,Comp 1,,No,Yes,No,Calculation,f,No,No,,GJ2381
+Lease Grid,Comp 2,,No,Yes,No,Calculation,f,No,No,,GM2381
+Lease Grid,Comp 3,,No,Yes,No,Calculation,f,No,No,,GP2381
+Lease Grid,Comp Fields - Hidden by default,,Yes,No,No,,s,No,No,,FX2383
+Lease Grid,Data,,No,Yes,No,Lookup,f,No,No,,GG2383
+Lease Grid,on,,No,Yes,No,Lookup,f,No,No,,GG2384
+Lease Grid,$ Last Rent / Restricted?,,No,Yes,No,Lookup,f,No,No,,GG2387
+Lease Grid,Rent Concessions,,No,Yes,No,Lookup,f,No,No,,GG2389
+Lease Grid,Occupancy for Unit Type,,No,Yes,No,Calculation,f,No,No,,GG2391
+Lease Grid,Effective Rent & Rent/ sq. ft,,No,Yes,No,Calculation,f,No,No,,GG2392
+Lease Grid,Structure / Stories,,No,Yes,No,Calculation,f,No,No,,GF2395
+Lease Grid,Same Market? Miles to Subj,,No,Yes,No,Lookup,f,No,No,,GH2399
+Lease Grid,# Bedrooms,,No,Yes,No,Lookup,f,No,No,,GE2401
+Lease Grid,# Baths,,No,Yes,No,Lookup,f,No,No,,GE2402
+Lease Grid,Unit Interior Sq. Ft.,,No,Yes,No,Lookup,f,No,No,,GE2403
+Lease Grid,Balcony/ Patio,,No,Yes,No,Lookup,f,No,No,,GG2404
+Lease Grid,Patios/Balcony,,Yes,No,No,,s,No,No,,FX2405
+Lease Grid,Air conditioning - Central,,Yes,No,No,,s,No,No,,FY2405
+Lease Grid,Range/ refrigerator,,No,Yes,No,Lookup,f,No,No,,GG2406
+Lease Grid,Microwave/ Dishwasher,,No,Yes,No,Lookup,f,No,No,,GG2407
+Lease Grid,Washer/Dryer Hookup,,Yes,No,No,,s,No,No,,FY2408
+Lease Grid,Washer/Dryer,,No,Yes,No,Lookup,f,No,No,,GG2408
+Lease Grid,Floor Covering-Vinyl,,Yes,No,No,,s,No,No,,FY2409
+Lease Grid,Floor Covering-Wood,,Yes,No,No,,s,No,No,,FZ2409
+Lease Grid,Floor Coverings,,No,Yes,No,Lookup,f,No,No,,GG2409
+Lease Grid,Window Coverings-Blinds,,Yes,No,No,,s,No,No,,FY2410
+Lease Grid,Window Coverings-Shades,,Yes,No,No,,s,No,No,,FZ2410
+Lease Grid,Window  Coverings,,No,Yes,No,Lookup,f,No,No,,GG2410
+Lease Grid,Cable/ Satellite/Internet,,No,Yes,No,Lookup,f,No,No,,GG2411
+Lease Grid,Special Features,,No,Yes,No,Lookup,f,No,No,,GG2412
+Lease Grid,Parking - Lot,,Yes,No,No,,s,No,No,,FY2415
+Lease Grid,Garage/Under Building,,Yes,No,No,,s,No,No,,FZ2415
+Lease Grid,Parking  ( $ Fee),,Yes,No,No,,s,No,No,,GF2415
+Lease Grid,/,,No,Yes,No,Lookup,f,No,No,,GG2415
+Lease Grid,Extra Storage,,No,Yes,No,Lookup,f,No,No,,GG2416
+Lease Grid,Storage,,Yes,No,No,,s,No,No,,FX2417
+Lease Grid,Clubhouse/Rec. Bldg,,Yes,No,No,,s,No,No,,FY2418
+Lease Grid,Clubhouse/ Meeting Rooms,,No,Yes,No,Lookup,f,No,No,,GG2418
+Lease Grid,Swimming Pool,,Yes,No,No,,s,No,No,,FY2419
+Lease Grid,Pool/ Recreation Areas,,No,Yes,No,Lookup,f,No,No,,GG2419
+Lease Grid,Business Ctr / Nbhd Netwk,,No,Yes,No,Lookup,f,No,No,,GG2420
+Lease Grid,Service Coordination,,No,Yes,No,Lookup,f,No,No,,GG2421
+Lease Grid,Heat (in rent?/ type),,No,Yes,No,Lookup,f,No,No,,GG2425
+Lease Grid,Hot Water (in rent?/ type),,No,Yes,No,Lookup,f,No,No,,GG2428
+Lease Grid,Cold Water/ Sewer,,No,Yes,No,Lookup,f,No,No,,GG2430
+Lease Grid,Trash /Recycling,,No,Yes,No,Lookup,f,No,No,,GG2431
+Lease Grid,/Y,,Yes,No,No,,n,No,No,,GI2431
+Lease Grid,# Adjustments B to D,,No,Yes,No,Conditional,f,No,No,,GG2433
+Lease Grid,Neg,,No,Yes,No,Conditional,f,No,No,,GU2433
+Lease Grid,Net/ Gross Adjmts B to E,,No,Yes,No,Calculation,f,No,No,,GG2437
+Lease Grid,Gross,,No,Yes,No,Calculation,f,No,No,,GU2437
+Lease Grid,Adjusted Rent (5+ 43),,No,Yes,No,Calculation,f,No,No,,GG2439
+Lease Grid,Adj Rent/Last  rent,,No,Yes,No,Conditional,f,No,No,,GI2440
+Lease Grid,Estimated Market Rent,,No,Yes,No,Conditional,f,No,No,,GG2441
+Lease Grid,Adj. Rent,,No,Yes,No,Calculation,f,No,No,,GG2443
+Lease Grid,N1Comp10Lease,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FC2454
+Lease Grid,N1HUD92273S8_Form,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GC2454
+Lease Grid,Grid was prepared:,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GG2454
+Lease Grid,Using HUD's Excel form,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GM2454
+Lease Grid,SubjectCompDataLease,,No,Yes,No,Lookup,f,No,No,,A2458
+Lease Grid,http://www.hendersoncountypublicschoolsnc.org/,,No,Yes,No,Lookup,f,No,No,,DC2458
+Lease Grid,Appraisal:,,No,Yes,No,Lookup,f,No,No,,GQ2458
+Lease Grid,Mud Creek,,No,Yes,No,Lookup,f,No,No,,KA2458
+Lease Grid,"Asheville, NC",,No,Yes,No,Lookup,f,No,No,,QU2458
+Lease Grid,Listing,,No,Yes,No,Lookup,f,No,No,,UB2458
+Lease Grid,http://taxinfo.hendersoncountync.gov/,,No,Yes,No,Lookup,f,No,No,,UV2458
+Lease Grid,Lease Comp Table,,Yes,No,No,,s,No,No,,A2461
+Lease Grid,Actual Price,,Yes,No,No,,s,No,No,,I2461
+Lease Grid,Adjustment Comments,,Yes,No,No,,s,No,No,,K2461
+Lease Grid,Appraisal Usage,,Yes,No,No,,s,No,No,,T2461
+Lease Grid,Assessor Website,,Yes,No,No,,s,No,No,,Y2461
+Lease Grid,Assisted Living Community Fee,,Yes,No,No,,s,No,No,,Z2461
+Lease Grid,Assisted Living Entry Fee,,Yes,No,No,,s,No,No,,AA2461
+Lease Grid,Assisted Living Monthly Second Person Fee,,Yes,No,No,,s,No,No,,AB2461
+Lease Grid,Assisted Living Occupancy Percentage,,Yes,No,No,,s,No,No,,AC2461
+Lease Grid,Average MF Unit Size,,Yes,No,No,,s,No,No,,AE2461
+Lease Grid,Base Rent Abatement,,Yes,No,No,,s,No,No,,AG2461
+Lease Grid,Building Repairs,,Yes,No,No,,s,No,No,,AR2461
+Lease Grid,Business Value Adjustment,,Yes,No,No,,s,No,No,,AS2461
+Lease Grid,Buyer Type,,Yes,No,No,,s,No,No,,AT2461
+Lease Grid,Care Type Comments,,Yes,No,No,,s,No,No,,AW2461
+Lease Grid,CBSA ID,,Yes,No,No,,s,No,No,,AX2461
+Lease Grid,Clean-up Costs,,Yes,No,No,,s,No,No,,BD2461
+Lease Grid,Comm. Verification Source,,Yes,No,No,,s,No,No,,BR2461
+Lease Grid,Commercial Vacancy,,Yes,No,No,,s,No,No,,BT2461
+Lease Grid,Conditions of Sale Adjustment,,Yes,No,No,,s,No,No,,BX2461
+Lease Grid,Confidential,,Yes,No,No,,s,No,No,,BY2461
+Lease Grid,Created By,,Yes,No,No,,s,No,No,,CM2461
+Lease Grid,Creation Date,,Yes,No,No,,s,No,No,,CN2461
+Lease Grid,Current List Price,,Yes,No,No,,s,No,No,,CO2461
+Lease Grid,Current List Price Difference,,Yes,No,No,,s,No,No,,CP2461
+Lease Grid,Deduct Reserves from EGI,,Yes,No,No,,s,No,No,,CS2461
+Lease Grid,Diminution Source,,Yes,No,No,,s,No,No,,DA2461
+Lease Grid,Discount Rate,,Yes,No,No,,s,No,No,,DB2461
+Lease Grid,District Spending,,Yes,No,No,,s,No,No,,DC2461
+Lease Grid,DistrictURL,,Yes,No,No,,s,No,No,,DD2461
+Lease Grid,Easement Acres,,Yes,No,No,,s,No,No,,DI2461
+Lease Grid,Easement Land SF,,Yes,No,No,,s,No,No,,DJ2461
+Lease Grid,East Boundary,,Yes,No,No,,s,No,No,,DK2461
+Lease Grid,Electric Expense,,Yes,No,No,,s,No,No,,DR2461
+Lease Grid,Encumbrance Or Easement,,Yes,No,No,,s,No,No,,DS2461
+Lease Grid,Enrollment,,Yes,No,No,,s,No,No,,DT2461
+Lease Grid,Environmental Concerns,,Yes,No,No,,s,No,No,,DU2461
+Lease Grid,Environmental Remarks,,Yes,No,No,,s,No,No,,DW2461
+Lease Grid,Environmental Status,,Yes,No,No,,s,No,No,,DX2461
+Lease Grid,Excess Acres,,Yes,No,No,,s,No,No,,DZ2461
+Lease Grid,Excess Land Adjustment,,Yes,No,No,,s,No,No,,EA2461
+Lease Grid,Excess Land SF,,Yes,No,No,,s,No,No,,EB2461
+Lease Grid,Expenditures after Sale Adjustment,,Yes,No,No,,s,No,No,,EC2461
+Lease Grid,Expense Growth Rate,,Yes,No,No,,s,No,No,,ED2461
+Lease Grid,Expense Reimbursements,,Yes,No,No,,s,No,No,,EH2461
+Lease Grid,FF and E Adjustment,,Yes,No,No,,s,No,No,,EK2461
+Lease Grid,Financials Type,,Yes,No,No,,s,No,No,,EP2461
+Lease Grid,Financing Terms Adjustment,,Yes,No,No,,s,No,No,,ER2461
+Lease Grid,Finish Condition,,Yes,No,No,,s,No,No,,ES2461
+Lease Grid,Flood Map Panel,,Yes,No,No,,s,No,No,,EV2461
+Lease Grid,Fuel Expense,,Yes,No,No,,s,No,No,,EZ2461
+Lease Grid,Gas Expense,,Yes,No,No,,s,No,No,,FC2461
+Lease Grid,General And Administrative,,Yes,No,No,,s,No,No,,FE2461
+Lease Grid,Gross Land Area Hectares,,Yes,No,No,,s,No,No,,FI2461
+Lease Grid,Gross Land Area Sq Meters,,Yes,No,No,,s,No,No,,FJ2461
+Lease Grid,Ground Rent Expense,,Yes,No,No,,s,No,No,,FK2461
+Lease Grid,Highest and Best Use,,Yes,No,No,,s,No,No,,FM2461
+Lease Grid,Historical Assessed Value 1,,Yes,No,No,,s,No,No,,FN2461
+Lease Grid,Historical Assessed Value 2,,Yes,No,No,,s,No,No,,FO2461
+Lease Grid,Historical Assessed Value 3,,Yes,No,No,,s,No,No,,FP2461
+Lease Grid,Historical Assessed Value 4,,Yes,No,No,,s,No,No,,FQ2461
+Lease Grid,Historical Improv Value 1,,Yes,No,No,,s,No,No,,FR2461
+Lease Grid,Historical Improv Value 2,,Yes,No,No,,s,No,No,,FS2461
+Lease Grid,Historical Improv Value 3,,Yes,No,No,,s,No,No,,FT2461
+Lease Grid,Historical Improv Value 4,,Yes,No,No,,s,No,No,,FU2461
+Lease Grid,Historical Land Value 1,,Yes,No,No,,s,No,No,,FV2461
+Lease Grid,Historical Land Value 2,,Yes,No,No,,s,No,No,,FW2461
+Lease Grid,Historical Land Value 3,,Yes,No,No,,s,No,No,,FX2461
+Lease Grid,Historical Land Value 4,,Yes,No,No,,s,No,No,,FY2461
+Lease Grid,Historical Taxes 1,,Yes,No,No,,s,No,No,,FZ2461
+Lease Grid,Historical Taxes 2,,Yes,No,No,,s,No,No,,GA2461
+Lease Grid,Historical Taxes 3,,Yes,No,No,,s,No,No,,GB2461
+Lease Grid,Historical Taxes 4,,Yes,No,No,,s,No,No,,GC2461
+Lease Grid,Historical Year 1,,Yes,No,No,,s,No,No,,GD2461
+Lease Grid,Historical Year 2,,Yes,No,No,,s,No,No,,GE2461
+Lease Grid,Historical Year 3,,Yes,No,No,,s,No,No,,GF2461
+Lease Grid,Historical Year 4,,Yes,No,No,,s,No,No,,GG2461
+Lease Grid,Holding Period Years,,Yes,No,No,,s,No,No,,GH2461
+Lease Grid,Improved TF,,Yes,No,No,,s,No,No,,GL2461
+Lease Grid,Improvement Value,,Yes,No,No,,s,No,No,,GO2461
+Lease Grid,Improvement Value Per SF,,Yes,No,No,,s,No,No,,GP2461
+Lease Grid,IncExpName,,Yes,No,No,,s,No,No,,GR2461
+Lease Grid,Income Growth,,Yes,No,No,,s,No,No,,GS2461
+Lease Grid,Income Growth Rate,,Yes,No,No,,s,No,No,,GT2461
+Lease Grid,Independent Living Community Fee,,Yes,No,No,,s,No,No,,GU2461
+Lease Grid,Independent Living Entry Fee,,Yes,No,No,,s,No,No,,GV2461
+Lease Grid,Independent Living Monthly Second Person Fee,,Yes,No,No,,s,No,No,,GW2461
+Lease Grid,Independent Living Occupancy Percentage,,Yes,No,No,,s,No,No,,GX2461
+Lease Grid,Industrial GBA Meters,,Yes,No,No,,s,No,No,,HA2461
+Lease Grid,Industrial RA Meters,,Yes,No,No,,s,No,No,,HC2461
+Lease Grid,Instance Type,,Yes,No,No,,s,No,No,,HD2461
+Lease Grid,Internal Comments,,Yes,No,No,,s,No,No,,HF2461
+Lease Grid,Is Ground Lease,,Yes,No,No,,s,No,No,,HG2461
+Lease Grid,Surplus Acres,,Yes,No,No,,s,No,No,,SB2461
+Lease Grid,Surplus Land SF,,Yes,No,No,,s,No,No,,SC2461
+Lease Grid,Total Market Rent,,Yes,No,No,,s,No,No,,TX2461
+Lease Grid,Unusable Acres,,Yes,No,No,,s,No,No,,UK2461
+Lease Grid,Unusable Land SF,,Yes,No,No,,s,No,No,,UL2461
+Lease Grid,AA 2nd Resident Percentage,,Yes,No,No,,s,No,No,,ZY2461
+Lease Grid,AA Bed Count,,Yes,No,No,,s,No,No,,ZZ2461
+Lease Grid,AA Meals per Day in Base Rate,,Yes,No,No,,s,No,No,,AAA2461
+Lease Grid,AA Occupancy,,Yes,No,No,,s,No,No,,AAB2461
+Lease Grid,AA Other Percentage,,Yes,No,No,,s,No,No,,AAC2461
+Lease Grid,AA Private Pay Percentage,,Yes,No,No,,s,No,No,,AAD2461
+Lease Grid,AA Unit Count,,Yes,No,No,,s,No,No,,AAE2461
+Lease Grid,Active Adult Managed Care Percentage,,Yes,No,No,,s,No,No,,AAF2461
+Lease Grid,Active Adult Medicaid Percentage,,Yes,No,No,,s,No,No,,AAG2461
+Lease Grid,Active Adult Medicare Percentage,,Yes,No,No,,s,No,No,,AAH2461
+Lease Grid,Active Adult VA Percentage,,Yes,No,No,,s,No,No,,AAI2461
+Lease Grid,AL 2nd Resident Percentage,,Yes,No,No,,s,No,No,,AAN2461
+Lease Grid,AL Bed Count,,Yes,No,No,,s,No,No,,AAO2461
+Lease Grid,AL Fee Structure,,Yes,No,No,,s,No,No,,AAP2461
+Lease Grid,AL Level of Care Max,,Yes,No,No,,s,No,No,,AAQ2461
+Lease Grid,AL Level of Care Min,,Yes,No,No,,s,No,No,,AAR2461
+Lease Grid,AL Managed Care Percentage,,Yes,No,No,,s,No,No,,AAS2461
+Lease Grid,AL Medicaid Percentage,,Yes,No,No,,s,No,No,,AAT2461
+Lease Grid,AL Medicare Percentage,,Yes,No,No,,s,No,No,,AAU2461
+Lease Grid,AL Medication Mgmt,,Yes,No,No,,s,No,No,,AAV2461
+Lease Grid,AL Occupancy,,Yes,No,No,,s,No,No,,AAW2461
+Lease Grid,AL Other Percentage,,Yes,No,No,,s,No,No,,AAX2461
+Lease Grid,AL Private Pay Percentage,,Yes,No,No,,s,No,No,,AAY2461
+Lease Grid,AL Unit Count,,Yes,No,No,,s,No,No,,AAZ2461
+Lease Grid,AL_MC Licensed Beds,,Yes,No,No,,s,No,No,,ABA2461
+Lease Grid,Assisted Living VA Percentage,,Yes,No,No,,s,No,No,,ABC2461
+Lease Grid,Care Type 1,,Yes,No,No,,s,No,No,,ABS2461
+Lease Grid,Care Type 2,,Yes,No,No,,s,No,No,,ABT2461
+Lease Grid,Care Type 3,,Yes,No,No,,s,No,No,,ABU2461
+Lease Grid,Care Type 4,,Yes,No,No,,s,No,No,,ABV2461
+Lease Grid,Care Type 5,,Yes,No,No,,s,No,No,,ABW2461
+Lease Grid,Care Type 6,,Yes,No,No,,s,No,No,,ABX2461
+Lease Grid,Change in Assessment YoY Following Sale,,Yes,No,No,,s,No,No,,ACB2461
+Lease Grid,Change in RE Taxes in Year Following Sale,,Yes,No,No,,s,No,No,,ACC2461
+Lease Grid,EBITDA less Reserves,,Yes,No,No,,s,No,No,,ACL2461
+Lease Grid,Fee Structure 3,,Yes,No,No,,s,No,No,,ACS2461
+Lease Grid,Fee Structure 4,,Yes,No,No,,s,No,No,,ACT2461
+Lease Grid,Fee Structure 5,,Yes,No,No,,s,No,No,,ACU2461
+Lease Grid,Fee Structure 6,,Yes,No,No,,s,No,No,,ACV2461
+Lease Grid,Food and Beverage Expenses,,Yes,No,No,,s,No,No,,ADJ2461
+Lease Grid,Food and Beverage Revenue,,Yes,No,No,,s,No,No,,ADK2461
+Lease Grid,Franchise Fees Expense,,Yes,No,No,,s,No,No,,ADL2461
+Lease Grid,Gross Operating Profit,,Yes,No,No,,s,No,No,,ADU2461
+Lease Grid,Housekeeping in Base Rate,,Yes,No,No,,s,No,No,,ADY2461
+Lease Grid,IL 2nd Resident Percentage,,Yes,No,No,,s,No,No,,AEA2461
+Lease Grid,IL Bed Count,,Yes,No,No,,s,No,No,,AEB2461
+Lease Grid,IL Meals per Day in Base Rate,,Yes,No,No,,s,No,No,,AEC2461
+Lease Grid,IL Occupancy,,Yes,No,No,,s,No,No,,AED2461
+Lease Grid,IL Other Percentage,,Yes,No,No,,s,No,No,,AEE2461
+Lease Grid,IL Private Pay Percentage,,Yes,No,No,,s,No,No,,AEF2461
+Lease Grid,IL Unit Count,,Yes,No,No,,s,No,No,,AEG2461
+Lease Grid,Income before Fixed Charges,,Yes,No,No,,s,No,No,,AEH2461
+Lease Grid,Independent Living Managed Care Percentage,,Yes,No,No,,s,No,No,,AEI2461
+Lease Grid,Independent Living Medicaid Percentage,,Yes,No,No,,s,No,No,,AEJ2461
+Lease Grid,Independent Living Medicare Percentage,,Yes,No,No,,s,No,No,,AEK2461
+Lease Grid,Independent Living VA Percentage,,Yes,No,No,,s,No,No,,AEL2461
+Lease Grid,Information Telecommunications,,Yes,No,No,,s,No,No,,AEO2461
+Lease Grid,Level of Care Max 3,,Yes,No,No,,s,No,No,,AEW2461
+Lease Grid,Level of Care Max 4,,Yes,No,No,,s,No,No,,AEX2461
+Lease Grid,Level of Care Max 5,,Yes,No,No,,s,No,No,,AEY2461
+Lease Grid,Level of Care Max 6,,Yes,No,No,,s,No,No,,AEZ2461
+Lease Grid,Level of Care Min 3,,Yes,No,No,,s,No,No,,AFA2461
+Lease Grid,Level of Care Min 4,,Yes,No,No,,s,No,No,,AFB2461
+Lease Grid,Level of Care Min 5,,Yes,No,No,,s,No,No,,AFC2461
+Lease Grid,Level of Care Min 6,,Yes,No,No,,s,No,No,,AFD2461
+Lease Grid,Listing Broker,,Yes,No,No,,s,No,No,,AFF2461
+Lease Grid,Loaded Cap Rate,,Yes,No,No,,s,No,No,,AFG2461
+Lease Grid,Market Assessment at ToS,,Yes,No,No,,s,No,No,,AFK2461
+Lease Grid,Market Assessment Year Following ToS,,Yes,No,No,,s,No,No,,AFL2461
+Lease Grid,MC Bed Count,,Yes,No,No,,s,No,No,,AFN2461
+Lease Grid,MC Fee Structure,,Yes,No,No,,s,No,No,,AFO2461
+Lease Grid,MC Level of Care Max,,Yes,No,No,,s,No,No,,AFP2461
+Lease Grid,MC Level of Care Min,,Yes,No,No,,s,No,No,,AFQ2461
+Lease Grid,MC Medicaid Percentage,,Yes,No,No,,s,No,No,,AFR2461
+Lease Grid,MC Medicare Percentage,,Yes,No,No,,s,No,No,,AFS2461
+Lease Grid,MC Medication Mgmt,,Yes,No,No,,s,No,No,,AFT2461
+Lease Grid,MC Occupancy,,Yes,No,No,,s,No,No,,AFU2461
+Lease Grid,MC Other Percentage,,Yes,No,No,,s,No,No,,AFV2461
+Lease Grid,MC Private Pay Percentage,,Yes,No,No,,s,No,No,,AFW2461
+Lease Grid,MC Unit Count,,Yes,No,No,,s,No,No,,AFX2461
+Lease Grid,Meal Additional Cost per Month,,Yes,No,No,,s,No,No,,AFY2461
+Lease Grid,Medication Mgmt 3,,Yes,No,No,,s,No,No,,AFZ2461
+Lease Grid,Medication Mgmt 4,,Yes,No,No,,s,No,No,,AGA2461
+Lease Grid,Medication Mgmt 5,,Yes,No,No,,s,No,No,,AGB2461
+Lease Grid,Medication Mgmt 6,,Yes,No,No,,s,No,No,,AGC2461
+Lease Grid,Memory Care Managed Care Percentage,,Yes,No,No,,s,No,No,,AGG2461
+Lease Grid,Memory Care VA Percentage,,Yes,No,No,,s,No,No,,AGH2461
+Lease Grid,NC Bed Count,,Yes,No,No,,s,No,No,,AGP2461
+Lease Grid,NC Licensed Beds,,Yes,No,No,,s,No,No,,AGQ2461
+Lease Grid,NC Managed Care Percentage,,Yes,No,No,,s,No,No,,AGR2461
+Lease Grid,NC Medicaid Percentage,,Yes,No,No,,s,No,No,,AGS2461
+Lease Grid,NC Medicare Percentage,,Yes,No,No,,s,No,No,,AGT2461
+Lease Grid,NC Occupancy,,Yes,No,No,,s,No,No,,AGU2461
+Lease Grid,NC Other Percentage,,Yes,No,No,,s,No,No,,AGV2461
+Lease Grid,NC Private Pay Percentage,,Yes,No,No,,s,No,No,,AGW2461
+Lease Grid,NC Unit Count,,Yes,No,No,,s,No,No,,AGX2461
+Lease Grid,New Assessment as Percent of Purchase Price,,Yes,No,No,,s,No,No,,AGY2461
+Lease Grid,On Off Hospital Campus,,Yes,No,No,,s,No,No,,AHB2461
+Lease Grid,Other Bed Count,,Yes,No,No,,s,No,No,,AHC2461
+Lease Grid,Other Operated Expenses,,Yes,No,No,,s,No,No,,AHD2461
+Lease Grid,Other Revenue,,Yes,No,No,,s,No,No,,AHE2461
+Lease Grid,Per Capita Income,,Yes,No,No,,s,No,No,,AHO2461
+Lease Grid,Percent Change in Market Taxes,,Yes,No,No,,s,No,No,,AHP2461
+Lease Grid,Percent Climate Controlled,,Yes,No,No,,s,No,No,,AHQ2461
+Lease Grid,Percent Discount for Early Payment,,Yes,No,No,,s,No,No,,AHR2461
+Lease Grid,Percentage of Affordable Units,,Yes,No,No,,s,No,No,,AHS2461
+Lease Grid,Population,,Yes,No,No,,s,No,No,,AHY2461
+Lease Grid,RE Taxes at ToS,,Yes,No,No,,s,No,No,,AIE2461
+Lease Grid,RE Taxes Year Following ToS,,Yes,No,No,,s,No,No,,AIF2461
+Lease Grid,Rentals Expenses,,Yes,No,No,,s,No,No,,AIH2461
+Lease Grid,Rentals Revenue,,Yes,No,No,,s,No,No,,AII2461
+Lease Grid,Room Expenses,,Yes,No,No,,s,No,No,,AIQ2461
+Lease Grid,Seller Type,,Yes,No,No,,s,No,No,,AIY2461
+Lease Grid,Skilled Nursing VA Percentage,,Yes,No,No,,s,No,No,,AJE2461
+Lease Grid,Stovetop,,Yes,No,No,,s,No,No,,AJQ2461
+Lease Grid,Telephone Expenses,,Yes,No,No,,s,No,No,,AJT2461
+Lease Grid,Telephone Revenue,,Yes,No,No,,s,No,No,,AJU2461
+Lease Grid,Total Departmental Expenses,,Yes,No,No,,s,No,No,,AJW2461
+Lease Grid,Total Departmental Profit,,Yes,No,No,,s,No,No,,AJX2461
+Lease Grid,Total Revenue,,Yes,No,No,,s,No,No,,AJY2461
+Lease Grid,Total Undistributed Expenses,,Yes,No,No,,s,No,No,,AJZ2461
+Lease Grid,Type 6 SF,,Yes,No,No,,s,No,No,,AOS2461
+Lease Grid,Type 6 BR,,Yes,No,No,,s,No,No,,AOU2461
+Lease Grid,Type 6 Baths,,Yes,No,No,,s,No,No,,AOV2461
+Lease Grid,Type 6 Rent/Mo.,,Yes,No,No,,s,No,No,,AOX2461
+Lease Grid,Type 6 Rent/SF,,Yes,No,No,,s,No,No,,AOY2461
+Lease Grid,Type 6 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,AOZ2461
+Lease Grid,Type 6 Market Rent/Mo.,,Yes,No,No,,s,No,No,,APA2461
+Lease Grid,Type 6 Market Rent/SF,,Yes,No,No,,s,No,No,,APB2461
+Lease Grid,Type 6 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,APC2461
+Lease Grid,Type 6 M2,,Yes,No,No,,s,No,No,,APD2461
+Lease Grid,Type 6 Rent/M2,,Yes,No,No,,s,No,No,,APE2461
+Lease Grid,Type 6 Floor,,Yes,No,No,,s,No,No,,APF2461
+Lease Grid,Type 6 Vacant Units,,Yes,No,No,,s,No,No,,APG2461
+Lease Grid,Type 6 Category,,Yes,No,No,,s,No,No,,APH2461
+Lease Grid,Type 7 SF,,Yes,No,No,,s,No,No,,APK2461
+Lease Grid,Type 7 BR,,Yes,No,No,,s,No,No,,APM2461
+Lease Grid,Type 7 Baths,,Yes,No,No,,s,No,No,,APN2461
+Lease Grid,Type 7 Rent/Mo.,,Yes,No,No,,s,No,No,,APP2461
+Lease Grid,Type 7 Rent/SF,,Yes,No,No,,s,No,No,,APQ2461
+Lease Grid,Type 7 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,APR2461
+Lease Grid,Type 7 Market Rent/Mo.,,Yes,No,No,,s,No,No,,APS2461
+Lease Grid,Type 7 Market Rent/SF,,Yes,No,No,,s,No,No,,APT2461
+Lease Grid,Type 7 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,APU2461
+Lease Grid,Type 7 M2,,Yes,No,No,,s,No,No,,APV2461
+Lease Grid,Type 7 Rent/M2,,Yes,No,No,,s,No,No,,APW2461
+Lease Grid,Type 7 Floor,,Yes,No,No,,s,No,No,,APX2461
+Lease Grid,Type 7 Vacant Units,,Yes,No,No,,s,No,No,,APY2461
+Lease Grid,Type 7 Category,,Yes,No,No,,s,No,No,,APZ2461
+Lease Grid,Type 8 SF,,Yes,No,No,,s,No,No,,AQC2461
+Lease Grid,Type 8 BR,,Yes,No,No,,s,No,No,,AQE2461
+Lease Grid,Type 8 Baths,,Yes,No,No,,s,No,No,,AQF2461
+Lease Grid,Type 8 Rent/Mo.,,Yes,No,No,,s,No,No,,AQH2461
+Lease Grid,Type 8 Rent/SF,,Yes,No,No,,s,No,No,,AQI2461
+Lease Grid,Type 8 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,AQJ2461
+Lease Grid,Type 8 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AQK2461
+Lease Grid,Type 8 Market Rent/SF,,Yes,No,No,,s,No,No,,AQL2461
+Lease Grid,Type 8 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,AQM2461
+Lease Grid,Type 8 M2,,Yes,No,No,,s,No,No,,AQN2461
+Lease Grid,Type 8 Rent/M2,,Yes,No,No,,s,No,No,,AQO2461
+Lease Grid,Type 8 Floor,,Yes,No,No,,s,No,No,,AQP2461
+Lease Grid,Type 8 Vacant Units,,Yes,No,No,,s,No,No,,AQQ2461
+Lease Grid,Type 8 Category,,Yes,No,No,,s,No,No,,AQR2461
+Lease Grid,Type 9 SF,,Yes,No,No,,s,No,No,,AQU2461
+Lease Grid,Type 9 BR,,Yes,No,No,,s,No,No,,AQW2461
+Lease Grid,Type 9 Baths,,Yes,No,No,,s,No,No,,AQX2461
+Lease Grid,Type 9 Rent/Mo.,,Yes,No,No,,s,No,No,,AQZ2461
+Lease Grid,Type 9 Rent/SF,,Yes,No,No,,s,No,No,,ARA2461
+Lease Grid,Type 9 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,ARB2461
+Lease Grid,Type 9 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ARC2461
+Lease Grid,Type 9 Market Rent/SF,,Yes,No,No,,s,No,No,,ARD2461
+Lease Grid,Type 9 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ARE2461
+Lease Grid,Type 9 M2,,Yes,No,No,,s,No,No,,ARF2461
+Lease Grid,Type 9 Rent/M2,,Yes,No,No,,s,No,No,,ARG2461
+Lease Grid,Type 9 Floor,,Yes,No,No,,s,No,No,,ARH2461
+Lease Grid,Type 9 Vacant Units,,Yes,No,No,,s,No,No,,ARI2461
+Lease Grid,Type 9 Category,,Yes,No,No,,s,No,No,,ARJ2461
+Lease Grid,Type 10 SF,,Yes,No,No,,s,No,No,,ARM2461
+Lease Grid,Type 10 BR,,Yes,No,No,,s,No,No,,ARO2461
+Lease Grid,Type 10 Baths,,Yes,No,No,,s,No,No,,ARP2461
+Lease Grid,Type 10 Rent/Mo.,,Yes,No,No,,s,No,No,,ARR2461
+Lease Grid,Type 10 Rent/SF,,Yes,No,No,,s,No,No,,ARS2461
+Lease Grid,Type 10 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,ART2461
+Lease Grid,Type 10 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ARU2461
+Lease Grid,Type 10 Market Rent/SF,,Yes,No,No,,s,No,No,,ARV2461
+Lease Grid,Type 10 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ARW2461
+Lease Grid,Type 10 M2,,Yes,No,No,,s,No,No,,ARX2461
+Lease Grid,Type 10 Rent/M2,,Yes,No,No,,s,No,No,,ARY2461
+Lease Grid,Type 10 Floor,,Yes,No,No,,s,No,No,,ARZ2461
+Lease Grid,Type 10 Vacant Units,,Yes,No,No,,s,No,No,,ASA2461
+Lease Grid,Type 10 Category,,Yes,No,No,,s,No,No,,ASB2461
+Lease Grid,Type 11 SF,,Yes,No,No,,s,No,No,,ASE2461
+Lease Grid,Type 11 BR,,Yes,No,No,,s,No,No,,ASG2461
+Lease Grid,Type 11 Baths,,Yes,No,No,,s,No,No,,ASH2461
+Lease Grid,Type 11 Rent/Mo.,,Yes,No,No,,s,No,No,,ASJ2461
+Lease Grid,Type 11 Rent/SF,,Yes,No,No,,s,No,No,,ASK2461
+Lease Grid,Type 11 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,ASL2461
+Lease Grid,Type 11 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ASM2461
+Lease Grid,Type 11 Market Rent/SF,,Yes,No,No,,s,No,No,,ASN2461
+Lease Grid,Type 11 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ASO2461
+Lease Grid,Type 11 M2,,Yes,No,No,,s,No,No,,ASP2461
+Lease Grid,Type 11 Rent/M2,,Yes,No,No,,s,No,No,,ASQ2461
+Lease Grid,Type 11 Floor,,Yes,No,No,,s,No,No,,ASR2461
+Lease Grid,Type 11 Vacant Units,,Yes,No,No,,s,No,No,,ASS2461
+Lease Grid,Type 11 Category,,Yes,No,No,,s,No,No,,AST2461
+Lease Grid,Type 12 SF,,Yes,No,No,,s,No,No,,ASW2461
+Lease Grid,Type 12 BR,,Yes,No,No,,s,No,No,,ASY2461
+Lease Grid,Type 12 Baths,,Yes,No,No,,s,No,No,,ASZ2461
+Lease Grid,Type 12 Rent/Mo.,,Yes,No,No,,s,No,No,,ATB2461
+Lease Grid,Type 12 Rent/SF,,Yes,No,No,,s,No,No,,ATC2461
+Lease Grid,Type 12 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,ATD2461
+Lease Grid,Type 12 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ATE2461
+Lease Grid,Type 12 Market Rent/SF,,Yes,No,No,,s,No,No,,ATF2461
+Lease Grid,Type 12 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ATG2461
+Lease Grid,Type 12 M2,,Yes,No,No,,s,No,No,,ATH2461
+Lease Grid,Type 12 Rent/M2,,Yes,No,No,,s,No,No,,ATI2461
+Lease Grid,Type 12 Floor,,Yes,No,No,,s,No,No,,ATJ2461
+Lease Grid,Type 12 Vacant Units,,Yes,No,No,,s,No,No,,ATK2461
+Lease Grid,Type 12 Category,,Yes,No,No,,s,No,No,,ATL2461
+Lease Grid,Type 13 SF,,Yes,No,No,,s,No,No,,ATO2461
+Lease Grid,Type 13 BR,,Yes,No,No,,s,No,No,,ATQ2461
+Lease Grid,Type 13 Baths,,Yes,No,No,,s,No,No,,ATR2461
+Lease Grid,Type 13 Rent/Mo.,,Yes,No,No,,s,No,No,,ATT2461
+Lease Grid,Type 13 Rent/SF,,Yes,No,No,,s,No,No,,ATU2461
+Lease Grid,Type 13 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,ATV2461
+Lease Grid,Type 13 Market Rent/Mo.,,Yes,No,No,,s,No,No,,ATW2461
+Lease Grid,Type 13 Market Rent/SF,,Yes,No,No,,s,No,No,,ATX2461
+Lease Grid,Type 13 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,ATY2461
+Lease Grid,Type 13 M2,,Yes,No,No,,s,No,No,,ATZ2461
+Lease Grid,Type 13 Rent/M2,,Yes,No,No,,s,No,No,,AUA2461
+Lease Grid,Type 13 Floor,,Yes,No,No,,s,No,No,,AUB2461
+Lease Grid,Type 13 Vacant Units,,Yes,No,No,,s,No,No,,AUC2461
+Lease Grid,Type 13 Category,,Yes,No,No,,s,No,No,,AUD2461
+Lease Grid,Type 14 SF,,Yes,No,No,,s,No,No,,AUG2461
+Lease Grid,Type 14 BR,,Yes,No,No,,s,No,No,,AUI2461
+Lease Grid,Type 14 Baths,,Yes,No,No,,s,No,No,,AUJ2461
+Lease Grid,Type 14 Rent/Mo.,,Yes,No,No,,s,No,No,,AUL2461
+Lease Grid,Type 14 Rent/SF,,Yes,No,No,,s,No,No,,AUM2461
+Lease Grid,Type 14 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,AUN2461
+Lease Grid,Type 14 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AUO2461
+Lease Grid,Type 14 Market Rent/SF,,Yes,No,No,,s,No,No,,AUP2461
+Lease Grid,Type 14 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,AUQ2461
+Lease Grid,Type 14 M2,,Yes,No,No,,s,No,No,,AUR2461
+Lease Grid,Type 14 Rent/M2,,Yes,No,No,,s,No,No,,AUS2461
+Lease Grid,Type 14 Floor,,Yes,No,No,,s,No,No,,AUT2461
+Lease Grid,Type 14 Vacant Units,,Yes,No,No,,s,No,No,,AUU2461
+Lease Grid,Type 14 Category,,Yes,No,No,,s,No,No,,AUV2461
+Lease Grid,Type 15 SF,,Yes,No,No,,s,No,No,,AUY2461
+Lease Grid,Type 15 BR,,Yes,No,No,,s,No,No,,AVA2461
+Lease Grid,Type 15 Baths,,Yes,No,No,,s,No,No,,AVB2461
+Lease Grid,Type 15 Rent/Mo.,,Yes,No,No,,s,No,No,,AVD2461
+Lease Grid,Type 15 Rent/SF,,Yes,No,No,,s,No,No,,AVE2461
+Lease Grid,Type 15 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,AVF2461
+Lease Grid,Type 15 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AVG2461
+Lease Grid,Type 15 Market Rent/SF,,Yes,No,No,,s,No,No,,AVH2461
+Lease Grid,Type 15 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,AVI2461
+Lease Grid,Type 15 M2,,Yes,No,No,,s,No,No,,AVJ2461
+Lease Grid,Type 15 Rent/M2,,Yes,No,No,,s,No,No,,AVK2461
+Lease Grid,Type 15 Floor,,Yes,No,No,,s,No,No,,AVL2461
+Lease Grid,Type 15 Vacant Units,,Yes,No,No,,s,No,No,,AVM2461
+Lease Grid,Type 15 Category,,Yes,No,No,,s,No,No,,AVN2461
+Lease Grid,Unit Type 16,,Yes,No,No,,s,No,No,,AVO2461
+Lease Grid,Type 16 SF,,Yes,No,No,,s,No,No,,AVQ2461
+Lease Grid,Type 16 BR,,Yes,No,No,,s,No,No,,AVS2461
+Lease Grid,Type 16 Baths,,Yes,No,No,,s,No,No,,AVT2461
+Lease Grid,Type 16 Rent/Mo.,,Yes,No,No,,s,No,No,,AVV2461
+Lease Grid,Type 16 Rent/SF,,Yes,No,No,,s,No,No,,AVW2461
+Lease Grid,Type 16 Rent/SF/Mo.,,Yes,No,No,,s,No,No,,AVX2461
+Lease Grid,Type 16 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AVY2461
+Lease Grid,Type 16 Market Rent/SF,,Yes,No,No,,s,No,No,,AVZ2461
+Lease Grid,Type 16 Daily Rate Per Unit,,Yes,No,No,,s,No,No,,AWA2461
+Lease Grid,Type 16 M2,,Yes,No,No,,s,No,No,,AWB2461
+Lease Grid,Type 16 Rent/M2,,Yes,No,No,,s,No,No,,AWC2461
+Lease Grid,Type 16 Floor,,Yes,No,No,,s,No,No,,AWD2461
+Lease Grid,Type 16 Vacant Units,,Yes,No,No,,s,No,No,,AWE2461
+Lease Grid,Type 16 Category,,Yes,No,No,,s,No,No,,AWF2461
+Lease Grid,Type 17 BR,,Yes,No,No,,s,No,No,,AWH2461
+Lease Grid,Type 17 Baths,,Yes,No,No,,s,No,No,,AWI2461
+Lease Grid,Type 17 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AWJ2461
+Lease Grid,Type 17 Market Rent/SF,,Yes,No,No,,s,No,No,,AWK2461
+Lease Grid,Type 17 Category,,Yes,No,No,,s,No,No,,AWL2461
+Lease Grid,Type 18 BR,,Yes,No,No,,s,No,No,,AWN2461
+Lease Grid,Type 18 Baths,,Yes,No,No,,s,No,No,,AWO2461
+Lease Grid,Type 18 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AWP2461
+Lease Grid,Type 18 Market Rent/SF,,Yes,No,No,,s,No,No,,AWQ2461
+Lease Grid,Type 18 Category,,Yes,No,No,,s,No,No,,AWR2461
+Lease Grid,Type 19 BR,,Yes,No,No,,s,No,No,,AWT2461
+Lease Grid,Type 19 Baths,,Yes,No,No,,s,No,No,,AWU2461
+Lease Grid,Type 19 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AWV2461
+Lease Grid,Type 19 Market Rent/SF,,Yes,No,No,,s,No,No,,AWW2461
+Lease Grid,Type 19 Category,,Yes,No,No,,s,No,No,,AWX2461
+Lease Grid,Type 20 BR,,Yes,No,No,,s,No,No,,AWZ2461
+Lease Grid,Type 20 Baths,,Yes,No,No,,s,No,No,,AXA2461
+Lease Grid,Type 20 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AXB2461
+Lease Grid,Type 20 Market Rent/SF,,Yes,No,No,,s,No,No,,AXC2461
+Lease Grid,Type 20 Category,,Yes,No,No,,s,No,No,,AXD2461
+Lease Grid,Type 21 BR,,Yes,No,No,,s,No,No,,AXF2461
+Lease Grid,Type 21 Baths,,Yes,No,No,,s,No,No,,AXG2461
+Lease Grid,Type 21 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AXH2461
+Lease Grid,Type 21 Market Rent/SF,,Yes,No,No,,s,No,No,,AXI2461
+Lease Grid,Type 21 Category,,Yes,No,No,,s,No,No,,AXJ2461
+Lease Grid,Type 22 Category,,Yes,No,No,,s,No,No,,AXK2461
+Lease Grid,Type 22 BR,,Yes,No,No,,s,No,No,,AXM2461
+Lease Grid,Type 22 Baths,,Yes,No,No,,s,No,No,,AXN2461
+Lease Grid,Type 22 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AXO2461
+Lease Grid,Type 22 Market Rent/SF,,Yes,No,No,,s,No,No,,AXP2461
+Lease Grid,Type 23 Category,,Yes,No,No,,s,No,No,,AXQ2461
+Lease Grid,Type 23 BR,,Yes,No,No,,s,No,No,,AXS2461
+Lease Grid,Type 23 Baths,,Yes,No,No,,s,No,No,,AXT2461
+Lease Grid,Type 23 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AXU2461
+Lease Grid,Type 23 Market Rent/SF,,Yes,No,No,,s,No,No,,AXV2461
+Lease Grid,Type 24 Category,,Yes,No,No,,s,No,No,,AXW2461
+Lease Grid,Type 24 BR,,Yes,No,No,,s,No,No,,AXY2461
+Lease Grid,Type 24 Baths,,Yes,No,No,,s,No,No,,AXZ2461
+Lease Grid,Type 24 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AYA2461
+Lease Grid,Type 24 Market Rent/SF,,Yes,No,No,,s,No,No,,AYB2461
+Lease Grid,Type 25 Category,,Yes,No,No,,s,No,No,,AYC2461
+Lease Grid,Type 25 BR,,Yes,No,No,,s,No,No,,AYE2461
+Lease Grid,Type 25 Baths,,Yes,No,No,,s,No,No,,AYF2461
+Lease Grid,Type 25 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AYG2461
+Lease Grid,Type 25 Market Rent/SF,,Yes,No,No,,s,No,No,,AYH2461
+Lease Grid,Type 26 Category,,Yes,No,No,,s,No,No,,AYI2461
+Lease Grid,Type 26 BR,,Yes,No,No,,s,No,No,,AYK2461
+Lease Grid,Type 26 Baths,,Yes,No,No,,s,No,No,,AYL2461
+Lease Grid,Type 26 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AYM2461
+Lease Grid,Type 26 Market Rent/SF,,Yes,No,No,,s,No,No,,AYN2461
+Lease Grid,Type 27 Category,,Yes,No,No,,s,No,No,,AYO2461
+Lease Grid,Type 27 BR,,Yes,No,No,,s,No,No,,AYQ2461
+Lease Grid,Type 27 Baths,,Yes,No,No,,s,No,No,,AYR2461
+Lease Grid,Type 27 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AYS2461
+Lease Grid,Type 27 Market Rent/SF,,Yes,No,No,,s,No,No,,AYT2461
+Lease Grid,Type 28 Category,,Yes,No,No,,s,No,No,,AYU2461
+Lease Grid,Type 28 BR,,Yes,No,No,,s,No,No,,AYW2461
+Lease Grid,Type 28 Baths,,Yes,No,No,,s,No,No,,AYX2461
+Lease Grid,Type 28 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AYY2461
+Lease Grid,Type 28 Market Rent/SF,,Yes,No,No,,s,No,No,,AYZ2461
+Lease Grid,Type 29 Category,,Yes,No,No,,s,No,No,,AZA2461
+Lease Grid,Type 29 BR,,Yes,No,No,,s,No,No,,AZC2461
+Lease Grid,Type 29 Baths,,Yes,No,No,,s,No,No,,AZD2461
+Lease Grid,Type 29 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AZE2461
+Lease Grid,Type 29 Market Rent/SF,,Yes,No,No,,s,No,No,,AZF2461
+Lease Grid,Type 30 Category,,Yes,No,No,,s,No,No,,AZG2461
+Lease Grid,Type 30 BR,,Yes,No,No,,s,No,No,,AZI2461
+Lease Grid,Type 30 Baths,,Yes,No,No,,s,No,No,,AZJ2461
+Lease Grid,Type 30 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AZK2461
+Lease Grid,Type 30 Market Rent/SF,,Yes,No,No,,s,No,No,,AZL2461
+Lease Grid,Type 31 Category,,Yes,No,No,,s,No,No,,AZM2461
+Lease Grid,Type 31 BR,,Yes,No,No,,s,No,No,,AZO2461
+Lease Grid,Type 31 Baths,,Yes,No,No,,s,No,No,,AZP2461
+Lease Grid,Type 31 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AZQ2461
+Lease Grid,Type 31 Market Rent/SF,,Yes,No,No,,s,No,No,,AZR2461
+Lease Grid,Type 32 Category,,Yes,No,No,,s,No,No,,AZS2461
+Lease Grid,Type 32 BR,,Yes,No,No,,s,No,No,,AZU2461
+Lease Grid,Type 32 Baths,,Yes,No,No,,s,No,No,,AZV2461
+Lease Grid,Type 32 Market Rent/Mo.,,Yes,No,No,,s,No,No,,AZW2461
+Lease Grid,Type 32 Market Rent/SF,,Yes,No,No,,s,No,No,,AZX2461
+Lease Grid,Type 33 Category,,Yes,No,No,,s,No,No,,AZY2461
+Lease Grid,Type 33 BR,,Yes,No,No,,s,No,No,,BAA2461
+Lease Grid,Type 33 Baths,,Yes,No,No,,s,No,No,,BAB2461
+Lease Grid,Type 33 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BAC2461
+Lease Grid,Type 33 Market Rent/SF,,Yes,No,No,,s,No,No,,BAD2461
+Lease Grid,Type 34 Category,,Yes,No,No,,s,No,No,,BAE2461
+Lease Grid,Type 34 BR,,Yes,No,No,,s,No,No,,BAG2461
+Lease Grid,Type 34 Baths,,Yes,No,No,,s,No,No,,BAH2461
+Lease Grid,Type 34 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BAI2461
+Lease Grid,Type 34 Market Rent/SF,,Yes,No,No,,s,No,No,,BAJ2461
+Lease Grid,Type 35 Category,,Yes,No,No,,s,No,No,,BAK2461
+Lease Grid,Type 35 BR,,Yes,No,No,,s,No,No,,BAM2461
+Lease Grid,Type 35 Baths,,Yes,No,No,,s,No,No,,BAN2461
+Lease Grid,Type 35 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BAO2461
+Lease Grid,Type 35 Market Rent/SF,,Yes,No,No,,s,No,No,,BAP2461
+Lease Grid,Type 36 Category,,Yes,No,No,,s,No,No,,BAQ2461
+Lease Grid,Type 36 BR,,Yes,No,No,,s,No,No,,BAS2461
+Lease Grid,Type 36 Baths,,Yes,No,No,,s,No,No,,BAT2461
+Lease Grid,Type 36 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BAU2461
+Lease Grid,Type 36 Market Rent/SF,,Yes,No,No,,s,No,No,,BAV2461
+Lease Grid,Type 37 Category,,Yes,No,No,,s,No,No,,BAW2461
+Lease Grid,Type 37 BR,,Yes,No,No,,s,No,No,,BAY2461
+Lease Grid,Type 37 Baths,,Yes,No,No,,s,No,No,,BAZ2461
+Lease Grid,Type 37 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BBA2461
+Lease Grid,Type 37 Market Rent/SF,,Yes,No,No,,s,No,No,,BBB2461
+Lease Grid,Type 38 Category,,Yes,No,No,,s,No,No,,BBC2461
+Lease Grid,Type 38 BR,,Yes,No,No,,s,No,No,,BBE2461
+Lease Grid,Type 38 Baths,,Yes,No,No,,s,No,No,,BBF2461
+Lease Grid,Type 38 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BBG2461
+Lease Grid,Type 38 Market Rent/SF,,Yes,No,No,,s,No,No,,BBH2461
+Lease Grid,Type 39 Category,,Yes,No,No,,s,No,No,,BBI2461
+Lease Grid,Type 39 BR,,Yes,No,No,,s,No,No,,BBK2461
+Lease Grid,Type 39 Baths,,Yes,No,No,,s,No,No,,BBL2461
+Lease Grid,Type 39 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BBM2461
+Lease Grid,Type 39 Market Rent/SF,,Yes,No,No,,s,No,No,,BBN2461
+Lease Grid,Type 40 Category,,Yes,No,No,,s,No,No,,BBO2461
+Lease Grid,Type 40 BR,,Yes,No,No,,s,No,No,,BBQ2461
+Lease Grid,Type 40 Baths,,Yes,No,No,,s,No,No,,BBR2461
+Lease Grid,Type 40 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BBS2461
+Lease Grid,Type 40 Market Rent/SF,,Yes,No,No,,s,No,No,,BBT2461
+Lease Grid,Type 41 Category,,Yes,No,No,,s,No,No,,BBU2461
+Lease Grid,Type 41 BR,,Yes,No,No,,s,No,No,,BBW2461
+Lease Grid,Type 41 Baths,,Yes,No,No,,s,No,No,,BBX2461
+Lease Grid,Type 41 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BBY2461
+Lease Grid,Type 41 Market Rent/SF,,Yes,No,No,,s,No,No,,BBZ2461
+Lease Grid,Type 42 Category,,Yes,No,No,,s,No,No,,BCA2461
+Lease Grid,Type 42 BR,,Yes,No,No,,s,No,No,,BCC2461
+Lease Grid,Type 42 Baths,,Yes,No,No,,s,No,No,,BCD2461
+Lease Grid,Type 42 Market Rent/Mo.,,Yes,No,No,,s,No,No,,BCE2461
+Lease Grid,Type 42 Market Rent/SF,,Yes,No,No,,s,No,No,,BCF2461
+Lease Grid,ParcelImageUrl,,Yes,No,No,,s,No,No,,BCG2461
+Market Rent,Tenant Paid Directly,,No,Yes,No,Conditional,f,No,No,,G9
+Market Rent,Owner Paid,,No,Yes,No,Conditional,f,No,No,,G10
+Market Rent,Tenant Reimburses,,No,Yes,No,Conditional,f,No,No,,G11
+Market Rent,N1_chtRentUtilitiesCostBurden,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],F15
+Market Rent,Comm [#] Lessee,,Yes,No,Yes,,s,No,No,,AN21
+Market Rent,Comm [#] Lease Date,,No,Yes,Yes,Conditional,f,No,No,,AO21
+Market Rent,Comm [#] SF,,Yes,No,Yes,,s,No,No,,AQ21
+Market Rent,Comm [#] Lease Term,,Yes,No,Yes,,s,No,No,,AP22
+Market Rent,Comm [#] Lease Type,,Yes,No,Yes,,s,No,No,,AR22
+Market Rent,Type BR,,No,Yes,No,Conditional,f,No,No,,V47
+Market Rent,Type SF,,No,Yes,No,Lookup,f,No,No,,X48
+Market Rent,Tenant ID,,No,Yes,No,Calculation,f,No,No,,AF50
+Market Rent,Unit,,No,Yes,No,Calculation,f,No,No,,AT50
+Market Rent,Avg. Rent,,No,Yes,No,Conditional,f,No,No,,BK50
+Market Rent,Min Rent,,No,Yes,No,Lookup,f,No,No,,V52
+Market Rent,Max Rent,,No,Yes,No,Lookup,f,No,No,,W52
+Market Rent,Is Min = Max,,No,Yes,No,Calculation,f,No,No,,X52
+Market Rent,Occ.,,No,Yes,No,Lookup,f,No,No,,AR52
+Market Rent,Types,,No,Yes,No,Calculation,f,No,No,,AS52
+Market Rent,Rent Range/SF,,No,Yes,No,Conditional,f,No,No,,AT52
+Market Rent,Rent Range/Unit,,No,Yes,No,Lookup,f,No,No,,AV52
+Market Rent,Per Mo.,,No,Yes,No,Lookup,f,No,No,,BG52
+Market Rent,Competitive Set Averages,,No,Yes,No,Aggregation,f,No,No,,AL70
+Market Rent,Market Averages,,No,Yes,No,Calculation,f,No,No,,AI74
+Market Rent,Min,,No,Yes,No,Calculation,f,No,No,,BJ80
+Market Rent,Max,,No,Yes,No,Calculation,f,No,No,,BJ81
+Market Rent,Wght Average,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BJ82
+Market Rent,Care,,Yes,No,Yes,,s,No,No,,CK125
+Market Rent,Additional Meal/Month,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DA138
+Market Rent,"AA 
+Additional Monthly Meal Total Cost",,No,Yes,No,Conditional,f,No,No,,DB138
+Market Rent,"IL 
+Additional Monthly Meal Total Cost",,No,Yes,No,Conditional,f,No,No,,DC138
+Market Rent,Standard Adjustment (OR override with value),,Yes,No,No,,n,No,No,,DF138
+Market Rent,IL First Row >>,,No,Yes,No,Lookup,f,No,No,,DP147
+Market Rent,Banded Row,,No,Yes,No,Calculation,f,No,No,,DI154
+Market Rent,Key,,No,Yes,No,Calculation,f,No,No,,DK154
+Market Rent,gridPosition,,No,Yes,No,Calculation,f,No,No,,DN154
+Market Rent,Entrance Fee,,No,Yes,No,Lookup,f,No,No,,DQ154
+Market Rent,% Refundable,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DR154
+Market Rent,Refunded Amount,,No,Yes,No,Calculation,f,No,No,,DS154
+Market Rent,Length of Stay (Mo.),,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DT154
+Market Rent,Safe Interest Rate,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DU154
+Market Rent,Override,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],EJ195
+Market Rent,$ Adj.,,No,Yes,No,Lookup,f,No,No,,EI196
+Market Rent,At Subj.,,No,Yes,No,Lookup,f,No,No,,ER196
+Market Rent,Utility,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],EC197
+Market Rent,Cable,,No,Yes,No,Conditional,f,No,No,,EO202
+Market Rent,Utilities Adjustments,,No,Yes,No,Aggregation,f,No,No,,ES207
+Market Rent,AL Levels of Care,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],EP212
+Market Rent,MC Levels of Care,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],EP213
+Market Rent,<- Comparable LOC for reference,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FF216
+Market Rent,Concessions,,No,Yes,No,Lookup,f,No,No,,EO217
+Market Rent,AA Meals,,No,Yes,No,Lookup,f,No,No,,EO221
+Market Rent,IL Meals,,No,Yes,No,Lookup,f,No,No,,EO222
+Market Rent,Housekeeping,,No,Yes,No,Lookup,f,No,No,,EO223
+Market Rent,Flex,,No,Yes,No,Lookup,f,No,No,,EO225
+Market Rent,Temporary Hotel Amenity UDF String,,No,Yes,No,Lookup,f,No,No,,PN240
+Market Rent,Charges & Fees,,No,Yes,No,Conditional,f,No,No,,SH298
+Market Rent,Utilities Adj.,,No,Yes,No,Lookup,f,No,No,,SA299
+Market Rent,Econ. Char.,,Yes,No,No,,n,No,No,,SM299
+Market Rent,Community Size,,Yes,No,No,,n,No,No,,SO299
+Market Rent,Unadjusted Min.,,No,Yes,No,Calculation,f,No,No,,RZ312
+Market Rent,Adjusted Min.,,No,Yes,No,Calculation,f,No,No,,SR312
+Market Rent,Unadjusted Avg.,,No,Yes,No,Conditional,f,No,No,,RZ313
+Market Rent,Adjusted Avg.,,No,Yes,No,Conditional,f,No,No,,SR313
+Market Rent,Unadjusted Max.,,No,Yes,No,Calculation,f,No,No,,RZ314
+Market Rent,Adjusted Max.,,No,Yes,No,Calculation,f,No,No,,SR314
+Market Rent,Concluded Market Rent:,,No,Yes,No,Calculation,f,No,No,,SV315
+Market Rent,LOC Fee Structure_Range,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],TX340
+Market Rent,Range across care type,,No,Yes,No,Calculation,f,No,No,,TV342
+Market Rent,SH_Care Type,,No,Yes,No,Lookup,f,No,No,,TK343
+Market Rent,SH_MinRent/Mo,,No,Yes,No,Lookup,f,No,No,,TL343
+Market Rent,SH_MaxRent/Mo,,No,Yes,No,Lookup,f,No,No,,TM343
+Market Rent,Tenant ID>,,No,Yes,No,Lookup,f,No,No,,TV352
+Market Rent,Lease Date,,No,Yes,Yes,Calculation,f,No,No,,TU363
+Market Rent,IsSeniors,,No,Yes,No,Calculation,f,No,No,,TK365
+Market Rent,Self Storage,,No,Yes,No,Calculation,f,No,No,,TP373
+Market Rent,careTypeAbbrev,,No,Yes,No,Aggregation,f,No,No,,TK374
+Market Rent,Units & Occupancy,,No,Yes,No,Conditional,f,No,No,,TU374
+Market Rent,compId,,No,Yes,No,Lookup,f,No,No,,TH375
+Market Rent,Active Adult,,No,Yes,No,Conditional,f,No,No,,TU375
+Market Rent,Independent Living,,No,Yes,No,Conditional,f,No,No,,TU376
+Market Rent,Assisted Living,,No,Yes,No,Conditional,f,No,No,,TU377
+Market Rent,Memory Care,,No,Yes,No,Conditional,f,No,No,,TU378
+Market Rent,Nursing Care,,No,Yes,No,Conditional,f,No,No,,TU379
+Market Rent,Monthly Rental Rates,,No,Yes,No,Conditional,f,No,No,,TU386
+Market Rent,Base Rent/SF,,No,Yes,No,Calculation,f,No,No,,TV401
+Market Rent,Lease Structure,,Yes,No,No,,n,No,No,,TY402
+Market Rent,Comm [#] Lease Conditions,,No,Yes,No,Lookup,f,No,No,,TH404
+Market Rent,Market Conditions,,No,Yes,No,Conditional,f,No,No,,TU410
+Market Rent,Cumulative Market Adjusted Rent,,No,Yes,No,Calculation,f,No,No,,TV411
+Market Rent,Final Adjusted Rent,,No,Yes,No,Calculation,f,No,No,,TV443
+Market Rent,Range of Unadjusted Rents,,No,Yes,No,Conditional,f,No,No,,TU448
+Market Rent,Range of Adjusted Rents,,No,Yes,No,Conditional,f,No,No,,TU449
+Market Rent,Median Adjusted Rent,,No,Yes,No,Calculation,f,No,No,,TU450
+Market Rent,Average Adjusted Rent,,No,Yes,No,Calculation,f,No,No,,TU451
+Market Rent,Use this Round to Nearest?,,No,Yes,No,Calculation,f,No,No,,TU457
+MF Market Rent,Rent Roll Master Column Index>>,,No,Yes,No,Lookup,f,No,No,,D2
+MF Market Rent,Calc,,No,Yes,No,Lookup,f,No,No,,AO2
+MF Market Rent,Total Asking,,No,Yes,No,Lookup,f,No,No,,AP2
+MF Market Rent,Total Contract,,No,Yes,No,Lookup,f,No,No,,AV2
+MF Market Rent,Display:,,No,Yes,Yes,Conditional,f,No,No,,X6
+MF Market Rent,# of Units,,No,Yes,No,Calculation,f,No,No,,Y8
+MF Market Rent,Rentable Area (SF),,No,Yes,No,Calculation,f,No,No,,AB8
+MF Market Rent,Leased SF,,No,Yes,No,Calculation,f,No,No,,AD8
+MF Market Rent,Contract % of Ask,,No,Yes,No,Calculation,f,No,No,,BD8
+MF Market Rent,Blended vs. Mkt.,,No,Yes,No,Calculation,f,No,No,,CA8
+MF Market Rent,Sorted Aff Comp Unit Grid,,No,Yes,No,Calculation,f,No,No,,W10
+MF Market Rent,Sorted Unit Grid_Unit Type Unit Name,,No,Yes,No,Calculation,f,No,No,,P11
+MF Market Rent,Unit Types,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AK11
+MF Market Rent,Avg. Size (SF),,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AM11
+MF Market Rent,Avg PSF,,No,Yes,No,Calculation,f,No,No,,AQ11
+MF Market Rent,Avg. PSF,,No,Yes,No,Calculation,f,No,No,,AW11
+MF Market Rent,Asking Rent,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BG11
+MF Market Rent,Contract Rent (1),,No,Yes,No,Calculation,f,No,No,,BH11
+MF Market Rent,Total Contract Rent,,No,Yes,No,Calculation,f,No,No,,BI11
+MF Market Rent,Market Rent,,No,Yes,No,Calculation,f,No,No,,BJ11
+MF Market Rent,Market Rent PSF,,No,Yes,No,Calculation,f,No,No,,BL11
+MF Market Rent,Blended Rent (1),,No,Yes,No,Calculation,f,No,No,,BR11
+MF Market Rent,Contract Rent,,No,Yes,No,Calculation,f,No,No,,CE11
+MF Market Rent,Contract vs. Mkt.,,No,Yes,No,Conditional,f,No,No,,CS11
+MF Market Rent,Total Bed,,No,Yes,No,Calculation,f,No,No,,CX11
+MF Market Rent,Total Bath,,No,Yes,No,Calculation,f,No,No,,CY11
+MF Market Rent,N1_txtMFNumberofUnits_UnitGrid1,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DA11
+MF Market Rent,N1_txtMFAskingRent_UnitGrid1,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DC11
+MF Market Rent,N1_txtMFContractRent_UnitGrid1,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DE11
+MF Market Rent,SpaceType_MF #,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],A12
+MF Market Rent,Totals/Weighted Avg.,,No,Yes,No,Calculation,f,No,No,,Y321
+MF Market Rent,Totals/$Weighted Avg.,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BD321
+MF Market Rent,N1_txtMFNumberofUnits_Total,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DA321
+MF Market Rent,N1_txtMFAskingRent_Total,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DC321
+MF Market Rent,N1_txtMFContractRent_Total,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],DE321
+MF Market Rent,N1_txtIE_MFSubjectOccupancy>,,No,Yes,No,Calculation,f,No,No,,AG323
+MF Market Rent,N1_txtMFContracttoAsking,,No,Yes,No,Calculation,f,No,No,,AY325
+MF Market Rent,Start Date -->,,No,Yes,No,Calculation,f,No,No,,DP333
+MF Market Rent,Select Cutoff -->,,Yes,No,Yes,,s,No,No,,DP334
+MF Market Rent,30 Days,,No,Yes,No,Calculation,f,No,No,,DP335
+MF Market Rent,Include Affordable Unit Types-->,,No,Yes,Yes,Conditional,f,No,No,,DP336
+MF Market Rent,Sorted,,No,Yes,No,Aggregation,f,No,No,,DW337
+MF Market Rent,Subject Rent Roll Column Index>>,,No,Yes,No,Lookup,f,No,No,,EX576
+MF Market Rent,Total SF,,No,Yes,No,Lookup,f,No,No,,GM576
+MF Market Rent,Comp #,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FY578
+MF Market Rent,Grid Unit Mix Column Index>>,,No,Yes,No,Lookup,f,No,No,,EW579
+MF Market Rent,Type Baths,,No,Yes,No,Lookup,f,No,No,,FM579
+MF Market Rent,Type Rent/Mo.,,No,Yes,No,Lookup,f,No,No,,FN579
+MF Market Rent,Type Market Rent/Mo.,,No,Yes,No,Lookup,f,No,No,,FO579
+MF Market Rent,Unit Type Display,,No,Yes,No,Lookup,f,No,No,,FP579
+MF Market Rent,Include N1 Description for Comps,,Yes,No,Yes,,s,No,No,,FZ582
+MF Market Rent,Min BR,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GE586
+MF Market Rent,Max BR,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],GE587
+MF Market Rent,Min Bed,,No,Yes,No,Conditional,f,No,No,,EX591
+MF Market Rent,Max Bed,,No,Yes,No,Conditional,f,No,No,,EZ591
+MF Market Rent,Unit Type Match,,No,Yes,No,Conditional,f,No,No,,EY592
+MF Market Rent,<<Used,,No,Yes,No,Calculation,f,No,No,,FF592
+MF Market Rent,Physical Charactertistics Adj,,No,Yes,No,Lookup,f,No,No,,FR595
+MF Market Rent,Sorted Rank,,No,Yes,No,Calculation,f,No,No,,FU595
+MF Market Rent,Rent PSF,,No,Yes,No,Calculation,f,No,No,,GC595
+MF Market Rent,Adjusted Rent PSF,,No,Yes,No,Calculation,f,No,No,,GG595
+MF Market Rent,Simple Market Averages,,No,Yes,No,Calculation,f,No,No,,GA837
+MF Market Rent,Sorted Unit Type Uint Name,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],FU838
+MF Market Rent,"Size
+(SF)",,No,Yes,No,Calculation,f,No,No,,GA839
+MF Market Rent,Asking Rent/Mo.,,No,Yes,No,Calculation,f,No,No,,GB839
+MF Market Rent,Asking Rent PSF,,No,Yes,No,Calculation,f,No,No,,GC839
+MF Market Rent,Mkt Rent PSF,,No,Yes,No,Calculation,f,No,No,,GG839
+MF Market Rent,Total Market,,No,Yes,No,Calculation,f,No,No,,GO839
+MF Market Rent,Comp Unit Grid_Unit Type Unit Name,,No,Yes,No,Calculation,f,No,No,,GQ839
+MF Market Rent,Market Rent Conclusion:,,No,Yes,No,Calculation,f,No,No,,GF869
+MF Market Rent,N1_chtMFUnitGrid1,,No,Yes,No,Conditional,f,No,No,,FX875
+MF Market Rent,SpaceType,,No,Yes,No,Calculation,f,No,No,,EV880
+MF Market Rent,N1_chtMFUnitGrid2,,No,Yes,No,Conditional,f,No,No,,FX1164
+MF Market Rent,N1_chtMFUnitGrid3,,No,Yes,No,Conditional,f,No,No,,FX1453
+MF Market Rent,N1_chtMFUnitGrid4,,No,Yes,No,Conditional,f,No,No,,FX1742
+MF Market Rent,N1_chtMFUnitGrid5,,No,Yes,No,Conditional,f,No,No,,FX2031
+MF Market Rent,N1_chtMFUnitGrid6,,No,Yes,No,Conditional,f,No,No,,FX2320
+MF Market Rent,N1_chtMFUnitGrid7,,No,Yes,No,Conditional,f,No,No,,FX2609
+MF Market Rent,N1_chtMFUnitGrid8,,No,Yes,No,Conditional,f,No,No,,FX2898
+MF Market Rent,N1_chtMFUnitGrid9,,No,Yes,No,Conditional,f,No,No,,FX3187
+Rent Comp Profiles,"City, State Zip",,No,Yes,No,Lookup,f,No,No,,AA6
+Rent Comp Profiles,marketRentPerMo,,No,Yes,No,Lookup,f,No,No,,Z399
+Rent Comp Profiles,marketRentPerSF,,No,Yes,No,Lookup,f,No,No,,Z400
+Rent Comp Profiles,Rent/SF,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],L401
+Rent Comp Profiles,Vehicle Storage - Canpoy Covered,,No,Yes,No,Lookup,f,No,No,,Z407
+Rent Comp Profiles,Vehicle Storage - Uncovered,,No,Yes,No,Lookup,f,No,No,,Z410
+Rent Comp Profiles,Include N1 Description,,No,Yes,No,Calculation,f,No,No,,AA423
+Rent Comp Profiles,Rev Unit3,,No,Yes,No,Lookup,f,No,No,,AA425
+Rent Comp Profiles,Rent (max),,No,Yes,No,Aggregation,f,No,No,,U448
+Rent Comp Profiles,"Addit'l
+Detail?",,Yes,No,Yes,,f,No,No,,I697
+Capitalization and Multipliers,Source worksheet for Potential Gross Income:,,Yes,No,Yes,,s,No,No,,J11
+Capitalization and Multipliers,Rent Roll,,Yes,No,Yes,,s,No,No,,M11
+Capitalization and Multipliers,Type of PGI:,,Yes,No,Yes,,s,No,No,,J32
+Capitalization and Multipliers,Units,,No,Yes,No,Calculation,f,No,No,,N32
+Capitalization and Multipliers,"Option 2. Clear Rent Roll data, if any, and enter PGI directly below",,Yes,No,No,,s,No,No,,J35
+Capitalization and Multipliers,Unit/Space Type,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],F40
+Capitalization and Multipliers,Income,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],G40
+Capitalization and Multipliers,Method,,No,Yes,Yes,PassThrough,f,No,No,[PASS-THROUGH],H40
+Capitalization and Multipliers,Units/SF,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],I40
+Capitalization and Multipliers,Annual,,No,Yes,No,Conditional,f,No,No,,J40
+Capitalization and Multipliers,% of PGI,,No,Yes,No,Calculation,f,No,No,,K40
+Capitalization and Multipliers,Clear Other Income Categories,,No,Yes,No,Calculation,f,No,No,,M59
+Capitalization and Multipliers,Total Rental Income:,,No,Yes,No,Aggregation,f,No,No,,J60
+Capitalization and Multipliers,Base Rent Abatement:,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],J61
+Capitalization and Multipliers,Expense Reimbursements:,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],J62
+Capitalization and Multipliers,Net Parking Income:,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],J63
+Capitalization and Multipliers,Percentage Rent:,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],J64
+Capitalization and Multipliers,Other Income:,,Yes,No,No,,n,No,No,,J65
+Capitalization and Multipliers,Potential Gross Income:,,No,Yes,No,Aggregation,f,No,No,,J66
+Capitalization and Multipliers,- Vacancy & Collection Loss:,,No,Yes,No,Calculation,f,No,No,,J67
+Capitalization and Multipliers,<- Overwrite,,No,Yes,No,Calculation,f,No,No,,M67
+Capitalization and Multipliers,Effective Gross Income (EGI):,,No,Yes,No,Calculation,f,No,No,,J68
+Capitalization and Multipliers,Effective Gross Rental Income (EGRI):,,No,Yes,No,Aggregation,f,No,No,,J69
+Capitalization and Multipliers,< Change,,No,Yes,No,Calculation,f,No,No,,M71
+Capitalization and Multipliers,$/Year,,No,Yes,No,Conditional,f,No,No,,J72
+Capitalization and Multipliers,Projected Taxes <> Asmnt. Tab Taxes,,No,Yes,No,Conditional,f,No,No,,P73
+Capitalization and Multipliers,Advertising and Marketing,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],G76
+Capitalization and Multipliers,Repairs and Maintenance,,No,Yes,No,Aggregation,f,No,No,,G86
+Capitalization and Multipliers,Painting and Decorating,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],G87
+Capitalization and Multipliers,General and Administrative,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],G98
+Capitalization and Multipliers,Need more rows?,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],G108
+Capitalization and Multipliers,Total Expenses:,,No,Yes,No,Aggregation,f,No,No,,J109
+Capitalization and Multipliers,Expense Ratio (Expenses/EGI):,,No,Yes,No,Conditional,f,No,No,,J110
+Capitalization and Multipliers,Capitalization Rate:,,Yes,No,No,,s,No,No,,F113
+Capitalization and Multipliers,Lease-Up Discount:,,Yes,No,No,,n,No,No,,J114
+Capitalization and Multipliers,Adjustment 2:,,Yes,No,No,,n,No,No,,J115
+Capitalization and Multipliers,Adjustment 3:,,Yes,No,No,,n,No,No,,J116
+Capitalization and Multipliers,Rounded:,,No,Yes,No,Calculation,f,No,No,,J118
+Capitalization and Multipliers,N1DirCap,,No,Yes,No,Calculation,s,No,No,,G120
+Capitalization and Multipliers,N1EGIDisplayTable,,No,Yes,No,Conditional,f,No,No,,G121
+Capitalization and Multipliers,"Add ""Cents"" to written value?",,Yes,No,Yes,,s,No,No,,K121
+Capitalization and Multipliers,- Total Expenses:,,No,Yes,No,Calculation,f,No,No,,J124
+Capitalization and Multipliers,Capitalization Rate Variables,,Yes,No,No,,s,No,No,,F132
+Capitalization and Multipliers,Mortgage Interest Rate,,Yes,No,No,,n,No,No,,G132
+Capitalization and Multipliers,Loan Term (Years),,Yes,No,No,,s,No,No,,F134
+Capitalization and Multipliers,Loan To Value Ratio,,Yes,No,No,,n,No,No,,G134
+Capitalization and Multipliers,Debt Coverage Ratio,,Yes,No,No,,s,No,No,,F136
+Capitalization and Multipliers,Equity Dividend Rate,,No,Yes,No,Calculation,f,No,No,,G136
+Capitalization and Multipliers,< Hand Enter,,Yes,No,No,,n,No,No,,M136
+Capitalization and Multipliers,Band of Investment Analysis,,Yes,No,No,,s,No,No,,F138
+Capitalization and Multipliers,Mortgage Constant,,Yes,No,No,,s,No,No,,I138
+Capitalization and Multipliers,Loan Ratio,,Yes,No,No,,s,No,No,,J138
+Capitalization and Multipliers,Band of Investment Capitalization Rate,,No,Yes,No,Conditional,f,No,No,,K142
+Capitalization and Multipliers,Debt Coverage Ratio x Loan to Value Ratio x Mortgage Constant,,No,Yes,No,Conditional,f,No,No,,F146
+Capitalization and Multipliers,Debt Coverage Ratio Capitalization Rate,,No,Yes,No,Conditional,f,No,No,,K147
+Capitalization and Multipliers,Cap Rate Type,,No,Yes,No,Lookup,f,No,No,,O156
+Capitalization and Multipliers,Database Source:,,Yes,No,Yes,,s,No,No,,G172
+Capitalization and Multipliers,Investor Surveys,,Yes,No,Yes,,s,No,No,,C179
+Capitalization and Multipliers,Averages:,,No,Yes,No,Conditional,f,No,No,,I187
+Capitalization and Multipliers,Improved Comparable Sales,,No,Yes,No,Calculation,f,No,No,,I207
+Capitalization and Multipliers,Investor Surveys - Averages,,No,Yes,No,Conditional,f,No,No,,I208
+Capitalization and Multipliers,Band of Investment,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],I210
+Capitalization and Multipliers,Reconciled Capitalization Rate:,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],I212
+Capitalization and Multipliers,Cap Rate Conclusion Commentary,,No,Yes,No,Conditional,f,No,No,,F216
+Capitalization and Multipliers,"Based on our underwriting, a cap rate",,Yes,No,Yes,,s,No,No,,G217
+Capitalization and Multipliers,Word link >>>,,No,Yes,No,Conditional,f,No,No,,G224
+Capitalization and Multipliers,Effective Gross Income,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],I284
+Capitalization and Multipliers,EGIM Low,,No,Yes,No,Calculation,f,No,No,,H312
+Capitalization and Multipliers,EGIM High,,No,Yes,No,Calculation,f,No,No,,H313
+Capitalization and Multipliers,EGIM Average,,No,Yes,No,Aggregation,f,No,No,,H314
+Capitalization and Multipliers,Reconciled EGIM,,Yes,No,No,,n,No,No,,H315
+Capitalization and Multipliers,Rounded,,No,Yes,No,Calculation,f,No,No,,H318
+Capitalization and Multipliers,NIM Low,,No,Yes,No,Calculation,f,No,No,,H342
+Capitalization and Multipliers,NIM High,,No,Yes,No,Calculation,f,No,No,,H343
+Capitalization and Multipliers,NIM Average,,No,Yes,No,Aggregation,f,No,No,,H344
+Capitalization and Multipliers,Reconciled NIM,,Yes,No,No,,n,No,No,,H345
+Capitalization and Multipliers,Net Operating Income,,No,Yes,No,Calculation,f,No,No,,H346
+Capitalization and Multipliers,Applied Discount Rate,,Yes,No,No,,f,No,No,,H356
+Capitalization and Multipliers,Indicated Net Present Value,,Yes,No,No,,f,No,No,,H357
+Capitalization and Multipliers,Reconciliation,,No,Yes,No,Calculation,f,No,No,,F365
+Capitalization and Multipliers,Direct Capitalization,,No,Yes,No,Conditional,f,No,No,,H367
+Capitalization and Multipliers,Discounted Cash Flow,,No,Yes,No,Conditional,f,No,No,,H368
+Capitalization and Multipliers,EGIM Analysis,,No,Yes,No,Conditional,f,No,No,,H369
+Capitalization and Multipliers,NIM Analysis,,No,Yes,No,Conditional,f,No,No,,H370
+Capitalization and Multipliers,Reconciled Income Value,,Yes,No,No,,n,No,No,,H371
+Capitalization and Multipliers,Per Unit,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],H374
+Capitalization and Multipliers,Prop Type >,,Yes,No,Yes,,f,No,No,,AE379
+Capitalization and Multipliers,PWC,,No,Yes,No,Lookup,s,No,No,,Z380
+Capitalization and Multipliers,MSA >,,No,Yes,No,Lookup,f,No,No,,AE380
+Capitalization and Multipliers,Period End >,,No,Yes,Yes,Calculation,f,No,No,,AE381
+Capitalization and Multipliers,Period Start >,,Yes,No,Yes,,f,No,No,,AE382
+Capitalization and Multipliers,Full Service,,Yes,No,No,,s,No,No,,AH386
+Capitalization and Multipliers,Luxury/Upper-Upscale,,Yes,No,No,,s,No,No,,AJ386
+Capitalization and Multipliers,CBD,,Yes,No,No,,s,No,No,,AH389
+Capitalization and Multipliers,Net Lease,,Yes,No,No,,s,No,No,,AI389
+Capitalization and Multipliers,Suburban,,Yes,No,No,,s,No,No,,AM389
+Capitalization and Multipliers,Power Center,,Yes,No,No,,s,No,No,,AH390
+Capitalization and Multipliers,Property Type Qualifier,,No,Yes,No,Lookup,f,No,No,,AG393
+Capitalization and Multipliers,National,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AH397
+Capitalization and Multipliers,Secondary Markets,,No,Yes,No,Calculation,f,No,No,,AQ402
+Capitalization and Multipliers,National Data,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AG403
+Capitalization and Multipliers,PwC Metric,,No,Yes,No,Calculation,f,No,No,,AA404
+Capitalization and Multipliers,Capitalization Rate,,No,Yes,No,Conditional,f,No,No,,AA405
+Capitalization and Multipliers,Exit Cap Rate,,No,Yes,No,Conditional,f,No,No,,AA409
+Capitalization and Multipliers,Cap to Reversion Rate Premium,,No,Yes,No,Calculation,f,No,No,,AG419
+Capitalization and Multipliers,Reversion to Discount Rate Premium,,No,Yes,No,Calculation,f,No,No,,AG420
+Capitalization and Multipliers,Subtype >,,Yes,No,Yes,,f,No,No,,AE426
+Capitalization and Multipliers,Reason >,,Yes,No,Yes,,f,No,No,,AE427
+Capitalization and Multipliers,Subj. Diff >,,No,Yes,No,Calculation,f,No,No,,AE428
+Capitalization and Multipliers,Diff (num),,No,Yes,No,Calculation,f,No,No,,AG428
+Capitalization and Multipliers,Subj. Compare >,,No,Yes,Yes,Lookup,f,No,No,,AE429
+Capitalization and Multipliers,Diff (txt),,No,Yes,No,Calculation,f,No,No,,AG429
+Capitalization and Multipliers,N1_txtInvestorSurveyCapToExit >>,,No,Yes,No,Lookup,f,No,No,,AF430
+Capitalization and Multipliers,N1_txtInvestorSurveyExitToDiscount >>,,No,Yes,No,Lookup,f,No,No,,AF438
+Capitalization and Multipliers,∆,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],BL450
+Capitalization and Multipliers,Range,,No,Yes,No,Conditional,f,No,No,,BI451
+Capitalization and Multipliers,Market Rent Change,,No,Yes,No,Conditional,f,No,No,,BV485
+Capitalization and Multipliers,Expense Change,,No,Yes,No,Conditional,f,No,No,,BV489
+Capitalization and Multipliers,Concluded Expense Growth,,No,Yes,No,Calculation,f,No,No,,BZ495
+Capitalization and Multipliers,Marketing Time,,No,Yes,No,Conditional,f,No,No,,CT510
+Capitalization and Multipliers,Marketing Time (months),,No,Yes,No,Calculation,f,No,No,,CX514
+Capitalization and Multipliers,pvaPropertyTypeKey,,No,Yes,No,Calculation,f,No,No,,DP522
+Capitalization and Multipliers,Year|Quarter,,No,Yes,No,Calculation,f,No,No,,DP523
+Capitalization and Multipliers,Data Month Year -->,,Yes,No,Yes,,f,No,No,,DY523
+Capitalization and Multipliers,Row Match,,No,Yes,No,Lookup,f,No,No,,DO525
+Capitalization and Multipliers,Loan Term Min,,No,Yes,No,Calculation,f,No,No,,DT526
+Capitalization and Multipliers,Loan Term Max,,No,Yes,No,Calculation,f,No,No,,DT527
+Capitalization and Multipliers,Loan Term,,No,Yes,No,Conditional,f,No,No,,DZ527
+Capitalization and Multipliers,Index Rate Min,,No,Yes,No,Calculation,f,No,No,,DT528
+Capitalization and Multipliers,Index Rate Max,,No,Yes,No,Calculation,f,No,No,,DT529
+Capitalization and Multipliers,Spread Min,,No,Yes,No,Calculation,f,No,No,,DT530
+Capitalization and Multipliers,Spread Max,,No,Yes,No,Calculation,f,No,No,,DT531
+Capitalization and Multipliers,Interest Rate Min,,No,Yes,No,Calculation,f,No,No,,DT532
+Capitalization and Multipliers,Index Rate,,No,Yes,No,Conditional,f,No,No,,DZ532
+Capitalization and Multipliers,Interest Rate Max,,No,Yes,No,Calculation,f,No,No,,DT533
+Capitalization and Multipliers,Spread,,No,Yes,No,Conditional,f,No,No,,DZ533
+Capitalization and Multipliers,LTV / LTC Min,,No,Yes,No,Calculation,f,No,No,,DT534
+Capitalization and Multipliers,Interest Rate,,No,Yes,No,Conditional,f,No,No,,DZ534
+Capitalization and Multipliers,LTV / LTC Max,,No,Yes,No,Calculation,f,No,No,,DT535
+Capitalization and Multipliers,Min Debt Yield Min,,No,Yes,No,Calculation,f,No,No,,DU536
+Capitalization and Multipliers,Min Debt Yield Max,,No,Yes,No,Calculation,f,No,No,,DT537
+Capitalization and Multipliers,DSCR Min,,No,Yes,No,Calculation,f,No,No,,DT538
+Capitalization and Multipliers,Min Debt Yield,,No,Yes,No,Conditional,f,No,No,,DZ538
+Capitalization and Multipliers,DSCR Max,,No,Yes,No,Calculation,f,No,No,,DT539
+Capitalization and Multipliers,Debt Service Coverage Ratio (DSCR),,No,Yes,No,Conditional,f,No,No,,DZ539
+Investor Survey Input,Property,,Yes,No,Yes,,f,No,No,,G24
+Investor Survey Input,Dollars,,No,Yes,No,Calculation,f,No,No,,R27
+Investor Survey Input,As Stabilized,,Yes,No,Yes,,f,No,No,,G28
+Investor Survey Input,Percent,,No,Yes,No,Calculation,f,No,No,,R29
+Investor Survey Input,Months,,No,Yes,No,Calculation,f,No,No,,R30
+Investor Survey Input,Years,,No,Yes,No,Calculation,f,No,No,,R33
+Investor Survey Output,Source 1:,,No,Yes,No,Calculation,f,No,No,,R4
+Investor Survey Output,Source Generic,,No,Yes,No,Calculation,f,No,No,,R5
+Investor Survey Output,Holding for Future Dev,,No,Yes,No,Calculation,s,No,No,,C10
+Investor Survey Output,'=Geography!$X$2:$X$25,,No,Yes,No,Lookup,s,No,No,,D11
+Investor Survey Output,'=LIST_InvestorSurveyYears,,No,Yes,No,Calculation,s,No,No,,D12
+Investor Survey Output,Geographies >,,Yes,No,Yes,,s,No,No,,F14
+Investor Survey Output,'=$G$19:$G$25,,No,Yes,No,Calculation,s,No,No,,C15
+Investor Survey Output,Subtype,,No,Yes,No,Calculation,f,No,No,,AP51
+Investor Survey Output,Very Hidden,,No,Yes,No,Calculation,f,No,No,,AH52
+Investor Survey Output,Avg,,Yes,No,Yes,,s,No,No,,BT101
+Investor Survey Output,Metric:,,No,Yes,No,Calculation,f,No,No,,BL102
+Investor Survey Output,Period,,Yes,No,No,,s,No,No,,BQ104
+Investor Survey Output,Current Quarter,,Yes,No,No,,s,No,No,,BV104
+MF Lease Up,Pro Forma Source,,No,Yes,No,Lookup,f,No,No,,S3
+MF Lease Up,Vacancy % Source,,No,Yes,No,Lookup,f,No,No,,U3
+MF Lease Up,Pro Forma EGI,,Yes,No,No,,n,No,No,,S8
+MF Lease Up,Pro Forma Expenses,,Yes,No,No,,n,No,No,,S9
+MF Lease Up,Starting Physical Occupancy,,No,Yes,No,Conditional,f,No,No,,O11
+MF Lease Up,Expense Percentage at Beginning of Period,,Yes,No,No,,n,No,No,,O14
+MF Lease Up,Subtotal,,No,Yes,No,Aggregation,f,No,No,,O77
+MF Lease Up,Months Abated,,No,Yes,No,Calculation,f,No,No,,O78
+MF Lease Up,RR Average Market Rent,,No,Yes,No,Conditional,f,No,No,,U78
+MF Lease Up,Entrepreneurial Profit for Lease Up Risk,,No,Yes,No,Conditional,f,No,No,,J79
+MF Lease Up,RR Vacant Units,,No,Yes,No,Conditional,f,No,No,,U79
+MF Lease Up,Total Income Loss,,No,Yes,No,Aggregation,f,No,No,,O80
+MF Lease Up,RR Units,,No,Yes,No,Conditional,f,No,No,,U80
+MF Lease Up,Total Operating Beds,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AZ181
+MF Lease Up,Beds Occupied at Stabilization,,No,Yes,No,Calculation,f,No,No,,AZ183
+MF Lease Up,Beds To Be Rented to Reach Stabilization,,No,Yes,No,Calculation,f,No,No,,AZ185
+MF Lease Up,Forecasted Absorption Period (Months),,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],AZ186
+MF Lease Up,Forecasted Net Absorption Per Month (Beds),,No,Yes,No,Calculation,f,No,No,,AZ187
+MF Lease Up,is MHC,,No,Yes,No,Calculation,f,No,No,,BI192
+MF Lease Up,is Affordable,,No,Yes,No,Calculation,f,No,No,,BI193
+MF Lease Up,Distance to Subject (mi.),,No,Yes,No,Calculation,f,No,No,,BT198
+MF Lease Up,LIHTC Only Average,,No,Yes,No,Calculation,f,No,No,,BO212
+MF Lease Up,Subject Projected Absorption,,No,Yes,No,Calculation,f,No,No,,BO214
+MF Lease Up,Total Sites,,No,Yes,No,Calculation,f,No,No,,CI227
+MF Lease Up,Occupied Sites,,No,Yes,No,Calculation,f,No,No,,CM227
+MF Lease Up,Absorbed Homes / Year,,No,Yes,No,Conditional,f,No,No,,CI228
+MF Lease Up,EGI / Site / Mo.,,No,Yes,No,Calculation,f,No,No,,CM228
+MF Lease Up,Stabilized Occupancy,,No,Yes,No,Calculation,f,No,No,,CI229
+MF Lease Up,In-Place,,No,Yes,No,PassThrough,f,No,No,[PASS-THROUGH],CH231
+MF Lease Up,DCF Absorbed Pads > Total?,,No,Yes,No,Conditional,f,No,No,,BY232
+MF Lease Up,Static Absorbed Pads > Total,,No,Yes,No,Conditional,f,No,No,,BZ232
+MF Lease Up,Foregone Income,,No,Yes,No,Aggregation,f,No,No,,CM252
+MF Lease Up,Total Foregone Income,,No,Yes,No,Aggregation,f,No,No,,CM255
+MF Lease Up,Units Absorbed per Month,,No,Yes,No,Calculation,f,No,No,,CY268
+MF Lease Up,Self-Storage Units,,No,Yes,No,Calculation,f,No,No,,DI288
+MF Lease Up,Vehicle Storage Units,,No,Yes,No,Calculation,f,No,No,,DI289
+MF Lease Up,Partner Projection,,No,Yes,No,Calculation,f,No,No,,DV300
+MF Lease Up,Developer Projection,,No,Yes,No,Calculation,f,No,No,,DV301
+MF Lease Up,Vacancy Beyond Stabilized Rate,,No,Yes,No,Conditional,f,No,No,,ER310
+MF Lease Up,Absorbed + Occupied,,No,Yes,No,Calculation,f,No,No,,EC312
+MF Lease Up,Absorbed > Total,,No,Yes,No,Calculation,f,No,No,,ED312
+MF Lease Up,Year 1,,No,Yes,No,Calculation,f,No,No,,EL312
+MF Lease Up,Year 2,,No,Yes,No,Calculation,f,No,No,,EL313
+MF Lease Up,Year 3,,No,Yes,No,Calculation,f,No,No,,EL314
+MF Lease Up,Year 4,,No,Yes,No,Calculation,f,No,No,,EL315
+MF Lease Up,Year 5,,No,Yes,No,Calculation,f,No,No,,EL316
+MF Lease Up,Year 6,,No,Yes,No,Calculation,f,No,No,,EL317
+MF Lease Up,Year 7,,No,Yes,No,Calculation,f,No,No,,EL318
+MF Lease Up,Year 8,,No,Yes,No,Calculation,f,No,No,,EL319
+MF Lease Up,Year 9,,No,Yes,No,Calculation,f,No,No,,EL320
+MF Lease Up,Year 10,,No,Yes,No,Calculation,f,No,No,,EL321
+MF Lease Up,Self-Storage Subtotal,,No,Yes,No,Aggregation,f,No,No,,EM322
+MF Lease Up,Outdoor Vehicle Storage Units,,No,Yes,No,Calculation,f,No,No,,EK323
+MF Lease Up,Outdoor Vehicle Storage Units Subtotal,,No,Yes,No,Aggregation,f,No,No,,EM334
+MF Lease Up,Commercial Units Subtotal,,No,Yes,No,Aggregation,f,No,No,,EM341
+MF Lease Up,Residential Units Subtotal,,No,Yes,No,Aggregation,f,No,No,,EM348
+MF Lease Up,Marketing,,No,Yes,No,Conditional,f,No,No,,EL350
+MF Lease Up,per unit absorbed,,No,Yes,No,Calculation,f,No,No,,ET350
+MF Lease Up,Profit for Lease-Up Risk (%),,Yes,No,No,,n,No,No,,EL351
+MF Lease Up,of stabilized market value,,No,Yes,No,Calculation,f,No,No,,ET351
+MF Lease Up,Total Including Profit,,No,Yes,No,Aggregation,f,No,No,,ET352
+MF Lease Up,Total Rounded,,Yes,No,No,,n,No,No,,EV353
+DirectCapConclusion,Income Characteristics,,Yes,No,No,,s,No,No,,G7
+DirectCapConclusion,"Stability of cash flow, risk of tax reassessment, above/below market rents",,No,Yes,No,Lookup,f,No,No,,H7
+DirectCapConclusion,"Community quality and condition, appeal relative to market competitors",,No,Yes,No,Lookup,f,No,No,,H8
+DirectCapConclusion,"Proximity to jobs hubs and support services, demographics & life cycle trends",,No,Yes,No,Lookup,f,No,No,,H9
+DirectCapConclusion,"Rental rate & occupancy trends, risk of new supply or regulatory issues",,No,Yes,No,Lookup,f,No,No,,H10
+DirectCapConclusion,Highest & Best Use,,Yes,No,No,,s,No,No,,G11
+DirectCapConclusion,Downside risk for casualty or upside potential for development or expansion,,No,Yes,No,Lookup,f,No,No,,H11
+DirectCapConclusion,Effective age considerations of subject property,,No,Yes,No,Lookup,f,No,No,,H12
+DirectCapConclusion,Projection 6,,Yes,No,Yes,,s,No,No,,AL22
+DirectCapConclusion,Projection 2,,No,Yes,No,Calculation,f,No,No,,AG25
+DirectCapConclusion,Projection 3,,No,Yes,No,Calculation,f,No,No,,AH25
+DirectCapConclusion,Projection 4,,No,Yes,No,Calculation,f,No,No,,AI25
+DirectCapConclusion,Projection 5,,No,Yes,No,Calculation,f,No,No,,AJ25
+DirectCapConclusion,In Place,,No,Yes,No,Calculation,f,No,No,,AE29
+DirectCapConclusion,***Seniors Housing/Affordable Only***,,Yes,No,Yes,,s,No,No,,BG67
+DirectCapConclusion,Display Mode:,,No,Yes,No,Calculation,f,No,No,,BG70
+DirectCapConclusion,ERITotal,,No,Yes,No,Conditional,f,No,No,,AW73
+DirectCapConclusion,OtherIncome,,No,Yes,No,Conditional,f,No,No,,AW74
+DirectCapConclusion,AdjustmentsIncomeTotal,,No,Yes,No,Conditional,f,No,No,,AW83
+DirectCapConclusion,EGITotal,,No,Yes,No,Conditional,f,No,No,,AW84
+DirectCapConclusion,index,,No,Yes,No,Conditional,f,No,No,,AW87
+DirectCapConclusion,N1_chtIE_ProForma row,,No,Yes,No,Lookup,f,No,No,,AZ87
+DirectCapConclusion,TotalExpensesTotal,,No,Yes,No,Conditional,f,No,No,,AW116
+DirectCapConclusion,ExpenseRatio,,No,Yes,No,Conditional,f,No,No,,AW117
+DirectCapConclusion,Adjustments to Value,,Yes,No,Yes,,f,No,No,,BF122
+DirectCapConclusion,Reconcile to:,,No,Yes,Yes,Lookup,f,No,No,,BT140
+DirectCapConclusion,Premise,,No,Yes,No,Calculation,f,No,No,,BU143
+DirectCapConclusion,Rooms Revenue Multiplier,,No,Yes,No,Calculation,f,No,No,,BU146
+DirectCapConclusion,Pct Diff >>,,No,Yes,No,Calculation,f,No,No,,BU154
+DirectCapConclusion,Conclude to:,,Yes,No,Yes,,s,No,No,,CE161
+DirectCapConclusion,The subject property is,,No,Yes,No,Lookup,f,No,No,,CD162
+DirectCapConclusion,Valuation Approach,,No,Yes,No,Calculation,f,No,No,,CE167
+DirectCapConclusion,Reconciled Value Conclusion,,No,Yes,No,Lookup,f,No,No,,CE171
+DirectCapConclusion,Income to Sales,,No,Yes,No,Calculation,f,No,No,,CE179
+DirectCapConclusion,Income to Cost,,No,Yes,No,Calculation,f,No,No,,CE180
+DirectCapConclusion,Sales to Cost,,No,Yes,No,Calculation,f,No,No,,CE181
+DirectCapConclusion,DCF Proj1 COA Line Items (comma-delimited),,No,Yes,No,Calculation,f,No,No,,DS269
+DirectCapConclusion,ProForma COA Line Items (comma-delimited),,Yes,No,No,,s,No,No,,DN271
+DirectCapConclusion,Total Expense Recoveries,,No,Yes,No,Calculation,f,No,No,,DP271
+DirectCapConclusion,Capture Rate,,No,Yes,No,Calculation,f,No,No,,DX274
+DirectCapConclusion,Slippage,,No,Yes,No,Calculation,f,No,No,,DX275

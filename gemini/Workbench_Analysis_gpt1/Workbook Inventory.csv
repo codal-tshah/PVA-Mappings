@@ -1,0 +1,200 @@
+Sheet,Visibility,Hidden,Rows,Columns,Formula Count,Named Range Count
+Datatape,visible,No,1,603,0,0
+Guidance,visible,No,73,18,0,0
+NamedRanges,visible,No,2388,2,2386,0
+File Info,visible,No,938,1053,607,0
+Settings,visible,No,109,24,60,0
+Workbook_Audit,visible,No,3790,2,3584,0
+"Dates, Premises",visible,No,94,30,79,0
+"Contracts, History",visible,No,145,45,208,0
+Scope,visible,No,220,57,158,0
+Market Area,visible,No,1135,161,1727,0
+Demographics,visible,No,33322,57,10132,0
+Market Analytics,visible,No,587,79,10369,0
+Submarket Analytics,visible,No,582,71,9302,0
+Market Analysis,visible,No,165,78,777,0
+Market Analysis - Flex,visible,No,165,87,856,0
+Market Analysis Submarkets,visible,No,200,91,1454,0
+tblMarketData,visible,No,5812,75,11622,0
+tblMarketDataInfo,visible,No,33,24,129,0
+tblMarketData_GreenStreet,visible,No,553,10,0,0
+tblMarketDataInfo_GreenStreet,visible,No,4,2,0,0
+tblMarketData_Comps,visible,No,242,15,482,0
+tblMarketDataInfo_Comps,visible,No,7,14,0,0
+tblMarketDataRanksCapRates,visible,No,10013,19,20024,0
+txt_All,visible,No,727,7,682,0
+Site,visible,No,404,142,2641,0
+Zoning,visible,No,170,97,863,0
+Improvements,visible,No,956,232,4737,0
+Assessment,visible,No,398,485,2775,0
+Land Grid,visible,No,1088,1107,4222,0
+Land Valuation,visible,No,314,234,1607,0
+Land Comp Profiles,visible,No,783,37,4547,0
+Cost Approach Setup,visible,No,1064,11,14,0
+Cost,visible,No,358,49,513,0
+Cost Approach,visible,No,1217,416,4495,0
+Cost Comps_PREV,visible,No,15,14,45,0
+Sales Grid,visible,No,1728,1227,8158,0
+Sales Approach,visible,No,618,574,6607,0
+SaleCompProfileSetup,visible,No,94,193,96,0
+Sale Comp Profiles,visible,No,783,37,4093,0
+Income Approach Setup,visible,No,37,14,12,0
+Rent Roll,visible,No,1087,322,12448,0
+NPV of AboveBelow Market Rent,visible,No,205,57,3005,0
+Lease Abstracts,visible,No,189,63,484,0
+Revenue Unit Setup,visible,No,19,38,0,0
+Rent Roll Input,visible,No,2511,78,2544,0
+Rent Roll Config,visible,No,132,53,3435,0
+Rent Roll Master,visible,No,2617,76,92708,0
+Lease Grid,visible,No,2461,1438,16471,0
+Lease Grid MF Unit Mix,visible,No,603,66,10701,0
+Lease Grid (2) MF Unit Mix,visible,No,603,55,4200,0
+Lease Grid (3) MF Unit Mix,visible,No,603,55,4200,0
+Market Rent,visible,No,525,597,7416,0
+Expense Grid,visible,No,960,457,4090,0
+RentCompProfileSetup,visible,No,170,168,167,0
+MF Market Rent,visible,No,3472,200,67366,0
+Rent Comp Profiles,visible,No,1409,37,9441,0
+Lease Grid (2),visible,No,2465,1119,14572,0
+Market Rent (2),visible,No,525,597,7414,0
+MF Affordable Rent,visible,No,3271,200,74318,0
+Rent Comp Profiles (2),visible,No,1409,37,9495,0
+Lease Grid (3),visible,No,2465,1119,14572,0
+Market Rent (3),visible,No,525,597,7386,0
+Rent Comp Profiles (3),visible,No,1409,37,9495,0
+Import_Kalibri_DoW Data,visible,No,1,1,0,0
+tblExpenseComps,visible,No,7,146,264,0
+tblExpenseCompsLineItems,visible,No,2,1,0,0
+Expense Comps Filtered,visible,No,505,174,53834,0
+Expense Comps Select,visible,No,188,192,2018,0
+Expense Comps,visible,No,653,371,85277,0
+tblFuzzyMatch,visible,No,1247,3,0,0
+T-12 Input,visible,No,1250,68,10084,0
+COA Map T-12,visible,No,509,13,1503,0
+Year-1 Input,visible,No,1157,68,4967,0
+COA Map Year-1,visible,No,509,13,1503,0
+Year-2 Input,visible,No,1154,68,4970,0
+COA Map Year-2,visible,No,509,13,1503,0
+Year-3 Input,visible,No,1132,68,4967,0
+COA Map Year-3,visible,No,509,13,1503,0
+Year-4 Input,visible,No,1132,68,4966,0
+COA Map Year-4,visible,No,509,13,1503,0
+Year-5 Input,visible,No,1132,68,4966,0
+COA Map Year-5,visible,No,509,13,1503,0
+Year-6 Input,visible,No,1132,68,4966,0
+COA Map Year-6,visible,No,509,13,1503,0
+YTD Input,visible,No,1227,68,4966,0
+COA Map YTD,visible,No,509,13,1503,0
+YTD Year-1 Input,visible,No,1250,68,4966,0
+COA Map YTD Year-1,visible,No,509,13,1503,0
+Budget Input,visible,No,1132,68,4967,0
+COA Map Budget,visible,No,509,13,1503,0
+ProForma,visible,No,712,433,88991,0
+Expense Projections,visible,No,3837,63,34266,0
+Capitalization and Multipliers,visible,No,1575,453,1254,0
+Investor Survey Input,visible,No,43,25,80,0
+Investor Survey Output,visible,No,316,367,438,0
+tblInvestorSurvey,visible,No,6000,200,14696,0
+Income-Expense Summary,visible,No,210,118,2229,0
+CashFlow-Assumptions,visible,No,86,11,1,0
+CashFlow-DCF,visible,No,167,19,162,0
+CashFlow-Returns,visible,No,66,18,56,0
+MarketSurvey API,visible,No,10874,111,11,0
+MF Lease Up,visible,No,356,157,2075,0
+Comm Lease Up,visible,No,76,89,957,0
+DirectCapConclusion,visible,No,277,148,1018,0
+DCF Assumptions,visible,No,282,150,682,0
+DCF Proj1,visible,No,318,102,4953,0
+DCF Proj2,visible,No,315,102,4964,0
+DCF Proj3,visible,No,315,102,4964,0
+DCF Rpv Proj1,visible,No,161,55,2033,0
+DCF Rpv Proj2,visible,No,161,55,2034,0
+DCF Rpv Proj3,visible,No,161,55,2034,0
+Values,visible,No,137,43,398,0
+Summary,visible,No,2436,128,1287,0
+Value Allocation GC,visible,No,101,67,217,0
+Appraisal Summary,visible,No,58,13,144,0
+Salient Facts,visible,No,251,68,2273,0
+tblSalientFacts,visible,No,3,1,0,0
+tblSalientFactsAdditional,visible,No,2,1,1,0
+HUD Form 92264,visible,No,848,265,2867,0
+HUD Form 92273 Market,visible,No,861,50,7210,0
+HUD Form 92273 Affordable,visible,No,861,50,7071,0
+HUD Form 92273 - S8,visible,No,1124,27,6378,0
+HUD Form 92274,visible,No,95,70,458,0
+HUD Form 92264T,visible,No,17,11,0,0
+Valuation,visible,No,162,18,394,0
+Custom Table,visible,No,52,18,1,0
+Custom User Sheet,visible,No,6,18,1,0
+tblZoning,visible,No,3,1,0,0
+tblTaxAssessment,visible,No,3,1,0,0
+tblTaxGeneral,visible,No,3,1,0,0
+Lists,visible,No,151,156,148,0
+DBManagerConfig,visible,No,303,15,0,0
+DBManagerFormart,visible,No,1,1,0,0
+DBManagerSearchResult,visible,No,1,1,0,0
+AE_DataExchange,visible,No,756,83,852,0
+AE_PropertyAssets,visible,No,2,65,0,0
+AE_MarketLeases,visible,No,2,63,0,0
+AE_Leases,visible,No,2,91,0,0
+AE_FreeRent,visible,No,2,16,0,0
+AE_Inflation,visible,No,30,18,29,0
+AE_TenantImprovements,visible,No,2,10,0,0
+AE_GenVacCreditLoss,visible,No,2,16,0,0
+AE_Expenses,visible,No,2,22,0,0
+AE_PropertyResultLines,visible,No,2,10,0,0
+AE_TenantResultLines,visible,No,2,11,0,0
+Rpv_SearchResults,visible,No,6,11,0,0
+Rpv_Property,visible,No,2,7,0,0
+Rpv_MLA,visible,No,2,59,0,0
+Rpv_RentRoll,visible,No,2,35,0,0
+Rpv_InflationRates,visible,No,2,52,0,0
+Rpv_Cashflow_Property,visible,No,2,12,0,0
+Rpv_Cashflow_Tenant,visible,No,30,13,0,0
+Rpv_Valuation,visible,No,2,16,0,0
+Rpv_PresentValue,visible,No,2,12,0,0
+Hospitals,visible,No,5201,14,7742,0
+Airports,visible,No,373,20,0,0
+ASHA_Regs,visible,No,54,57,159,0
+tblLB_Import_Parcel,visible,No,8,47,0,0
+tblLB_Import_Improvements,visible,No,8,134,0,0
+tblLB_Import_Improvements_impro,visible,No,2,2,1,0
+tblLB_Import_Zoning,visible,No,6,19,0,0
+tblLB_Import_Zoning_zoningsubre,visible,No,2,2,1,0
+tblLB_Import_Site,visible,No,8,87,0,0
+tblLB_Import_Site_subparcels,visible,No,3,6,0,0
+tblLB_Import_Sales,visible,No,10,131,0,0
+tblLB_Import_Assessment,visible,No,7,52,0,0
+tblLB_Import_Assessment_assessi,visible,No,3,20,2,0
+tblLB_Import_IncExp,visible,No,2,1,0,0
+tblLB_Import_UnitLeaseSummary,visible,No,8,70,0,0
+tblLB_Import_UnitLease,visible,No,10,54,9,0
+tblLB_Import_RentRollSummary,visible,No,2,1,0,0
+tblLB_Import_RentRoll,visible,No,2,2,1,0
+tblLB_Import_UDF,visible,No,48,3,0,0
+tblLB_Import_Images,visible,No,23,9,0,0
+Lightbox API Rent Roll,visible,No,381,333,11735,0
+Linnaean API,visible,No,24,61,8,0
+tblREITRates,visible,No,214,5,0,0
+tblAppraisers,visible,No,1048576,43,55,0
+GreenStreet API,visible,No,1556,82,6,0
+OpenAI API,visible,No,299,92,107,0
+Geography,visible,No,3145,34,4350,0
+Property Types,visible,No,299,12,154,0
+MasterTOC,visible,No,222,9,0,0
+FileCloseActions,visible,No,1,1,0,0
+File Bifurcate,visible,No,16,8,0,0
+JobProgress,visible,No,103,43,1136,0
+portfolioRR,visible,No,33,56,155,0
+portfolioIE,visible,No,310,50,218,0
+portfolioTaxHistory Comps,visible,No,43,22,42,0
+tblFileConfig,visible,No,1031,61,1901,0
+PartnerLists,visible,No,876,777,11959,0
+Comp Prompt,visible,No,71,20,4,0
+Lightbox API Config,visible,No,186,44,268,0
+Lightbox API,visible,No,136,684,363,0
+Lightbox API Enumerations,visible,No,1434,7,4,0
+Lightbox API Dictionary,visible,No,911,21,947,0
+Lightbox API UDF Dictionary,visible,No,283,14,282,0
+Lightbox API Error Log,visible,No,1,4,0,0
+Change Log,visible,No,4048,13,16,0

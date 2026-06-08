@@ -1,0 +1,197 @@
+Datatape
+Guidance
+File Info
+Settings
+Dates, Premises
+Contracts, History
+Scope
+Market Area
+Demographics
+Market Analytics
+Submarket Analytics
+Market Analysis
+Market Analysis - Flex
+Market Analysis Submarkets
+tblMarketData
+tblMarketDataInfo
+tblMarketData_GreenStreet
+tblMarketDataInfo_GreenStreet
+tblMarketData_Comps
+tblMarketDataInfo_Comps
+tblMarketDataRanksCapRates
+txt_All
+Site
+Zoning
+Improvements
+Assessment
+Land Grid
+Land Valuation
+Land Comp Profiles
+Cost Approach Setup
+Cost
+Cost Approach
+Cost Comps_PREV
+Sales Grid
+Sales Approach
+SaleCompProfileSetup
+Sale Comp Profiles
+Income Approach Setup
+Rent Roll
+NPV of AboveBelow Market Rent
+Lease Abstracts
+Revenue Unit Setup
+Rent Roll Input
+Rent Roll Config
+Rent Roll Master
+Lease Grid
+Lease Grid MF Unit Mix
+Lease Grid (2) MF Unit Mix
+Lease Grid (3) MF Unit Mix
+Market Rent
+Expense Grid
+RentCompProfileSetup
+MF Market Rent
+Rent Comp Profiles
+Lease Grid (2)
+Market Rent (2)
+MF Affordable Rent
+Rent Comp Profiles (2)
+Lease Grid (3)
+Market Rent (3)
+Rent Comp Profiles (3)
+Import_Kalibri_DoW Data
+tblExpenseComps
+tblExpenseCompsLineItems
+Expense Comps Filtered
+Expense Comps Select
+Expense Comps
+tblFuzzyMatch
+T-12 Input
+COA Map T-12
+Year-1 Input
+COA Map Year-1
+Year-2 Input
+COA Map Year-2
+Year-3 Input
+COA Map Year-3
+Year-4 Input
+COA Map Year-4
+Year-5 Input
+COA Map Year-5
+Year-6 Input
+COA Map Year-6
+YTD Input
+COA Map YTD
+YTD Year-1 Input
+COA Map YTD Year-1
+Budget Input
+COA Map Budget
+ProForma
+Expense Projections
+Capitalization and Multipliers
+Investor Survey Input
+Investor Survey Output
+tblInvestorSurvey
+Income-Expense Summary
+CashFlow-Assumptions
+CashFlow-DCF
+CashFlow-Returns
+MarketSurvey API
+MF Lease Up
+Comm Lease Up
+DirectCapConclusion
+DCF Assumptions
+DCF Proj1
+DCF Proj2
+DCF Proj3
+DCF Rpv Proj1
+DCF Rpv Proj2
+DCF Rpv Proj3
+Values
+Summary
+Value Allocation GC
+Appraisal Summary
+Salient Facts
+tblSalientFacts
+tblSalientFactsAdditional
+HUD Form 92264
+HUD Form 92273 Market
+HUD Form 92273 Affordable
+HUD Form 92273 - S8
+HUD Form 92274
+HUD Form 92264T
+Valuation
+Custom Table
+Custom User Sheet
+tblZoning
+tblTaxAssessment
+tblTaxGeneral
+Lists
+DBManagerConfig
+DBManagerFormart
+DBManagerSearchResult
+AE_DataExchange
+AE_PropertyAssets
+AE_MarketLeases
+AE_Leases
+AE_FreeRent
+AE_Inflation
+AE_TenantImprovements
+AE_GenVacCreditLoss
+AE_Expenses
+AE_PropertyResultLines
+AE_TenantResultLines
+Rpv_SearchResults
+Rpv_Property
+Rpv_MLA
+Rpv_RentRoll
+Rpv_InflationRates
+Rpv_Cashflow_Property
+Rpv_Cashflow_Tenant
+Rpv_Valuation
+Rpv_PresentValue
+Hospitals
+Airports
+ASHA_Regs
+tblLB_Import_Parcel
+tblLB_Import_Improvements
+tblLB_Import_Improvements_impro
+tblLB_Import_Zoning
+tblLB_Import_Zoning_zoningsubre
+tblLB_Import_Site
+tblLB_Import_Site_subparcels
+tblLB_Import_Sales
+tblLB_Import_Assessment
+tblLB_Import_Assessment_assessi
+tblLB_Import_IncExp
+tblLB_Import_UnitLeaseSummary
+tblLB_Import_UnitLease
+tblLB_Import_RentRollSummary
+tblLB_Import_RentRoll
+tblLB_Import_UDF
+tblLB_Import_Images
+Lightbox API Rent Roll
+Linnaean API
+tblREITRates
+tblAppraisers
+GreenStreet API
+OpenAI API
+Geography
+Property Types
+MasterTOC
+FileCloseActions
+File Bifurcate
+JobProgress
+portfolioRR
+portfolioIE
+portfolioTaxHistory Comps
+tblFileConfig
+PartnerLists
+Comp Prompt
+Lightbox API Config
+Lightbox API
+Lightbox API Enumerations
+Lightbox API Dictionary
+Lightbox API UDF Dictionary
+Lightbox API Error Log
+Change Log

@@ -1,0 +1,129 @@
+{
+  "property_type": "Retail",
+  "data_sources": ["CoStar", "ERD"],
+  "matched_fields": {
+    "property_identity_and_location": {
+      "PropertyID": "property.property_id",
+      "Property Name": "property.name",
+      "Property Address": "property.address",
+      "City": "property.city",
+      "State": "property.state",
+      "Zip": "property.zip",
+      "County Name": "property.county",
+      "Country": "property.country",
+      "Latitude": "property.lat",
+      "Longitude": "property.lng",
+      "Market Name": "property.market",
+      "Submarket Name": "property.submarket"
+    },
+    "property_characteristics_and_building_details": {
+      "PropertyType": "property.propertytype",
+      "Secondary Type": "property.propertysubtype",
+      "Building Class": "improvement.buildingclass",
+      "Year Built": "improvement.yearbuilt",
+      "Year Renovated": "improvement.renovations",
+      "Construction Material": "improvement.construction",
+      "Number Of Stories": "improvement.noofstories",
+      "Total Buildings": "improvement.noofbuildings",
+      "RBA": "improvement.rentablearea",
+      "Amenities": "improvement.amenities",
+      "Features": "improvement.features",
+      "Heating": "improvement.heating",
+      "Sprinklers": "improvement.sprinklers",
+      "Number Of Elevators": "improvement.noofelevators",
+      "Number Of Parking Spaces": "improvement.parking",
+      "Parking Ratio": "improvement.parkingratiogba"
+    },
+    "land_zoning_and_flood_risk": {
+      "Land Area (AC)": "site.acres",
+      "Land Area (SF)": "site.landsf",
+      "Zoning": "property_zoning.zoningcode",
+      "Fema Flood Zone": "site.floodzone",
+      "FEMA Map Date": "site.femamapdate"
+    },
+    "ownership_and_contact": {
+      "Owner Name": "property.owner"
+    },
+    "financials_taxes_and_sales_information": {
+      "Last Sale Date": "sale_comp.saledate",
+      "Cap Rate": "sale_comp.caprate",
+      "$Price/Unit": "sale_comp.priceperunit",
+      "Last Sale Price": "sale_comp.priceactual"
+    },
+    "commercial_availability_and_leasing": {
+      "Vacancy %": "rent_comp.vacancyrate",
+      "Days On Market": "sale_comp.daysonmarket",
+      "Tenancy": "commercial_survey.tenant",
+      "Rent Type": "commercial_survey.commleasetype",
+      "Rent/SF/Yr": "lease_comp.baserentperyear",
+      "Smallest Available Space": "commercial_survey.commsizemin",
+      "Max Building Contiguous Space": "commercial_survey.commsizemax"
+    },
+    "industrial_and_retail_specifics": {
+      "Anchor Tenants": "commercial_survey.anchors",
+      "Ceiling Ht": "improvement.ceilingheight"
+    }
+  },
+  "costar_retail_specific_data_gaps": {
+    "location_and_transit_gaps": [
+      "Closest Transit Stop",
+      "Closest Transit Stop Dist (mi)",
+      "Closest Transit Stop Walk Time (min)",
+      "Continent",
+      "Subcontinent",
+      "Cross Street"
+    ],
+    "sustainability_and_utilities_gaps": [
+      "Energy Star",
+      "LEED Certified",
+      "Sewer",
+      "Water",
+      "Gas"
+    ],
+    "granular_fema_data_gaps": [
+      "FEMA Map Identifier",
+      "FIRM ID",
+      "FIRM Panel Number",
+      "Flood Risk Area",
+      "In SFHA"
+    ],
+    "detailed_ownership_and_contact_gaps": [
+      "Owner Address",
+      "True Owner Name",
+      "True Owner Contact",
+      "Property Manager Name",
+      "Property Manager Address",
+      "Leasing Company Name",
+      "Leasing Company Contact",
+      "Sale Company Name",
+      "Developer Name",
+      "Architect Name",
+      "Parent Company",
+      "Fund Name"
+    ],
+    "financials_and_tax_expenses_gaps": [
+      "Building Operating Expenses",
+      "Ops Expense",
+      "Ops Expense Per SF",
+      "Building Tax Expenses",
+      "Tax Year",
+      "Taxes Total",
+      "Taxes Per SF"
+    ],
+    "granular_commercial_leasing_gaps": [
+      "Percent Leased",
+      "Average Weighted Rent",
+      "Avg Rent-Direct (Retail)",
+      "Avg Rent-Sublet (Retail)",
+      "Direct Available Space",
+      "Sublet Available Space",
+      "Total Vacant Avail Relet Space (SF)",
+      "Total Vacant Avail Sublet Space (SF)"
+    ],
+    "retail_specific_metrics_gaps": [
+      "Anchor GLA",
+      "Market Segment",
+      "Scale"
+    ]
+  }
+}

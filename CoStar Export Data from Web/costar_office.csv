@@ -1,0 +1,105 @@
+```txt id="h5k2rv"
+Property
+Property Address
+Property Name
+PropertyID
+Condo
+Collateral Type
+Has Lab Space
+
+property_type_ref
+Property Type
+
+Geography
+Submarket Cluster
+Submarket Name
+City
+State
+Zip
+County Name
+Continent
+Country
+Subcontinent
+
+improvement
+Building Park
+Building Status
+Building Class
+Year Built
+Number of Stories
+Year Renovated
+Number of Parking Spaces
+Parking Ratio
+RBA
+Typical Floor Size
+Max Building Contiguous Space
+Max Floor Contiguous Space
+Construction Begin
+Month Renovated
+Amenities
+Coworking Available Space
+Lab Space (SF)
+Lab Space Percent Composition
+
+commercial_survey
+Total Available Space (SF)
+Direct Available Space
+Direct Vacant Space
+Sublet Available Space
+Sublet Vacant Space
+Percent Leased
+Average Weighted Rent
+Sublet Services
+Direct Services
+Avg Rent-Direct (Office)
+Avg Rent-Sublet (Office)
+Rent/SF/Yr
+
+property_operations
+Building Tax Expenses
+Building Operating Expenses
+
+company_contacts
+Property Manager Name
+Developer Name
+Leasing Company Name
+Leasing Company Address
+Leasing Company City State Zip
+Leasing Company Phone
+Leasing Company Fax
+Leasing Company Contact
+Owner Name
+Architect Name
+Fund Name
+Originator
+Sale Company Address
+Sale Company City State Zip
+Sale Company Contact
+Sale Company Fax
+Sale Company Name
+Sale Company Phone
+Sales Company
+Sales Contact
+Sales Contact Phone
+
+site
+Fema Flood Zone
+FEMA Map Date
+FEMA Map Identifier
+FIRM ID
+FIRM Panel Number
+Flood Risk Area
+Floodplain Area
+In SFHA
+Land Area (AC)
+Land Area (SF)
+
+sale_comp
+For Sale Price Per SF
+Interest Rate
+Interest Rate Type
+Loan Type
+Maturity Date
+Origination Amount
+Origination Date
+```

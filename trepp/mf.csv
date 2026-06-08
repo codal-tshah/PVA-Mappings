@@ -1,0 +1,89 @@
+property_id
+file_id
+property_name
+property_type
+propertysubtype
+propertysubtype2
+address
+city
+county
+state
+zip
+msa
+msaname
+prop_units
+prop_sqft
+year_built
+year_renovated
+occupancy
+occupancy_date
+prop_bloomberg_name
+data_load_date
+data_update_date
+latitude
+longitude
+statement_id
+stmt_type
+stmt_begin_date
+stmt_end_date
+stmt_file_date
+reporting_year
+stmt_sqft
+stmt_units
+stmt_occ_rate
+mr_occdt
+mr_occ_rate
+calc_occ_rate
+calc_occdt
+source
+Income
+Rental Income
+Loss to Lease
+Commercial Rental Income
+Commercial Expense Reimbursements
+Effective Potential Gross Income
+Vacancy
+Bad Debt
+Collection Loss
+Concessions
+Effective Rental Revenue
+Physical Vacancy
+Other Revenue
+Net Parking Income
+Cable Income
+Laundry Income
+Other Income
+Expense Reimbursements
+Flex Income Item
+Total Other Revenue
+Net Operating Income
+Effective Gross Income
+Total Expenses
+Real Estate Taxes
+Insurance
+Natural Gas
+Electricity
+Water/Sewer
+Trash
+Other Utilities
+Total Utilities
+Grounds
+Exteriminating/Pest Contol
+Cleaning/Unit Turnover
+Other Repairs and Maintenance
+Total Repairs and Maintenance
+Security
+Administrative Payroll
+Maintenance Payroll
+Employee Tax and Benefits
+Employee Units
+Total Payroll
+Model Units
+Other Advertising
+Total Advertising and Marketing
+General/Administrative
+Management
+Ground Rent
+Flex Expense Item
+Reserves
+Expense Ratio

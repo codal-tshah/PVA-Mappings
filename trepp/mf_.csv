@@ -1,0 +1,143 @@
+Property
+
+property_id
+file_id
+property_name
+property_type
+propertysubtype
+propertysubtype2
+prop_units
+prop_sqft
+year_built
+year_renovated
+occupancy
+occupancy_date
+prop_bloomberg_name
+stmt_sqft
+stmt_units
+stmt_occ_rate
+mr_occ_rate
+calc_occ_rate
+
+Geography
+
+address
+city
+county
+state
+zip
+msa
+msaname
+latitude
+longitude
+
+time_log / reporting_period
+
+data_load_date
+data_update_date
+stmt_begin_date
+stmt_end_date
+stmt_file_date
+reporting_year
+mr_occdt
+calc_occdt
+
+project / source_metadata
+
+statement_id
+stmt_type
+source
+
+pva-mvp-wip-v2.improvement
+
+occupancy
+occupancy_date
+prop_units
+prop_sqft
+year_built
+year_renovated
+
+pva-mvp-wip-v2.commercial_survey
+
+stmt_occ_rate
+mr_occ_rate
+calc_occ_rate
+Vacancy
+Physical Vacancy
+Concessions
+Collection Loss
+Bad Debt
+
+pva-mvp-wip-v2.property_operations
+
+Income
+Rental Income
+Loss to Lease
+Commercial Rental Income
+Commercial Expense Reimbursements
+Effective Potential Gross Income
+Vacancy
+Bad Debt
+Collection Loss
+Concessions
+Effective Rental Revenue
+Physical Vacancy
+Other Revenue
+Net Parking Income
+Cable Income
+Laundry Income
+Other Income
+Expense Reimbursements
+Flex Income Item
+Total Other Revenue
+Net Operating Income
+Effective Gross Income
+Total Expenses
+Real Estate Taxes
+Insurance
+Natural Gas
+Electricity
+Water/Sewer
+Trash
+Other Utilities
+Total Utilities
+Grounds
+Exteriminating/Pest Contol
+Cleaning/Unit Turnover
+Other Repairs and Maintenance
+Total Repairs and Maintenance
+Security
+Administrative Payroll
+Maintenance Payroll
+Employee Tax and Benefits
+Employee Units
+Total Payroll
+Model Units
+Other Advertising
+Total Advertising and Marketing
+General/Administrative
+Management
+Ground Rent
+Flex Expense Item
+Reserves
+Expense Ratio
+
+pva-mvp-wip-v2.property_assessment
+
+Real Estate Taxes
+
+pva-mvp-wip-v2.lease_comp
+
+Rental Income
+Commercial Rental Income
+Expense Reimbursements
+Commercial Expense Reimbursements
+Loss to Lease
+Concessions
+
+pva-mvp-wip-v2.sale_comp
+
+Net Operating Income
+Effective Gross Income
+Expense Ratio
+Effective Potential Gross Income

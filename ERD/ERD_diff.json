@@ -1,0 +1,286 @@
+{
+  "schema_smart_comparison": {
+    "tables_added_in_new_erd": [
+      "Geography",
+      "property_type_ref",
+      "school_district",
+      "property_assessment"
+    ],
+    "tables_removed_in_new_erd": [],
+    "column_differences_by_table": {
+      "Property": {
+        "missing_in_new_erd": [
+          "createdby",
+          "timestamp",
+          "propertymajortype",
+          "propertytype",
+          "propertysubtype",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "country",
+          "market",
+          "submarket",
+          "townshiprange",
+          "municipality",
+          "cbsa_name",
+          "cbsa_id",
+          "msa",
+          "censusblock",
+          "censustract",
+          "neighborhood",
+          "northboundary",
+          "southboundary",
+          "eastboundary",
+          "westboundary",
+          "neighborhoodcomments",
+          "locationdescription",
+          "opportunityzone",
+          "schooldistrict",
+          "districtspending",
+          "districturl",
+          "studentteacherratio",
+          "enrollment",
+          "far",
+          "id"
+        ],
+        "added_in_new_erd": [
+          "geography_id",
+          "lightbox_created_by",
+          "lightbox_timestamp",
+          "property_type_id",
+          "floor_area_ratio",
+          "custom_fields",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      },
+      "site": {
+        "missing_in_new_erd": [
+          "dimensions",
+          "views",
+          "visibility",
+          "topography",
+          "utilities",
+          "withinfloodplainname",
+          "drainage"
+        ],
+        "added_in_new_erd": [
+          "site_dimensions",
+          "site_views",
+          "site_visibility",
+          "site_topography",
+          "site_utilities",
+          "within_flood_plain",
+          "site_drainage",
+          "custom_fields",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      },
+      "improvement": {
+        "missing_in_new_erd": [
+          "condition",
+          "construction",
+          "quality",
+          "landscaping",
+          "renovations",
+          "foundation",
+          "cooling",
+          "heating",
+          "sprinklers",
+          "garage",
+          "docks",
+          "features",
+          "amenities",
+          "craneways",
+          "adr"
+        ],
+        "added_in_new_erd": [
+          "building_condition",
+          "construction_type",
+          "building_quality",
+          "site_landscaping",
+          "renovations_description",
+          "foundation_type",
+          "cooling_type",
+          "heating_type",
+          "sprinkler_type",
+          "garage_type",
+          "no_of_docks",
+          "building_features",
+          "building_amenities",
+          "no_of_craneways",
+          "average_daily_rate",
+          "custom_fields",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      },
+      "property_zoning": {
+        "missing_in_new_erd": [
+          "jurisdiction",
+          "type",
+          "summary",
+          "ordinancedocument",
+          "comments",
+          "district"
+        ],
+        "added_in_new_erd": [
+          "zoning_jurisdiction",
+          "zoning_type",
+          "zoning_summary",
+          "ordinance_document",
+          "ordinance_document_url",
+          "notes",
+          "zoning_notes",
+          "zoning_district",
+          "zoning_designation",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      },
+      "sale_comp": {
+        "missing_in_new_erd": [
+          "pgim",
+          "egim",
+          "activestatus",
+          "isexcel",
+          "confidential",
+          "priceactual",
+          "price",
+          "grantor",
+          "grantee",
+          "financing",
+          "lender",
+          "nim"
+        ],
+        "added_in_new_erd": [
+          "potential_gross_income_multiplier",
+          "effective_gross_income_multiplier",
+          "is_active",
+          "is_excel_entry",
+          "is_confidential",
+          "actual_price",
+          "sale_price",
+          "grantor_seller",
+          "grantee_buyer",
+          "financing_type",
+          "lender_name",
+          "net_income_multiplier",
+          "custom_fields",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      },
+      "commercial_survey": {
+        "missing_in_new_erd": [
+          "commvacancy",
+          "anchors",
+          "tenant",
+          "escalations"
+        ],
+        "added_in_new_erd": [
+          "comm_vacancy_rate",
+          "anchor_tenants",
+          "tenant_name",
+          "rent_escalations"
+        ]
+      },
+      "lease_comp": {
+        "missing_in_new_erd": [
+          "tenant",
+          "lessor",
+          "leaseterm",
+          "leasedate",
+          "options",
+          "comments",
+          "sizem2",
+          "rentperm2",
+          "finish",
+          "rentincreased"
+        ],
+        "added_in_new_erd": [
+          "tenant_name",
+          "lessor_name",
+          "lease_term_months",
+          "lease_commencement_date",
+          "lease_options",
+          "notes",
+          "size_sq_meters",
+          "rent_per_sq_meter",
+          "space_finish",
+          "rent_last_increased",
+          "custom_fields",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      },
+      "rent_comp": {
+        "missing_in_new_erd": [
+          "mfamenities"
+        ],
+        "added_in_new_erd": [
+          "mf_unit_amenities",
+          "custom_fields",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      },
+      "unit_mix": {
+        "missing_in_new_erd": [
+          "category",
+          "floor",
+          "baths",
+          "marketrentmo",
+          "marketrentsf",
+          "sizem2",
+          "rentperm2",
+          "leasestart",
+          "leaseexpiration",
+          "unitheight",
+          "unitwidth",
+          "unitdepth",
+          "incometarget",
+          "lhtc"
+        ],
+        "added_in_new_erd": [
+          "unit_category",
+          "unit_floor",
+          "no_of_baths",
+          "market_rent_per_mo",
+          "market_rent_per_sf",
+          "size_sq_meters",
+          "rent_per_sq_meter",
+          "lease_start_date",
+          "lease_expiration_date",
+          "unit_height_ft",
+          "unit_width_ft",
+          "unit_depth_ft",
+          "income_target_percent",
+          "is_lihtc",
+          "custom_fields",
+          "created_at",
+          "updated_at",
+          "created_by_user_id",
+          "updated_by_user_id"
+        ]
+      }
+    }
+  }
+}

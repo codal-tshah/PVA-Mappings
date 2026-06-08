@@ -1,0 +1,154 @@
+{
+  "property_type": "Manufactured Housing",
+  "data_sources": ["CoStar", "ERD"],
+  "matched_fields": {
+    "property_identity_and_location": {
+      "PropertyID": "property.property_id",
+      "Property Name": "property.name",
+      "Property Address": "property.address",
+      "City": "property.city",
+      "State": "property.state",
+      "Zip": "property.zip",
+      "County Name": "property.county",
+      "Country": "property.country",
+      "Latitude": "property.lat",
+      "Longitude": "property.lng",
+      "Market Name": "property.market",
+      "Submarket Name": "property.submarket"
+    },
+    "property_characteristics_and_building_details": {
+      "PropertyType": "property.propertytype",
+      "Secondary Type": "property.propertysubtype",
+      "Building Class": "improvement.buildingclass",
+      "Year Built": "improvement.yearbuilt",
+      "Year Renovated": "improvement.renovations",
+      "Construction Material": "improvement.construction",
+      "Number Of Stories": "improvement.noofstories",
+      "Total Buildings": "improvement.noofbuildings",
+      "Amenities": "improvement.amenities",
+      "Features": "improvement.features",
+      "Heating": "improvement.heating",
+      "Sprinklers": "improvement.sprinklers",
+      "Number Of Parking Spaces": "improvement.parking",
+      "Parking Spaces/Unit": "improvement.parkingratiounit"
+    },
+    "land_zoning_and_flood_risk": {
+      "Land Area (AC)": "site.acres",
+      "Land Area (SF)": "site.landsf",
+      "Zoning": "property_zoning.zoningcode",
+      "Fema Flood Zone": "site.floodzone",
+      "FEMA Map Date": "site.femamapdate"
+    },
+    "ownership_and_contact": {
+      "Owner Name": "property.owner"
+    },
+    "financials_taxes_and_sales_information": {
+      "Last Sale Date": "sale_comp.saledate",
+      "Cap Rate": "sale_comp.caprate",
+      "$Price/Unit": "sale_comp.priceperunit",
+      "Last Sale Price": "sale_comp.priceactual"
+    },
+    "manufactured_housing_community_metrics": {
+      "Number Of Units": "improvement.noofunits",
+      "Number of Sites/Lots": "site.landunits",
+      "Site/Lot Type": "site.landunittype",
+      "Vacancy %": "rent_comp.vacancyrate"
+    }
+  },
+  "costar_manufactured_housing_specific_data_gaps": {
+    "location_and_transit_gaps": [
+      "Closest Transit Stop",
+      "Closest Transit Stop Dist (mi)",
+      "Closest Transit Stop Walk Time (min)",
+      "Submarket Cluster",
+      "Continent",
+      "Subcontinent",
+      "Cross Street",
+      "Property Location"
+    ],
+    "building_sustainability_and_efficiency_gaps": [
+      "Building Status",
+      "Constr Status",
+      "Operational Status",
+      "Operation Type",
+      "Style",
+      "Star Rating",
+      "Building Park",
+      "Month Built",
+      "Month Renovated",
+      "Construction Begin",
+      "Sewer",
+      "Water",
+      "Gas",
+      "Energy Star",
+      "LEED Certified"
+    ],
+    "granular_zoning_and_flood_data_gaps": [
+      "Parcel Number 1(Min)",
+      "Parcel Number 2(Max)",
+      "Proposed Land Use",
+      "FEMA Map Identifier",
+      "FIRM ID",
+      "FIRM Panel Number",
+      "Flood Risk Area",
+      "Floodplain Area",
+      "In SFHA"
+    ],
+    "detailed_ownership_and_contact_gaps": [
+      "Owner Address",
+      "Owner City State Zip",
+      "Owner Contact",
+      "Owner Phone",
+      "True Owner Name",
+      "True Owner Address",
+      "True Owner Contact",
+      "Property Manager Name",
+      "Property Manager Address",
+      "Property Manager Contact",
+      "Leasing Company Name",
+      "Leasing Company Address",
+      "Sales Company",
+      "Sale Company Name",
+      "Sale Company Contact",
+      "Primary Agent Name",
+      "Developer Name",
+      "Architect Name",
+      "Parent Company",
+      "Fund Name"
+    ],
+    "financials_and_tax_expenses_gaps": [
+      "For Sale Price",
+      "For Sale Status",
+      "Building Operating Expenses",
+      "Ops Expense",
+      "Ops Expense Per SF",
+      "Building Tax Expenses",
+      "Tax Year",
+      "Taxes Total",
+      "Taxes Per SF"
+    ],
+    "manufactured_housing_specific_pad_and_lot_gaps": [
+      "Total Pads",
+      "Occupied Pads",
+      "Vacant Pads",
+      "Expandable Pads",
+      "Average Lot Size",
+      "Average Lot Rent",
+      "Resident-Owned Unit Count",
+      "Park-Owned Unit Count",
+      "Utility Billing Type"
+    ],
+    "manufactured_housing_specific_amenities_and_infrastructure_gaps": [
+      "Age-Restricted Flag",
+      "Seasonal Community Flag",
+      "RV Park Combination Flag",
+      "Infrastructure Condition",
+      "Road Type",
+      "Utility Type",
+      "Septic/Sewer Type",
+      "Water Source",
+      "RV Storage",
+      "Boat Storage"
+    ]
+  }
+}

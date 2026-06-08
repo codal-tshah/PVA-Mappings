@@ -1,0 +1,199 @@
+Sheet,Visibility,Hidden,Rows,Columns,Formula Count,Named Range Count
+Datatape,hidden,Yes,1,603,0,0
+Guidance,visible,No,73,18,0,0
+File Info,visible,No,938,1053,607,0
+Settings,visible,No,109,24,60,0
+Workbook_Audit,visible,No,3790,2,3584,0
+"Dates, Premises",visible,No,94,30,79,0
+"Contracts, History",visible,No,145,45,208,0
+Scope,visible,No,220,57,158,0
+Market Area,visible,No,1135,161,1727,0
+Demographics,hidden,Yes,33322,57,10132,0
+Market Analytics,hidden,Yes,587,79,10369,0
+Submarket Analytics,hidden,Yes,582,71,9302,0
+Market Analysis,visible,No,165,78,777,0
+Market Analysis - Flex,visible,No,165,87,856,0
+Market Analysis Submarkets,visible,No,200,91,1454,0
+tblMarketData,hidden,Yes,5812,75,11622,0
+tblMarketDataInfo,hidden,Yes,33,24,129,0
+tblMarketData_GreenStreet,hidden,Yes,553,10,0,0
+tblMarketDataInfo_GreenStreet,hidden,Yes,4,2,0,0
+tblMarketData_Comps,hidden,Yes,242,15,482,0
+tblMarketDataInfo_Comps,hidden,Yes,7,14,0,0
+tblMarketDataRanksCapRates,hidden,Yes,10013,19,20024,0
+txt_All,visible,No,727,7,682,0
+Site,visible,No,404,142,2641,0
+Zoning,visible,No,170,97,863,0
+Improvements,visible,No,956,232,4737,0
+Assessment,visible,No,398,485,2775,0
+Land Grid,visible,No,1088,1107,4222,0
+Land Valuation,visible,No,314,234,1607,0
+Land Comp Profiles,visible,No,783,37,4547,0
+Cost Approach Setup,visible,No,1064,11,14,0
+Cost,hidden,Yes,358,49,513,0
+Cost Approach,hidden,Yes,1217,416,4495,0
+Cost Comps_PREV,hidden,Yes,15,14,45,0
+Sales Grid,visible,No,1728,1227,8158,0
+Sales Approach,visible,No,618,574,6607,0
+SaleCompProfileSetup,hidden,Yes,94,193,96,0
+Sale Comp Profiles,visible,No,783,37,4093,0
+Income Approach Setup,visible,No,37,14,12,0
+Rent Roll,hidden,Yes,1087,322,12448,0
+NPV of AboveBelow Market Rent,hidden,Yes,205,57,3005,0
+Lease Abstracts,hidden,Yes,189,63,484,0
+Revenue Unit Setup,hidden,Yes,19,38,0,0
+Rent Roll Input,visible,No,2511,78,2544,0
+Rent Roll Config,visible,No,132,53,3435,0
+Rent Roll Master,hidden,Yes,2617,76,92708,0
+Lease Grid,visible,No,2461,1438,16471,0
+Lease Grid MF Unit Mix,hidden,Yes,603,66,10701,0
+Lease Grid (2) MF Unit Mix,hidden,Yes,603,55,4200,0
+Lease Grid (3) MF Unit Mix,hidden,Yes,603,55,4200,0
+Market Rent,visible,No,525,597,7416,0
+Expense Grid,hidden,Yes,960,457,4090,0
+RentCompProfileSetup,hidden,Yes,170,168,167,0
+MF Market Rent,visible,No,3472,200,67366,0
+Rent Comp Profiles,visible,No,1409,37,9441,0
+Lease Grid (2),hidden,Yes,2465,1119,14572,0
+Market Rent (2),hidden,Yes,525,597,7414,0
+MF Affordable Rent,hidden,Yes,3271,200,74318,0
+Rent Comp Profiles (2),hidden,Yes,1409,37,9495,0
+Lease Grid (3),hidden,Yes,2465,1119,14572,0
+Market Rent (3),hidden,Yes,525,597,7386,0
+Rent Comp Profiles (3),hidden,Yes,1409,37,9495,0
+Import_Kalibri_DoW Data,hidden,Yes,1,1,0,0
+tblExpenseComps,visible,No,7,146,264,0
+tblExpenseCompsLineItems,hidden,Yes,2,1,0,0
+Expense Comps Filtered,hidden,Yes,505,174,53834,0
+Expense Comps Select,visible,No,188,192,2018,0
+Expense Comps,visible,No,653,371,85277,0
+tblFuzzyMatch,hidden,Yes,1247,3,0,0
+T-12 Input,visible,No,1250,68,10084,0
+COA Map T-12,hidden,Yes,509,13,1503,0
+Year-1 Input,hidden,Yes,1157,68,4967,0
+COA Map Year-1,hidden,Yes,509,13,1503,0
+Year-2 Input,hidden,Yes,1154,68,4970,0
+COA Map Year-2,hidden,Yes,509,13,1503,0
+Year-3 Input,hidden,Yes,1132,68,4967,0
+COA Map Year-3,hidden,Yes,509,13,1503,0
+Year-4 Input,hidden,Yes,1132,68,4966,0
+COA Map Year-4,hidden,Yes,509,13,1503,0
+Year-5 Input,hidden,Yes,1132,68,4966,0
+COA Map Year-5,hidden,Yes,509,13,1503,0
+Year-6 Input,hidden,Yes,1132,68,4966,0
+COA Map Year-6,hidden,Yes,509,13,1503,0
+YTD Input,hidden,Yes,1227,68,4966,0
+COA Map YTD,hidden,Yes,509,13,1503,0
+YTD Year-1 Input,hidden,Yes,1250,68,4966,0
+COA Map YTD Year-1,hidden,Yes,509,13,1503,0
+Budget Input,hidden,Yes,1132,68,4967,0
+COA Map Budget,hidden,Yes,509,13,1503,0
+ProForma,visible,No,712,433,88991,0
+Expense Projections,visible,No,3837,63,34266,0
+Capitalization and Multipliers,visible,No,1575,453,1254,0
+Investor Survey Input,visible,No,43,25,80,0
+Investor Survey Output,visible,No,316,367,438,0
+tblInvestorSurvey,hidden,Yes,6000,200,14696,0
+Income-Expense Summary,hidden,Yes,210,118,2229,0
+CashFlow-Assumptions,hidden,Yes,86,11,1,0
+CashFlow-DCF,hidden,Yes,167,19,162,0
+CashFlow-Returns,hidden,Yes,66,18,56,0
+MarketSurvey API,hidden,Yes,10874,111,11,0
+MF Lease Up,visible,No,356,157,2075,0
+Comm Lease Up,hidden,Yes,76,89,957,0
+DirectCapConclusion,visible,No,277,148,1018,0
+DCF Assumptions,hidden,Yes,282,150,682,0
+DCF Proj1,hidden,Yes,318,102,4953,0
+DCF Proj2,hidden,Yes,315,102,4964,0
+DCF Proj3,hidden,Yes,315,102,4964,0
+DCF Rpv Proj1,hidden,Yes,161,55,2033,0
+DCF Rpv Proj2,hidden,Yes,161,55,2034,0
+DCF Rpv Proj3,hidden,Yes,161,55,2034,0
+Values,visible,No,137,43,398,0
+Summary,visible,No,2436,128,1287,0
+Value Allocation GC,hidden,Yes,101,67,217,0
+Appraisal Summary,hidden,Yes,58,13,144,0
+Salient Facts,visible,No,251,68,2273,0
+tblSalientFacts,hidden,Yes,3,1,0,0
+tblSalientFactsAdditional,hidden,Yes,2,1,1,0
+HUD Form 92264,hidden,Yes,848,265,2867,0
+HUD Form 92273 Market,hidden,Yes,861,50,7210,0
+HUD Form 92273 Affordable,hidden,Yes,861,50,7071,0
+HUD Form 92273 - S8,hidden,Yes,1124,27,6378,0
+HUD Form 92274,hidden,Yes,95,70,458,0
+HUD Form 92264T,hidden,Yes,17,11,0,0
+Valuation,hidden,Yes,162,18,394,0
+Custom Table,hidden,Yes,52,18,1,0
+Custom User Sheet,hidden,Yes,6,18,1,0
+tblZoning,hidden,Yes,3,1,0,0
+tblTaxAssessment,hidden,Yes,3,1,0,0
+tblTaxGeneral,hidden,Yes,3,1,0,0
+Lists,hidden,Yes,151,156,148,0
+DBManagerConfig,hidden,Yes,303,15,0,0
+DBManagerFormart,hidden,Yes,1,1,0,0
+DBManagerSearchResult,hidden,Yes,1,1,0,0
+AE_DataExchange,hidden,Yes,756,83,852,0
+AE_PropertyAssets,hidden,Yes,2,65,0,0
+AE_MarketLeases,hidden,Yes,2,63,0,0
+AE_Leases,hidden,Yes,2,91,0,0
+AE_FreeRent,hidden,Yes,2,16,0,0
+AE_Inflation,hidden,Yes,30,18,29,0
+AE_TenantImprovements,hidden,Yes,2,10,0,0
+AE_GenVacCreditLoss,hidden,Yes,2,16,0,0
+AE_Expenses,hidden,Yes,2,22,0,0
+AE_PropertyResultLines,hidden,Yes,2,10,0,0
+AE_TenantResultLines,hidden,Yes,2,11,0,0
+Rpv_SearchResults,hidden,Yes,6,11,0,0
+Rpv_Property,hidden,Yes,2,7,0,0
+Rpv_MLA,hidden,Yes,2,59,0,0
+Rpv_RentRoll,hidden,Yes,2,35,0,0
+Rpv_InflationRates,hidden,Yes,2,52,0,0
+Rpv_Cashflow_Property,hidden,Yes,2,12,0,0
+Rpv_Cashflow_Tenant,hidden,Yes,30,13,0,0
+Rpv_Valuation,hidden,Yes,2,16,0,0
+Rpv_PresentValue,hidden,Yes,2,12,0,0
+Hospitals,hidden,Yes,5201,14,7742,0
+Airports,hidden,Yes,373,20,0,0
+ASHA_Regs,hidden,Yes,54,57,159,0
+tblLB_Import_Parcel,hidden,Yes,8,47,0,0
+tblLB_Import_Improvements,hidden,Yes,8,134,0,0
+tblLB_Import_Improvements_impro,hidden,Yes,2,2,1,0
+tblLB_Import_Zoning,hidden,Yes,6,19,0,0
+tblLB_Import_Zoning_zoningsubre,hidden,Yes,2,2,1,0
+tblLB_Import_Site,hidden,Yes,8,87,0,0
+tblLB_Import_Site_subparcels,hidden,Yes,3,6,0,0
+tblLB_Import_Sales,hidden,Yes,10,131,0,0
+tblLB_Import_Assessment,hidden,Yes,7,52,0,0
+tblLB_Import_Assessment_assessi,hidden,Yes,3,20,2,0
+tblLB_Import_IncExp,hidden,Yes,2,1,0,0
+tblLB_Import_UnitLeaseSummary,hidden,Yes,8,70,0,0
+tblLB_Import_UnitLease,hidden,Yes,10,54,9,0
+tblLB_Import_RentRollSummary,hidden,Yes,2,1,0,0
+tblLB_Import_RentRoll,hidden,Yes,2,2,1,0
+tblLB_Import_UDF,hidden,Yes,48,3,0,0
+tblLB_Import_Images,hidden,Yes,23,9,0,0
+Lightbox API Rent Roll,hidden,Yes,381,333,11735,0
+Linnaean API,hidden,Yes,24,61,8,0
+tblREITRates,hidden,Yes,214,5,0,0
+tblAppraisers,hidden,Yes,1048576,43,55,0
+GreenStreet API,hidden,Yes,1556,82,6,0
+OpenAI API,hidden,Yes,299,92,107,0
+Geography,hidden,Yes,3145,34,4350,0
+Property Types,hidden,Yes,299,12,154,0
+MasterTOC,hidden,Yes,222,9,0,0
+FileCloseActions,hidden,Yes,1,1,0,0
+File Bifurcate,hidden,Yes,16,8,0,0
+JobProgress,veryHidden,Yes,103,43,1136,0
+portfolioRR,hidden,Yes,33,56,155,0
+portfolioIE,hidden,Yes,310,50,218,0
+portfolioTaxHistory Comps,hidden,Yes,43,22,42,0
+tblFileConfig,hidden,Yes,1031,61,1901,0
+PartnerLists,hidden,Yes,876,777,11959,0
+Comp Prompt,hidden,Yes,71,20,4,0
+Lightbox API Config,hidden,Yes,186,44,268,0
+Lightbox API,hidden,Yes,136,684,363,0
+Lightbox API Enumerations,hidden,Yes,1434,7,4,0
+Lightbox API Dictionary,hidden,Yes,911,21,947,0
+Lightbox API UDF Dictionary,hidden,Yes,283,14,282,0
+Lightbox API Error Log,hidden,Yes,1,4,0,0
+Change Log,hidden,Yes,4048,13,16,0

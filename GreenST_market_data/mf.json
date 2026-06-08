@@ -1,0 +1,94 @@
+property_type_ref
+Property Type
+Property Class Name
+
+Geography
+Geography Name
+Geography Code
+CBSA Code
+Geography Type
+Population
+Median Household Income
+Households
+Industrial Employment
+Office Employment
+Total Employment
+
+commercial_survey
+All Service Type Rent Direct
+All Service Type Rent Overall
+All Service Type Rent Sublet
+Availability Rate
+Availability Rate % Direct
+Availability Rate % Sublet
+Available SF Direct
+Available SF Sublet
+Available SF Total
+Demand SF
+Leasing SF Direct
+Leasing SF Sublet
+Leasing SF Total
+Market Rent Growth
+Market Rent Growth 12 Mo
+Market Rent Index
+Market Rent/SF
+Net Absorption SF
+Net Absorption SF 12 Mo
+Net Absorption SF Direct
+Net Absorption SF Sublet
+NNN Rent Direct
+NNN Rent Overall
+NNN Rent Sublet
+Occupancy Rate
+Vacancy Rate
+Vacant Available %
+Vacant Available SF Direct
+Vacant Available SF Sublet
+Vacant Available SF Total
+Vacant SF Direct
+Vacant SF Sublet
+Vacant SF Total
+
+sale_comp
+Asset Value
+Average Sale Price
+Cap Rate
+Cap Rate Transactions
+Capital Value Index
+Market Cap Rate
+Market Sale Price Growth
+Market Sale Price Index
+Market Sale Price Per SF
+Median Cap Rate
+Median Price/Bldg SF
+Sales Volume Transactions
+Sold Building SF
+Total Sales Transactions
+Total Sales Volume
+Transaction Sale Price/SF
+
+improvement
+Construction Starts SF
+Construction Starts SF 12 Mo
+Demolished SF
+Existing Buildings
+Existing Centers
+Gross Delivered Buildings
+Gross Delivered SF
+Inventory SF
+Net Delivered SF
+Net Delivered SF 12 Mo
+Under Construction Buildings
+Under Construction SF
+
+property_operations
+Appreciation Return
+Income Return
+NOI Index
+Total Return
+
+EXPLICIT_NEW_TABLE_REQUIRED: market_forecast_snapshot
+Period
+Slice
+As Of
+Forecast Scenario

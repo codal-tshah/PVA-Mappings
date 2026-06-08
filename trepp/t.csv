@@ -1,0 +1,122 @@
+Property
+
+* property_id
+* file_id
+* property_name
+* property_type
+* propertysubtype
+* propertysubtype2
+* prop_units
+* prop_sqft
+* year_built
+* year_renovated
+* occupancy
+* occupancy_date
+* prop_bloomberg_name
+* stmt_sqft
+* stmt_units
+* stmt_occ_rate
+* mr_occ_rate
+* calc_occ_rate
+
+Geography
+
+* address
+* city
+* county
+* state
+* zip
+* msa
+* msaname
+* latitude
+* longitude
+
+time_log / reporting_period
+
+* data_load_date
+* data_update_date
+* stmt_begin_date
+* stmt_end_date
+* stmt_file_date
+* reporting_year
+* mr_occdt
+* calc_occdt
+
+project / source_metadata
+
+* statement_id
+* stmt_type
+* source
+
+pva-mvp-wip-v2.improvement
+
+* occupancy
+* occupancy_date
+* prop_units
+* prop_sqft
+* year_built
+* year_renovated
+
+pva-mvp-wip-v2.commercial_survey
+
+* stmt_occ_rate
+* mr_occ_rate
+* calc_occ_rate
+
+pva-mvp-wip-v2.property_operations
+
+Income
+Base Rent
+Base Rent Abatement
+Expense Reimbursements
+Potential Gross Income
+Vacancy and Collection Loss
+Effective Rental Revenue
+Physical Vacancy
+Other Income
+Net Parking Income
+Flex Income Item
+Total Other Income
+Net Operating Income
+Effective Gross Income
+Total Expenses
+Tax Expense
+Insurance
+Total Utilities
+Repairs/Maintenance
+Cleaning/Janitorial
+Roads/Grounds
+Security
+General/Administrative
+Management
+Non-Reimbursable Expenses
+Ground Rent
+Flex Expense Item
+Operating Expense Ratio
+
+pva-mvp-wip-v2.property_assessment
+
+* Tax Expense
+
+pva-mvp-wip-v2.lease_comp
+
+* Base Rent
+* Base Rent Abatement
+* Expense Reimbursements
+
+pva-mvp-wip-v2.sale_comp
+
+* Net Operating Income
+* Effective Gross Income
+* Operating Expense Ratio
+
+New office-specific fields compared to retail
+(pva-mvp-wip-v2.property_operations)
+
+* Net Parking Income
+* Total Utilities
+* Repairs/Maintenance
+* Cleaning/Janitorial
+* Roads/Grounds
+* Security
+* Non-Reimbursable Expenses

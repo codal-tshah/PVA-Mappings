@@ -1,0 +1,863 @@
+Sites_access
+Sites_acres
+Sales_activestatus
+""
+""
+""
+Parcel_address
+Sales_adjustmentcomments
+Improvement_adr
+Unit Lease_affordabilitystatus
+Sites_allutilities
+Sites_allowablefloorareasf
+Sites_allowableunits
+Sites_utilities
+Improvement_amenities
+""
+Rent Roll_anchortype
+Rent Roll Summary_anchors
+Improvement_ancillarybuildings
+""
+Sales_appraisaldate
+Parcel_appraisalfile
+Parcel_appraisalusage
+Sales_appraisedvalue
+Unit Lease_category
+Sites_areainfloodzone
+""
+""
+""
+""
+""
+""
+""
+Sales_caprate
+Unit Lease Summary_avgmfunitsize
+""
+Rent Roll_baserentpermo
+Rent Roll_baserentperyear
+""
+""
+Assessment_basetaxes
+Improvement_basementsize
+Improvement_basementuseandfinish
+Unit Lease_baths
+Unit Lease_bedrooms
+Unit Lease_beds
+Sales_bookpageorrefdoc
+""
+""
+""
+Improvement_buildingclass
+""
+Improvement_BuildingDescription
+""
+""
+Sales_businessvalueadjustment
+Sales_buyertype
+Sales_toscaprate
+Unit Lease Summary_shcaretypecomments
+""
+Parcel_cbsa_id
+Parcel_cbsa_name
+Improvement_ceilingheight
+Parcel_censusblock
+Parcel_censustract
+Parcel_city
+Sales_cleanupcosts
+Improvement_clearheight
+""
+Improvement_columnspacing
+Rent Roll Summary_commleasecomments
+Rent Roll Summary_commleasenotes
+Rent Roll Summary_commleasesurveydate
+Rent Roll Summary_commleaseterms
+Rent Roll Summary_CommLeaseType
+Rent Roll Summary_commrentconcessions
+""
+""
+""
+""
+""
+Sales_verificationsource
+""
+Unit Lease_communityfeemax
+Unit Lease_communityfeemin
+Rent Roll Summary_commvacancy
+Rent Roll_concessions
+Improvement_condition
+Sales_conditionsofsale
+Sales_conditionsofsaleadjustment
+Sales_confidential
+Improvement_constructionclass
+Improvement_construction
+Unit Lease_contractrentmax
+Unit Lease_contractrentmin
+Improvement_cooling
+""
+Sites_corner
+Rent Roll_coststofinish
+Parcel_country
+Parcel_county
+Improvement_coveredparkingspaces
+Improvement_craneways
+""
+""
+Parcel_createdby
+Sales_currentlistprice
+Sales_currentlppercentdiff
+Rent Roll_CurrentRentPerMo
+Sales_currentuse
+""
+Unit Lease_dailyrateperunit
+Unit Lease_dailyrateperunitmax
+Unit Lease_dailyrateperunitmin
+Sales_datasource
+Sales_daysonmarket
+Improvement_deferredmaintance
+Sites_demographicssurveydate
+Sites_depth
+Improvement_designappeal
+Sites_dimensions
+Sales_diminutionsource
+Sales_discountrate
+""
+Parcel_districturl
+Parcel_districtspending
+Sites_drainage
+""
+Sites_earthquakehazardrisk
+Sites_earthquakezonecomments
+Parcel_eastboundary
+Rent Roll_effrentpermo
+Rent Roll_effrentperyear
+Improvement_effectiveage
+""
+""
+Rent Roll_effectiverentsfmo
+Sites_effectivewaterfrontage
+Sales_egim
+Sites_encumbranceoreasement
+Parcel_enrollment
+Unit Lease_entryfeemax
+Unit Lease_entryfeemin
+Sales_environmentalconcerns
+Sites_environmentalissues
+Sales_environmentalremarks
+Sales_environmentalstatus
+Assessment_equalizationratio
+Rent Roll_escalations
+Sales_excesslandadjustment
+Sales_expendituresaftersaleadjustment
+Sales_expensegrowthrate
+Rent Roll_expensereimbursements
+Rent Roll_expensestop
+Improvement_exteriorwall
+""
+Parcel_far
+Improvement_features
+Sites_femamapdate
+Improvement_ffande
+Sales_ffandeadjustment
+""
+""
+""
+Sales_financing
+Sales_financingtermsadjustment
+incExp_financialstype
+Rent Roll_finish
+Sales_finishcondition
+Improvement_fireplaceorwoodstove
+Sites_floodmappanel
+Sites_floodzone
+Unit Lease_floor
+""
+Rent Roll_floorlevel
+Improvement_foundation
+""
+Rent Roll_freerentmonths
+""
+Improvement_garageparkingspaces
+""
+""
+""
+""
+""
+""
+""
+""
+Sales_grantee
+""
+Sales_grantor
+""
+""
+Improvement_heating
+""
+Sales_highestandbestuse
+Sales_holdingperiodyears
+Sites_homesiteacres
+Improvement_hotelflag
+Sales_hotelroomrevmultiplier
+Sales_id
+Assessment_impliedvalue
+Assessment_assessmentyear
+Rent Roll_comments
+Rent Roll Summary_ID
+""
+""
+""
+""
+Improvement_docks
+""
+Improvement_garage
+""
+Improvement_landscaping
+Improvement_landtobuildingratio
+Improvement_loadfactor
+Improvement_multifamilyamenities
+Improvement_noofbathrooms
+Improvement_noofbays
+Improvement_noofbedrooms
+Improvement_noofbeds
+Improvement_noofelevators
+Improvement_noofescalators
+Improvement_noofgolfholes
+Improvement_noofhalfbaths
+Improvement_noofrooms
+Improvement_noofseats
+Improvement_noofspaces
+Improvement_noofstories
+Improvement_nooftruckdoors
+Improvement_nooftruckdoorswithlevelers
+Improvement_noofunits
+Improvement_parking
+Improvement_parkingadequacy
+Improvement_parkingcomments
+Improvement_parkingcondition
+Improvement_parkingtype
+Improvement_porchordeck
+Improvement_proportionrenovated
+Improvement_quality
+Improvement_ratotalmeters
+Improvement_remainingeconomiclife
+Improvement_renovations
+Improvement_residentialamenities
+Improvement_residentialdesign
+Improvement_roofcover
+Improvement_rooftype
+Improvement_sourceforsfarea
+Improvement_sprinklers
+Improvement_surfaceparkingspaces
+Improvement_tenantimprovements
+Improvement_totaleconomiclife
+Improvement_typicalbaydepth
+Improvement_usablearea
+Improvement_yearbuilt
+""
+""
+Sales_incomegrowth
+Sales_incomegrowthrate
+Unit Lease_incometarget
+""
+""
+""
+""
+Rent Roll Summary_instancetype
+Sales_internalcomments
+""
+Rent Roll Summary_confidential
+Sales_isdeleted
+""
+Parcel_isgroundlease
+""
+Sales_isexcel
+""
+Assessment_landassessment
+Sites_landhectares
+""
+Sites_landsquaremeters
+Sites_landunitapprovedorzoned
+Sites_landunittype
+Sites_landunits
+Sites_landuse
+Sales_landvalue
+""
+Unit Lease_lastrentincrease
+Parcel_lat
+""
+""
+""
+""
+Rent Roll_leaseconditions
+Unit Lease_leaseexpiration
+""
+Rent Roll_leasestartdate
+Rent Roll_leasetenantimprovs
+""
+Rent Roll_leasetransactiontype
+Rent Roll_leasetype
+Rent Roll_leasedate
+""
+Rent Roll_leaseexpiredate
+Unit Lease_leasestart
+Rent Roll_leaseterm
+Sales_legaldescription
+Sales_lender
+""
+Rent Roll_lessor
+""
+Improvement_lhoccupancy
+Unit Lease_lhtc
+""
+""
+""
+Parcel_lng
+""
+Parcel_locationdescription
+""
+Unit Lease Summary_managementcompany
+Parcel_market
+Unit Lease_marketrentmax
+Unit Lease_marketrentmin
+Unit Lease_marketrentmo
+""
+Unit Lease_marketrentsf
+""
+""
+Unit Lease_MaxGrossLIHTCRestrictedRent
+""
+""
+Sites_medianhomevalue
+Sites_medianhouseholdincome
+Parcel_timestamp
+""
+Unit Lease Summary_mfbrmax
+Unit Lease Summary_mfbrmin
+Unit Lease Summary_mfcarportfeemonthly
+Unit Lease Summary_mfgaragefeemonthly
+Unit Lease Summary_mfleasecomments
+Unit Lease Summary_mfleasenotes
+Unit Lease Summary_mfleasesurveydate
+Unit Lease Summary_mfoccupancy
+Unit Lease Summary_mfrentconcessions
+Unit Lease Summary_mfrentpermomax
+Unit Lease Summary_mfrentpermomin
+""
+""
+Unit Lease Summary_mfrentpersfpermomax
+Unit Lease Summary_mfrentpersfpermomin
+Unit Lease Summary_mfrenttype
+""
+""
+Unit Lease Summary_MFSourceNotes
+Unit Lease Summary_mfsurveyedunitcounttotal
+Unit Lease Summary_mftotalannualrent
+Unit Lease Summary_mftotalrentpermonth
+Unit Lease Summary_mfamenities
+Unit Lease Summary_mfvacantunitscount
+Unit Lease Summary_mfweightedavgrentpersfpermo
+Unit Lease Summary_mfweightedavgrentpersfperyear
+Unit Lease Summary_mfweightedavgrentperunit
+""
+""
+""
+Unit Lease_monthlyordailyrent
+Parcel_msa
+""
+Parcel_municipality
+Parcel_name
+Parcel_neighborhood
+Parcel_neighborhoodcomments
+""
+""
+""
+Sales_nim
+""
+""
+""
+""
+Improvement_noofmfbathrooms
+Improvement_noofmultifamilybedrooms
+Improvement_noofmultifamilyrooms
+Sales_tosnumberoftenants
+Parcel_northboundary
+""
+Sites_NumberOfParcels
+""
+Unit Lease_occupancytype
+""
+""
+""
+Parcel_opportunityzone
+Rent Roll_options
+""
+""
+Sales_originallistprice
+Sales_originallppercentdiff
+Sites_otheracres
+Sales_otheradjustment
+Assessment_otherassessment
+Parcel_otherdbrefs
+""
+""
+Parcel_owner
+incExp_comments
+Rent Roll_id
+Sales_verificationdate
+""
+""
+""
+""
+""
+Improvement_parkingratiounit
+""
+""
+""
+Sales_percentdiminutioninvalue
+Rent Roll_percentofficeul
+Rent Roll_percentrent
+Sales_percentstigma
+Sites_percenttillable
+Sites_percentwetlands
+Improvement_perimeter
+""
+""
+Sales_pgim
+""
+""
+Sales_price
+Sales_priceadjustment
+Sales_priceperacre
+Sales_priceperbay
+Sales_priceperbed
+Sales_priceperbedroom
+Sales_priceperbuildablesf
+Sales_priceperfar
+""
+Sales_priceperlandhectares
+""
+Sales_priceperlandsqm
+Sales_priceperlandunit
+Sales_pricepermfbedroom
+Sales_pricepermfroom
+Sales_priceperprimaryfrontage
+""
+""
+Sales_priceperroom
+""
+Sales_priceperspace
+Sales_priceperunit
+Sales_priceperusableacre
+Sales_priceperusablelandsf
+Sales_priceactual
+Sites_primaryfrontagelf
+Sites_primaryfrontagest
+Improvement_productsegment
+Sites_productivityindex
+Unit Lease Summary_projectamenities
+""
+""
+""
+Unit Lease Summary_projectstyle
+""
+""
+Sales_propertyincluded
+Sales_propertyrights
+Parcel_propertytype
+Parcel_propertysubtype
+""
+Parcel_propertymajortype
+""
+""
+Sites_proposedunits
+Sales_proposeduse
+""
+""
+Sites_railservice
+Parcel_readyforuse
+""
+Sales_recordingdate
+""
+Rent Roll_rentbasis
+""
+Rent Roll Summary_escalations
+Unit Lease_rentincreasepercent
+Rent Roll_rentincreased
+Unit Lease_rentpermo
+""
+Rent Roll Summary_rentpersfpermomax
+Rent Roll Summary_rentpersfpermomin
+""
+""
+Rent Roll Summary_CommLeaseNotes
+""
+""
+Rent Roll_rentperm2
+Rent Roll_rentperm2permo
+Sales_responsibleparty
+""
+""
+Improvement_revpar
+Sales_riskprofile
+Sites_roadfrontage
+""
+""
+Unit Lease_rooms
+Sales_salecomments
+""
+Sales_saledate
+Sales_salenotes
+""
+Sales_salesupportingfiles
+Parcel_schooldistrict
+""
+Sites_secondaryfrontagelf
+Sites_secondaryfrontagest
+Sites_secondarytrafficcount
+""
+""
+""
+""
+""
+""
+Rent Roll Summary_shadowanchors
+Unit Lease Summary_shalcommunityfee
+Unit Lease Summary_shalentryfee
+Unit Lease Summary_shaloccupancypercentage
+Unit Lease Summary_shalsecondpersonfeemonthly
+Unit Lease Summary_shalunitcount
+Sites_shape
+""
+Unit Lease Summary_shilcommunityfee
+Unit Lease Summary_shilentryfee
+Unit Lease Summary_shilunitcount
+Unit Lease Summary_shmccommunityfee
+Unit Lease Summary_shmcentryfee
+Unit Lease Summary_shmcoccupancypercentage
+Unit Lease Summary_shmcsecondpersonfeemonthly
+Unit Lease Summary_shmcunitcount
+Unit Lease Summary_shothercommunityfee
+Unit Lease Summary_shotherentryfee
+Unit Lease Summary_shotheroccupancypercentage
+Unit Lease Summary_shothersecondpersonfeemonthly
+Unit Lease Summary_shotherunitcount
+Unit Lease Summary_shpayormedicaidpercentage
+Unit Lease Summary_SHPayorMedicarePercentage
+Unit Lease Summary_shpayorotherpercentage
+Unit Lease Summary_shpayorprivatepaypercentage
+Unit Lease Summary_shpayorvapercentage
+Unit Lease Summary_shsncommunityfee
+Unit Lease Summary_shsnentryfee
+Unit Lease Summary_shsnoccupancypercentage
+Unit Lease Summary_shsnsecondpersonfeemonthly
+Unit Lease Summary_shsnunitcount
+""
+Sites_wasteacres
+""
+Sites_sitecomments
+""
+""
+""
+""
+Sites_topography
+""
+""
+Sites_visibility
+""
+Rent Roll_sizem2
+Sites_soiltype
+""
+Parcel_southboundary
+""
+Assessment_specialassessments
+""
+""
+""
+Parcel_state
+""
+Unit Lease Summary_storagefee
+Parcel_studentteacherratio
+""
+Parcel_submarket
+Rent Roll_suite
+""
+Parcel_supportingfiles
+Assessment_taxid
+Assessment_taxrate
+Assessment_taxingauthority
+Rent Roll Summary_tenant
+incExp_cam
+Rent Roll_tenantcam
+Rent Roll_tenantparking
+Unit Lease_tenantprofile
+Sales_terminalcaprate
+Sites_tertiaryfrontagelf
+Sites_tertiaryfrontagest
+Sites_tertiarytrafficcount
+Sites_tillableacres
+""
+""
+""
+""
+Sales_toseffectiveage
+Sales_tosegim
+Sales_tosnoi
+""
+Sales_tosoccupancyrate
+Sales_tospriceperrsf
+Sales_tospriceperuseableacreland
+Sales_tospriceperuseablesfland
+Sales_tostenancytype
+Sales_tosvacancyrate
+Sales_tosweightedaverageleaseterm
+""
+Assessment_totalassessment
+Unit Lease Summary_totalmarketrent
+""
+Parcel_townshiprange
+Sites_trafficcount
+Sites_trafficsurveydate
+Sales_transactiontype
+Sales_typeofcontamination
+Rent Roll_typeoruseofspace
+""
+Unit Lease_unitcount
+Unit Lease_unitdepth
+""
+Unit Lease_unitheight
+""
+""
+Unit Lease_unittype
+Unit Lease_unitwidth
+""
+""
+""
+""
+""
+""
+""
+""
+incExp_totalutilities
+Unit Lease Summary_UtilitiesPaidByOwner
+Unit Lease_utilityallowance
+Unit Lease Summary_vacancyrate
+Unit Lease_vacantunits
+Rent Roll_verificationdate
+Sales_verificationphone
+Rent Roll_verificationsource
+Sites_views
+""
+""
+Sites_waterfrontage
+Parcel_westboundary
+Sites_wetlandacres
+Sites_wetlandstype
+Sites_withinfloodplainname
+""
+Sites_woodlandacres
+Improvement_yearbuiltnumeric
+Parcel_zip
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+Parcel_parcelverificationdata
+Parcel_parcelcomments
+Sales_pricepersf
+Sales_priceperra
+Sales_priceperlandsf
+Sales_pricepergbameters
+Sales_priceperrameters
+Sales_landvaluepersf
+Sales_improvementvalue
+Sales_improvementvaluepersf
+Sites_landsf
+Sites_usableacres
+Sites_usablelandsf
+Sites_UnusableAcres
+Sites_UnusableLandSF
+Sites_excessacres
+Sites_excesslandsf
+Sites_SurplusAcres
+Sites_SurplusLandSF
+Sites_easementacres
+Sites_easementlandsf
+Sites_buildablesf
+Sites_proposedsf
+Improvement_noofbuildings
+Improvement_noofmultifamilyunits
+Improvement_gbamultifamily
+Improvement_ramultifamily
+Improvement_noofofficeunits
+Improvement_gbaoffice
+Improvement_raoffice
+Improvement_percentoffice
+Improvement_percentofficera
+Improvement_noofretailunits
+Improvement_gbaretail
+Improvement_raretailgla
+Improvement_percentretail
+Improvement_noofindustrialunits
+Improvement_gbaindustrial
+Improvement_raindustrial
+Improvement_noofotherunits
+Improvement_gbaother
+Improvement_raother
+Improvement_gbatotal
+Improvement_ratotal
+Improvement_parkingratiogba
+Improvement_parkingratiora
+Improvement_improvmentcomments
+Improvement_gbamultifamilymeters
+Improvement_ramultifamilymeters
+Improvement_gbaofficemeters
+Improvement_raofficemeters
+Improvement_gbaretailMeters
+Improvement_raretailmeters
+Improvement_gbaindustrialmeters
+Improvement_raindustrialmeters
+Improvement_gbaothermeters
+Improvement_raothermeters
+Improvement_gbatotalmeters
+Rent Roll Summary_commrentpersfmin
+Rent Roll Summary_commrentpersfmax
+Rent Roll Summary_commsizemin
+Rent Roll Summary_commsizemax
+Rent Roll Summary_commverificationsource
+Rent Roll Summary_nooftenants
+Rent Roll Summary_sfleased
+Rent Roll_tenant
+Rent Roll_unitsf
+Rent Roll_effectiverentsf
+Rent Roll_baserentsf
+Rent Roll_baserentsfmo
+Rent Roll_commleasesurveydate
+Rent Roll_datasource
+Rent Roll_rentpersfpermo
+Unit Lease Summary_ID
+Unit Lease Summary_instancetype
+Unit Lease_unitsf
+Unit Lease_annualrentpersf
+Unit Lease_rentpersfpermo
+Unit Lease_sizem2
+Unit Lease_rentperm2
+Unit Lease_sfsizemin
+Unit Lease_sfsizemax
+Unit Lease Summary_mfrentpersfmin
+Unit Lease Summary_mfrentpersfmax
+Unit Lease Summary_mfsizesfmin
+Unit Lease Summary_mfsizesfmax
+Unit Lease Summary_shiloccupancypercentage
+Unit Lease Summary_shilsecondpersonfeemonthly
+incExp_name
+incExp_surveydate
+incExp_annualrent
+incExp_baserentabatement
+incExp_expensereimbursements
+incExp_netparkingincome
+incExp_percentagerent
+incExp_otherincome
+incExp_pgi
+incExp_pgipersf
+incExp_pgiperunit
+incExp_vacancycost
+incExp_vacancy
+incExp_vacancycostpersf
+incExp_vacancycostperunit
+incExp_occupancy
+incExp_egi
+incExp_egipersf
+incExp_egiperunit
+incExp_taxexpense
+incExp_insurance
+incExp_onsitemanagementexp
+incExp_management
+incExp_advertisingandmarketing
+incExp_electricexpense
+incExp_waterexpense
+incExp_sewerexpense
+incExp_gasexpense
+incExp_fuelexpense
+incExp_trashexpense
+incExp_buildingrepairs
+incExp_otherrepairs
+incExp_repairsandmaintenance
+incExp_paintinganddecorating
+incExp_generalandadministrative2
+incExp_cleaning
+incExp_managerleasingsalaries
+incExp_maintenancesalaries
+incExp_othersalaries
+incExp_payrolltaxes
+incExp_payrolltotal
+incExp_groundsandsecurity
+incExp_professionalservicesexp
+incExp_generalandadministrative
+incExp_nonrevenueunits
+incExp_otherexpenses
+incExp_reserves
+incExp_deductreserves
+incExp_expleasingcommissions
+incExp_exptenantimprovements
+incExp_GroundRentExp
+incExp_totalexpenses
+incExp_ExpensePerSF
+incExp_ExpensePerUnit
+incExp_expenseratio
+incExp_noi
+incExp_noipersf
+incExp_noiperbed
+incExp_noipergbam2
+incExp_noiperrasf
+incExp_noiperunit
+incExp_noiperusablesf
+Saleinfo_NIM
+Assessment_improvementassessment
+Assessment_taxyear
+Assessment_taxratecode
+Assessment_taxrateper
+Assessment_taxes
+Assessment_marketvalue
+Assessment_taxespersfgba
+Assessment_taxesperra
+Assessment_taxesperunit
+Assessment_taxesperlandsf
+Assessment_taxesperacre
+Assessment_taxesperlandunit
+Assessment_taxespergbam2
+Assessment_taxesperram2
+Assessment_taxesperhectares
+Assessment_taxesperlandm2
+Assessment_assessmentcomments
+Assessment_assessorwebsite
+Assessment_historicalassessedvalue1
+Assessment_historicalassessedvalue2
+Assessment_historicalassessedvalue3
+Assessment_historicalassessedvalue4
+Assessment_historicalimprovvalue1
+Assessment_historicalimprovvalue2
+Assessment_historicalimprovvalue3
+Assessment_historicalimprovvalue4
+Assessment_historicallandvalue1
+Assessment_historicallandvalue2
+Assessment_historicallandvalue3
+Assessment_historicallandvalue4
+Assessment_historicaltaxes1
+Assessment_historicaltaxes2
+Assessment_historicaltaxes3
+Assessment_historicaltaxes4
+Assessment_historicalyear1
+Assessment_historicalyear2
+Assessment_historicalyear3
+Assessment_historicalyear4

@@ -1,0 +1,163 @@
+{
+  "property_type": "Multi-Family",
+  "data_sources": ["CoStar", "ERD"],
+  "matched_fields": {
+    "property_identity_and_location": {
+      "PropertyID": "property.property_id",
+      "Property Name": "property.name",
+      "Property Address": "property.address",
+      "City": "property.city",
+      "State": "property.state",
+      "Zip": "property.zip",
+      "County Name": "property.county",
+      "Country": "property.country",
+      "Latitude": "property.lat",
+      "Longitude": "property.lng",
+      "Market Name": "property.market",
+      "Submarket Name": "property.submarket"
+    },
+    "property_characteristics_and_building_details": {
+      "PropertyType": "property.propertytype",
+      "Secondary Type": "property.propertysubtype",
+      "Building Class": "improvement.buildingclass",
+      "Year Built": "improvement.yearbuilt",
+      "Year Renovated": "improvement.renovations",
+      "Construction Material": "improvement.construction",
+      "Number Of Stories": "improvement.noofstories",
+      "Total Buildings": "improvement.noofbuildings",
+      "RBA": "improvement.rentablearea",
+      "Amenities": "improvement.amenities",
+      "Features": "improvement.features",
+      "Heating": "improvement.heating",
+      "Sprinklers": "improvement.sprinklers",
+      "Number Of Elevators": "improvement.noofelevators",
+      "Number Of Parking Spaces": "improvement.parking",
+      "Parking Spaces/Unit": "improvement.parkingratiounit"
+    },
+    "land_zoning_and_flood_risk": {
+      "Land Area (AC)": "site.acres",
+      "Land Area (SF)": "site.landsf",
+      "Zoning": "property_zoning.zoningcode",
+      "Fema Flood Zone": "site.floodzone",
+      "FEMA Map Date": "site.femamapdate"
+    },
+    "ownership_and_contact": {
+      "Owner Name": "property.owner"
+    },
+    "financials_taxes_and_sales_information": {
+      "Last Sale Date": "sale_comp.saledate",
+      "Cap Rate": "sale_comp.caprate",
+      "$Price/Unit": "sale_comp.priceperunit",
+      "Last Sale Price": "sale_comp.priceactual"
+    },
+    "multi_family_unit_mix_and_details": {
+      "Number Of Units": "improvement.noofunits",
+      "Number of Beds": "improvement.noofmultifamilybedrooms",
+      "Avg Unit SF": "rent_comp.avgmfunitsize"
+    },
+    "multi_family_rental_economics": {
+      "Avg Asking/Unit": "rent_comp.mfweightedavgrentperunit",
+      "Avg Concessions %": "rent_comp.mfrentconcessions",
+      "Vacancy %": "rent_comp.vacancyrate"
+    }
+  },
+  "costar_multi_family_specific_data_gaps": {
+    "location_and_transit_gaps": [
+      "Closest Transit Stop",
+      "Closest Transit Stop Dist (mi)",
+      "Closest Transit Stop Walk Time (min)",
+      "Continent",
+      "Subcontinent",
+      "Cross Street"
+    ],
+    "building_and_sustainability_gaps": [
+      "Building Status",
+      "Constr Status",
+      "Operational Status",
+      "Operation Type",
+      "Style",
+      "Star Rating",
+      "Month Built",
+      "Month Renovated",
+      "Construction Begin",
+      "Energy Star",
+      "LEED Certified",
+      "Sewer",
+      "Water",
+      "Gas",
+      "University"
+    ],
+    "granular_fema_data_gaps": [
+      "FEMA Map Identifier",
+      "FIRM ID",
+      "FIRM Panel Number",
+      "Flood Risk Area",
+      "In SFHA"
+    ],
+    "detailed_ownership_and_contact_gaps": [
+      "Owner Address",
+      "Owner Contact",
+      "Owner Phone",
+      "True Owner Name",
+      "True Owner Contact",
+      "True Owner Phone",
+      "Property Manager Name",
+      "Property Manager Address",
+      "Property Manager Phone",
+      "Leasing Company Name",
+      "Leasing Company Contact",
+      "Sale Company Name",
+      "Developer Name",
+      "Architect Name",
+      "Parent Company",
+      "Fund Name"
+    ],
+    "financials_and_tax_expenses_gaps": [
+      "For Sale Price",
+      "For Sale Status",
+      "Building Operating Expenses",
+      "Ops Expense",
+      "Ops Expense Per SF",
+      "Building Tax Expenses",
+      "Tax Year",
+      "Taxes Total",
+      "Taxes Per SF"
+    ],
+    "granular_unit_mix_gaps": [
+      "Affordable Type",
+      "% Studios",
+      "% 1-Bed",
+      "% 2-Bed",
+      "% 3-Bed",
+      "% 4-Bed",
+      "Number Of Studios Units",
+      "Number Of 1 Bedrooms Units",
+      "Number Of 2 Bedrooms Units",
+      "Number Of 3 Bedrooms Units",
+      "Number Of 4 Bedrooms Units",
+      "Studio Avg SF",
+      "One Bedroom Avg SF",
+      "Two Bedroom Avg SF",
+      "Three Bedroom Avg SF",
+      "Four Bedroom Avg SF"
+    ],
+    "granular_rental_economics_gaps": [
+      "Avg Asking/Bed",
+      "Avg Effective/SF",
+      "Studio Asking Rent/Bed",
+      "Studio Asking Rent/SF",
+      "Studio Effective Rent/Unit",
+      "Studio Concessions %",
+      "Studio Vacancy %",
+      "One Bedroom Asking Rent/Bed",
+      "One Bedroom Asking Rent/SF",
+      "One Bedroom Effective Rent/Unit",
+      "Two Bedroom Asking Rent/Bed",
+      "Two Bedroom Asking Rent/SF",
+      "Three Bedroom Asking Rent/Bed",
+      "Four Bedroom Asking Rent/Bed",
+      "Four Bedroom Vacancy %",
+      "Four Bedroom Vacant Units"
+    ]
+  }
+}

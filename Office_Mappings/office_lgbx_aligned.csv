@@ -1,0 +1,902 @@
+LightBox Source Fields,CoStar Source Fields,Consolidated ERD Fields,LightBox Aligned Fields
+Parcel_id,PropertyID,access,Sites_access
+Parcel_createdby,Property Name,acres,Sites_acres
+Parcel_timestamp,Property Address,activestatus,Sales_activestatus
+Parcel_name,City,activity_description,
+Parcel_name,State,actual_price,
+Parcel_appraisalusage,Zip,added_at,
+Parcel_readyforuse,County Name,address,Parcel_address
+Parcel_propertymajortype,Country,adjustment_comments,Sales_adjustmentcomments
+Parcel_propertytype,Continent,adr,Improvement_adr
+Parcel_propertysubtype,Subcontinent,affordability_status,
+Parcel_owner,Cross Street,all_utilities_to_site,Sites_allutilities
+Parcel_address,Latitude,allowable_floor_area_sf,Sites_allowablefloorareasf
+Parcel_city,Longitude,allowable_units,
+Parcel_county,Market Name,allutilities,Sites_utilities
+Parcel_state,Submarket Name,amenities,Improvement_amenities
+Parcel_zip,Submarket Cluster,anchor_tenants,
+Parcel_country,Closest Transit Stop,anchor_type,
+Parcel_lat,Closest Transit Stop Dist (mi),anchors,
+Parcel_lng,Closest Transit Stop Walk Time (min),ancillary_buildings,Improvement_ancillarybuildings
+Parcel_parcelverificationdata,Property Location,annual_rent_per_sf,
+Parcel_isgroundlease,Owner Address,appraisal_date,Sales_appraisaldate
+Parcel_market,Owner City State Zip,appraisal_file,Parcel_appraisalfile
+Parcel_submarket,Property Manager Address,appraisal_usage,Parcel_appraisalusage
+Parcel_townshiprange,Property Manager City State Zip,appraised_value,Sales_appraisedvalue
+Parcel_municipality,Recorded Owner Address,area_category,
+Parcel_cbsa_name,Recorded Owner City State Zip,area_in_flood_zone,Sites_areainfloodzone
+Parcel_cbsa_id,True Owner Address,assessment_year,
+Parcel_msa,True Owner City State Zip,assigned_to_user_id,
+Parcel_censusblock,Leasing Company Address,attribution_id,
+Parcel_censustract,Leasing Company City State Zip,audit_log_id,
+Parcel_neighborhood,Sale Company Address,authority,
+Parcel_northboundary,Sale Company City State Zip,average_daily_rate,
+Parcel_southboundary,PropertyType,avg_asking_rent_sf,
+Parcel_eastboundary,Secondary Type,avg_cap_rate,Sales_caprate
+Parcel_westboundary,Building Class,avg_mf_unit_size,
+Parcel_neighborhoodcomments,Building Status,back_yard_distance,Zoning_Subrecords_backyarddistance
+Parcel_locationdescription,Constr Status,base_rent_per_mo,
+Parcel_opportunityzone,Operational Status,base_rent_per_year,
+Parcel_parcelcomments,Operation Type,base_rent_sf,
+Sales_pgim,Style,base_rent_sf_mo,
+Sales_egim,Star Rating,base_taxes,Assessment_basetaxes
+Sales_caprate,Building Park,basement_size,Improvement_basementsize
+Parcel_appraisalfile,Year Built,basement_use_and_finish,Improvement_basementuseandfinish
+Parcel_otherdbrefs,Month Built,baths,
+Parcel_supportingfiles,Year Renovated,bedrooms,
+Sales_saledate,Month Renovated,beds,
+Sales_transactiontype,Construction Begin,book_page_or_ref_doc,Sales_bookpageorrefdoc
+Sales_id,Construction Material,boundary_comments,
+Sales_activestatus,Number Of Stories,buildable_sf,
+Sales_isdeleted,Total Buildings,building_amenities,
+Sales_isexcel,Typical Floor Size,building_class,Improvement_buildingclass
+Sales_confidential,RBA,building_condition,
+Sales_priceactual,Core Factor,building_description,Improvement_BuildingDescription
+Sales_ffandeadjustment,Primary Corridors,building_features,
+Sales_excesslandadjustment,Amenities,building_quality,
+Sales_businessvalueadjustment,Features,business_value_adjustment,Sales_businessvalueadjustment
+Sales_financingtermsadjustment,Services,buyer_type,Sales_buyertype
+Sales_conditionsofsaleadjustment,Sewer,cap_rate,Sales_toscaprate
+Sales_expendituresaftersaleadjustment,Water,care_type_comments,
+Sales_otheradjustment,Gas,category,
+Sales_priceadjustment,Heating,cbsa_id,Parcel_cbsa_id
+Sales_price,Sprinklers,cbsa_name,Parcel_cbsa_name
+Sales_pricepersf,Number Of Elevators,ceiling_height,Improvement_ceilingheight
+Sales_priceperra,Number Of Parking Spaces,censusblock,Parcel_censusblock
+Sales_priceperlandsf,Parking Ratio,censustract,Parcel_censustract
+Sales_priceperacre,Parking Spaces/Unit,city,Parcel_city
+Sales_priceperlandunit,Energy Star,clean_up_costs,Sales_cleanupcosts
+Sales_priceperusableacre,LEED Certified,clear_height,Improvement_Subrecords_clearheight
+Sales_priceperbuildablesf,University,client_name,
+Sales_priceperprimaryfrontage,Land Area (AC),column_spacing,Improvement_columnspacing
+Sales_priceperfar,Land Area (SF),comm_lease_comments,
+Sales_pricepergbameters,Parcel Number 1(Min),comm_lease_notes,
+Sales_priceperrameters,Parcel Number 2(Max),comm_lease_survey_date,
+Sales_priceperlandsqm,Proposed Land Use,comm_lease_terms,
+Sales_priceperlandhectares,Zoning,comm_lease_type,
+Sales_grantor,Fema Flood Zone,comm_rent_concessions,
+Sales_grantee,FEMA Map Date,comm_rent_per_sf_max,
+Sales_propertyrights,FEMA Map Identifier,comm_rent_per_sf_min,
+Sales_financing,FIRM ID,comm_size_max,
+Sales_conditionsofsale,FIRM Panel Number,comm_size_min,
+Sales_currentuse,Flood Risk Area,comm_vacancy_rate,
+Sales_propertyincluded,Floodplain Area,comm_verification_source,Sales_verificationsource
+Sales_daysonmarket,In SFHA,commercial_survey_id,
+Sales_recordingdate,Owner Name,community_fee_max,
+Sales_bookpageorrefdoc,Owner Contact,community_fee_min,
+Sales_lender,Owner Phone,commvacancy,
+Sales_buyertype,True Owner Name,concessions,
+Sales_proposeduse,True Owner Contact,condition_id,Improvement_Subrecords_conditionid
+Sales_highestandbestuse,True Owner Phone,conditions_of_sale,Improvement_condition
+Sales_verificationsource,Recorded Owner Name,conditions_of_sale_adjustment,Sales_conditionsofsaleadjustment
+Sales_verificationphone,Recorded Owner Contact,confidential,Sales_confidential
+Sales_verificationdate,Recorded Owner Phone,construction_class,Improvement_constructionclass
+Sales_datasource,Property Manager Name,construction_type,Improvement_construction
+Sales_salesupportingfiles,Property Manager Contact,contract_rent_max,
+Sales_legaldescription,Property Manager Phone,contract_rent_min,
+Sales_appraisaldate,Leasing Company Name,cooling_id,Improvement_Subrecords_coolingid
+Sales_appraisedvalue,Leasing Company Contact,cooling_type,Improvement_cooling
+Sales_landvaluepersf,Leasing Company Phone,corner,Sites_corner
+Sales_landvalue,Leasing Company Fax,costs_to_finish,
+Sales_improvementvalue,Sales Company,country,Parcel_country
+Sales_improvementvaluepersf,Sale Company Name,county,Parcel_county
+Sales_nim,Sale Company Contact,covered_parking_spaces,Improvement_coveredparkingspaces
+Sales_caprate,Sale Company Phone,craneways,
+Sales_hotelroomrevmultiplier,Sale Company Fax,created_at,
+Sales_toscaprate,Sales Contact,created_by_user_id,
+Sales_tosnoi,Sales Contact Phone,createdby,Parcel_createdby
+Sales_tosoccupancyrate,Primary Agent Name,current_list_price,Sales_currentlistprice
+Sales_tosvacancyrate,Developer Name,current_lp_percent_diff,Sales_currentlppercentdiff
+Sales_tospriceperrsf,Architect Name,current_rent_per_mo,
+Sales_tospriceperuseableacreland,Parent Company,current_use,Sales_currentuse
+Sales_tospriceperuseablesfland,Fund Name,custom_fields,
+Sales_toseffectiveage,$Price/Unit,daily_rate_per_unit,
+Sales_discountrate,For Sale Price,daily_rate_per_unit_max,
+Sales_expensegrowthrate,For Sale Status,daily_rate_per_unit_min,
+Sales_incomegrowthrate,Last Sale Date,data_source,Sales_datasource
+Sales_terminalcaprate,Last Sale Price,days_on_market,Sales_daysonmarket
+Sales_holdingperiodyears,Cap Rate,deferred_maintenance,Improvement_deferredmaintance
+Sales_incomegrowth,Building Operating Expenses,demographics_survey_date,
+Sales_riskprofile,Ops Expense,depth,Sites_depth
+Sales_originallistprice,Ops Expense Per SF,design_appeal,Improvement_designappeal
+Sales_originallppercentdiff,Building Tax Expenses,dimensions,Sites_dimensions
+Sales_currentlistprice,Tax Year,diminution_source,Sales_diminutionsource
+Sales_currentlppercentdiff,Taxes Total,discount_rate,Sales_discountrate
+Sales_environmentalconcerns,Taxes Per SF,district_name,
+Sales_environmentalstatus,Percent Leased,district_url,
+Sales_environmentalremarks,Vacancy %,districtspending,
+Sales_cleanupcosts,Days On Market,drainage,Sites_drainage
+Sales_typeofcontamination,Tenancy,duration_seconds,
+Sales_responsibleparty,Rent Type,earthquake_hazard_risk,Sites_earthquakehazardrisk
+Sales_percentdiminutioninvalue,Rent/SF/Yr,earthquake_zone_comments,Sites_earthquakezonecomments
+Sales_diminutionsource,Average Weighted Rent,east_boundary,Parcel_eastboundary
+Sales_percentstigma,Pre-Leasing,eff_rent_per_mo,
+Sales_adjustmentcomments,Exp Year,eff_rent_per_year,
+Sales_internalcomments,Avg Rent-Direct (Industrial),effective_age,Improvement_effectiveage
+Sales_salenotes,Avg Rent-Direct (Office),effective_gross_income_multiplier,
+Sales_salecomments,Avg Rent-Direct (Retail),effective_rent_sf,
+Sales_priceperusableacre,Avg Rent-Sublet (Industrial),effective_rent_sf_mo,
+Sales_priceperusablelandsf,Avg Rent-Sublet (Office),effective_water_frontage,Sites_effectivewaterfrontage
+Sites_NumberOfParcels,Avg Rent-Sublet (Retail),egim,Sales_egim
+Sites_landuse,Direct Available Space,encumbrance_or_easement,Sites_encumbranceoreasement
+Sites_acres,Direct Vacant Space,enrollment,
+Sites_landsf,Sublet Available Space,entry_fee_max,
+Sites_usableacres,Sublet Vacant Space,entry_fee_min,
+Sites_usablelandsf,Total Available Space (SF),environmental_concerns,Sales_environmentalconcerns
+Sites_UnusableAcres,Total Relet Space (SF),environmental_issues,Sites_environmentalissues
+Sites_UnusableLandSF,Total Sublet Space (SF),environmental_remarks,Sales_environmentalremarks
+Sites_excessacres,Total Vacant Avail Relet Space (SF),environmental_status,Sales_environmentalstatus
+Sites_excesslandsf,Total Vacant Avail Sublet Space (SF),equalization_ratio,Assessment_equalizationratio
+Sites_SurplusAcres,Total Vacant Available,escalations,
+Sites_SurplusLandSF,Total New Space (SF),excess_land_adjustment,Sales_excesslandadjustment
+Sites_easementacres,Smallest Available Space,expenditures_after_sale_adjustment,Sales_expendituresaftersaleadjustment
+Sites_easementlandsf,Max Building Contiguous Space,expense_growth_rate,Sales_expensegrowthrate
+Sites_buildablesf,Max Floor Contiguous Space,expense_reimbursements,incExp_expensereimbursements
+Sites_landhectares,Direct Services,expense_stop,
+Sites_landsquaremeters,Sublet Services,exterior_wall,Improvement_exteriorwall
+Sites_allowablefloorareasf,Office Space,exterior_wall_id,Improvement_Subrecords_exteriorwallid
+Sites_proposedsf,,far,Parcel_far
+Sites_landunits,,features,Improvement_features
+Sites_landunittype,,fema_map_date,Sites_femamapdate
+Sites_landunitapprovedorzoned,,ff_and_e,
+Sites_roadfrontage,,ff_and_e_adjustment,Sales_ffandeadjustment
+Sites_primaryfrontagelf,,field_changed,
+Sites_primaryfrontagest,,field_name,
+Sites_secondaryfrontagelf,,field_value,
+Sites_secondaryfrontagest,,financing,Sales_financing
+Sites_tertiaryfrontagelf,,financing_terms_adjustment,Sales_financingtermsadjustment
+Sites_tertiaryfrontagest,,financing_type,
+Sites_dimensions,,finish,
+Sites_waterfrontage,,finish_condition,
+Sites_effectivewaterfrontage,,fireplace_or_woodstove,Improvement_fireplaceorwoodstove
+Sites_depth,,flood_map_panel,Sites_floodmappanel
+Sites_access,,flood_zone,Sites_floodzone
+Sites_views,,floor,
+Sites_visibility,,floor_area_ratio,
+Sites_shape,,floor_level,
+Sites_topography,,foundation_id,Improvement_Subrecords_foundationid
+Sites_corner,,foundation_type,Improvement_foundation
+Sites_utilities,,free_rent_months,
+Sites_allutilities,,front_set_back_distance,Zoning_Subrecords_frontsetbackdistance
+Sites_floodzone,,garage_parking_spaces,Improvement_garageparkingspaces
+Sites_floodmappanel,,garage_type,
+Sites_femamapdate,,gba,Improvement_Subrecords_gba
+Sites_withinfloodplainname,,gba_total,
+Sites_areainfloodzone,,gba_total_meters,
+Sites_earthquakehazardrisk,,geo_code,
+Sites_earthquakezonecomments,,geo_name,
+Sites_encumbranceoreasement,,geo_type,
+Sites_environmentalissues,,geography_id,
+Sites_drainage,,grantee,Sales_grantee
+Sites_soiltype,,grantee_buyer,
+Sites_productivityindex,,grantor,Sales_grantor
+Sites_tillableacres,,grantor_seller,
+Sites_percenttillable,,gross_building_area,
+Sites_wetlandstype,,heating_id,Improvement_Subrecords_heatingid
+Sites_wetlandacres,,heating_type,Improvement_heating
+Sites_percentwetlands,,highest_and_best_use,Sales_highestandbestuse
+Sites_woodlandacres,,holding_period_years,Sales_holdingperiodyears
+Sites_otheracres,,home_site_acres,Sites_homesiteacres
+Sites_wasteacres,,hotel_flag,Improvement_hotelflag
+Sites_homesiteacres,,hotel_room_rev_multiplier,Sales_hotelroomrevmultiplier
+Sites_sitecomments,,id,Parcel_id
+Improvement_BuildingDescription,,implied_value,Assessment_impliedvalue
+Improvement_noofbuildings,,improvement_assessment,Assessment_assessmentyear
+Improvement_constructionclass,,improvement_comments,Sales_salecomments
+Improvement_buildingclass,,improvement_id,Sales_id
+Improvement_perimeter,,improvement_subrecords_condition,Improvement_Subrecords_condition
+Improvement_sourceforsfarea,,improvement_subrecords_construction,Improvement_Subrecords_construction
+Improvement_noofofficeunits,,improvement_subrecords_cooling,Improvement_Subrecords_cooling
+Improvement_gbaoffice,,improvement_subrecords_deferredmaintance,Improvement_Subrecords_deferredmaintance
+Improvement_raoffice,,improvement_subrecords_docks,Improvement_Subrecords_docks
+Improvement_usablearea,,improvement_subrecords_foundation,Improvement_Subrecords_foundation
+Improvement_loadfactor,,improvement_subrecords_garage,Improvement_garage
+Improvement_percentofficera,,improvement_subrecords_heating,Improvement_Subrecords_heating
+Improvement_noofotherunits,,improvement_subrecords_landscaping,Improvement_landscaping
+Improvement_gbaother,,improvement_subrecords_landtobuildingratio,Improvement_landtobuildingratio
+Improvement_raother,,improvement_subrecords_loadfactor,Improvement_loadfactor
+Improvement_noofunits,,improvement_subrecords_multifamilyamenities,
+Improvement_gbatotal,,improvement_subrecords_noofbathrooms,
+Improvement_ratotal,,improvement_subrecords_noofbays,
+Improvement_landtobuildingratio,,improvement_subrecords_noofbedrooms,
+Parcel_far,,improvement_subrecords_noofbeds,
+Improvement_surfaceparkingspaces,,improvement_subrecords_noofelevators,Improvement_noofelevators
+Improvement_coveredparkingspaces,,improvement_subrecords_noofescalators,Improvement_noofescalators
+Improvement_garageparkingspaces,,improvement_subrecords_noofgolfholes,Improvement_noofgolfholes
+Improvement_parking,,improvement_subrecords_noofhalfbaths,Improvement_Subrecords_noofhalfbaths
+Improvement_parkingratiounit,,improvement_subrecords_noofrooms,
+Improvement_parkingratiogba,,improvement_subrecords_noofseats,Improvement_noofseats
+Improvement_parkingratiora,,improvement_subrecords_noofspaces,Sites_NumberOfParcels
+Improvement_noofstories,,improvement_subrecords_noofstories,Improvement_noofstories
+Improvement_noofseats,,improvement_subrecords_nooftruckdoors,Improvement_Subrecords_nooftruckdoors
+Improvement_noofgolfholes,,improvement_subrecords_nooftruckdoorswithlevelers,Improvement_Subrecords_nooftruckdoorswithlevelers
+Improvement_adr,,improvement_subrecords_noofunits,Improvement_noofunits
+Improvement_lhoccupancy,,improvement_subrecords_parking,Improvement_parking
+Improvement_productsegment,,improvement_subrecords_parkingadequacy,Improvement_parkingadequacy
+Improvement_hotelflag,,improvement_subrecords_parkingcomments,Improvement_parkingcomments
+Improvement_designappeal,,improvement_subrecords_parkingcondition,Improvement_parkingcondition
+Improvement_condition,,improvement_subrecords_parkingtype,Improvement_parkingtype
+Improvement_construction,,improvement_subrecords_porchordeck,Improvement_Subrecords_porchordeck
+Improvement_quality,,improvement_subrecords_proportionrenovated,Improvement_proportionrenovated
+Improvement_landscaping,,improvement_subrecords_quality,Improvement_quality
+Improvement_parkingtype,,improvement_subrecords_ratotalmeters,Improvement_ratotalmeters
+Improvement_parkingadequacy,,improvement_subrecords_remainingeconomiclife,Improvement_remainingeconomiclife
+Improvement_parkingcondition,,improvement_subrecords_renovations,Improvement_renovations
+Improvement_parkingcomments,,improvement_subrecords_residentialamenities,Improvement_Subrecords_residentialamenities
+Improvement_deferredmaintance,,improvement_subrecords_residentialdesign,Improvement_Subrecords_residentialdesign
+Improvement_ffande,,improvement_subrecords_roofcover,Improvement_roofcover
+Improvement_yearbuilt,,improvement_subrecords_rooftype,Improvement_rooftype
+Improvement_yearbuiltnumeric,,improvement_subrecords_sourceforsfarea,Improvement_sourceforsfarea
+Improvement_renovations,,improvement_subrecords_sprinklers,Improvement_sprinklers
+Improvement_proportionrenovated,,improvement_subrecords_surfaceparkingspaces,Improvement_surfaceparkingspaces
+Improvement_totaleconomiclife,,improvement_subrecords_tenantimprovements,Improvement_Subrecords_tenantimprovements
+Improvement_effectiveage,,improvement_subrecords_totaleconomiclife,Improvement_totaleconomiclife
+Improvement_remainingeconomiclife,,improvement_subrecords_typicalbaydepth,
+Improvement_foundation,,improvement_subrecords_usablearea,Improvement_usablearea
+Improvement_exteriorwall,,improvement_subrecords_yearbuilt,Improvement_yearbuilt
+Improvement_basementuseandfinish,,improvement_value,
+Improvement_basementsize,,improvement_value_per_sf,
+Improvement_columnspacing,,income_growth,Sales_incomegrowth
+Improvement_ceilingheight,,income_growth_rate,Sales_incomegrowthrate
+Improvement_roofcover,,income_target_percent,
+Improvement_rooftype,,incometarget,
+Improvement_cooling,,industrial_gba,
+Improvement_heating,,industrial_ra,
+Improvement_noofelevators,,ingestion_timestamp,
+Improvement_noofescalators,,instance_type,
+Improvement_sprinklers,,internal_comments,Sales_internalcomments
+Improvement_fireplaceorwoodstove,,is_active,
+Improvement_garage,,is_confidential,
+Improvement_ancillarybuildings,,is_deleted,Sales_isdeleted
+Improvement_features,,is_excel_entry,
+Improvement_amenities,,is_ground_lease,Parcel_isgroundlease
+Improvement_improvmentcomments,,is_lihtc,
+Improvement_gbaofficemeters,,isexcel,Sales_isexcel
+Improvement_raofficemeters,,jurisdiction,Zoning_jurisdiction
+Improvement_gbaothermeters,,land_assessment,Assessment_landassessment
+Improvement_parkingratiora,,land_hectares,Sites_landhectares
+Improvement_raothermeters,,land_sf,Sites_SurplusLandSF
+Improvement_gbatotalmeters,,land_square_meters,Sites_landsquaremeters
+Improvement_ratotalmeters,,land_unit_approved_or_zoned,Sites_landunitapprovedorzoned
+incExp_name,,land_unit_type,Sites_landunittype
+incExp_surveydate,,land_units,Sites_landunits
+incExp_financialstype,,land_use,Sites_landuse
+incExp_annualrent,,land_value,Sales_landvalue
+incExp_baserentabatement,,land_value_per_sf,
+incExp_expensereimbursements,,last_rent_increase,
+incExp_netparkingincome,,lat,Parcel_lat
+incExp_percentagerent,,lat_centroid,
+incExp_otherincome,,lease_commencement_date,
+incExp_pgi,,lease_comp_id,
+incExp_pgipersf,,lease_concessions,
+incExp_pgiperunit,,lease_conditions,
+incExp_vacancycost,,lease_expiration_date,
+incExp_vacancy,,lease_options,
+incExp_vacancycostpersf,,lease_start_date,
+incExp_vacancycostperunit,,lease_tenant_improvs,
+incExp_occupancy,,lease_term_months,
+incExp_egi,,lease_transaction_type,Sales_transactiontype
+incExp_egipersf,,lease_type,
+incExp_egiperunit,,leasedate,
+incExp_taxexpense,,leaseexpiration,
+incExp_insurance,,leaseexpiredate,
+incExp_onsitemanagementexp,,leasestart,
+incExp_management,,leaseterm,
+incExp_advertisingandmarketing,,legal_description,Sales_legaldescription
+incExp_electricexpense,,lender,Sales_lender
+incExp_waterexpense,,lender_name,
+incExp_sewerexpense,,lessor,
+incExp_gasexpense,,lessor_name,
+incExp_fuelexpense,,lh_occupancy,Improvement_lhoccupancy
+incExp_trashexpense,,lhtc,
+incExp_totalutilities,,lightbox_created_by,
+incExp_buildingrepairs,,lightbox_id,
+incExp_otherrepairs,,lightbox_timestamp,
+incExp_repairsandmaintenance,,lng,Parcel_lng
+incExp_paintinganddecorating,,lng_centroid,
+incExp_generalandadministrative2,,locationdescription,Parcel_locationdescription
+incExp_cleaning,,major_type,
+incExp_cam,,management_company,
+incExp_managerleasingsalaries,,market,Parcel_market
+incExp_maintenancesalaries,,market_rent_max,
+incExp_othersalaries,,market_rent_min,
+incExp_payrolltaxes,,market_rent_per_mo,
+incExp_payrolltotal,,market_rent_per_sf,
+incExp_groundsandsecurity,,marketrentmo,
+incExp_professionalservicesexp,,marketrentsf,
+incExp_generalandadministrative,,max_build_height,Zoning_maxbuildheight
+incExp_nonrevenueunits,,max_gross_lihtc_restricted_rent,
+incExp_otherexpenses,,max_site_coverage,Zoning_maxsitecoverage
+incExp_reserves,,median_hh_income,
+incExp_deductreserves,,median_home_value,
+incExp_expleasingcommissions,,median_household_income,
+incExp_exptenantimprovements,,merge_timestamp,Parcel_timestamp
+incExp_GroundRentExp,,merged_by_user_or_system,
+incExp_totalexpenses,,mf_br_max,
+incExp_ExpensePerSF,,mf_br_min,
+incExp_ExpensePerUnit,,mf_carport_fee_monthly,
+incExp_expenseratio,,mf_garage_fee_monthly,
+incExp_noi,,mf_lease_comments,
+incExp_noipersf,,mf_lease_notes,
+incExp_noiperbed,,mf_lease_survey_date,
+incExp_noipergbam2,,mf_occupancy,
+incExp_noiperrasf,,mf_rent_concessions,
+incExp_noiperunit,,mf_rent_per_mo_max,
+incExp_noiperusablesf,,mf_rent_per_mo_min,
+Saleinfo_NIM,,mf_rent_per_sf_max,
+incExp_comments,,mf_rent_per_sf_min,
+Assessment_taxingauthority,,mf_rent_per_sf_per_mo_max,
+Assessment_taxid,,mf_rent_per_sf_per_mo_min,
+Assessment_assessmentyear,,mf_rent_type,
+Assessment_landassessment,,mf_size_sf_max,
+Assessment_improvementassessment,,mf_size_sf_min,
+Assessment_otherassessment,,mf_source_notes,
+Assessment_totalassessment,,mf_surveyed_unit_count_total,
+Assessment_taxyear,,mf_total_annual_rent,
+Assessment_taxratecode,,mf_total_rent_per_month,
+Assessment_taxrate,,mf_unit_amenities,
+Assessment_taxrateper,,mf_vacant_units_count,
+Assessment_basetaxes,,mf_weighted_avg_rent_per_sf_per_mo,
+Assessment_specialassessments,,mf_weighted_avg_rent_per_sf_per_year,
+Assessment_taxes,,mf_weighted_avg_rent_per_unit,
+Assessment_marketvalue,,mfamenities,
+Assessment_taxespersfgba,,min_lot_area,Zoning_Subrecords_minlotarea
+Assessment_taxesperra,,minimum_lot_area,Zoning_minimumlotarea
+Assessment_taxesperunit,,monthly_or_daily_rent,
+Assessment_taxesperlandsf,,msa,Parcel_msa
+Assessment_taxesperacre,,multifamily_gba,
+Assessment_taxesperlandunit,,municipality,Parcel_municipality
+Assessment_taxespergbam2,,name,Parcel_name
+Assessment_taxesperram2,,neighborhood,Parcel_neighborhood
+Assessment_taxesperhectares,,neighborhoodcomments,Parcel_neighborhoodcomments
+Assessment_taxesperlandm2,,net_income_multiplier,
+Assessment_equalizationratio,,net_rentable_area,Improvement_Subrecords_rentablearea
+Assessment_impliedvalue,,new_value,
+Assessment_assessmentcomments,,nim,Sales_nim
+Assessment_assessorwebsite,,no_of_baths,
+Assessment_historicalassessedvalue1,,no_of_buildings,Improvement_noofbuildings
+Assessment_historicalassessedvalue2,,no_of_craneways,
+Assessment_historicalassessedvalue3,,no_of_docks,
+Assessment_historicalassessedvalue4,,no_of_mf_bathrooms,
+Assessment_historicalimprovvalue1,,no_of_multifamily_bedrooms,
+Assessment_historicalimprovvalue2,,no_of_multifamily_rooms,
+Assessment_historicalimprovvalue3,,no_of_tenants,
+Assessment_historicalimprovvalue4,,north_boundary,Parcel_northboundary
+Assessment_historicallandvalue1,,notes,
+Assessment_historicallandvalue2,,number_of_parcels,
+Assessment_historicallandvalue3,,number_of_units,
+Assessment_historicallandvalue4,,occupancy_type,
+Assessment_historicaltaxes1,,office_gba,
+Assessment_historicaltaxes2,,office_ra,
+Assessment_historicaltaxes3,,old_value,
+Assessment_historicaltaxes4,,opportunity_zone,Parcel_opportunityzone
+Assessment_historicalyear1,,options,
+Assessment_historicalyear2,,ordinance_document,Zoning_OrdinanceDocument
+Assessment_historicalyear3,,ordinance_document_url,
+Assessment_historicalyear4,,original_list_price,Sales_originallistprice
+Zoning_jurisdiction,,original_lp_percent_diff,Sales_originallppercentdiff
+Zoning_district,,other_acres,Sites_otheracres
+Zoning_zoningcode,,other_adjustment,Sales_otheradjustment
+Zoning_type,,other_assessment,Assessment_otherassessment
+Zoning_summary,,other_db_refs,Parcel_otherdbrefs
+Zoning_zoneddensity,,other_gba,
+Zoning_PermittedUses,,other_ra,
+Zoning_maxsitecoverage,,owner,Parcel_owner
+Zoning_minimumlotarea,,parcel_comments,Sites_sitecomments
+Zoning_setbackdistance,,parcel_id,Improvement_Subrecords_id
+Zoning_sideyarddistance,,parcel_verification_data,Sales_verificationdate
+Zoning_rearyarddistance,,parent_geo_id,
+Zoning_maxbuildheight,,parking_adequacy_id,
+Zoning_parkingrequirement,,parking_condition_id,
+Zoning_OrdinanceDocument,,parking_ratio_gba,
+Zoning_comments,,parking_ratio_ra,
+Assessment_Subparcels OLD_impliedvalue,,parking_ratio_unit,Improvement_parkingratiounit
+Zoning_Subrecords_id,,parking_requirement,Zoning_parkingrequirement
+Zoning_Subrecords_Zoningid,,parking_type_id,Improvement_Subrecords_parkingtype
+Zoning_Subrecords_authority,,per_pupil_spending,
+Zoning_Subrecords_NA_jurisdiction,,percent_diminution_in_value,Sales_percentdiminutioninvalue
+Zoning_Subrecords_district,,percent_office_ul,Improvement_Subrecords_percentoffice
+Zoning_Subrecords_zoning,,percent_rent,
+Zoning_Subrecords_zoneddensity,,percent_stigma,Sales_percentstigma
+Zoning_Subrecords_permitteduses,,percent_tillable,Sites_percenttillable
+Zoning_Subrecords_maxsitecoverage,,percent_wetlands,Sites_percentwetlands
+Zoning_Subrecords_minlotarea,,perimeter,Improvement_perimeter
+Zoning_Subrecords_frontsetbackdistance,,perimeter_sf,
+Zoning_Subrecords_sideyarddistance,,permitted_uses,Zoning_PermittedUses
+Zoning_Subrecords_backyarddistance,,pgim,Sales_pgim
+Zoning_Subrecords_maxbuildheight,,population,
+Zoning_Subrecords_ordinancedocument,,potential_gross_income_multiplier,
+Zoning_Subrecords_comments,,price,Sales_price
+Sites_Subparcels_parcelid,,price_adjustment,Sales_priceadjustment
+Sites_Subparcels_id,,price_per_acre,Sales_priceperacre
+Sites_Subparcels_identification,,price_per_bay,Sales_priceperra
+Sites_Subparcels_acres,,price_per_bed,
+Sites_Subparcels_landsf,,price_per_bedroom,
+Sites_Subparcels_subparcelcomments,,price_per_buildable_sf,Sales_priceperbuildablesf
+Improvement_Subrecords_NA_parcelId,,price_per_far,Sales_priceperfar
+Improvement_Subrecords_id,,price_per_gba_meters,
+Improvement_Subrecords_buildingdescription,,price_per_land_hectares,Sales_priceperlandhectares
+_constructionclassid,,price_per_land_sf,
+Improvement_Subrecords_constructionclass,,price_per_land_sqm,Sales_priceperlandsqm
+_buildingclassid,,price_per_land_unit,Sales_priceperlandunit
+Improvement_Subrecords_buildingclass,,price_per_mf_bedroom,
+Improvement_Subrecords_perimetersf,,price_per_mf_room,
+_sourceforsfareaid,,price_per_primary_frontage,Sales_priceperprimaryfrontage
+Improvement_Subrecords_sourceforsfarea,,price_per_ra,
+Improvement_Subrecords_noofofficeunits,,price_per_ra_meters,
+Improvement_Subrecords_officegba,,price_per_room,
+Improvement_Subrecords_officera,,price_per_sf,
+Improvement_Subrecords_usablearea,,price_per_space,
+Improvement_Subrecords_percentoffice,,price_per_unit,
+Improvement_Subrecords_percentofficera,,price_per_usable_acre,Sales_priceperusableacre
+Improvement_Subrecords_othergba,,price_per_usable_land_sf,Sales_priceperusablelandsf
+Improvement_Subrecords_otherra,,priceactual,Sales_priceactual
+Improvement_Subrecords_gba,,primary_frontage_lf,Sites_primaryfrontagelf
+Improvement_Subrecords_rentablearea,,primary_frontage_st,Sites_primaryfrontagest
+Improvement_Subrecords_landtobuildingratio,,product_segment,Improvement_productsegment
+Improvement_Subrecords_noofstories,,productivity_index,Sites_productivityindex
+Improvement_Subrecords_noofseats,,project_amenities,
+Improvement_Subrecords_noofhalfbaths,,project_id,
+Improvement_Subrecords_noofgolfholes,,project_name,
+Improvement_Subrecords_designappeal,,project_property_id,
+Improvement_Subrecords_conditionid,,project_style,
+Improvement_Subrecords_condition,,property_assessment_id,
+Improvement_Subrecords_construction,,property_id,
+Improvement_Subrecords_qualityid,,property_included,Sales_propertyincluded
+Improvement_Subrecords_quality,,property_rights,Sales_propertyrights
+Improvement_Subrecords_landscaping,,property_type,Parcel_propertytype
+Improvement_Subrecords_parkingtype,,property_type_id,Parcel_propertysubtype
+Improvement_Subrecords_deferredmaintance,,property_zoning_id,
+Improvement_Subrecords_ffande,,propertymajortype,Parcel_propertymajortype
+Improvement_Subrecords_yearbuilt,,propertysubtype,
+Improvement_Subrecords_renovations,,proposed_sf,
+Improvement_Subrecords_proportionrenovated,,proposed_units,
+Improvement_Subrecords_totaleconomiclife,,proposed_use,Sales_proposeduse
+Improvement_Subrecords_effectiveage,,quality_id,Improvement_Subrecords_qualityid
+Improvement_Subrecords_remainingeconomiclife,,ra_total,
+Improvement_Subrecords_foundationid,,rail_service,
+Improvement_Subrecords_foundation,,ready_for_use,Parcel_readyforuse
+Improvement_Subrecords_exteriorwallid,,rear_yard_distance,Zoning_rearyarddistance
+Improvement_Subrecords_exteriorwall,,recording_date,Sales_recordingdate
+Improvement_Subrecords_basementuseandfinish,,renovations_description,
+Improvement_Subrecords_basementsize,,rent_basis,
+Improvement_Subrecords_columnspacing,,rent_comp_id,
+Improvement_Subrecords_ceilingheight,,rent_escalations,
+Improvement_Subrecords_roofcoverid,,rent_increase_percent,
+Improvement_Subrecords_roofcover,,rent_last_increased,
+Improvement_Subrecords_rooftypeid,,rent_per_mo,
+Improvement_Subrecords_rooftype,,rent_per_sf_per_mo,
+Improvement_Subrecords_nooftruckdoors,,rent_per_sf_per_mo_max,
+Improvement_Subrecords_nooftruckdoorswithlevelers,,rent_per_sf_per_mo_min,
+Improvement_Subrecords_clearheight,,rent_per_sq_meter,
+Improvement_Subrecords_coolingid,,rent_per_sq_meter_per_mo,
+Improvement_Subrecords_cooling,,rent_roll_summary_commleasenotes,
+Improvement_Subrecords_heatingid,,rentable_area,
+Improvement_Subrecords_heating,,rentincreased,
+Improvement_Subrecords_noofelevators,,rentperm2,
+Improvement_Subrecords_noofescalators,,rentperm2permo,
+Improvement_Subrecords_sprinklersid,,responsible_party,Sales_responsibleparty
+Improvement_Subrecords_sprinklers,,retail_gba,
+Improvement_Subrecords_residentialdesign,,retail_gla,
+Improvement_Subrecords_residentialamenities,,rev_par,
+Improvement_Subrecords_fireplaceorwoodstove,,risk_profile,Sales_riskprofile
+Improvement_Subrecords_garage,,road_frontage,Sites_roadfrontage
+Improvement_Subrecords_docks,,roof_cover_id,Improvement_Subrecords_roofcoverid
+Improvement_Subrecords_porchordeck,,roof_type_id,Improvement_Subrecords_rooftypeid
+Improvement_Subrecords_ancillarybuildings,,rooms,
+Improvement_Subrecords_tenantimprovements,,sale_comments,
+Improvement_Subrecords_gbaofficemeters,,sale_comp_id,
+Improvement_Subrecords_raofficemeters,,sale_date,Sales_saledate
+Improvement_Subrecords_gbaothermeters,,sale_notes,Sales_salenotes
+Improvement_Subrecords_raothermeters,,sale_price,
+Improvement_Subrecords_gbatotalmeters,,sale_supporting_files,Sales_salesupportingfiles
+Improvement_Subrecords_ratotalmeters,,school_district_id,
+Assessment_Subparcels_id,,schooldistrict,
+Assessment_Subparcels_assessinfoid,,secondary_frontage_lf,Sites_secondaryfrontagelf
+Assessment_Subparcels_,,secondary_frontage_st,Sites_secondaryfrontagest
+Assessment_Subparcels_taxid,,secondary_traffic_count,
+Assessment_Subparcels_assessmentyear,,session_end,
+Assessment_Subparcels_landassessment,,session_start,
+Assessment_Subparcels_improvementassessment,,setback_distance,Zoning_setbackdistance
+Assessment_Subparcels_otherassessment,,sf_leased,
+Assessment_Subparcels_totalassessment,,sf_size_max,
+Assessment_Subparcels_taxingauthority,,sf_size_min,
+Assessment_Subparcels_taxyear,,shadow_anchors,
+Assessment_Subparcels_taxratecode,,shalcommunityfee,
+Assessment_Subparcels_taxrate,,shalentryfee,
+Assessment_Subparcels_taxrateper,,shaloccupancypercentage,
+Assessment_Subparcels_basetaxes,,shalsecondpersonfeemonthly,
+Assessment_Subparcels_specialassessments,,shalunitcount,
+Assessment_Subparcels_taxes,,shape,Sites_shape
+Assessment_Subparcels_marketvalue,,shcaretypecomments,
+Assessment_Subparcels_equalizationratio,,shilcommunityfee,
+Assessment_Subparcels_impliedvalue,,shilentryfee,
+Assessment_Subparcels_isdeleted,,shilunitcount,
+,,shmccommunityfee,
+,,shmcentryfee,
+,,shmcoccupancypercentage,
+,,shmcsecondpersonfeemonthly,
+,,shmcunitcount,
+,,shothercommunityfee,
+,,shotherentryfee,
+,,shotheroccupancypercentage,
+,,shothersecondpersonfeemonthly,
+,,shotherunitcount,
+,,shpayormedicaidpercentage,
+,,shpayormedicarepercentage,
+,,shpayorotherpercentage,
+,,shpayorprivatepaypercentage,
+,,shpayorvapercentage,
+,,shsncommunityfee,
+,,shsnentryfee,
+,,shsnoccupancypercentage,
+,,shsnsecondpersonfeemonthly,
+,,shsnunitcount,
+,,side_yard_distance,Zoning_sideyarddistance
+,,site_acres,Sites_wasteacres
+,,site_area_id,
+,,site_comments,
+,,site_dimensions,
+,,site_drainage,
+,,site_id,
+,,site_landscaping,Improvement_Subrecords_landscaping
+,,site_topography,Sites_topography
+,,site_utilities,
+,,site_views,
+,,site_visibility,Sites_visibility
+,,size_sq_meters,
+,,sizem2,
+,,soil_type,Sites_soiltype
+,,source_system,
+,,south_boundary,Parcel_southboundary
+,,space_finish,
+,,special_assessments,Assessment_specialassessments
+,,sprinkler_type,Improvement_Subrecords_sprinklers
+,,sprinklers_id,Improvement_Subrecords_sprinklersid
+,,square_feet,
+,,state,Parcel_state
+,,status,
+,,storage_fee,
+,,student_teacher_ratio,
+,,sub_type,
+,,submarket,Parcel_submarket
+,,suite,
+,,suite_number,
+,,supporting_files,Parcel_supportingfiles
+,,tax_id,Assessment_taxid
+,,tax_rate,Assessment_taxrate
+,,taxing_authority,Assessment_taxingauthority
+,,tenant,
+,,tenant_cam,incExp_cam
+,,tenant_name,
+,,tenant_parking,
+,,tenant_profile,
+,,terminal_cap_rate,Sales_terminalcaprate
+,,tertiary_frontage_lf,Sites_tertiaryfrontagelf
+,,tertiary_frontage_st,Sites_tertiaryfrontagest
+,,tertiary_traffic_count,
+,,tillable_acres,Sites_tillableacres
+,,time_log_id,
+,,timestamp,
+,,topography,
+,,tos_cap_rate,
+,,tos_effective_age,Sales_toseffectiveage
+,,tos_egim,
+,,tos_noi,Sales_tosnoi
+,,tos_number_of_tenants,
+,,tos_occupancy_rate,Sales_tosoccupancyrate
+,,tos_price_per_rsf,Sales_tospriceperrsf
+,,tos_price_per_useable_acre_land,Sales_tospriceperuseableacreland
+,,tos_price_per_useable_sf_land,Sales_tospriceperuseablesfland
+,,tos_tenancy_type,
+,,tos_vacancy_rate,Sales_tosvacancyrate
+,,tos_weighted_avg_lease_term,
+,,tosweightedaverageleaseterm,
+,,total_assessment,Assessment_totalassessment
+,,total_market_rent,
+,,total_taxes,
+,,townshiprange,Parcel_townshiprange
+,,traffic_count,
+,,traffic_survey_date,
+,,transaction_type,
+,,type_of_contamination,Sales_typeofcontamination
+,,type_or_use_of_space,
+,,unit_category,
+,,unit_count,
+,,unit_depth_ft,
+,,unit_floor,
+,,unit_height_ft,
+,,unit_mix_id,
+,,unit_sf,
+,,unit_type,
+,,unit_width_ft,
+,,unitdepth,
+,,unitheight,
+,,unitwidth,
+,,updated_at,
+,,updated_by_user_id,
+,,use_mix_id,
+,,use_type,
+,,user_id,
+,,utilities,
+,,utilities_paid_by_owner,
+,,utility_allowance,
+,,vacancy_rate,
+,,vacant_units,
+,,verification_date,
+,,verification_phone,Sales_verificationphone
+,,verification_source,
+,,views,Sites_views
+,,visibility,
+,,waste_acres,
+,,water_frontage,Sites_waterfrontage
+,,west_boundary,Parcel_westboundary
+,,wetland_acres,Sites_wetlandacres
+,,wetlands_type,Sites_wetlandstype
+,,within_flood_plain,Sites_withinfloodplainname
+,,withinfloodplainname,
+,,woodland_acres,Sites_woodlandacres
+,,year_built_numeric,Improvement_yearbuiltnumeric
+,,zip,Parcel_zip
+,,zoned_density,Zoning_zoneddensity
+,,zoning,Zoning_Subrecords_id
+,,zoning_authority,Zoning_Subrecords_authority
+,,zoning_code,Zoning_zoningcode
+,,zoning_designation,
+,,zoning_district,Zoning_district
+,,zoning_id,
+,,zoning_jurisdiction,Zoning_Subrecords_NA_jurisdiction
+,,zoning_notes,
+,,zoning_subrecords_comments,Zoning_comments
+,,zoning_subrecords_district,Zoning_Subrecords_district
+,,zoning_subrecords_summary,Zoning_summary
+,,zoning_subrecords_type,Zoning_type
+,,zoning_summary,
+,,zoning_type,
+,,,Parcel_parcelverificationdata
+,,,Parcel_parcelcomments
+,,,Sales_pricepersf
+,,,Sales_priceperlandsf
+,,,Sales_pricepergbameters
+,,,Sales_priceperrameters
+,,,Sales_conditionsofsale
+,,,Sales_landvaluepersf
+,,,Sales_improvementvalue
+,,,Sales_improvementvaluepersf
+,,,Sites_landsf
+,,,Sites_usableacres
+,,,Sites_usablelandsf
+,,,Sites_UnusableAcres
+,,,Sites_UnusableLandSF
+,,,Sites_excessacres
+,,,Sites_excesslandsf
+,,,Sites_SurplusAcres
+,,,Sites_easementacres
+,,,Sites_easementlandsf
+,,,Sites_buildablesf
+,,,Sites_proposedsf
+,,,Improvement_noofofficeunits
+,,,Improvement_gbaoffice
+,,,Improvement_raoffice
+,,,Improvement_percentofficera
+,,,Improvement_noofotherunits
+,,,Improvement_gbaother
+,,,Improvement_raother
+,,,Improvement_gbatotal
+,,,Improvement_ratotal
+,,,Improvement_parkingratiogba
+,,,Improvement_parkingratiora
+,,,Improvement_ffande
+,,,Improvement_improvmentcomments
+,,,Improvement_gbaofficemeters
+,,,Improvement_raofficemeters
+,,,Improvement_gbaothermeters
+,,,Improvement_raothermeters
+,,,Improvement_gbatotalmeters
+,,,incExp_name
+,,,incExp_surveydate
+,,,incExp_financialstype
+,,,incExp_annualrent
+,,,incExp_baserentabatement
+,,,incExp_netparkingincome
+,,,incExp_percentagerent
+,,,incExp_otherincome
+,,,incExp_pgi
+,,,incExp_pgipersf
+,,,incExp_pgiperunit
+,,,incExp_vacancycost
+,,,incExp_vacancy
+,,,incExp_vacancycostpersf
+,,,incExp_vacancycostperunit
+,,,incExp_occupancy
+,,,incExp_egi
+,,,incExp_egipersf
+,,,incExp_egiperunit
+,,,incExp_taxexpense
+,,,incExp_insurance
+,,,incExp_onsitemanagementexp
+,,,incExp_management
+,,,incExp_advertisingandmarketing
+,,,incExp_electricexpense
+,,,incExp_waterexpense
+,,,incExp_sewerexpense
+,,,incExp_gasexpense
+,,,incExp_fuelexpense
+,,,incExp_trashexpense
+,,,incExp_totalutilities
+,,,incExp_buildingrepairs
+,,,incExp_otherrepairs
+,,,incExp_repairsandmaintenance
+,,,incExp_paintinganddecorating
+,,,incExp_generalandadministrative2
+,,,incExp_cleaning
+,,,incExp_managerleasingsalaries
+,,,incExp_maintenancesalaries
+,,,incExp_othersalaries
+,,,incExp_payrolltaxes
+,,,incExp_payrolltotal
+,,,incExp_groundsandsecurity
+,,,incExp_professionalservicesexp
+,,,incExp_generalandadministrative
+,,,incExp_nonrevenueunits
+,,,incExp_otherexpenses
+,,,incExp_reserves
+,,,incExp_deductreserves
+,,,incExp_expleasingcommissions
+,,,incExp_exptenantimprovements
+,,,incExp_GroundRentExp
+,,,incExp_totalexpenses
+,,,incExp_ExpensePerSF
+,,,incExp_ExpensePerUnit
+,,,incExp_expenseratio
+,,,incExp_noi
+,,,incExp_noipersf
+,,,incExp_noiperbed
+,,,incExp_noipergbam2
+,,,incExp_noiperrasf
+,,,incExp_noiperunit
+,,,incExp_noiperusablesf
+,,,Saleinfo_NIM
+,,,incExp_comments
+,,,Assessment_improvementassessment
+,,,Assessment_taxyear
+,,,Assessment_taxratecode
+,,,Assessment_taxrateper
+,,,Assessment_taxes
+,,,Assessment_marketvalue
+,,,Assessment_taxespersfgba
+,,,Assessment_taxesperra
+,,,Assessment_taxesperunit
+,,,Assessment_taxesperlandsf
+,,,Assessment_taxesperacre
+,,,Assessment_taxesperlandunit
+,,,Assessment_taxespergbam2
+,,,Assessment_taxesperram2
+,,,Assessment_taxesperhectares
+,,,Assessment_taxesperlandm2
+,,,Assessment_assessmentcomments
+,,,Assessment_assessorwebsite
+,,,Assessment_historicalassessedvalue1
+,,,Assessment_historicalassessedvalue2
+,,,Assessment_historicalassessedvalue3
+,,,Assessment_historicalassessedvalue4
+,,,Assessment_historicalimprovvalue1
+,,,Assessment_historicalimprovvalue2
+,,,Assessment_historicalimprovvalue3
+,,,Assessment_historicalimprovvalue4
+,,,Assessment_historicallandvalue1
+,,,Assessment_historicallandvalue2
+,,,Assessment_historicallandvalue3
+,,,Assessment_historicallandvalue4
+,,,Assessment_historicaltaxes1
+,,,Assessment_historicaltaxes2
+,,,Assessment_historicaltaxes3
+,,,Assessment_historicaltaxes4
+,,,Assessment_historicalyear1
+,,,Assessment_historicalyear2
+,,,Assessment_historicalyear3
+,,,Assessment_historicalyear4
+,,,Assessment_Subparcels OLD_impliedvalue
+,,,Zoning_Subrecords_Zoningid
+,,,Zoning_Subrecords_zoning
+,,,Zoning_Subrecords_zoneddensity
+,,,Zoning_Subrecords_permitteduses
+,,,Zoning_Subrecords_maxsitecoverage
+,,,Zoning_Subrecords_sideyarddistance
+,,,Zoning_Subrecords_maxbuildheight
+,,,Zoning_Subrecords_ordinancedocument
+,,,Zoning_Subrecords_comments
+,,,Sites_Subparcels_parcelid
+,,,Sites_Subparcels_id
+,,,Sites_Subparcels_identification
+,,,Sites_Subparcels_acres
+,,,Sites_Subparcels_landsf
+,,,Sites_Subparcels_subparcelcomments
+,,,Improvement_Subrecords_NA_parcelId
+,,,Improvement_Subrecords_buildingdescription
+,,,_constructionclassid
+,,,Improvement_Subrecords_constructionclass
+,,,_buildingclassid
+,,,Improvement_Subrecords_buildingclass
+,,,Improvement_Subrecords_perimetersf
+,,,_sourceforsfareaid
+,,,Improvement_Subrecords_sourceforsfarea
+,,,Improvement_Subrecords_noofofficeunits
+,,,Improvement_Subrecords_officegba
+,,,Improvement_Subrecords_officera
+,,,Improvement_Subrecords_usablearea
+,,,Improvement_Subrecords_percentofficera
+,,,Improvement_Subrecords_othergba
+,,,Improvement_Subrecords_otherra
+,,,Improvement_Subrecords_landtobuildingratio
+,,,Improvement_Subrecords_noofstories
+,,,Improvement_Subrecords_noofseats
+,,,Improvement_Subrecords_noofgolfholes
+,,,Improvement_Subrecords_designappeal
+,,,Improvement_Subrecords_quality
+,,,Improvement_Subrecords_ffande
+,,,Improvement_Subrecords_yearbuilt
+,,,Improvement_Subrecords_renovations
+,,,Improvement_Subrecords_proportionrenovated
+,,,Improvement_Subrecords_totaleconomiclife
+,,,Improvement_Subrecords_effectiveage
+,,,Improvement_Subrecords_remainingeconomiclife
+,,,Improvement_Subrecords_exteriorwall
+,,,Improvement_Subrecords_basementuseandfinish
+,,,Improvement_Subrecords_basementsize
+,,,Improvement_Subrecords_columnspacing
+,,,Improvement_Subrecords_ceilingheight
+,,,Improvement_Subrecords_roofcover
+,,,Improvement_Subrecords_rooftype
+,,,Improvement_Subrecords_noofelevators
+,,,Improvement_Subrecords_noofescalators
+,,,Improvement_Subrecords_fireplaceorwoodstove
+,,,Improvement_Subrecords_garage
+,,,Improvement_Subrecords_ancillarybuildings
+,,,Improvement_Subrecords_gbaofficemeters
+,,,Improvement_Subrecords_raofficemeters
+,,,Improvement_Subrecords_gbaothermeters
+,,,Improvement_Subrecords_raothermeters
+,,,Improvement_Subrecords_gbatotalmeters
+,,,Improvement_Subrecords_ratotalmeters
+,,,Assessment_Subparcels_id
+,,,Assessment_Subparcels_assessinfoid
+,,,Assessment_Subparcels_
+,,,Assessment_Subparcels_taxid
+,,,Assessment_Subparcels_assessmentyear
+,,,Assessment_Subparcels_landassessment
+,,,Assessment_Subparcels_improvementassessment
+,,,Assessment_Subparcels_otherassessment
+,,,Assessment_Subparcels_totalassessment
+,,,Assessment_Subparcels_taxingauthority
+,,,Assessment_Subparcels_taxyear
+,,,Assessment_Subparcels_taxratecode
+,,,Assessment_Subparcels_taxrate
+,,,Assessment_Subparcels_taxrateper
+,,,Assessment_Subparcels_basetaxes
+,,,Assessment_Subparcels_specialassessments
+,,,Assessment_Subparcels_taxes
+,,,Assessment_Subparcels_marketvalue
+,,,Assessment_Subparcels_equalizationratio
+,,,Assessment_Subparcels_impliedvalue
+,,,Assessment_Subparcels_isdeleted

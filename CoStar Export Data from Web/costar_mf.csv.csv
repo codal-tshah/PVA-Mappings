@@ -1,0 +1,160 @@
+Property
+Property Address
+Property Name
+PropertyID
+Condo
+Collateral Type
+
+property_type_ref
+Property Type
+Secondary Type
+
+Geography
+Market Name
+Submarket Name
+Submarket Cluster
+City
+State
+Zip
+County Name
+Country
+Continent
+Subcontinent
+Closest Transit Stop
+Closest Transit Stop Dist (mi)
+Closest Transit Stop Walk Time (min)
+
+improvement
+Number of Units
+Star Rating
+Building Class
+Building Status
+Month Built
+Year Built
+Year Renovated
+Number of Stories
+Amenities
+Building Park
+Construction Begin
+Construction Material
+Energy Star
+Features
+LEED Certified
+Number of Parking Spaces
+Parking Spaces/Unit
+Style
+Total Buildings
+
+rent_comp
+Avg Unit SF
+Avg Asking/SF
+Avg Asking/Unit
+Avg Concessions %
+Avg Effective/SF
+Avg Effective/Unit
+Vacancy %
+Percent Leased
+Rent Type
+
+unit_mix
+Affordable Type
+% 1-Bed
+% 2-Bed
+% 3-Bed
+% 4-Bed
+% Studios
+Four Bedroom Asking Rent/SF
+Four Bedroom Asking Rent/Unit
+Four Bedroom Avg SF
+Four Bedroom Concessions %
+Four Bedroom Effective Rent/SF
+Four Bedroom Effective Rent/Unit
+Four Bedroom Vacancy %
+Four Bedroom Vacant Units
+Number of 1 Bedroom Units
+Number of 2 Bedroom Units
+Number of 3 Bedroom Units
+Number of 4 Bedroom Units
+Number of Studio Units
+One Bedroom Asking Rent/SF
+One Bedroom Asking Rent/Unit
+One Bedroom Avg SF
+One Bedroom Concessions %
+One Bedroom Effective Rent/SF
+One Bedroom Effective Rent/Unit
+One Bedroom Vacancy %
+One Bedroom Vacant Units
+Studio Asking Rent/SF
+Studio Asking Rent/Unit
+Studio Avg SF
+Studio Concessions %
+Studio Effective Rent/SF
+Studio Effective Rent/Unit
+Studio Vacancy %
+Studio Vacant Units
+Three Bedroom Asking Rent/SF
+Three Bedroom Asking Rent/Unit
+Three Bedroom Avg SF
+Three Bedroom Concessions %
+Three Bedroom Effective Rent/SF
+Three Bedroom Effective Rent/Unit
+Three Bedroom Vacancy %
+Three Bedroom Vacant Units
+Two Bedroom Asking Rent/SF
+Two Bedroom Asking Rent/Unit
+Two Bedroom Avg SF
+Two Bedroom Concessions %
+Two Bedroom Effective Rent/SF
+Two Bedroom Effective Rent/Unit
+Two Bedroom Vacancy %
+Two Bedroom Vacant Units
+
+sale_comp
+For Sale Price
+Cap Rate
+For Sale Price Per Unit
+For Sale Price Per SF
+Interest Rate
+Interest Rate Type
+Loan Type
+Maturity Date
+Origination Amount
+Origination Date
+
+company_contacts
+Sale Company Name
+Sale Company Address
+Sale Company City State Zip
+Sale Company Phone
+Sale Company Fax
+Sale Company Contact
+Architect Name
+Developer Name
+Fund Name
+Originator
+Owner Contact
+Owner Name
+Property Manager Address
+Property Manager City State Zip
+Property Manager Contact
+Property Manager Name
+Property Manager Phone
+Sales Company
+Sales Contact
+Sales Contact Phone
+
+site
+Fema Flood Zone
+FEMA Map Date
+FEMA Map Identifier
+FIRM ID
+FIRM Panel Number
+Flood Risk Area
+Floodplain Area
+In SFHA
+Land Area (AC)
+Land Area (SF)
+
+property_zoning
+Zoning
+```

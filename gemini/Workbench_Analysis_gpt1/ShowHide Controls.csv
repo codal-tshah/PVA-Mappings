@@ -1,0 +1,59 @@
+Named Range,Reference
+AppraisalSummary_ShowHideSource,'Appraisal Summary'!$B$13
+Assessment_ShowHideDBColumns,Assessment!$F$52
+ExpenseGrid_ShowHideMultiUseRows,'Expense Grid'!$B$31
+FileInfo_ShowHideAnalytics,'File Info'!$I$79
+FileInfo_ShowHideCostApproach,'File Info'!$I$69
+FileInfo_ShowHideDCF,'File Info'!$I$77
+FileInfo_ShowHideIncomeApproach,'File Info'!$I$75
+FileInfo_ShowHideSalesApproach,'File Info'!$I$71
+FileInfo_ShowHideSalesGrid,'File Info'!$I$73
+LandGrid_ShowHideCompSections,'Land Grid'!$CR$517
+LandGrid_ShowHideExtraAdjustmentRows,'Land Grid'!$B$56
+LandGrid_ShowHideMarketTrends,'Land Grid'!$B$41
+LandGrid_ShowHidePriceAdj,'Land Grid'!$B$27
+LandGrid_ShowHideThumbnails,'Land Grid'!$U$13
+LeaseGrid_ShowHideSections,'Lease Grid'!$FF$1102
+LeaseGrid_ShowHideThumbnails,'Lease Grid'!$R$13
+LeaseGrid_ShowHideUnitFeaturesProjectAmenities,'Lease Grid'!$ED$987
+pvaSH_Cost_ShowHide,'Cost Approach Setup'!$G$13
+SalesGrid_ShowHideCompSections,'Sales Grid'!$FX$661
+SalesGrid_ShowHideExtraAdjustmentRows,'Sales Grid'!$B$55
+SalesGrid_ShowHideMarketTrends,'Sales Grid'!$B$40
+SalesGrid_ShowHideMultiUseRows,'Sales Grid'!$CV$505
+SalesGrid_ShowHidePriceAdj,'Sales Grid'!$B$27
+SalesGrid_ShowHideThumbnails,'Sales Grid'!$R$13
+SalesGrid_ShowHideUnitFeaturesProjectAmenities,'Sales Grid'!$FA$566
+Scope_ShowHideCost,Scope!$H$70
+Scope_ShowHideIncome,Scope!$H$86
+Scope_ShowHideSales,Scope!$H$76
+Scope_ShowHideSalesGrid,Scope!$H$82
+Z_Contracts_ExportTransaction_ShowHide,"'Contracts, History'!$Q$36"
+Z_Contracts_Transaction_ShowHide,"'Contracts, History'!$Q$11"
+Z_Dates_Extraordinary_ShowHide,"'Dates, Premises'!$Q$47"
+Z_Dates_Hypothetical_ShowHide,"'Dates, Premises'!$Q$36"
+Z_Dates_PriorServices_ShowHide,"'Dates, Premises'!$Q$58"
+Z_FileInfo_AppraisalFirm_ShowHide,'File Info'!$M$319
+Z_FileInfo_Appraiser2_ShowHide,'File Info'!$M$346
+Z_FileInfo_Client2Info_ShowHide,'File Info'!$M$190
+Z_FileInfo_FirstAppraiser_ShowHide,'File Info'!$M$273
+Z_FileInfo_PropertyContact_ShowHide,'File Info'!$M$236
+Z_FileInfo_ShowHide,'File Info'!$M$29
+Z_FileInfo_Styles_ShowHide,'File Info'!$M$50
+Z_Improvements_Amenities_ShowHide,Improvements!$EL$503
+Z_Improvements_Buildings_ShowHide,Improvements!$AN$54
+Z_Improvements_Foundation_ShowHide,Improvements!$AN$138
+Z_Improvements_Interior_ShowHide,Improvements!$AN$162
+Z_Improvements_MechanicalSystems_ShowHide,Improvements!$AN$176
+Z_Improvements_MFInv_ShowHide,Improvements!$DO$465
+Z_Improvements_Overall_ShowHide,Improvements!$AN$15
+Z_Improvements_Residential_ShowHide,Improvements!$AN$193
+Z_Methodology_ShowHide,Scope!$J$67
+Z_ReportType_ShowHide,Scope!$J$23
+Z_Scope_ShowHide,Scope!$J$10
+Z_ScopeOfWork_ShowHide,Scope!$J$44
+Z_Site_Agricultural_ShowHide,Site!$AY$135
+Z_Values_AsComplete_ShowHide,Values!$N$29
+Z_Values_AsStabilized_ShowHide,Values!$N$13
+Z_Values_InsurableValue_ShowHide,Values!$N$61
+Z_ZoningData_ShowHide,Zoning!$AL$15

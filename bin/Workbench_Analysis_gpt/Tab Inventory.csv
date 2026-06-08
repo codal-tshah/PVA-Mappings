@@ -1,0 +1,21 @@
+Tab Name,Category,Purpose,Input / Calc / Output,Notes,Visibility,Tab Color
+File Info,Uncategorized,Auto-extracted,,,visible,FF333F50
+Settings,Uncategorized,Auto-extracted,,,visible,FF333F50
+"Dates, Premises",Uncategorized,Auto-extracted,,,visible,FF333F50
+"Contracts, History",Uncategorized,Auto-extracted,,,visible,FF333F50
+Scope,Uncategorized,Auto-extracted,,,visible,FF333F50
+Site,Uncategorized,Auto-extracted,,,visible,FFCDE2EA
+Zoning,Uncategorized,Auto-extracted,,,visible,FFCDE2EA
+Improvements,Uncategorized,Auto-extracted,,,visible,FFCDE2EA
+Assessment,Uncategorized,Auto-extracted,,,visible,FFCDE2EA
+Land Grid,Uncategorized,Auto-extracted,,,visible,FF92D050
+Land Valuation,Uncategorized,Auto-extracted,,,visible,FF92D050
+Land Comp Profiles,Uncategorized,Auto-extracted,,,visible,FF92D050
+Cost Approach Setup,Uncategorized,Auto-extracted,,,visible,Values must be of type <class 'str'>
+Sales Grid,Uncategorized,Auto-extracted,,,visible,FF005199
+Sales Approach,Uncategorized,Auto-extracted,,,visible,FF005199
+Sale Comp Profiles,Uncategorized,Auto-extracted,,,visible,FF005199
+Income Approach Setup,Uncategorized,Auto-extracted,,,visible,FFEDC65A
+Rent Roll Input,Uncategorized,Auto-extracted,,,visible,FFEDC65A
+Rent Roll Config,Uncategorized,Auto-extracted,,,visible,FFEDC65A
+Lease Grid,Uncategorized,Auto-extracted,,,visible,FFEDC65A

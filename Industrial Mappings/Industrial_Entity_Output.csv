@@ -1,0 +1,857 @@
+Entity,Semantic Concept,Updated ERD Field Names,CoStar Source Fields,GreenST market data,Trepp Fields,Match Type
+property_type_ref,property_class_name,major_type,,Property Class Name,,full
+property_type_ref,property_type,property_type,Property Type,Property Type,,full
+property_type_ref,is_active,is_active,,,,partial
+property_type_ref,property_subtype,sub_type,,,,partial
+property_type_ref,typeid,property_type_id,,,,unmatched
+Geography,city_name,,City,,city,full
+Geography,county_name,,County Name,,county,full
+Geography,geography_code,geo_code,,Geography Code,,full
+Geography,lat_centroid,lat_centroid,,,latitude,full
+Geography,lng_centroid,lng_centroid,,,longitude,full
+Geography,median_household_income,median_hh_income,,Median Household Income,,full
+Geography,metro_name,,,CBSA Code,msa | msaname,full
+Geography,population_count,population,,Population,,full
+Geography,postal_code,,Zip,,zip,full
+Geography,property_name,geo_name,,Geography Name,,full
+Geography,property_type,geo_type,,Geography Type,,full
+Geography,state_code,,State,,state,full
+Geography,comm_vacancy_rate,vacancy_rate,,,,partial
+Geography,continentname,,Continent,,,partial
+Geography,country_name,,Country,,,partial
+Geography,created_by_user_id,created_by_user_id,,,,partial
+Geography,date_updated,updated_at,,,,partial
+Geography,ingestion_timestamp,created_at,,,,partial
+Geography,median_home_value,median_home_value,,,,partial
+Geography,parent_geo_id,parent_geo_id,,,,partial
+Geography,property_address,,,,address,partial
+Geography,property_id,geography_id,,,,partial
+Geography,submarket_name,,Submarket Name,,,partial
+Geography,updated_by_user_id,updated_by_user_id,,,,partial
+Geography,avgaskingrentsf,avg_asking_rent_sf,,,,unmatched
+Geography,avgcaprate,avg_cap_rate,,,,unmatched
+Geography,boundarycomments,boundary_comments,,,,unmatched
+Geography,eastboundary,east_boundary,,,,unmatched
+Geography,households,,,Households,,unmatched
+Geography,industrialemployment,,,Industrial Employment,,unmatched
+Geography,northboundary,north_boundary,,,,unmatched
+Geography,officeemployment,,,Office Employment,,unmatched
+Geography,opportunityzone,opportunity_zone,,,,unmatched
+Geography,southboundary,south_boundary,,,,unmatched
+Geography,subcontinent,,Subcontinent,,,unmatched
+Geography,submarketcluster,,Submarket Cluster,,,unmatched
+Geography,totalemployment,,,Total Employment,,unmatched
+Geography,westboundary,west_boundary,,,,unmatched
+Property,property_address,address,Property Address,,,full
+Property,property_id,property_id | parcel_id | geography_id,PropertyID,,property_id | file_id,full
+Property,property_name,name,Property Name,,property_name,full
+Property,appraisal_usage,appraisal_usage,,,,partial
+Property,calc_occ_rate,,,,occupancy | stmt_occ_rate | mr_occ_rate | calc_occ_rate,partial
+Property,construction_date,,,,year_built,partial
+Property,created_by_user_id,created_by_user_id,,,,partial
+Property,custom_fields,custom_fields,,,,partial
+Property,date_updated,updated_at,,,,partial
+Property,gross_building_area,,,,prop_sqft | stmt_sqft,partial
+Property,ingestion_timestamp,created_at,,,,partial
+Property,lat_centroid,lat,,,,partial
+Property,lng_centroid,lng,,,,partial
+Property,month_renovated,,,,year_renovated,partial
+Property,number_of_units,,,,prop_units | stmt_units,partial
+Property,occupancy_date,,,,occupancy_date,partial
+Property,parcel_appraisalfile,appraisal_file,,,,partial
+Property,parcel_owner,owner,,,,partial
+Property,property_subtype,,,,propertysubtype | propertysubtype2,partial
+Property,property_type,,,,property_type,partial
+Property,updated_by_user_id,updated_by_user_id,,,,partial
+Property,bloombergname,,,,prop_bloomberg_name,unmatched
+Property,collateraltype,,Collateral Type,,,unmatched
+Property,comments,parcel_comments,,,,unmatched
+Property,condo,,Condo,,,unmatched
+Property,floorarearatio,floor_area_ratio,,,,unmatched
+Property,haslabspace,,Has Lab Space,,,unmatched
+Property,isgroundlease,is_ground_lease,,,,unmatched
+Property,lightboxcreatedby,lightbox_created_by,,,,unmatched
+Property,lightboxid,lightbox_id,,,,unmatched
+Property,lightboxtimestamp,lightbox_timestamp,,,,unmatched
+Property,otherdbrefs,other_db_refs,,,,unmatched
+Property,readyforuse,ready_for_use,,,,unmatched
+Property,supportingfiles,supporting_files,,,,unmatched
+Property,typeid,property_type_id,,,,unmatched
+Property,verificationdata,parcel_verification_data,,,,unmatched
+school_district,date_updated,updated_at,,,,partial
+school_district,district_name,district_name,,,,partial
+school_district,ingestion_timestamp,created_at,,,,partial
+school_district,property_id,geography_id,,,,partial
+school_district,districturl,district_url,,,,unmatched
+school_district,enrollment,enrollment,,,,unmatched
+school_district,perpupilspending,per_pupil_spending,,,,unmatched
+school_district,schooldistrictid,school_district_id,,,,unmatched
+school_district,studentteacherratio,student_teacher_ratio,,,,unmatched
+project,building_status,status,,,,partial
+project,client_name,client_name,,,,partial
+project,created_by_user_id,created_by_user_id,,,,partial
+project,ingestion_timestamp,created_at,,,,partial
+project,project_id,project_id,,,,partial
+project,project_name,project_name,,,,partial
+project,property_type,,,,stmt_type,partial
+project,source_system,,,,source,partial
+project,statementid,,,,statement_id,unmatched
+project_property,ingestion_timestamp,added_at,,,,partial
+project_property,project_id,project_id,,,,partial
+project_property,property_id,property_id,,,,partial
+project_property,assignedtouserid,assigned_to_user_id,,,,unmatched
+project_property,projectpropertyid,project_property_id,,,,unmatched
+site,fema_flood_zone,flood_zone,Fema Flood Zone,,,full
+site,fema_map_date,fema_map_date,FEMA Map Date,,,full
+site,fema_map_identifier,flood_map_panel,FEMA Map Identifier | FIRM ID | FIRM Panel Number,,,full
+site,allowable_units,allowable_units | land_units,,,,partial
+site,created_by_user_id,created_by_user_id,,,,partial
+site,custom_fields,custom_fields,,,,partial
+site,date_updated,updated_at,,,,partial
+site,ingestion_timestamp,created_at,,,,partial
+site,land_use,land_use,,,,partial
+site,median_home_value,median_home_value,,,,partial
+site,median_household_income,median_household_income,,,,partial
+site,property_id,property_id,,,,partial
+site,site_acres,site_acres | land_sf,,,,partial
+site,updated_by_user_id,updated_by_user_id,,,,partial
+site,access,access,,,,unmatched
+site,allowablefloorareasf,allowable_floor_area_sf,,,,unmatched
+site,allutilitiestosite,all_utilities_to_site,,,,unmatched
+site,areainfloodzone,area_in_flood_zone,,,,unmatched
+site,buildablesf,buildable_sf,,,,unmatched
+site,corner,corner,,,,unmatched
+site,demographicssurveydate,demographics_survey_date,,,,unmatched
+site,depth,depth,,,,unmatched
+site,earthquakehazardrisk,earthquake_hazard_risk,,,,unmatched
+site,earthquakezonecomments,earthquake_zone_comments,,,,unmatched
+site,effectivewaterfrontage,effective_water_frontage,,,,unmatched
+site,encumbranceoreasement,encumbrance_or_easement,,,,unmatched
+site,environmentalissues,environmental_issues,,,,unmatched
+site,floodplainarea,,Floodplain Area,,,unmatched
+site,floodriskarea,,Flood Risk Area,,,unmatched
+site,gas,,Gas,,,unmatched
+site,homesiteacres,home_site_acres,,,,unmatched
+site,insfha,,In SFHA,,,unmatched
+site,landarea(ac),,Land Area (AC),,,unmatched
+site,landarea(sf),,Land Area (SF),,,unmatched
+site,landhectares,land_hectares,,,,unmatched
+site,landsquaremeters,land_square_meters,,,,unmatched
+site,landunitapprovedorzoned,land_unit_approved_or_zoned,,,,unmatched
+site,landunittype,land_unit_type,,,,unmatched
+site,numberofparcels,number_of_parcels,,,,unmatched
+site,osedsf,proposed_sf,,,,unmatched
+site,osedunits,proposed_units,,,,unmatched
+site,otheracres,other_acres,,,,unmatched
+site,percenttillable,percent_tillable,,,,unmatched
+site,percentwetlands,percent_wetlands,,,,unmatched
+site,primaryfrontagelf,primary_frontage_lf,,,,unmatched
+site,primaryfrontagest,primary_frontage_st,,,,unmatched
+site,productivityindex,productivity_index,,,,unmatched
+site,railservice,rail_service,,,,unmatched
+site,roadfrontage,road_frontage,,,,unmatched
+site,secondaryfrontagelf,secondary_frontage_lf,,,,unmatched
+site,secondaryfrontagest,secondary_frontage_st,,,,unmatched
+site,secondarytrafficcount,secondary_traffic_count,,,,unmatched
+site,sewer,,Sewer,,,unmatched
+site,shape,shape,,,,unmatched
+site,sitecomments,site_comments,,,,unmatched
+site,sitedimensions,site_dimensions,,,,unmatched
+site,sitedrainage,site_drainage,,,,unmatched
+site,siteid,site_id,,,,unmatched
+site,sitetopography,site_topography,,,,unmatched
+site,siteutilities,site_utilities,,,,unmatched
+site,siteviews,site_views,,,,unmatched
+site,sitevisibility,site_visibility,,,,unmatched
+site,soiltype,soil_type,,,,unmatched
+site,tertiaryfrontagelf,tertiary_frontage_lf,,,,unmatched
+site,tertiaryfrontagest,tertiary_frontage_st,,,,unmatched
+site,tertiarytrafficcount,tertiary_traffic_count,,,,unmatched
+site,tillableacres,tillable_acres,,,,unmatched
+site,trafficcount,traffic_count,,,,unmatched
+site,trafficsurveydate,traffic_survey_date,,,,unmatched
+site,wasteacres,waste_acres,,,,unmatched
+site,water,,Water,,,unmatched
+site,waterfrontage,water_frontage,,,,unmatched
+site,wetlandacres,wetland_acres,,,,unmatched
+site,wetlandstype,wetlands_type,,,,unmatched
+site,withinfloodplain,within_flood_plain,,,,unmatched
+site,woodlandacres,woodland_acres,,,,unmatched
+site_area_breakdown,gross_building_area,square_feet,,,,partial
+site_area_breakdown,site_acres,site_acres,,,,partial
+site_area_breakdown,areacategory,area_category,,,,unmatched
+site_area_breakdown,siteareaid,site_area_id,,,,unmatched
+site_area_breakdown,siteid,site_id,,,,unmatched
+improvement,columnspacing,column_spacing,Column Spacing,,,full
+improvement,construction_date,year_built,Year Built,,year_built,full
+improvement,features,building_features,Features,,,full
+improvement,gross_building_area,gba_total | gross_building_area,RBA,Inventory SF,prop_sqft,full
+improvement,month_renovated,,Year Renovated | Month Renovated,,year_renovated,full
+improvement,number_of_stories,no_of_stories,Number of Stories,,,full
+improvement,number_of_units,no_of_units,,,prop_units,full
+improvement,building_status,,Building Status,,,partial
+improvement,calc_occ_rate,,,,occupancy,partial
+improvement,construction_class,construction_class | construction_type,,,,partial
+improvement,created_by_user_id,created_by_user_id,,,,partial
+improvement,custom_fields,custom_fields,,,,partial
+improvement,date_updated,updated_at,,,,partial
+improvement,description,building_description,,,,partial
+improvement,improvement_id,improvement_id,,,,partial
+improvement,ingestion_timestamp,created_at,,,,partial
+improvement,no_of_parking_spaces,,Number of Parking Spaces,,,partial
+improvement,number_of_bathrooms,no_of_bathrooms,,,,partial
+improvement,number_of_bedrooms,no_of_beds | no_of_bedrooms,,,,partial
+improvement,number_of_rooms,no_of_rooms,,,,partial
+improvement,occupancy_date,,,,occupancy_date,partial
+improvement,property_class_name,building_class,,,,partial
+improvement,property_id,property_id | parcel_id | id,,,,partial
+improvement,updated_by_user_id,updated_by_user_id,,,,partial
+improvement,amenities,building_amenities,,,,unmatched
+improvement,ancillarybuildings,ancillary_buildings,,,,unmatched
+improvement,averagedailyrate,average_daily_rate,,,,unmatched
+improvement,averagerentalrateperkw,,Average Rental Rate Per kW,,,unmatched
+improvement,basementsize,basement_size,,,,unmatched
+improvement,basementuseandfinish,basement_use_and_finish,,,,unmatched
+improvement,capacityavailablekw,,Capacity Available kW,,,unmatched
+improvement,capacitycriticalitkw,,Capacity Critical IT kW,,,unmatched
+improvement,capacitytotalutilitykw,,Capacity Total Utility kW,,,unmatched
+improvement,ceilingheight,ceiling_height,,,,unmatched
+improvement,ceilinght,,Ceiling Ht,,,unmatched
+improvement,clearheight,clear_height,,,,unmatched
+improvement,condition,building_condition,,,,unmatched
+improvement,conditionid,condition_id,,,,unmatched
+improvement,constructionbegin,,Construction Begin,,,unmatched
+improvement,constructionmaterial,,Construction Material,,,unmatched
+improvement,constructionstartssf,,,Construction Starts SF,,unmatched
+improvement,constructionstartssf12mo,,,Construction Starts SF 12 Mo,,unmatched
+improvement,coolingid,cooling_id,,,,unmatched
+improvement,coolingredundancy,,Cooling Redundancy,,,unmatched
+improvement,coolingtype,cooling_type,,,,unmatched
+improvement,coveredparkingspaces,covered_parking_spaces,,,,unmatched
+improvement,coworkingavailablespace,,Coworking Available Space,,,unmatched
+improvement,datacentertier,,Data Center Tier,,,unmatched
+improvement,datacentertype,,Data Center Type,,,unmatched
+improvement,datahallareasf,,Data Hall Area SF,,,unmatched
+improvement,datahallcount,,Data Hall Count,,,unmatched
+improvement,deferredmaintenance,deferred_maintenance,,,,unmatched
+improvement,demolishedsf,,,Demolished SF,,unmatched
+improvement,densitykw/rack,,Density kW/rack,,,unmatched
+improvement,densitykw/sf,,Density kW/SF,,,unmatched
+improvement,designappeal,design_appeal,,,,unmatched
+improvement,driveins,,Drive Ins,,,unmatched
+improvement,effectiveage,effective_age,,,,unmatched
+improvement,electricutility,,Electric Utility,,,unmatched
+improvement,existingbuildings,,,Existing Buildings,,unmatched
+improvement,exteriorwall,exterior_wall,,,,unmatched
+improvement,exteriorwallid,exterior_wall_id,,,,unmatched
+improvement,ffande,ff_and_e,,,,unmatched
+improvement,fireplaceorwoodstove,fireplace_or_woodstove,,,,unmatched
+improvement,foundationid,foundation_id,,,,unmatched
+improvement,foundationtype,foundation_type,,,,unmatched
+improvement,garageparkingspaces,garage_parking_spaces,,,,unmatched
+improvement,garagetype,garage_type,,,,unmatched
+improvement,gbatotalmeters,gba_total_meters,,,,unmatched
+improvement,grossdeliveredbuildings,,,Gross Delivered Buildings,,unmatched
+improvement,grossdeliveredsf,,,Gross Delivered SF,,unmatched
+improvement,heating,,Heating,,,unmatched
+improvement,heatingid,heating_id,,,,unmatched
+improvement,heatingtype,heating_type,,,,unmatched
+improvement,hotelflag,hotel_flag,,,,unmatched
+improvement,improvementcomments,improvement_comments,,,,unmatched
+improvement,industrialgba,industrial_gba,,,,unmatched
+improvement,industrialra,industrial_ra,,,,unmatched
+improvement,labspace(sf),,Lab Space (SF),,,unmatched
+improvement,labspacepercentcomposition,,Lab Space Percent Composition,,,unmatched
+improvement,landtobuildingratio,land_to_building_ratio,,,,unmatched
+improvement,lhoccupancy,lh_occupancy,,,,unmatched
+improvement,loadfactor,load_factor,,,,unmatched
+improvement,maxbuildingcontiguousspace,,Max Building Contiguous Space,,,unmatched
+improvement,multifamilyamenities,multifamily_amenities,,,,unmatched
+improvement,multifamilygba,multifamily_gba,,,,unmatched
+improvement,netdeliveredsf,,,Net Delivered SF,,unmatched
+improvement,netdeliveredsf12mo,,,Net Delivered SF 12 Mo,,unmatched
+improvement,noofbays,no_of_bays,,,,unmatched
+improvement,noofbuildings,no_of_buildings,,,,unmatched
+improvement,noofcraneways,no_of_craneways,,,,unmatched
+improvement,noofdocks,no_of_docks,,,,unmatched
+improvement,noofelevators,no_of_elevators,,,,unmatched
+improvement,noofescalators,no_of_escalators,,,,unmatched
+improvement,noofgolfholes,no_of_golf_holes,,,,unmatched
+improvement,noofhalfbaths,no_of_half_baths,,,,unmatched
+improvement,noofmfbathrooms,no_of_mf_bathrooms,,,,unmatched
+improvement,noofmultifamilybedrooms,no_of_multifamily_bedrooms,,,,unmatched
+improvement,noofmultifamilyrooms,no_of_multifamily_rooms,,,,unmatched
+improvement,noofseats,no_of_seats,,,,unmatched
+improvement,noofspaces,no_of_spaces,,,,unmatched
+improvement,nooftruckdoors,no_of_truck_doors,,,,unmatched
+improvement,nooftruckdoorswithlevelers,no_of_truck_doors_with_levelers,,,,unmatched
+improvement,numberofcranes,,Number of Cranes,,,unmatched
+improvement,numberofloadingdocks,,Number of Loading Docks,,,unmatched
+improvement,officegba,office_gba,,,,unmatched
+improvement,officera,office_ra,,,,unmatched
+improvement,officespace,,Office Space,,,unmatched
+improvement,ortionrenovated,proportion_renovated,,,,unmatched
+improvement,othergba,other_gba,,,,unmatched
+improvement,otherra,other_ra,,,,unmatched
+improvement,park,,Building Park,,,unmatched
+improvement,parking,parking,,,,unmatched
+improvement,parkingadequacy,parking_adequacy,,,,unmatched
+improvement,parkingadequacyid,parking_adequacy_id,,,,unmatched
+improvement,parkingcomments,parking_comments,,,,unmatched
+improvement,parkingcondition,parking_condition,,,,unmatched
+improvement,parkingconditionid,parking_condition_id,,,,unmatched
+improvement,parkingratio,,Parking Ratio,,,unmatched
+improvement,parkingratiogba,parking_ratio_gba,,,,unmatched
+improvement,parkingratiora,parking_ratio_ra,,,,unmatched
+improvement,parkingratiounit,parking_ratio_unit,,,,unmatched
+improvement,parkingtype,parking_type,,,,unmatched
+improvement,parkingtypeid,parking_type_id,,,,unmatched
+improvement,perimeter,perimeter,,,,unmatched
+improvement,perimetersf,perimeter_sf,,,,unmatched
+improvement,porchordeck,porch_or_deck,,,,unmatched
+improvement,power,,Power,,,unmatched
+improvement,powerredundancy,,Power Redundancy,,,unmatched
+improvement,powerusageeffectiveness,,Power Usage Effectiveness,,,unmatched
+improvement,productsegment,product_segment,,,,unmatched
+improvement,quality,building_quality,,,,unmatched
+improvement,qualityid,quality_id,,,,unmatched
+improvement,raillines,,Rail Lines,,,unmatched
+improvement,ratotal,ra_total,,,,unmatched
+improvement,ratotalmeters,ra_total_meters,,,,unmatched
+improvement,remainingeconomiclife,remaining_economic_life,,,,unmatched
+improvement,renovationsdescription,renovations_description,,,,unmatched
+improvement,rentablearea,rentable_area,,,,unmatched
+improvement,residentialamenities,residential_amenities,,,,unmatched
+improvement,residentialdesign,residential_design,,,,unmatched
+improvement,retailgba,retail_gba,,,,unmatched
+improvement,retailgla,retail_gla,,,,unmatched
+improvement,revpar,rev_par,,,,unmatched
+improvement,roofcover,roof_cover,,,,unmatched
+improvement,roofcoverid,roof_cover_id,,,,unmatched
+improvement,rooftype,roof_type,,,,unmatched
+improvement,rooftypeid,roof_type_id,,,,unmatched
+improvement,sitelandscaping,site_landscaping,,,,unmatched
+improvement,smallestavailablespace,,Smallest Available Space,,,unmatched
+improvement,sourceforsfarea,source_for_sf_area,,,,unmatched
+improvement,sprinklers,,Sprinklers,,,unmatched
+improvement,sprinklersid,sprinklers_id,,,,unmatched
+improvement,sprinklertype,sprinkler_type,,,,unmatched
+improvement,surfaceparkingspaces,surface_parking_spaces,,,,unmatched
+improvement,tenantimprovements,tenant_improvements,,,,unmatched
+improvement,totaleconomiclife,total_economic_life,,,,unmatched
+improvement,typicalbaydepth,typical_bay_depth,,,,unmatched
+improvement,underconstructionbuildings,,,Under Construction Buildings,,unmatched
+improvement,underconstructionsf,,,Under Construction SF,,unmatched
+improvement,usablearea,usable_area,,,,unmatched
+improvement,yearbuiltnumeric,year_built_numeric,,,,unmatched
+property_zoning,created_by_user_id,created_by_user_id,,,,partial
+property_zoning,date_updated,updated_at,,,,partial
+property_zoning,description,notes,,,,partial
+property_zoning,ingestion_timestamp,created_at,,,,partial
+property_zoning,property_id,property_id | id,,,,partial
+property_zoning,updated_by_user_id,updated_by_user_id,,,,partial
+property_zoning,zoning_designation,zoning_code | zoning_district | zoning_designation,,,,partial
+property_zoning,backyarddistance,back_yard_distance,,,,unmatched
+property_zoning,frontsetbackdistance,front_set_back_distance,,,,unmatched
+property_zoning,maxbuildheight,max_build_height,,,,unmatched
+property_zoning,maxsitecoverage,max_site_coverage,,,,unmatched
+property_zoning,minimumlotarea,minimum_lot_area,,,,unmatched
+property_zoning,minlotarea,min_lot_area,,,,unmatched
+property_zoning,ordinancedocument,ordinance_document,,,,unmatched
+property_zoning,ordinancedocumenturl,ordinance_document_url,,,,unmatched
+property_zoning,parkingrequirement,parking_requirement,,,,unmatched
+property_zoning,permitteduses,permitted_uses,,,,unmatched
+property_zoning,rearyarddistance,rear_yard_distance,,,,unmatched
+property_zoning,setbackdistance,setback_distance,,,,unmatched
+property_zoning,sideyarddistance,side_yard_distance,,,,unmatched
+property_zoning,zoneddensity,zoned_density,,,,unmatched
+property_zoning,zoningauthority,zoning_authority,,,,unmatched
+property_zoning,zoningid,property_zoning_id | zoning_id,,,,unmatched
+property_zoning,zoningjurisdiction,zoning_jurisdiction,,,,unmatched
+property_zoning,zoningnotes,zoning_notes,,,,unmatched
+property_zoning,zoningsummary,zoning_summary,,,,unmatched
+property_zoning,zoningtype,zoning_type,,,,unmatched
+time_log,lease_expiration_date,session_end,,,stmt_end_date,full
+time_log,lease_start_date,session_start,,,stmt_begin_date,full
+time_log,data_update_date,,,,data_load_date | data_update_date | stmt_file_date,partial
+time_log,occupancy_date,,,,mr_occdt | calc_occdt,partial
+time_log,project_id,project_id,,,,partial
+time_log,property_id,property_id,,,,partial
+time_log,reporting_year,,,,reporting_year,partial
+time_log,activitydescription,activity_description,,,,unmatched
+time_log,durationseconds,duration_seconds,,,,unmatched
+time_log,timelogid,time_log_id,,,,unmatched
+time_log,userid,user_id,,,,unmatched
+property_assessment,building_tax_expenses,,,,Tax Expense,partial
+property_assessment,created_by_user_id,created_by_user_id,,,,partial
+property_assessment,custom_fields,custom_fields,,,,partial
+property_assessment,date_updated,updated_at,,,,partial
+property_assessment,ingestion_timestamp,created_at,,,,partial
+property_assessment,property_id,property_id,,,,partial
+property_assessment,updated_by_user_id,updated_by_user_id,,,,partial
+property_assessment,assessmentid,property_assessment_id,,,,unmatched
+property_assessment,assessmentyear,assessment_year,,,,unmatched
+property_assessment,basetaxes,base_taxes,,,,unmatched
+property_assessment,equalizationratio,equalization_ratio,,,,unmatched
+property_assessment,impliedvalue,implied_value,,,,unmatched
+property_assessment,improvementassessment,improvement_assessment,,,,unmatched
+property_assessment,landassessment,land_assessment,,,,unmatched
+property_assessment,otherassessment,other_assessment,,,,unmatched
+property_assessment,specialassessments,special_assessments,,,,unmatched
+property_assessment,taxid,tax_id,,,,unmatched
+property_assessment,taxingauthority,taxing_authority,,,,unmatched
+property_assessment,taxrate,tax_rate,,,,unmatched
+property_assessment,totalassessment,total_assessment,,,,unmatched
+property_assessment,totaltaxes,total_taxes,,,,unmatched
+sale_comp,caprate,cap_rate,,Cap Rate,,full
+sale_comp,created_by_user_id,created_by_user_id,,,,partial
+sale_comp,custom_fields,custom_fields,,,,partial
+sale_comp,date_updated,updated_at,,,,partial
+sale_comp,ingestion_timestamp,created_at,,,,partial
+sale_comp,is_active,is_active,,,,partial
+sale_comp,net_operating_income,,,,Net Operating Income,partial
+sale_comp,price_per_foot,price_per_sf,,,,partial
+sale_comp,price_per_unit,price_per_unit | price_per_room,,,,partial
+sale_comp,property_id,sale_comp_id | property_id | id,,,,partial
+sale_comp,source_system,data_source,,,,partial
+sale_comp,total_sale_price,sale_price,,,,partial
+sale_comp,transaction_date,sale_date,,,,partial
+sale_comp,updated_by_user_id,updated_by_user_id,,,,partial
+sale_comp,actualprice,actual_price,,,,unmatched
+sale_comp,adjustmentcomments,adjustment_comments,,,,unmatched
+sale_comp,appraisaldate,appraisal_date,,,,unmatched
+sale_comp,appraisedvalue,appraised_value,,,,unmatched
+sale_comp,assetvalue,,,Asset Value,,unmatched
+sale_comp,averagesaleprice,,,Average Sale Price,,unmatched
+sale_comp,bookpageorrefdoc,book_page_or_ref_doc,,,,unmatched
+sale_comp,businessvalueadjustment,business_value_adjustment,,,,unmatched
+sale_comp,buyertype,buyer_type,,,,unmatched
+sale_comp,capitalvalueindex,,,Capital Value Index,,unmatched
+sale_comp,capratetransactions,,,Cap Rate Transactions,,unmatched
+sale_comp,cleanupcosts,clean_up_costs,,,,unmatched
+sale_comp,conditionsofsale,conditions_of_sale,,,,unmatched
+sale_comp,conditionsofsaleadjustment,conditions_of_sale_adjustment,,,,unmatched
+sale_comp,currentlistprice,current_list_price,,,,unmatched
+sale_comp,currentlppercentdiff,current_lp_percent_diff,,,,unmatched
+sale_comp,currentuse,current_use,,,,unmatched
+sale_comp,daysonmarket,days_on_market,,,,unmatched
+sale_comp,diminutionsource,diminution_source,,,,unmatched
+sale_comp,discountrate,discount_rate,,,,unmatched
+sale_comp,effectivegrossincome,,,,Effective Gross Income,unmatched
+sale_comp,effectivegrossincomemultiplier,effective_gross_income_multiplier,,,,unmatched
+sale_comp,environmentalconcerns,environmental_concerns,,,,unmatched
+sale_comp,environmentalremarks,environmental_remarks,,,,unmatched
+sale_comp,environmentalstatus,environmental_status,,,,unmatched
+sale_comp,excesslandadjustment,excess_land_adjustment,,,,unmatched
+sale_comp,expendituresaftersaleadjustment,expenditures_after_sale_adjustment,,,,unmatched
+sale_comp,expensegrowthrate,expense_growth_rate,,,,unmatched
+sale_comp,ffandeadjustment,ff_and_e_adjustment,,,,unmatched
+sale_comp,financingtermsadjustment,financing_terms_adjustment,,,,unmatched
+sale_comp,financingtype,financing_type,,,,unmatched
+sale_comp,finishcondition,finish_condition,,,,unmatched
+sale_comp,forsalepricepersf,,For Sale Price Per SF,,,unmatched
+sale_comp,granteebuyer,grantee_buyer,,,,unmatched
+sale_comp,grantorseller,grantor_seller,,,,unmatched
+sale_comp,highestandbestuse,highest_and_best_use,,,,unmatched
+sale_comp,holdingperiodyears,holding_period_years,,,,unmatched
+sale_comp,hotelroomrevmultiplier,hotel_room_rev_multiplier,,,,unmatched
+sale_comp,improvementvalue,improvement_value,,,,unmatched
+sale_comp,improvementvaluepersf,improvement_value_per_sf,,,,unmatched
+sale_comp,included,property_included,,,,unmatched
+sale_comp,incomegrowth,income_growth,,,,unmatched
+sale_comp,incomegrowthrate,income_growth_rate,,,,unmatched
+sale_comp,interestrate,,Interest Rate,,,unmatched
+sale_comp,interestratetype,,Interest Rate Type,,,unmatched
+sale_comp,internalcomments,internal_comments,,,,unmatched
+sale_comp,isconfidential,is_confidential,,,,unmatched
+sale_comp,isdeleted,is_deleted,,,,unmatched
+sale_comp,isexcelentry,is_excel_entry,,,,unmatched
+sale_comp,landvalue,land_value,,,,unmatched
+sale_comp,landvaluepersf,land_value_per_sf,,,,unmatched
+sale_comp,legaldescription,legal_description,,,,unmatched
+sale_comp,lendername,lender_name,,,,unmatched
+sale_comp,loantype,,Loan Type,,,unmatched
+sale_comp,marketcaprate,,,Market Cap Rate,,unmatched
+sale_comp,marketsalepricegrowth,,,Market Sale Price Growth,,unmatched
+sale_comp,marketsalepriceindex,,,Market Sale Price Index,,unmatched
+sale_comp,marketsalepricepersf,,,Market Sale Price Per SF,,unmatched
+sale_comp,maturitydate,,Maturity Date,,,unmatched
+sale_comp,mediancaprate,,,Median Cap Rate,,unmatched
+sale_comp,medianprice/bldgsf,,,Median Price/Bldg SF,,unmatched
+sale_comp,netincomemultiplier,net_income_multiplier,,,,unmatched
+sale_comp,operatingexpenseratio,,,,Operating Expense Ratio,unmatched
+sale_comp,originallistprice,original_list_price,,,,unmatched
+sale_comp,originallppercentdiff,original_lp_percent_diff,,,,unmatched
+sale_comp,originationamount,,Origination Amount,,,unmatched
+sale_comp,originationdate,,Origination Date,,,unmatched
+sale_comp,oseduse,proposed_use,,,,unmatched
+sale_comp,otheradjustment,other_adjustment,,,,unmatched
+sale_comp,percentdiminutioninvalue,percent_diminution_in_value,,,,unmatched
+sale_comp,percentstigma,percent_stigma,,,,unmatched
+sale_comp,potentialgrossincomemultiplier,potential_gross_income_multiplier,,,,unmatched
+sale_comp,priceadjustment,price_adjustment,,,,unmatched
+sale_comp,priceperacre,price_per_acre,,,,unmatched
+sale_comp,priceperbay,price_per_bay,,,,unmatched
+sale_comp,priceperbed,price_per_bed,,,,unmatched
+sale_comp,priceperbedroom,price_per_bedroom,,,,unmatched
+sale_comp,priceperbuildablesf,price_per_buildable_sf,,,,unmatched
+sale_comp,priceperfar,price_per_far,,,,unmatched
+sale_comp,pricepergbameters,price_per_gba_meters,,,,unmatched
+sale_comp,priceperlandhectares,price_per_land_hectares,,,,unmatched
+sale_comp,priceperlandsf,price_per_land_sf,,,,unmatched
+sale_comp,priceperlandsqm,price_per_land_sqm,,,,unmatched
+sale_comp,priceperlandunit,price_per_land_unit,,,,unmatched
+sale_comp,pricepermfbedroom,price_per_mf_bedroom,,,,unmatched
+sale_comp,pricepermfroom,price_per_mf_room,,,,unmatched
+sale_comp,priceperprimaryfrontage,price_per_primary_frontage,,,,unmatched
+sale_comp,priceperra,price_per_ra,,,,unmatched
+sale_comp,priceperrameters,price_per_ra_meters,,,,unmatched
+sale_comp,priceperspace,price_per_space,,,,unmatched
+sale_comp,priceperusableacre,price_per_usable_acre,,,,unmatched
+sale_comp,priceperusablelandsf,price_per_usable_land_sf,,,,unmatched
+sale_comp,recordingdate,recording_date,,,,unmatched
+sale_comp,responsibleparty,responsible_party,,,,unmatched
+sale_comp,rights,property_rights,,,,unmatched
+sale_comp,riskprofile,risk_profile,,,,unmatched
+sale_comp,salecomments,sale_comments,,,,unmatched
+sale_comp,salenotes,sale_notes,,,,unmatched
+sale_comp,salesupportingfiles,sale_supporting_files,,,,unmatched
+sale_comp,salesvolumetransactions,,,Sales Volume Transactions,,unmatched
+sale_comp,soldbuildingsf,,,Sold Building SF,,unmatched
+sale_comp,terminalcaprate,terminal_cap_rate,,,,unmatched
+sale_comp,toscaprate,tos_cap_rate,,,,unmatched
+sale_comp,toseffectiveage,tos_effective_age,,,,unmatched
+sale_comp,tosegim,tos_egim,,,,unmatched
+sale_comp,tosnoi,tos_noi,,,,unmatched
+sale_comp,tosnumberoftenants,tos_number_of_tenants,,,,unmatched
+sale_comp,tosoccupancyrate,tos_occupancy_rate,,,,unmatched
+sale_comp,tospriceperrsf,tos_price_per_rsf,,,,unmatched
+sale_comp,tospriceperuseableacreland,tos_price_per_useable_acre_land,,,,unmatched
+sale_comp,tospriceperuseablesfland,tos_price_per_useable_sf_land,,,,unmatched
+sale_comp,tostenancytype,tos_tenancy_type,,,,unmatched
+sale_comp,tosvacancyrate,tos_vacancy_rate,,,,unmatched
+sale_comp,tosweightedavgleaseterm,tos_weighted_avg_lease_term,,,,unmatched
+sale_comp,totalsalestransactions,,,Total Sales Transactions,,unmatched
+sale_comp,totalsalesvolume,,,Total Sales Volume,,unmatched
+sale_comp,transactionsaleprice/sf,,,Transaction Sale Price/SF,,unmatched
+sale_comp,transactiontype,transaction_type,,,,unmatched
+sale_comp,typeofcontamination,type_of_contamination,,,,unmatched
+sale_comp,verificationdate,verificationdate,,,,unmatched
+sale_comp,verificationphone,verification_phone,,,,unmatched
+sale_comp,verificationsource,verification_source,,,,unmatched
+commercial_survey,calc_occ_rate,,Percent Leased,Occupancy Rate,stmt_occ_rate | mr_occ_rate | calc_occ_rate,full
+commercial_survey,comm_vacancy_rate,comm_vacancy_rate,,Vacancy Rate,,full
+commercial_survey,lease_type,comm_lease_type,,,,partial
+commercial_survey,property_id,property_id | id,,,,partial
+commercial_survey,tenant_name,tenant_name,,,,partial
+commercial_survey,allservicetyperentdirect,,,All Service Type Rent Direct,,unmatched
+commercial_survey,allservicetyperentoverall,,,All Service Type Rent Overall,,unmatched
+commercial_survey,allservicetyperentsublet,,,All Service Type Rent Sublet,,unmatched
+commercial_survey,anchortenants,anchor_tenants,,,,unmatched
+commercial_survey,availabilityrate,,,Availability Rate,,unmatched
+commercial_survey,availabilityrate%direct,,,Availability Rate % Direct,,unmatched
+commercial_survey,availabilityrate%sublet,,,Availability Rate % Sublet,,unmatched
+commercial_survey,availablesfdirect,,,Available SF Direct,,unmatched
+commercial_survey,availablesfsublet,,,Available SF Sublet,,unmatched
+commercial_survey,availablesftotal,,,Available SF Total,,unmatched
+commercial_survey,averageweightedrent,,Average Weighted Rent,,,unmatched
+commercial_survey,avgrentdirect(industrial),,Avg Rent-Direct (Industrial),,,unmatched
+commercial_survey,avgrentsublet(industrial),,Avg Rent-Sublet (Industrial),,,unmatched
+commercial_survey,demandsf,,,Demand SF,,unmatched
+commercial_survey,directavailablespace,,Direct Available Space,,,unmatched
+commercial_survey,directservices,,Direct Services,,,unmatched
+commercial_survey,directvacantspace,,Direct Vacant Space,,,unmatched
+commercial_survey,ercialsurveyid,commercial_survey_id,,,,unmatched
+commercial_survey,instancetype,instance_type,,,,unmatched
+commercial_survey,isconfidential,is_confidential,,,,unmatched
+commercial_survey,leasecomments,comm_lease_comments,,,,unmatched
+commercial_survey,leasenotes,comm_lease_notes,,,,unmatched
+commercial_survey,leasesurveydate,comm_lease_survey_date,,,,unmatched
+commercial_survey,leaseterms,comm_lease_terms,,,,unmatched
+commercial_survey,leasingsfdirect,,,Leasing SF Direct,,unmatched
+commercial_survey,leasingsfsublet,,,Leasing SF Sublet,,unmatched
+commercial_survey,leasingsftotal,,,Leasing SF Total,,unmatched
+commercial_survey,marketrent/sf,,,Market Rent/SF,,unmatched
+commercial_survey,marketrentgrowth,,,Market Rent Growth,,unmatched
+commercial_survey,marketrentgrowth12mo,,,Market Rent Growth 12 Mo,,unmatched
+commercial_survey,marketrentindex,,,Market Rent Index,,unmatched
+commercial_survey,netabsorptionsf,,,Net Absorption SF,,unmatched
+commercial_survey,netabsorptionsf12mo,,,Net Absorption SF 12 Mo,,unmatched
+commercial_survey,netabsorptionsfdirect,,,Net Absorption SF Direct,,unmatched
+commercial_survey,netabsorptionsfsublet,,,Net Absorption SF Sublet,,unmatched
+commercial_survey,nnnrentdirect,,,NNN Rent Direct,,unmatched
+commercial_survey,nnnrentoverall,,,NNN Rent Overall,,unmatched
+commercial_survey,nnnrentsublet,,,NNN Rent Sublet,,unmatched
+commercial_survey,nooftenants,no_of_tenants,,,,unmatched
+commercial_survey,rentconcessions,comm_rent_concessions,,,,unmatched
+commercial_survey,rentescalations,rent_escalations,,,,unmatched
+commercial_survey,rentpersfmax,comm_rent_per_sf_max,,,,unmatched
+commercial_survey,rentpersfmin,comm_rent_per_sf_min,,,,unmatched
+commercial_survey,rentpersfpermomax,rent_per_sf_per_mo_max,,,,unmatched
+commercial_survey,rentpersfpermomin,rent_per_sf_per_mo_min,,,,unmatched
+commercial_survey,rentrollsummarycommleasenotes,rent_roll_summary_commleasenotes,,,,unmatched
+commercial_survey,sfleased,sf_leased,,,,unmatched
+commercial_survey,shadowanchors,shadow_anchors,,,,unmatched
+commercial_survey,sizemax,comm_size_max,,,,unmatched
+commercial_survey,sizemin,comm_size_min,,,,unmatched
+commercial_survey,subletavailablespace,,Sublet Available Space,,,unmatched
+commercial_survey,subletservices,,Sublet Services,,,unmatched
+commercial_survey,totalavailablespace(sf),,Total Available Space (SF),,,unmatched
+commercial_survey,vacantavailable%,,,Vacant Available %,,unmatched
+commercial_survey,vacantavailablesfdirect,,,Vacant Available SF Direct,,unmatched
+commercial_survey,vacantavailablesfsublet,,,Vacant Available SF Sublet,,unmatched
+commercial_survey,vacantavailablesftotal,,,Vacant Available SF Total,,unmatched
+commercial_survey,vacantsfdirect,,,Vacant SF Direct,,unmatched
+commercial_survey,vacantsfsublet,,,Vacant SF Sublet,,unmatched
+commercial_survey,vacantsftotal,,,Vacant SF Total,,unmatched
+commercial_survey,verificationsource,comm_verification_source,,,,unmatched
+lease_comp,base_rent_sf,base_rent_sf,,,Base Rent,full
+lease_comp,expense_reimbursements,expense_reimbursements,,,Expense Reimbursements,full
+lease_comp,percent_rent,percent_rent,,,Percent Rent,full
+lease_comp,created_by_user_id,created_by_user_id,,,,partial
+lease_comp,custom_fields,custom_fields,,,,partial
+lease_comp,date_updated,updated_at,,,,partial
+lease_comp,description,notes,,,,partial
+lease_comp,ingestion_timestamp,created_at,,,,partial
+lease_comp,lease_expiration_date,leaseexpiredate,,,,partial
+lease_comp,lease_start_date,leasestartdate,,,,partial
+lease_comp,lease_term_months,lease_term_months,,,,partial
+lease_comp,lease_type,lease_type,,,,partial
+lease_comp,leased_area,unit_sf,,,,partial
+lease_comp,lessor_name,lessor_name,,,,partial
+lease_comp,property_id,lease_comp_id | id,,,,partial
+lease_comp,source_system,data_source,,,,partial
+lease_comp,tenant_name,tenant_name,,,,partial
+lease_comp,updated_by_user_id,updated_by_user_id,,,,partial
+lease_comp,anchortype,anchor_type,,,,unmatched
+lease_comp,baserentpermo,base_rent_per_mo,,,,unmatched
+lease_comp,baserentperyear,base_rent_per_year,,,,unmatched
+lease_comp,baserentsfmo,base_rent_sf_mo,,,,unmatched
+lease_comp,coststofinish,costs_to_finish,,,,unmatched
+lease_comp,currentrentpermo,current_rent_per_mo,,,,unmatched
+lease_comp,effectiverentsf,effective_rent_sf,,,,unmatched
+lease_comp,effectiverentsfmo,effective_rent_sf_mo,,,,unmatched
+lease_comp,effrentpermo,eff_rent_per_mo,,,,unmatched
+lease_comp,effrentperyear,eff_rent_per_year,,,,unmatched
+lease_comp,ercialsurveyid,commercial_survey_id,,,,unmatched
+lease_comp,expensestop,expense_stop,,,,unmatched
+lease_comp,floorlevel,floor_level,,,,unmatched
+lease_comp,freerentmonths,free_rent_months,,,,unmatched
+lease_comp,leasecommencementdate,lease_commencement_date,,,,unmatched
+lease_comp,leaseconcessions,lease_concessions,,,,unmatched
+lease_comp,leaseconditions,lease_conditions,,,,unmatched
+lease_comp,leaseoptions,lease_options,,,,unmatched
+lease_comp,leasesurveydate,comm_lease_survey_date,,,,unmatched
+lease_comp,leasetenantimprovs,lease_tenant_improvs,,,,unmatched
+lease_comp,leasetransactiontype,lease_transaction_type,,,,unmatched
+lease_comp,percentofficeul,percent_office_ul,,,,unmatched
+lease_comp,rentbasis,rent_basis,,,,unmatched
+lease_comp,rentescalations,rent_escalations,,,,unmatched
+lease_comp,rentlastincreased,rent_last_increased,,,,unmatched
+lease_comp,rentpersfpermo,rent_per_sf_per_mo,,,,unmatched
+lease_comp,rentpersqmeter,rent_per_sq_meter,,,,unmatched
+lease_comp,rentpersqmeterpermo,rent_per_sq_meter_per_mo,,,,unmatched
+lease_comp,sizesqmeters,size_sq_meters,,,,unmatched
+lease_comp,spacefinish,space_finish,,,,unmatched
+lease_comp,suitenumber,suite_number,,,,unmatched
+lease_comp,tenantcam,tenant_cam,,,,unmatched
+lease_comp,tenantparking,tenant_parking,,,,unmatched
+lease_comp,typeoruseofspace,type_or_use_of_space,,,,unmatched
+lease_comp,verificationdate,verification_date,,,,unmatched
+lease_comp,verificationsource,verification_source,,,,unmatched
+rent_comp,calc_occ_rate,mf_occupancy,,,,partial
+rent_comp,comm_vacancy_rate,vacancy_rate,,,,partial
+rent_comp,created_by_user_id,created_by_user_id,,,,partial
+rent_comp,custom_fields,custom_fields,,,,partial
+rent_comp,date_updated,updated_at,,,,partial
+rent_comp,ingestion_timestamp,created_at,,,,partial
+rent_comp,property_id,rent_comp_id | property_id | id,,,,partial
+rent_comp,updated_by_user_id,updated_by_user_id,,,,partial
+rent_comp,avgmfunitsize,avg_mf_unit_size,,,,unmatched
+rent_comp,brmax,mf_br_max,,,,unmatched
+rent_comp,brmin,mf_br_min,,,,unmatched
+rent_comp,caretypecomments,care_type_comments,,,,unmatched
+rent_comp,carportfeemonthly,mf_carport_fee_monthly,,,,unmatched
+rent_comp,garagefeemonthly,mf_garage_fee_monthly,,,,unmatched
+rent_comp,instancetype,instance_type,,,,unmatched
+rent_comp,leasecomments,mf_lease_comments,,,,unmatched
+rent_comp,leasenotes,mf_lease_notes,,,,unmatched
+rent_comp,leasesurveydate,mf_lease_survey_date,,,,unmatched
+rent_comp,managementcompany,management_company,,,,unmatched
+rent_comp,projectamenities,project_amenities,,,,unmatched
+rent_comp,projectstyle,project_style,,,,unmatched
+rent_comp,rentconcessions,mf_rent_concessions,,,,unmatched
+rent_comp,rentpermomax,mf_rent_per_mo_max,,,,unmatched
+rent_comp,rentpermomin,mf_rent_per_mo_min,,,,unmatched
+rent_comp,rentpersfmax,mf_rent_per_sf_max,,,,unmatched
+rent_comp,rentpersfmin,mf_rent_per_sf_min,,,,unmatched
+rent_comp,rentpersfpermomax,mf_rent_per_sf_per_mo_max,,,,unmatched
+rent_comp,rentpersfpermomin,mf_rent_per_sf_per_mo_min,,,,unmatched
+rent_comp,renttype,mf_rent_type,,,,unmatched
+rent_comp,sizesfmax,mf_size_sf_max,,,,unmatched
+rent_comp,sizesfmin,mf_size_sf_min,,,,unmatched
+rent_comp,sourcenotes,mf_source_notes,,,,unmatched
+rent_comp,storagefee,storage_fee,,,,unmatched
+rent_comp,surveyedunitcounttotal,mf_surveyed_unit_count_total,,,,unmatched
+rent_comp,totalannualrent,mf_total_annual_rent,,,,unmatched
+rent_comp,totalmarketrent,total_market_rent,,,,unmatched
+rent_comp,totalrentpermonth,mf_total_rent_per_month,,,,unmatched
+rent_comp,unitamenities,mf_unit_amenities,,,,unmatched
+rent_comp,utilitiespaidbyowner,utilities_paid_by_owner,,,,unmatched
+rent_comp,vacantunitscount,mf_vacant_units_count,,,,unmatched
+rent_comp,weightedavgrentpersfpermo,mf_weighted_avg_rent_per_sf_per_mo,,,,unmatched
+rent_comp,weightedavgrentpersfperyear,mf_weighted_avg_rent_per_sf_per_year,,,,unmatched
+rent_comp,weightedavgrentperunit,mf_weighted_avg_rent_per_unit,,,,unmatched
+unit_mix,created_by_user_id,created_by_user_id,,,,partial
+unit_mix,custom_fields,custom_fields,,,,partial
+unit_mix,date_updated,updated_at,,,,partial
+unit_mix,ingestion_timestamp,created_at,,,,partial
+unit_mix,lease_expiration_date,lease_expiration_date,,,,partial
+unit_mix,lease_start_date,lease_start_date,,,,partial
+unit_mix,leased_area,unit_sf,,,,partial
+unit_mix,number_of_bathrooms,no_of_baths,,,,partial
+unit_mix,number_of_bedrooms,no_of_bedrooms | no_of_beds,,,,partial
+unit_mix,number_of_rooms,no_of_rooms,,,,partial
+unit_mix,number_of_units,unit_count,,,,partial
+unit_mix,property_id,rent_comp_id,,,,partial
+unit_mix,updated_by_user_id,updated_by_user_id,,,,partial
+unit_mix,affordabilitystatus,affordability_status,,,,unmatched
+unit_mix,annualrentpersf,annual_rent_per_sf,,,,unmatched
+unit_mix,contractrentmax,contract_rent_max,,,,unmatched
+unit_mix,contractrentmin,contract_rent_min,,,,unmatched
+unit_mix,dailyrateperunit,daily_rate_per_unit,,,,unmatched
+unit_mix,dailyrateperunitmax,daily_rate_per_unit_max,,,,unmatched
+unit_mix,dailyrateperunitmin,daily_rate_per_unit_min,,,,unmatched
+unit_mix,entryfeemax,entry_fee_max,,,,unmatched
+unit_mix,entryfeemin,entry_fee_min,,,,unmatched
+unit_mix,incometargetpercent,income_target_percent,,,,unmatched
+unit_mix,islihtc,is_lihtc,,,,unmatched
+unit_mix,lastrentincrease,last_rent_increase,,,,unmatched
+unit_mix,marketrentmax,market_rent_max,,,,unmatched
+unit_mix,marketrentmin,market_rent_min,,,,unmatched
+unit_mix,marketrentpermo,market_rent_per_mo,,,,unmatched
+unit_mix,marketrentpersf,market_rent_per_sf,,,,unmatched
+unit_mix,maxgrosslihtcrestrictedrent,max_gross_lihtc_restricted_rent,,,,unmatched
+unit_mix,monthlyordailyrent,monthly_or_daily_rent,,,,unmatched
+unit_mix,occupancytype,occupancy_type,,,,unmatched
+unit_mix,rentincreasepercent,rent_increase_percent,,,,unmatched
+unit_mix,rentpermo,rent_per_mo,,,,unmatched
+unit_mix,rentpersfpermo,rent_per_sf_per_mo,,,,unmatched
+unit_mix,rentpersqmeter,rent_per_sq_meter,,,,unmatched
+unit_mix,sfsizemax,sf_size_max,,,,unmatched
+unit_mix,sfsizemin,sf_size_min,,,,unmatched
+unit_mix,sizesqmeters,size_sq_meters,,,,unmatched
+unit_mix,tenantprofile,tenant_profile,,,,unmatched
+unit_mix,unitcategory,unit_category,,,,unmatched
+unit_mix,unitdepthft,unit_depth_ft,,,,unmatched
+unit_mix,unitfloor,unit_floor,,,,unmatched
+unit_mix,unitheightft,unit_height_ft,,,,unmatched
+unit_mix,unitmixid,unit_mix_id,,,,unmatched
+unit_mix,unittype,unit_type,,,,unmatched
+unit_mix,unitwidthft,unit_width_ft,,,,unmatched
+unit_mix,unityfeemax,community_fee_max,,,,unmatched
+unit_mix,unityfeemin,community_fee_min,,,,unmatched
+unit_mix,utilityallowance,utility_allowance,,,,unmatched
+unit_mix,vacantunits,vacant_units,,,,unmatched
+property_source_attribution,ingestion_timestamp,ingestion_timestamp,,,,partial
+property_source_attribution,property_id,property_id,,,,partial
+property_source_attribution,source_system,source_system,,,,partial
+property_source_attribution,attributionid,attribution_id,,,,unmatched
+property_source_attribution,fieldname,field_name,,,,unmatched
+property_source_attribution,fieldvalue,field_value,,,,unmatched
+property_merge_audit_log,ingestion_timestamp,merge_timestamp,,,,partial
+property_merge_audit_log,property_id,property_id,,,,partial
+property_merge_audit_log,auditlogid,audit_log_id,,,,unmatched
+property_merge_audit_log,fieldchanged,field_changed,,,,unmatched
+property_merge_audit_log,mergedbyuserorsystem,merged_by_user_or_system,,,,unmatched
+property_merge_audit_log,newvalue,new_value,,,,unmatched
+property_merge_audit_log,oldvalue,old_value,,,,unmatched
+sale_comp_merge_audit_log,ingestion_timestamp,merge_timestamp,,,,partial
+sale_comp_merge_audit_log,property_id,sale_comp_id,,,,partial
+sale_comp_merge_audit_log,auditlogid,audit_log_id,,,,unmatched
+sale_comp_merge_audit_log,fieldchanged,field_changed,,,,unmatched
+sale_comp_merge_audit_log,mergedbyuserorsystem,merged_by_user_or_system,,,,unmatched
+sale_comp_merge_audit_log,newvalue,new_value,,,,unmatched
+sale_comp_merge_audit_log,oldvalue,old_value,,,,unmatched
+sale_comp_source_attribution,ingestion_timestamp,ingestion_timestamp,,,,partial
+sale_comp_source_attribution,property_id,sale_comp_id,,,,partial
+sale_comp_source_attribution,source_system,source_system,,,,partial
+sale_comp_source_attribution,attributionid,attribution_id,,,,unmatched
+sale_comp_source_attribution,fieldname,field_name,,,,unmatched
+sale_comp_source_attribution,fieldvalue,field_value,,,,unmatched
+lease_comp_merge_audit_log,ingestion_timestamp,merge_timestamp,,,,partial
+lease_comp_merge_audit_log,property_id,lease_comp_id,,,,partial
+lease_comp_merge_audit_log,auditlogid,audit_log_id,,,,unmatched
+lease_comp_merge_audit_log,fieldchanged,field_changed,,,,unmatched
+lease_comp_merge_audit_log,mergedbyuserorsystem,merged_by_user_or_system,,,,unmatched
+lease_comp_merge_audit_log,newvalue,new_value,,,,unmatched
+lease_comp_merge_audit_log,oldvalue,old_value,,,,unmatched
+lease_comp_source_attribution,created_by_user_id,created_by_user_id,,,,partial
+lease_comp_source_attribution,date_updated,updated_at,,,,partial
+lease_comp_source_attribution,ingestion_timestamp,ingestion_timestamp | created_at,,,,partial
+lease_comp_source_attribution,property_id,lease_comp_id,,,,partial
+lease_comp_source_attribution,source_system,source_system,,,,partial
+lease_comp_source_attribution,updated_by_user_id,updated_by_user_id,,,,partial
+lease_comp_source_attribution,attributionid,attribution_id,,,,unmatched
+lease_comp_source_attribution,fieldname,field_name,,,,unmatched
+lease_comp_source_attribution,fieldvalue,field_value,,,,unmatched
+rent_comp_merge_audit_log,ingestion_timestamp,merge_timestamp,,,,partial
+rent_comp_merge_audit_log,property_id,rent_comp_id,,,,partial
+rent_comp_merge_audit_log,auditlogid,audit_log_id,,,,unmatched
+rent_comp_merge_audit_log,fieldchanged,field_changed,,,,unmatched
+rent_comp_merge_audit_log,mergedbyuserorsystem,merged_by_user_or_system,,,,unmatched
+rent_comp_merge_audit_log,newvalue,new_value,,,,unmatched
+rent_comp_merge_audit_log,oldvalue,old_value,,,,unmatched
+rent_comp_source_attribution,created_by_user_id,created_by_user_id,,,,partial
+rent_comp_source_attribution,date_updated,updated_at,,,,partial
+rent_comp_source_attribution,ingestion_timestamp,ingestion_timestamp | created_at,,,,partial
+rent_comp_source_attribution,property_id,rent_comp_id,,,,partial
+rent_comp_source_attribution,source_system,source_system,,,,partial
+rent_comp_source_attribution,updated_by_user_id,updated_by_user_id,,,,partial
+rent_comp_source_attribution,attributionid,attribution_id,,,,unmatched
+rent_comp_source_attribution,fieldname,field_name,,,,unmatched
+rent_comp_source_attribution,fieldvalue,field_value,,,,unmatched
+company_contacts,parcel_owner,,Owner Name,,,partial
+company_contacts,developername,,Developer Name,,,unmatched
+company_contacts,fundname,,Fund Name,,,unmatched
+company_contacts,leasingcompanycitystatezip,,Leasing Company City State Zip,,,unmatched
+company_contacts,leasingcompanyfax,,Leasing Company Fax,,,unmatched
+company_contacts,leasingcompanyname,,Leasing Company Name,,,unmatched
+company_contacts,leasingcompanyphone,,Leasing Company Phone,,,unmatched
+company_contacts,managername,,Property Manager Name,,,unmatched
+company_contacts,originator,,Originator,,,unmatched
+company_contacts,primaryagentname,,Primary Agent Name,,,unmatched
+company_contacts,salescompany,,Sales Company,,,unmatched
+company_contacts,salescontact,,Sales Contact,,,unmatched
+company_contacts,salescontactphone,,Sales Contact Phone,,,unmatched
+property_operations,building_operating_expenses,,Building Operating Expenses,,Total Expenses,full
+property_operations,building_tax_expenses,,Building Tax Expenses,,Tax Expense,full
+property_operations,net_operating_income,,,NOI Index,Income | Net Operating Income,full
+property_operations,base_rent_sf,,,,Base Rent,partial
+property_operations,expense_reimbursements,,,,Expense Reimbursements,partial
+property_operations,percent_rent,,,,Percent Rent,partial
+property_operations,appreciationreturn,,,Appreciation Return,,unmatched
+property_operations,effectivegrossincome,,,,Effective Gross Income,unmatched
+property_operations,effectiverentalrevenue,,,,Effective Rental Revenue,unmatched
+property_operations,flexexpenseitem,,,,Flex Expense Item,unmatched
+property_operations,flexincomeitem,,,,Flex Income Item,unmatched
+property_operations,general/administrative,,,,General/Administrative,unmatched
+property_operations,groundrent,,,,Ground Rent,unmatched
+property_operations,incomereturn,,,Income Return,,unmatched
+property_operations,insurance,,,,Insurance,unmatched
+property_operations,management,,,,Management,unmatched
+property_operations,netmarketingandpromotion,,,,Net Marketing and Promotion,unmatched
+property_operations,netspecialtyleasingincome,,,,Net Specialty Leasing Income,unmatched
+property_operations,netutilitiesincome,,,,Net Utilities Income,unmatched
+property_operations,onareamaintenance,,,,Common Area Maintenance,unmatched
+property_operations,operatingexpenseratio,,,,Operating Expense Ratio,unmatched
+property_operations,otherincome,,,,Other Income,unmatched
+property_operations,physicalvacancy,,,,Physical Vacancy,unmatched
+property_operations,potentialgrossincome,,,,Potential Gross Income,unmatched
+property_operations,totalotherincome,,,,Total Other Income,unmatched
+property_operations,totalreturn,,,Total Return,,unmatched
+property_operations,vacancyandcollectionloss,,,,Vacancy and Collection Loss,unmatched
+market_forecast_snapshot,asof,,,As Of,,unmatched
+market_forecast_snapshot,forecastscenario,,,Forecast Scenario,,unmatched
+market_forecast_snapshot,period,,,Period,,unmatched
+market_forecast_snapshot,slice,,,Slice,,unmatched

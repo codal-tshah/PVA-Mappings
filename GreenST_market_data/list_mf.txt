@@ -1,0 +1,73 @@
+Property Class Name
+Period
+Slice
+As Of
+Geography Name
+Geography Code
+Property Type
+Forecast Scenario
+CBSA Code
+Geography Type
+Absorption %
+Absorption Units
+Absorption Units 12 Mo
+Appreciation Return
+Asset Value
+Average Sale Price
+Average Units Sold
+Cap Rate
+Cap Rate Transactions
+Capital Value Index
+Construction Starts Units
+Construction Starts Units 12 Mo
+Demand Units
+Demolished Units
+Existing Buildings
+Gross Delivered Buildings
+Gross Delivered Units
+Households
+Income Return
+Industrial Employment
+Inventory Units
+Market Asking Rent Growth
+Market Asking Rent Growth 12 Mo
+Market Asking Rent Index
+Market Asking Rent/SF
+Market Asking Rent/Unit
+Market Asking Rent/Unit 1 Bedroom
+Market Asking Rent/Unit 2 Bedroom
+Market Asking Rent/Unit 3 Bedroom
+Market Asking Rent/Unit Studio
+Market Cap Rate
+Market Effective Rent Growth
+Market Effective Rent Growth 12 Mo
+Market Effective Rent/SF
+Market Effective Rent/Unit
+Market Effective Rent/Unit 1 Bedroom
+Market Effective Rent/Unit 2 Bedroom
+Market Effective Rent/Unit 3 Bedroom
+Market Effective Rent/Unit Studio
+Market Sale Price Growth
+Market Sale Price Index
+Market Sale Price Per Unit
+Median Cap Rate
+Median Household Income
+Median Price/Bldg SF
+Median Price/Unit
+Net Delivered Units
+Net Delivered Units 12 Mo
+NOI Index
+Occupancy Rate
+Office Employment
+Population
+Sales Volume Transactions
+Sold Units
+Stabilized Vacancy
+Total Employment
+Total Return
+Total Sales Transactions
+Total Sales Volume
+Transaction Sale Price/Unit
+Under Construction Buildings
+Under Construction Units
+Vacancy Rate

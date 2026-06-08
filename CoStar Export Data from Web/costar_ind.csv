@@ -1,0 +1,204 @@
+Property
+Property Address
+Property Name
+PropertyID
+Condo
+Collateral Type
+Has Lab Space
+
+property_type_ref
+Property Type
+
+Geography
+Submarket Cluster
+Submarket Name
+City
+State
+Zip
+County Name
+Continent
+Country
+Subcontinent
+
+improvement
+Building Status
+Year Built
+Number of Stories
+Year Renovated
+Number of Parking Spaces
+Parking Ratio
+RBA
+Max Building Contiguous Space
+Smallest Available Space
+Office Space
+Features
+Power
+Ceiling Ht
+Number of Loading Docks
+Drive Ins
+Column Spacing
+Sprinklers
+Number of Cranes
+Construction Material
+Rail Lines
+Heating
+Building Park
+Construction Begin
+Month Renovated
+Coworking Available Space
+Lab Space (SF)
+Lab Space Percent Composition
+Average Rental Rate Per kW
+Capacity Available kW
+Capacity Critical IT kW
+Capacity Total Utility kW
+Cooling Redundancy
+Data Center Tier
+Data Center Type
+Data Hall Area SF
+Data Hall Count
+Density kW/rack
+Density kW/SF
+Electric Utility
+Power Redundancy
+Power Usage Effectiveness
+
+commercial_survey
+Total Available Space (SF)
+Direct Available Space
+Direct Vacant Space
+Sublet Available Space
+Average Weighted Rent
+Percent Leased
+Sublet Services
+Direct Services
+Avg Rent-Direct (Industrial)
+Avg Rent-Sublet (Industrial)
+
+property_operations
+Building Tax Expenses
+Building Operating Expenses
+
+company_contacts
+Leasing Company Name
+Leasing Company City State Zip
+Leasing Company Phone
+Leasing Company Fax
+Primary Agent Name
+Property Manager Name
+Developer Name
+Owner Name
+Fund Name
+Originator
+Sales Company
+Sales Contact
+Sales Contact Phone
+
+site
+Sewer
+Water
+Gas
+Fema Flood Zone
+FEMA Map Date
+FEMA Map Identifier
+FIRM ID
+FIRM Panel Number
+Flood Risk Area
+Floodplain Area
+In SFHA
+Land Area (AC)
+Land Area (SF)
+
+sale_comp
+For Sale Price Per SF
+Interest Rate
+Interest Rate Type
+Loan Type
+Maturity Date
+Origination Amount
+Origination Date
+
+demographics
+2020 Avg Age(1m)
+2020 Med Age(1m)
+2020 Pop Age 0-4(1m)
+2020 Pop Age 10-14(1m)
+2020 Pop Age 15-19(1m)
+2020 Pop Age 20-24(1m)
+2020 Pop Age 45-49(1m)
+2020 Pop Age 50-54(1m)
+2020 Pop Age 55-59(1m)
+2020 Pop Age 5-9(1m)
+2020 Pop Age 60-64(1m)
+2020 Pop Age 65+(1m)
+2020 Pop Age 85+(1m)
+2025 Avg Age(1m)
+2025 Avg Age, Female(1m)
+2025 Avg Age, Male(1m)
+2025 HH Age 15-24(1m)
+2025 HH Age 25-34(1m)
+2025 HH Age 35-44(1m)
+2025 HH Age 45-54(1m)
+2025 HH Age 55-64(1m)
+2025 HH Age 65-74(1m)
+2025 HH Age 75-84(1m)
+2025 HH Age 85+(1m)
+2025 Med Age(1m)
+2025 Med Age, Female(1m)
+2025 Med Age, Male(1m)
+2025 Median HH Age(1m)
+2025 Pop Age <19(1m)
+2025 Pop Age 0-4(1m)
+2025 Pop Age 10-14(1m)
+2025 Pop Age 15-19(1m)
+2025 Pop Age 20-24(1m)
+2025 Pop Age 20-64(1m)
+2025 Pop Age 25-29(1m)
+2025 Pop Age 30-34(1m)
+2025 Pop Age 35-39(1m)
+2025 Pop Age 40-44(1m)
+2025 Pop Age 45-49(1m)
+2025 Pop Age 50-54(1m)
+2025 Pop Age 55-59(1m)
+2025 Pop Age 5-9(1m)
+2025 Pop Age 60-64(1m)
+2025 Pop Age 65+(1m)
+2025 Pop Age 65-69(1m)
+2025 Pop Age 70-74(1m)
+2025 Pop Age 75-79(1m)
+2025 Pop Age 80-84(1m)
+2025 Pop Age 85+(1m)
+2030 Avg Age(1m)
+2030 Avg Female Age(1m)
+2030 Avg Male Age(1m)
+2030 HH Age 15-24(1m)
+2030 HH Age 25-34(1m)
+2030 HH Age 35-44(1m)
+2030 HH Age 45-54(1m)
+2030 HH Age 55-64(1m)
+2030 HH Age 65-74(1m)
+2030 HH Age 75-84(1m)
+2030 HH Age 85+(1m)
+2030 Med Age(1m)
+2030 Median HH Age(1m)
+2030 Pop Age <19(1m)
+2030 Pop Age 0-4(1m)
+2030 Pop Age 10-14(1m)
+2030 Pop Age 15-19(1m)
+2030 Pop Age 20-24(1m)
+2030 Pop Age 20-64(1m)
+2030 Pop Age 25-29(1m)
+2030 Pop Age 30-34(1m)
+2030 Pop Age 35-39(1m)
+2030 Pop Age 40-44(1m)
+2030 Pop Age 45-49(1m)
+2030 Pop Age 50-54(1m)
+2030 Pop Age 55-59(1m)
+2030 Pop Age 5-9(1m)
+2030 Pop Age 60-64(1m)
+2030 Pop Age 65+(1m)
+2030 Pop Age 65-69(1m)
+2030 Pop Age 70-74(1m)
+2030 Pop Age 75-79(1m)
+2030 Pop Age 80-84(1m)
+2030 Pop Age 85+(1m)

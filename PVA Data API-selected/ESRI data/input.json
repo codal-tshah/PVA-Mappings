@@ -1,0 +1,24 @@
+{
+  "geographies": {
+    "State": [
+      "01",
+      "13",
+      "33",
+      "49"
+    ],
+    "CBSA": [
+      "11260",
+      "48540"
+    ],
+    "Country": [
+      "01"
+    ]
+  },
+  "variables": [
+    "TOTPOP00",
+    "TOTPOP10",
+    "TOTPOP20",
+    "TOTPOP_CY",
+    "TOTPOP_FY"
+  ]
+}

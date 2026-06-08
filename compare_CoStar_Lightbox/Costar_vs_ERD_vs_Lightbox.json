@@ -1,0 +1,68 @@
+{
+  "comparison_matches_costar_vs_lightbox_missing": {
+    "operating_expenses": {
+      "costar_gap_fields": [
+        "Building Operating Expenses",
+        "Ops Expense"
+      ],
+      "lightbox_erd_missing_fields": [
+        "incExp_totalexpenses",
+        "incExp_otherexpenses",
+        "incExp_repairsandmaintenance",
+        "incExp_insurance",
+        "incExp_management"
+      ]
+    },
+    "operating_expenses_per_sf": {
+      "costar_gap_fields": [
+        "Ops Expense Per SF"
+      ],
+      "lightbox_erd_missing_fields": [
+        "incExp_ExpensePerSF"
+      ]
+    },
+    "tax_expenses_and_assessments": {
+      "costar_gap_fields": [
+        "Building Tax Expenses",
+        "Taxes Total"
+      ],
+      "lightbox_erd_missing_fields": [
+        "incExp_taxexpense",
+        "Assessment_taxes",
+        "Assessment_totalassessment",
+        "Assessment_basetaxes"
+      ]
+    },
+    "tax_year": {
+      "costar_gap_fields": [
+        "Tax Year"
+      ],
+      "lightbox_erd_missing_fields": [
+        "Assessment_taxyear",
+        "Assessment_assessmentyear"
+      ]
+    },
+    "taxes_per_sf": {
+      "costar_gap_fields": [
+        "Taxes Per SF"
+      ],
+      "lightbox_erd_missing_fields": [
+        "Assessment_taxespersfgba",
+        "Assessment_taxesperra"
+      ]
+    },
+    "utilities_tracking": {
+      "costar_gap_fields": [
+        "Sewer",
+        "Water",
+        "Gas"
+      ],
+      "lightbox_erd_missing_fields": [
+        "incExp_sewerexpense",
+        "incExp_waterexpense",
+        "incExp_gasexpense",
+        "incExp_totalutilities"
+      ]
+    }
+  }
+}

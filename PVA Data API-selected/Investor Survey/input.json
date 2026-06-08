@@ -1,0 +1,8 @@
+{
+    "property_type": ["MF Conventional"],
+    "startPeriod": "2025 Q2",
+    "endPeriod": "2026 Q1",
+    "qualifier": ["Average"],
+    "data_source": ["SITUSRERC", "PwC"],
+    "metric": ["Discount Rate"]
+}

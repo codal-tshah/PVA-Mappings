@@ -1,0 +1,99 @@
+{
+  Geography: [
+Geography Name
+Geography Code
+CBSA Code
+Geography Type
+Population
+Median Household Income
+Households
+Industrial Employment
+Office Employment
+Total Employment
+  ],
+  property_type_ref: [
+Property Type
+Property Class Name
+  ],
+  commercial_survey: [
+All Service Type Rent Direct
+All Service Type Rent Overall
+All Service Type Rent Sublet
+Availability Rate
+Availability Rate % Direct
+Availability Rate % Sublet
+Available SF Direct
+Available SF Sublet
+Available SF Total
+Leasing SF Direct
+Leasing SF Sublet
+Leasing SF Total
+Market Rent Growth
+Market Rent Growth 12 Mo
+Market Rent Index
+Market Rent/SF
+NNN Rent Direct
+NNN Rent Overall
+NNN Rent Sublet
+Occupancy Rate
+Vacancy Rate
+Vacant Available %
+Vacant Available SF Direct
+Vacant Available SF Sublet
+Vacant Available SF Total
+Vacant SF Direct
+Vacant SF Sublet
+Vacant SF Total
+Demand SF
+Net Absorption SF
+Net Absorption SF 12 Mo
+Net Absorption SF Direct
+Net Absorption SF Sublet
+  ],
+  sale_comp: [
+Average Sale Price
+Cap Rate
+Cap Rate Transactions
+Market Cap Rate
+Market Sale Price Growth
+Market Sale Price Index
+Market Sale Price Per SF
+Median Cap Rate
+Median Price/Bldg SF
+Sales Volume Transactions
+Sold Building SF
+Total Sales Transactions
+Total Sales Volume
+Transaction Sale Price/SF
+Asset Value
+Capital Value Index
+  ],
+  improvement: [
+Existing Buildings
+Inventory SF
+Under Construction Buildings
+Under Construction SF
+Gross Delivered Buildings
+Gross Delivered SF
+Net Delivered SF
+Net Delivered SF 12 Mo
+Construction Starts SF
+Construction Starts SF 12 Mo
+Demolished SF
+  ],
+  property_operations: [
+NOI Index
+Income Return
+Appreciation Return
+Total Return
+  ],
+  EXPLICIT_NEW_TABLES_REQUIRED: {
+    market_forecast_snapshot: [
+      Reason: These are time-series market analytics and forecast metrics at geography/property-type granularity, not property-level transactional entities.
+Period
+Slice
+As Of
+Forecast Scenario
+    ]
+  }
+}
