@@ -6,6 +6,7 @@ from collections import defaultdict
 from datetime import date, datetime
 
 import openpyxl
+from openpyxl.formula.tokenizer import Tokenizer, TokenizerError
 from openpyxl.utils import column_index_from_string, get_column_letter, range_boundaries
 
 # --- CONFIGURATION ---
@@ -37,6 +38,7 @@ class WorkbenchAnalyzer:
         self.named_range_map = {}
         self.named_range_cell_map = {}
         self.named_range_usage = defaultdict(lambda: {"tabs": set(), "csvs": set()})
+        self.named_ranges_upper = {}
         self.table_map = {}
         self.effective_value_cache = {}
         self.field_label_cache = {}
@@ -782,6 +784,7 @@ class WorkbenchAnalyzer:
         logging.info("Building Named Range index...")
         self.named_range_map.clear()
         self.named_range_cell_map.clear()
+        self.named_ranges_upper.clear()
 
         for name, dn in self._iter_defined_names():
             try:
@@ -815,6 +818,7 @@ class WorkbenchAnalyzer:
                     key = f"{sheet_name}!{top_left}"
                     # Keep the first named range encountered for a cell
                     self.named_range_map.setdefault(key, name)
+                    self.named_ranges_upper.setdefault(name.upper(), name)
 
             except Exception:
                 continue
@@ -835,6 +839,183 @@ class WorkbenchAnalyzer:
                     "ref": table.ref,
                     "columns": [getattr(col, "name", "") for col in getattr(table, "tableColumns", [])],
                 }
+
+    def _strip_spill_refs(self, formula_text):
+        """
+        Replace spill markers (#) with plain references so Tokenizer can parse the formula.
+        """
+        spill_pattern = r"((?:'[^']+'|[A-Za-z0-9_ .\-]+)!\$?[A-Za-z]{1,3}\$?[0-9]+|\$?[A-Za-z]{1,3}\$?[0-9]+)#"
+        spill_refs = set()
+
+        def _replace(match):
+            ref = match.group(1)
+            spill_refs.add(ref.replace("$", ""))
+            return ref
+
+        safe_formula = re.sub(spill_pattern, _replace, str(formula_text))
+        return safe_formula, spill_refs
+
+    def _tokenize_formula(self, formula):
+        """
+        Parse a formula into openpyxl tokens, tolerating spill references.
+        """
+        formula_text = str(formula or "")
+        safe_formula, spill_refs = self._strip_spill_refs(formula_text)
+        if not safe_formula.startswith("="):
+            safe_formula = f"={safe_formula}"
+
+        try:
+            tokens = Tokenizer(safe_formula).items
+        except TokenizerError:
+            tokens = []
+
+        return tokens, spill_refs
+
+    def _is_bare_reference_name(self, value):
+        """
+        True for plain identifiers that could be named ranges or LET/LAMBDA variables.
+        """
+        text = str(value or "").strip()
+        if not text:
+            return False
+        if any(ch in text for ch in ["!", "[", "]", ":", "#", "$"]):
+            return False
+        return bool(re.fullmatch(r"[A-Za-z_][A-Za-z0-9_.]*", text))
+
+    def _collect_let_lambda_locals(self, tokens):
+        """
+        Collect variable names declared by LET() and LAMBDA().
+        """
+        locals_found = set()
+        stack = []
+
+        for idx, token in enumerate(tokens):
+            if token.type == "FUNC" and token.subtype == "OPEN":
+                func_name = token.value[:-1].upper()
+                stack.append({"name": func_name, "arg_index": 1})
+                continue
+
+            if token.type == "FUNC" and token.subtype == "CLOSE":
+                if stack:
+                    stack.pop()
+                continue
+
+            if token.type == "SEP" and token.subtype == "ARG":
+                if stack:
+                    stack[-1]["arg_index"] += 1
+                continue
+
+            if not stack:
+                continue
+
+            ctx = stack[-1]
+            if ctx["name"] not in {"LET", "LAMBDA"}:
+                continue
+
+            if token.type != "OPERAND" or token.subtype != "RANGE":
+                continue
+
+            if not self._is_bare_reference_name(token.value):
+                continue
+
+            next_token = None
+            for lookahead in tokens[idx + 1 :]:
+                if lookahead.type == "WSPACE":
+                    continue
+                next_token = lookahead
+                break
+
+            if next_token and next_token.type == "SEP" and next_token.subtype == "ARG":
+                locals_found.add(token.value.upper())
+
+        return locals_found
+
+    def _extract_formula_reference_details(self, formula, current_sheet=None):
+        """
+        Tokenize a formula and return dependency details without scanning every named range.
+        """
+        tokens, spill_refs = self._tokenize_formula(formula)
+        local_vars = self._collect_let_lambda_locals(tokens)
+
+        sheet_deps = []
+        named_deps = []
+        source_refs = []
+        structured_refs = []
+        seen_sheet = set()
+        seen_named = set()
+        seen_source = set()
+        seen_structured = set()
+
+        def add_sheet_dep(sheet_name):
+            sheet_name = (sheet_name or "").strip()
+            if sheet_name and sheet_name not in seen_sheet:
+                seen_sheet.add(sheet_name)
+                sheet_deps.append(sheet_name)
+
+        def add_named_dep(name):
+            if name and name not in seen_named:
+                seen_named.add(name)
+                named_deps.append(name)
+
+        def add_source_ref(sheet_name, coord, raw_value):
+            key = (sheet_name, coord)
+            if key not in seen_source:
+                seen_source.add(key)
+                source_refs.append((sheet_name, coord, raw_value))
+
+        def add_structured_ref(ref):
+            if ref and ref not in seen_structured:
+                seen_structured.add(ref)
+                structured_refs.append(ref)
+
+        for token in tokens:
+            if token.type != "OPERAND" or token.subtype != "RANGE":
+                continue
+
+            value = str(token.value).strip()
+            if not value or value.upper() in local_vars:
+                continue
+
+            upper = value.upper()
+            if upper in self.named_ranges_upper:
+                add_named_dep(self.named_ranges_upper[upper])
+                continue
+
+            if "[" in value and "]" in value:
+                add_structured_ref(value)
+                table_name = value.split("[", 1)[0].strip()
+                if table_name in self.table_map:
+                    add_sheet_dep(self.table_map[table_name]["sheet"])
+                continue
+
+            if value in spill_refs:
+                value = value
+
+            sheet_name, coord = self._get_sheet_and_coord_from_ref(value, current_sheet=current_sheet)
+            if sheet_name and coord:
+                add_sheet_dep(sheet_name)
+                add_source_ref(sheet_name, coord, value)
+                continue
+
+            if value in self.table_map:
+                add_sheet_dep(self.table_map[value]["sheet"])
+                add_structured_ref(value)
+                continue
+
+            if self._is_bare_reference_name(value):
+                # Bare identifiers may be named ranges that differ only by case.
+                named = self.named_ranges_upper.get(value.upper())
+                if named:
+                    add_named_dep(named)
+
+        return {
+            "sheet_deps": sheet_deps,
+            "named_deps": named_deps,
+            "source_refs": source_refs,
+            "structured_refs": structured_refs,
+            "spill_refs": sorted(spill_refs),
+            "tokens": tokens,
+        }
 
     def get_named_range_for_cell(self, ws, row, col):
         coord_key = f"{ws.title}!{get_column_letter(col)}{row}"
@@ -1090,19 +1271,10 @@ class WorkbenchAnalyzer:
 
     def extract_named_range_dependencies(self, formula):
         """
-        Case-insensitive search for named ranges used in a formula.
-        Uses boundary-aware matching to reduce false positives.
+        Resolve named range dependencies using tokenized formulas and a normalized lookup.
         """
-        formula_upper = str(formula).upper()
-        found = []
-
-        for nr in set(self.named_range_map.values()):
-            nr_upper = str(nr).upper()
-            pattern = rf"(?<![A-Z0-9_]){re.escape(nr_upper)}(?![A-Z0-9_])"
-            if re.search(pattern, formula_upper):
-                found.append(nr)
-
-        return sorted(set(found))
+        details = self._extract_formula_reference_details(formula)
+        return sorted(set(details["named_deps"]))
 
     def extract_source_field_dependencies(self, ws, formula):
         """
@@ -1111,50 +1283,48 @@ class WorkbenchAnalyzer:
         This keeps the dependency output at the field level instead of sheet level
         for the Calculated Fields export.
         """
-        formula_str = str(formula)
+        details = self._extract_formula_reference_details(formula, current_sheet=ws.title)
         deps = []
         seen = set()
 
-        def add_dep(sheet_name, row_num, col_letter):
+        for sheet_name, coord, raw_value in details["source_refs"]:
             if sheet_name not in self.wb.sheetnames:
-                return
+                continue
 
             source_ws = self.wb[sheet_name]
-            col_idx = openpyxl.utils.column_index_from_string(col_letter)
-            label = self.find_field_label(source_ws, row_num, col_idx)
-            value = label if label else f"{sheet_name}!{col_letter}{row_num}"
+            if ":" in coord:
+                min_col, min_row, max_col, max_row = range_boundaries(coord)
+                for row_num in range(min_row, max_row + 1):
+                    for col_idx in range(min_col, max_col + 1):
+                        label = self.find_field_label(source_ws, row_num, col_idx)
+                        value = label if label else f"{sheet_name}!{get_column_letter(col_idx)}{row_num}"
+                        if value not in seen:
+                            seen.add(value)
+                            deps.append(value)
+            else:
+                col_letters = re.match(r"[A-Za-z]{1,3}", coord)
+                row_numbers = re.search(r"\d+", coord)
+                if not col_letters or not row_numbers:
+                    continue
+                col_idx = column_index_from_string(col_letters.group(0))
+                row_num = int(row_numbers.group(0))
+                label = self.find_field_label(source_ws, row_num, col_idx)
+                value = label if label else f"{sheet_name}!{coord}"
+                if value not in seen:
+                    seen.add(value)
+                    deps.append(value)
 
-            if value not in seen:
-                seen.add(value)
-                deps.append(value)
-
-        # Sheet-qualified ranges and single-cell refs.
-        sheet_ref_pattern = r"(?:'([^']+)'|([A-Za-z0-9_ .\-]+))!\$?([A-Za-z]+)\$?([0-9]+)(?::\$?([A-Za-z]+)\$?([0-9]+))?"
-        for quoted_sheet, unquoted_sheet, start_col, start_row, end_col, end_row in re.findall(sheet_ref_pattern, formula_str):
-            sheet_name = quoted_sheet if quoted_sheet else unquoted_sheet
-            if not sheet_name:
+        for structured_ref in details["structured_refs"]:
+            table_name = structured_ref.split("[", 1)[0].strip()
+            table_info = self.table_map.get(table_name)
+            if not table_info:
                 continue
-
-            try:
-                min_col, min_row = openpyxl.utils.column_index_from_string(start_col), int(start_row)
-                if end_col and end_row:
-                    max_col, max_row = openpyxl.utils.column_index_from_string(end_col), int(end_row)
-                else:
-                    max_col, max_row = min_col, min_row
-            except Exception:
+            sheet_name = table_info["sheet"]
+            if sheet_name not in self.wb.sheetnames:
                 continue
-
-            for row_num in range(min_row, max_row + 1):
-                for col_idx in range(min_col, max_col + 1):
-                    add_dep(sheet_name.strip(), row_num, get_column_letter(col_idx))
-
-        # Same-sheet cell refs, e.g. =A1 + B2
-        same_sheet_pattern = r"(?<![A-Z0-9_!])\$?([A-Z]{1,3})\$?([0-9]+)(?![A-Z0-9_])"
-        for col_letter, row_num in re.findall(same_sheet_pattern, formula_str):
-            try:
-                add_dep(ws.title, int(row_num), col_letter)
-            except Exception:
-                continue
+            if sheet_name not in seen:
+                seen.add(sheet_name)
+                deps.append(sheet_name)
 
         return deps
 
@@ -1165,65 +1335,63 @@ class WorkbenchAnalyzer:
         This is used for Field Mapping.csv so the Source Field column contains
         actual labels instead of a placeholder.
         """
-        formula_str = str(formula)
+        details = self._extract_formula_reference_details(formula, current_sheet=ws.title)
         mappings = []
         seen = set()
 
-        def add_mapping(sheet_name, row_num, col_letter):
+        for sheet_name, coord, raw_value in details["source_refs"]:
             if sheet_name not in self.wb.sheetnames:
-                return
+                continue
 
             source_ws = self.wb[sheet_name]
-            col_idx = openpyxl.utils.column_index_from_string(col_letter)
-            label = self.find_field_label(source_ws, row_num, col_idx)
-            source_field = label if label else f"{sheet_name}!{col_letter}{row_num}"
-            key = (sheet_name, source_field)
+            if ":" in coord:
+                min_col, min_row, max_col, max_row = range_boundaries(coord)
+                for row_num in range(min_row, max_row + 1):
+                    for col_idx in range(min_col, max_col + 1):
+                        label = self.find_field_label(source_ws, row_num, col_idx)
+                        source_field = label if label else f"{sheet_name}!{get_column_letter(col_idx)}{row_num}"
+                        key = (sheet_name, source_field)
+                        if key not in seen:
+                            seen.add(key)
+                            mappings.append(key)
+            else:
+                col_letters = re.match(r"[A-Za-z]{1,3}", coord)
+                row_numbers = re.search(r"\d+", coord)
+                if not col_letters or not row_numbers:
+                    continue
+                col_idx = column_index_from_string(col_letters.group(0))
+                row_num = int(row_numbers.group(0))
+                label = self.find_field_label(source_ws, row_num, col_idx)
+                source_field = label if label else f"{sheet_name}!{coord}"
+                key = (sheet_name, source_field)
+                if key not in seen:
+                    seen.add(key)
+                    mappings.append(key)
+
+        for structured_ref in details["structured_refs"]:
+            table_name = structured_ref.split("[", 1)[0].strip()
+            table_info = self.table_map.get(table_name)
+            if not table_info:
+                continue
+            sheet_name = table_info["sheet"]
+            key = (sheet_name, structured_ref)
             if key not in seen:
                 seen.add(key)
                 mappings.append(key)
-
-        sheet_ref_pattern = r"(?:'([^']+)'|([A-Za-z0-9_ .\-]+))!\$?([A-Za-z]+)\$?([0-9]+)(?::\$?([A-Za-z]+)\$?([0-9]+))?"
-        for quoted_sheet, unquoted_sheet, start_col, start_row, end_col, end_row in re.findall(sheet_ref_pattern, formula_str):
-            sheet_name = quoted_sheet if quoted_sheet else unquoted_sheet
-            if not sheet_name:
-                continue
-
-            try:
-                min_col, min_row = openpyxl.utils.column_index_from_string(start_col), int(start_row)
-                if end_col and end_row:
-                    max_col, max_row = openpyxl.utils.column_index_from_string(end_col), int(end_row)
-                else:
-                    max_col, max_row = min_col, min_row
-            except Exception:
-                continue
-
-            for row_num in range(min_row, max_row + 1):
-                for col_idx in range(min_col, max_col + 1):
-                    add_mapping(sheet_name.strip(), row_num, get_column_letter(col_idx))
-
-        same_sheet_pattern = r"(?<![A-Z0-9_!])\$?([A-Z]{1,3})\$?([0-9]+)(?![A-Z0-9_])"
-        for col_letter, row_num in re.findall(same_sheet_pattern, formula_str):
-            try:
-                add_mapping(ws.title, int(row_num), col_letter)
-            except Exception:
-                continue
 
         return mappings
 
     def extract_dependencies_from_formula(self, formula):
         """
-        Extract sheet-level dependencies from formulas.
-        Handles quoted sheet names and sheet names with spaces / punctuation.
+        Extract sheet-level dependencies from formulas using tokenized parsing.
         """
-        pattern = r"(?:'([^']+)'|([A-Za-z0-9_ .\-]+))!\$?[A-Za-z]+\$?[0-9]+"
-        matches = re.findall(pattern, str(formula))
-
-        deps = set()
-        for quoted, unquoted in matches:
-            sheet = quoted if quoted else unquoted
-            if sheet:
-                deps.add(sheet.strip())
-
+        details = self._extract_formula_reference_details(formula)
+        deps = set(details["sheet_deps"])
+        for structured_ref in details["structured_refs"]:
+            table_name = structured_ref.split("[", 1)[0].strip()
+            table_info = self.table_map.get(table_name)
+            if table_info:
+                deps.add(table_info["sheet"])
         return sorted(deps)
 
     def get_effective_value(self, ws, row, col):
