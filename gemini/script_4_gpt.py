@@ -1,4 +1,5 @@
 import csv
+import json
 import logging
 import os
 import re
@@ -39,6 +40,7 @@ SELECTED_OUTPUT_CSVS = [
     "Calculated Fields.csv",
     "Named Ranges.csv",
     "Tab Relationships.csv",
+    "WorkbookGraph.csv",
     "ShowHide Usage.csv",
     "Notes Findings.csv",
 ]
@@ -50,6 +52,7 @@ ALL_CELL_BASED_OUTPUTS = [
     "Dropdown Values.csv",
     "ShowHide Usage.csv",
     "Tab Relationships.csv",
+    "WorkbookGraph.csv",
 ]
 
 CELL_BASED_OUTPUTS = set(ALL_CELL_BASED_OUTPUTS)
@@ -77,6 +80,9 @@ class WorkbenchAnalyzer:
 
         # Track relationships between tabs and their types
         self.relationships = defaultdict(set)
+        self.workbook_graph_edges = []
+        self.workbook_graph_edge_keys = set()
+        self.sheet_inventory_rows = {}
 
         # Track how many named ranges each sheet has
         self.sheet_named_range_count = defaultdict(int)
@@ -108,7 +114,8 @@ class WorkbenchAnalyzer:
                 "Purpose",
                 "Input / Calc / Output",
                 "Notes",
-                "Visibility",
+                "Visibility State",
+                "Sheet Role",
                 "Tab Color"
             ],
 
@@ -185,6 +192,13 @@ class WorkbenchAnalyzer:
                 "Tab Name",
                 "Finding",
                 "Open Question"
+            ],
+
+            "WorkbookGraph.csv": [
+                "Source Tab",
+                "Target Tab",
+                "Dependency Type",
+                "Dependency Source"
             ]
         }
 
@@ -224,6 +238,115 @@ class WorkbenchAnalyzer:
 
     def _output_enabled(self, filename):
         return self.enabled_outputs is None or filename in self.enabled_outputs
+
+    def _normalize_visibility(self, sheet_state):
+        state = str(sheet_state or "").strip()
+        if state == "visible":
+            return "Visible"
+        if state == "hidden":
+            return "Hidden"
+        if state == "veryHidden":
+            return "Very Hidden"
+        return state or "Unknown"
+
+    def classify_sheet_role(self, ws):
+        """
+        Best-effort classification for sheets that act like lookups, validations, or configs.
+        """
+        title = ws.title.lower()
+        if any(token in title for token in ["lookup", "reference", "ref", "list", "master", "code"]):
+            return "Lookup Sheet"
+        if any(token in title for token in ["validation", "valid", "dropdown", "options"]):
+            return "Validation Sheet"
+        if any(token in title for token in ["config", "setup", "settings", "control", "param"]):
+            return "Configuration Sheet"
+        return "Data Sheet"
+
+    def find_last_used_row(self, ws):
+        """
+        Reverse-scan populated cells to find the last meaningful row.
+        """
+        used_rows = set()
+
+        for cell in ws._cells.values():
+            if cell.value is not None and str(cell.value).strip() != "":
+                used_rows.add(cell.row)
+
+        for dv in getattr(ws.data_validations, "dataValidation", []):
+            for cell_range in getattr(dv.sqref, "ranges", []):
+                used_rows.add(cell_range.max_row)
+
+        for table in getattr(ws, "tables", {}).values():
+            table_ref = table if isinstance(table, str) else getattr(table, "ref", None)
+            if table_ref:
+                try:
+                    used_rows.add(range_boundaries(table_ref)[3])
+                except Exception:
+                    pass
+
+        return max(used_rows) if used_rows else 0
+
+    def find_last_used_col(self, ws):
+        """
+        Reverse-scan populated cells to find the last meaningful column.
+        """
+        used_cols = set()
+
+        for cell in ws._cells.values():
+            if cell.value is not None and str(cell.value).strip() != "":
+                used_cols.add(cell.column)
+
+        for dv in getattr(ws.data_validations, "dataValidation", []):
+            for cell_range in getattr(dv.sqref, "ranges", []):
+                used_cols.add(cell_range.max_col)
+
+        for table in getattr(ws, "tables", {}).values():
+            table_ref = table if isinstance(table, str) else getattr(table, "ref", None)
+            if table_ref:
+                try:
+                    used_cols.add(range_boundaries(table_ref)[2])
+                except Exception:
+                    pass
+
+        return max(used_cols) if used_cols else 0
+
+    def add_workbook_graph_edge(self, source_tab, target_tab, dependency_type, dependency_source):
+        source_tab = str(source_tab or "").strip()
+        target_tab = str(target_tab or "").strip()
+        dependency_type = str(dependency_type or "").strip()
+        dependency_source = str(dependency_source or "").strip()
+        if not source_tab or not target_tab:
+            return
+
+        key = (source_tab, target_tab, dependency_type, dependency_source)
+        if key in self.workbook_graph_edge_keys:
+            return
+
+        self.workbook_graph_edge_keys.add(key)
+        self.workbook_graph_edges.append(
+            {
+                "Source Tab": source_tab,
+                "Target Tab": target_tab,
+                "Dependency Type": dependency_type or "formula",
+                "Dependency Source": dependency_source,
+            }
+        )
+
+    def _named_range_source_tabs(self, named_range):
+        dn = self._get_defined_name(named_range)
+        if dn is None:
+            return []
+
+        source_tabs = []
+        seen = set()
+        try:
+            for sheet_name, _coord in self._iter_defined_name_destinations(dn):
+                if sheet_name and sheet_name not in seen:
+                    seen.add(sheet_name)
+                    source_tabs.append(sheet_name)
+        except Exception:
+            pass
+        return source_tabs
 
     def load_workbook(self):
         logging.info(f"Loading workbook {self.filepath} (This may take several minutes)...")
@@ -1510,6 +1633,50 @@ class WorkbenchAnalyzer:
             except Exception:
                 pass
 
+    def export_workbook_graph(self):
+        if not self._output_enabled("WorkbookGraph.csv"):
+            return
+
+        logging.info("Exporting Workbook Graph...")
+
+        for edge in self.workbook_graph_edges:
+            self._append_to_csv(
+                "WorkbookGraph.csv",
+                [
+                    edge["Source Tab"],
+                    edge["Target Tab"],
+                    edge["Dependency Type"],
+                    edge["Dependency Source"]
+                ]
+            )
+
+        graph_json_path = os.path.join(self.out_dir, "WorkbookGraph.json")
+        nodes = []
+        seen_nodes = set()
+        for ws in self.wb.worksheets:
+            if ws.title in seen_nodes:
+                continue
+            seen_nodes.add(ws.title)
+            nodes.append(
+                {
+                    "tab": ws.title,
+                    "visibility_state": self._normalize_visibility(ws.sheet_state),
+                    "sheet_role": self.classify_sheet_role(ws),
+                    "tab_color": ws.sheet_properties.tabColor.rgb if ws.sheet_properties.tabColor else "None",
+                }
+            )
+
+        graph_payload = {
+            "nodes": nodes,
+            "edges": self.workbook_graph_edges,
+        }
+
+        try:
+            with open(graph_json_path, "w", encoding="utf-8") as f:
+                json.dump(graph_payload, f, indent=2, ensure_ascii=False)
+        except Exception as exc:
+            logging.warning(f"Could not write WorkbookGraph.json: {exc}")
+
     def analyze(self):
         try:
             self.load_workbook()
@@ -1525,6 +1692,7 @@ class WorkbenchAnalyzer:
                 logging.info(f"Finished saving data for: {sheet_name}")
 
             self.export_named_ranges()
+            self.export_workbook_graph()
             logging.info("Analysis complete! Generating final Tab Relationships...")
             if self._output_enabled("Tab Relationships.csv"):
                 self._write_relationships()
@@ -1533,7 +1701,8 @@ class WorkbenchAnalyzer:
 
     def analyze_sheet(self, ws):
         sheet_name = ws.title
-        visibility = ws.sheet_state
+        visibility = self._normalize_visibility(ws.sheet_state)
+        sheet_role = self.classify_sheet_role(ws)
         tab_color = ws.sheet_properties.tabColor.rgb if ws.sheet_properties.tabColor else "None"
         field_inventory_enabled = self._output_enabled("Field Inventory.csv")
         dropdown_values_enabled = self._output_enabled("Dropdown Values.csv")
@@ -1542,9 +1711,20 @@ class WorkbenchAnalyzer:
         showhide_enabled = self._output_enabled("ShowHide Usage.csv")
         tab_relationships_enabled = self._output_enabled("Tab Relationships.csv")
         named_ranges_enabled = self._output_enabled("Named Ranges.csv")
+        workbook_graph_enabled = self._output_enabled("WorkbookGraph.csv")
         needs_cell_scan = any(
             self._output_enabled(filename) for filename in CELL_BASED_OUTPUTS
         )
+        needs_formula_scan = any(
+            [
+                calculated_fields_enabled,
+                field_mapping_enabled,
+                showhide_enabled,
+                tab_relationships_enabled,
+                workbook_graph_enabled,
+            ]
+        )
+        needs_dropdown_scan = dropdown_values_enabled or field_inventory_enabled or workbook_graph_enabled
 
         if self._output_enabled("Tab Inventory.csv"):
             self._append_to_csv(
@@ -1556,6 +1736,7 @@ class WorkbenchAnalyzer:
                     "",
                     "",
                     visibility,
+                    sheet_role,
                     tab_color
                 ]
             )
@@ -1564,7 +1745,7 @@ class WorkbenchAnalyzer:
             return
 
         dropdowns = {}
-        if dropdown_values_enabled or field_inventory_enabled:
+        if needs_dropdown_scan:
             validations = getattr(ws.data_validations, "dataValidation", [])
 
             for dv in validations:
@@ -1579,9 +1760,10 @@ class WorkbenchAnalyzer:
                                 )
                                 dropdowns[coord] = dropdown_meta
 
-        max_r, max_c = ws.max_row, ws.max_column
-        if max_r > 5000:
-            max_r = 5000
+        max_r = self.find_last_used_row(ws)
+        max_c = self.find_last_used_col(ws)
+        if not max_r or not max_c:
+            return
 
         for row_cells in ws.iter_rows(min_row=1, max_row=max_r, max_col=max_c):
             row = row_cells[0].row
@@ -1623,6 +1805,13 @@ class WorkbenchAnalyzer:
                     named_range = self.get_named_range_for_cell(ws, row, col) if named_ranges_enabled else ""
                     if named_range:
                         self.record_named_range_usage(named_range, sheet_name, "Field Inventory.csv")
+                        for source_tab in self._named_range_source_tabs(named_range):
+                            self.add_workbook_graph_edge(
+                                source_tab,
+                                sheet_name,
+                                "named range",
+                                named_range
+                            )
 
                     if field_inventory_enabled:
                         formula_type = self.classify_formula(val) if is_formula else ""
@@ -1651,7 +1840,7 @@ class WorkbenchAnalyzer:
                             ]
                         )
 
-                    if is_dropdown and dropdown_values_enabled:
+                    if is_dropdown:
                         dropdown_meta = dropdowns[coord]
                         named_ranges = [
                             item.strip()
@@ -1660,24 +1849,46 @@ class WorkbenchAnalyzer:
                         ]
                         for nr in named_ranges:
                             self.record_named_range_usage(nr, sheet_name, "Dropdown Values.csv")
+                            for source_tab in self._named_range_source_tabs(nr):
+                                self.add_workbook_graph_edge(
+                                    source_tab,
+                                    sheet_name,
+                                    "validation",
+                                    nr
+                                )
 
-                        self._append_to_csv(
-                            "Dropdown Values.csv",
-                            [
-                                sheet_name,
-                                label,
-                                dropdown_meta.get("options", ""),
-                                dropdown_meta.get("named_ranges", ""),
-                                dropdown_meta.get("dropdown_type", ""),
-                                dropdown_meta.get("source_formula", ""),
-                                dropdown_meta.get("referenced_cells", ""),
-                                dropdown_meta.get("source_ranges", ""),
-                                "Resolved" if dropdown_meta.get("resolved") else "Unresolved",
-                                coord
-                            ]
-                        )
+                        if workbook_graph_enabled:
+                            for source_range in str(dropdown_meta.get("source_ranges", "")).split(","):
+                                source_range = source_range.strip()
+                                if not source_range:
+                                    continue
+                                source_sheet = source_range.split("!", 1)[0].strip("'")
+                                if source_sheet:
+                                    self.add_workbook_graph_edge(
+                                        source_sheet,
+                                        sheet_name,
+                                        "dropdown",
+                                        dropdown_meta.get("source_formula", "")
+                                    )
 
-                    if is_formula and calculated_fields_enabled:
+                        if dropdown_values_enabled:
+                            self._append_to_csv(
+                                "Dropdown Values.csv",
+                                [
+                                    sheet_name,
+                                    label,
+                                    dropdown_meta.get("options", ""),
+                                    dropdown_meta.get("named_ranges", ""),
+                                    dropdown_meta.get("dropdown_type", ""),
+                                    dropdown_meta.get("source_formula", ""),
+                                    dropdown_meta.get("referenced_cells", ""),
+                                    dropdown_meta.get("source_ranges", ""),
+                                    "Resolved" if dropdown_meta.get("resolved") else "Unresolved",
+                                    coord
+                                ]
+                            )
+
+                    if is_formula and needs_formula_scan:
                         source_fields = self.extract_source_field_dependencies(ws, val)
                         deps = self.extract_dependencies_from_formula(val)
                         named_deps = self.extract_named_range_dependencies(val)
@@ -1685,18 +1896,28 @@ class WorkbenchAnalyzer:
                         if named_ranges_enabled:
                             for named_dep in named_deps:
                                 self.record_named_range_usage(named_dep, sheet_name, "Calculated Fields.csv")
+                        if workbook_graph_enabled:
+                            for named_dep in named_deps:
+                                for source_tab in self._named_range_source_tabs(named_dep):
+                                    self.add_workbook_graph_edge(
+                                        source_tab,
+                                        sheet_name,
+                                        "named range",
+                                        named_dep
+                                    )
 
-                        self._append_to_csv(
-                            "Calculated Fields.csv",
-                            [
-                                sheet_name,
-                                label,
-                                val,
-                                ", ".join(source_fields),
-                                ", ".join(named_deps),
-                                coord
-                            ]
-                        )
+                        if calculated_fields_enabled:
+                            self._append_to_csv(
+                                "Calculated Fields.csv",
+                                [
+                                    sheet_name,
+                                    label,
+                                    val,
+                                    ", ".join(source_fields),
+                                    ", ".join(named_deps),
+                                    coord
+                                ]
+                            )
 
                         # ShowHide usage capture
                         if showhide_enabled:
@@ -1733,10 +1954,27 @@ class WorkbenchAnalyzer:
                                 if dep != sheet_name:
                                     self.add_relationship(dep, sheet_name, relationship_type)
 
+                        if workbook_graph_enabled:
+                            for dep in deps:
+                                if dep != sheet_name:
+                                    self.add_workbook_graph_edge(
+                                        dep,
+                                        sheet_name,
+                                        "formula",
+                                        coord
+                                    )
+
                         if field_mapping_enabled:
                             for source_tab, source_field in self.extract_field_mappings_from_formula(ws, val):
                                 if source_tab != sheet_name and tab_relationships_enabled:
                                     self.add_relationship(source_tab, sheet_name, relationship_type)
+                                if workbook_graph_enabled and source_tab != sheet_name:
+                                    self.add_workbook_graph_edge(
+                                        source_tab,
+                                        sheet_name,
+                                        "formula",
+                                        source_field
+                                    )
                                 self._append_to_csv(
                                     "Field Mapping.csv",
                                     [
