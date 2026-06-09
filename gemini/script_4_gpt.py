@@ -11,7 +11,7 @@ from openpyxl.utils import column_index_from_string, get_column_letter, range_bo
 
 # --- CONFIGURATION ---
 FILE_PATH = "/Users/tshah/Documents/PVA Mappings/gemini/Mixed Use Copy zip real.xlsm"  # Ensure this points to your file
-OUTPUT_DIR = "Workbench_Analysis_gpt4"
+OUTPUT_DIR = "gpt_4_improvements_2"
 
 TARGET_TABS = [
     "File Info", "Settings", "Dates, Premises", "Contracts, History", "Scope",
@@ -834,10 +834,37 @@ class WorkbenchAnalyzer:
         for ws in self.wb.worksheets:
             tables = getattr(ws, "tables", {})
             for table_name, table in tables.items():
+                table_ref = None
+                table_columns = []
+
+                if isinstance(table, str):
+                    table_ref = table
+                else:
+                    table_ref = getattr(table, "ref", None) or str(table)
+                    table_columns = [
+                        getattr(col, "name", "")
+                        for col in getattr(table, "tableColumns", [])
+                        if getattr(col, "name", "")
+                    ]
+
+                if not table_ref:
+                    continue
+
+                if not table_columns:
+                    try:
+                        min_col, min_row, max_col, max_row = range_boundaries(table_ref)
+                        if min_row <= max_row:
+                            table_columns = [
+                                str(ws.cell(min_row, col_idx).value or "").strip()
+                                for col_idx in range(min_col, max_col + 1)
+                            ]
+                    except Exception:
+                        table_columns = []
+
                 self.table_map[table_name] = {
                     "sheet": ws.title,
-                    "ref": table.ref,
-                    "columns": [getattr(col, "name", "") for col in getattr(table, "tableColumns", [])],
+                    "ref": table_ref,
+                    "columns": table_columns,
                 }
 
     def _strip_spill_refs(self, formula_text):
