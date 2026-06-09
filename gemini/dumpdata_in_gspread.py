@@ -6,6 +6,7 @@ import os
 import random
 import re
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Iterable, List, Sequence
 
@@ -50,6 +51,23 @@ MAX_ROWS_PER_WORKSHEET = 40000
 # If a CSV is wider than this, the script still uploads it; this is just used for sizing.
 MIN_WORKSHEET_ROWS = 1000
 MIN_WORKSHEET_COLS = 20
+
+# Workbook presentation
+CREATE_INDEX_SHEET = True
+INDEX_SHEET_TITLE = "00_Index"
+
+TAB_STYLE_MAP = {
+    "Tab Inventory": {"tab_color": (0.10, 0.47, 0.78), "header_color": (0.10, 0.47, 0.78)},
+    "Field Inventory": {"tab_color": (0.16, 0.63, 0.41), "header_color": (0.16, 0.63, 0.41)},
+    "Field Mapping": {"tab_color": (0.55, 0.35, 0.75), "header_color": (0.55, 0.35, 0.75)},
+    "Dropdown Values": {"tab_color": (0.92, 0.67, 0.11), "header_color": (0.92, 0.67, 0.11)},
+    "Calculated Fields": {"tab_color": (0.86, 0.34, 0.24), "header_color": (0.86, 0.34, 0.24)},
+    "Tab Relationships": {"tab_color": (0.15, 0.62, 0.74), "header_color": (0.15, 0.62, 0.74)},
+    "Named Ranges": {"tab_color": (0.58, 0.47, 0.20), "header_color": (0.58, 0.47, 0.20)},
+    "Notes Findings": {"tab_color": (0.45, 0.45, 0.45), "header_color": (0.45, 0.45, 0.45)},
+}
+
+DEFAULT_STYLE = {"tab_color": (0.25, 0.58, 0.53), "header_color": (0.13, 0.59, 0.95)}
 
 # Retry policy
 MAX_RETRIES = 6
@@ -201,6 +219,19 @@ def split_csv_for_tabs(data: List[List[str]], max_rows_per_worksheet: int) -> Li
     return parts
 
 
+def get_style_for_title(title: str):
+    """
+    Returns a tab/header color palette for a worksheet title.
+    """
+    if title == INDEX_SHEET_TITLE:
+        return {"tab_color": (0.09, 0.09, 0.09), "header_color": (0.09, 0.09, 0.09)}
+
+    for prefix, style in TAB_STYLE_MAP.items():
+        if title.startswith(prefix):
+            return style
+    return DEFAULT_STYLE
+
+
 def get_or_create_worksheet(spreadsheet: gspread.Spreadsheet, title: str, rows: int, cols: int):
     """
     Gets an existing worksheet or creates it with enough size.
@@ -232,6 +263,165 @@ def delete_existing_part_tabs(spreadsheet: gspread.Spreadsheet, base_title: str)
         if pattern.match(ws.title):
             logging.info(f"Deleting stale tab: {ws.title}")
             with_retry(spreadsheet.del_worksheet, ws)
+
+
+def ensure_index_sheet(spreadsheet: gspread.Spreadsheet) -> None:
+    """
+    Create or refresh a landing page with links and a color legend.
+    """
+    try:
+        ws = spreadsheet.worksheet(INDEX_SHEET_TITLE)
+    except WorksheetNotFound:
+        ws = with_retry(
+            spreadsheet.add_worksheet,
+            title=INDEX_SHEET_TITLE,
+            rows="100",
+            cols="8"
+        )
+
+    rows = [
+        ["Workbook Workbench Mappings"],
+        ["Last refreshed", datetime.now().strftime("%Y-%m-%d %H:%M:%S")],
+        [""],
+        ["Tab", "Purpose", "Open", "Color"],
+        ["Tab Inventory", "Workbook metadata and sheet summary", "", "Blue"],
+        ["Field Inventory", "Extracted field catalog", "", "Green"],
+        ["Field Mapping", "Cross-sheet source mapping", "", "Purple"],
+        ["Dropdown Values", "Resolved dropdown options", "", "Amber"],
+        ["Calculated Fields", "Formula breakdown", "", "Red"],
+        ["Tab Relationships", "Sheet dependency graph", "", "Cyan"],
+        ["Named Ranges", "Named range catalog and usage", "", "Gold"],
+        ["Notes Findings", "Open questions and findings", "", "Gray"],
+    ]
+
+    with_retry(ws.clear)
+    with_retry(ws.resize, rows=100, cols=8)
+    with_retry(
+        ws.update,
+        range_name="A1:D12",
+        values=normalize_matrix(rows),
+        value_input_option="USER_ENTERED"
+    )
+
+    try:
+        with batch_updater(spreadsheet) as b:
+            title_format = CellFormat(
+                backgroundColor=Color(0.09, 0.09, 0.09),
+                textFormat=TextFormat(bold=True, foregroundColor=Color(1, 1, 1)),
+                horizontalAlignment="CENTER"
+            )
+            header_format = CellFormat(
+                backgroundColor=Color(0.18, 0.18, 0.18),
+                textFormat=TextFormat(bold=True, foregroundColor=Color(1, 1, 1))
+            )
+            b.format_cell_range(ws, "A1:D1", title_format)
+            b.format_cell_range(ws, "A4:D4", header_format)
+
+        with_retry(ws.freeze, rows=4)
+        with_retry(ws.columns_auto_resize, 0, 4)
+        with_retry(
+            ws.spreadsheet.batch_update,
+            {
+                "requests": [
+                    {
+                        "updateSheetProperties": {
+                            "properties": {
+                                "sheetId": ws.id,
+                                "tabColor": {"red": 0.09, "green": 0.09, "blue": 0.09},
+                                "index": 0,
+                            },
+                            "fields": "tabColor,index",
+                        }
+                    }
+                ]
+            }
+        )
+    except Exception as exc:
+        logging.warning(f"Could not fully format index sheet: {exc}")
+
+
+def refresh_index_sheet(spreadsheet: gspread.Spreadsheet) -> None:
+    """
+    Rebuild the index sheet with actual jump links to the mapped tabs.
+    """
+    try:
+        ws = spreadsheet.worksheet(INDEX_SHEET_TITLE)
+    except WorksheetNotFound:
+        return
+
+    rows = [
+        ["Workbook Workbench Mappings"],
+        ["Last refreshed", datetime.now().strftime("%Y-%m-%d %H:%M:%S")],
+        [""],
+        ["Tab", "Purpose", "Open", "Color"],
+    ]
+
+    legend = [
+        ("Tab Inventory", "Workbook metadata and sheet summary", "Blue"),
+        ("Field Inventory", "Extracted field catalog", "Green"),
+        ("Field Mapping", "Cross-sheet source mapping", "Purple"),
+        ("Dropdown Values", "Resolved dropdown options", "Amber"),
+        ("Calculated Fields", "Formula breakdown", "Red"),
+        ("Tab Relationships", "Sheet dependency graph", "Cyan"),
+        ("Named Ranges", "Named range catalog and usage", "Gold"),
+        ("Notes Findings", "Open questions and findings", "Gray"),
+    ]
+
+    gid_by_title = {}
+    for worksheet in spreadsheet.worksheets():
+        gid_by_title[worksheet.title] = worksheet.id
+
+    for title, purpose, color_name in legend:
+        gid = gid_by_title.get(title)
+        open_formula = f'=HYPERLINK("#gid={gid}", "Open")' if gid is not None else "Missing"
+        rows.append([title, purpose, open_formula, color_name])
+
+    with_retry(ws.clear)
+    with_retry(ws.resize, rows=100, cols=8)
+    with_retry(
+        ws.update,
+        range_name="A1:D12",
+        values=normalize_matrix(rows),
+        value_input_option="USER_ENTERED"
+    )
+
+    try:
+        with batch_updater(spreadsheet) as b:
+            title_format = CellFormat(
+                backgroundColor=Color(0.09, 0.09, 0.09),
+                textFormat=TextFormat(bold=True, foregroundColor=Color(1, 1, 1)),
+                horizontalAlignment="CENTER"
+            )
+            header_format = CellFormat(
+                backgroundColor=Color(0.18, 0.18, 0.18),
+                textFormat=TextFormat(bold=True, foregroundColor=Color(1, 1, 1))
+            )
+            link_format = CellFormat(
+                textFormat=TextFormat(bold=True, foregroundColor=Color(0.13, 0.59, 0.95))
+            )
+            b.format_cell_range(ws, "A1:D1", title_format)
+            b.format_cell_range(ws, "A4:D4", header_format)
+            b.format_cell_range(ws, "C5:C12", link_format)
+        with_retry(ws.freeze, rows=4)
+        with_retry(ws.columns_auto_resize, 0, 4)
+        with_retry(
+            ws.spreadsheet.batch_update,
+            {
+                "requests": [
+                    {
+                        "updateSheetProperties": {
+                            "properties": {
+                                "sheetId": ws.id,
+                                "index": 0,
+                            },
+                            "fields": "index",
+                        }
+                    }
+                ]
+            }
+        )
+    except Exception as exc:
+        logging.warning(f"Could not refresh index sheet: {exc}")
 
 
 def clear_and_upload_matrix(
@@ -286,32 +476,47 @@ def clear_and_upload_matrix(
         except Exception as exc:
             logging.warning(f"Could not freeze header row for {sheet_title}: {exc}")
 
+    style = get_style_for_title(sheet_title)
+
     # ── PROFESSIONAL FORMATTING ──────────────────────────────────────────
     try:
-        # 1. Formatting for the Header Row (Row 1)
-        # Blue background (RGB: 33, 150, 243 -> 0.13, 0.59, 0.95)
-        # White bold text
         header_format = CellFormat(
-            backgroundColor=Color(0.129, 0.588, 0.953),
+            backgroundColor=Color(*style["header_color"]),
             textFormat=TextFormat(bold=True, foregroundColor=Color(1, 1, 1)),
             horizontalAlignment="CENTER"
         )
-        
-        # 2. Add some stripes or borders if desired? 
-        # Let's keep it clean with just a strong header and auto-resize.
-        
+
         with batch_updater(worksheet.spreadsheet) as b:
-            # Apply header format
             last_col_ltr = rowcol_to_a1(1, cols).split('1')[0]
             header_range = f"A1:{last_col_ltr}1"
             b.format_cell_range(worksheet, header_range, header_format)
-            
-        # 3. Auto-resize columns to fit content
+
+        try:
+            with_retry(
+                worksheet.spreadsheet.batch_update,
+                {
+                    "requests": [
+                        {
+                            "setBasicFilter": {
+                                "filter": {
+                                    "range": {
+                                        "sheetId": worksheet.id,
+                                        "startRowIndex": 0,
+                                        "endRowIndex": rows,
+                                        "startColumnIndex": 0,
+                                        "endColumnIndex": cols,
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            )
+        except Exception as exc:
+            logging.warning(f"Could not set filter for {sheet_title}: {exc}")
+
         with_retry(worksheet.columns_auto_resize, 0, cols)
 
-        # 4. Set Tab Color (Light Green/Cyan)
-        # RGB: 0, 150, 136 -> 0, 0.58, 0.53
-        # gspread 6.0+ uses spreadsheet.batch_update for property changes or specific direct calls
         with_retry(
             worksheet.spreadsheet.batch_update,
             {
@@ -320,7 +525,11 @@ def clear_and_upload_matrix(
                         "updateSheetProperties": {
                             "properties": {
                                 "sheetId": worksheet.id,
-                                "tabColor": {"red": 0.0, "green": 0.58, "blue": 0.53},
+                                "tabColor": {
+                                    "red": style["tab_color"][0],
+                                    "green": style["tab_color"][1],
+                                    "blue": style["tab_color"][2],
+                                },
                             },
                             "fields": "tabColor",
                         }
@@ -356,6 +565,9 @@ def upload_csvs_to_gsheets() -> None:
 
     existing_titles = {ws.title for ws in spreadsheet.worksheets()}
     logging.info(f"Connected to Google Sheet: {spreadsheet.title}")
+
+    if CREATE_INDEX_SHEET:
+        ensure_index_sheet(spreadsheet)
 
     csv_files = sorted(
         f for f in INPUT_DIR.iterdir()
@@ -406,6 +618,9 @@ def upload_csvs_to_gsheets() -> None:
                 cols=max(max(len(r) for r in part_data) + 5, MIN_WORKSHEET_COLS)
             )
             clear_and_upload_matrix(worksheet, part_data, worksheet_title)
+
+    if CREATE_INDEX_SHEET:
+        refresh_index_sheet(spreadsheet)
 
     logging.info("All CSVs successfully synced to Google Sheets.")
 
