@@ -249,6 +249,20 @@ class WorkbenchAnalyzer:
             return "Very Hidden"
         return state or "Unknown"
 
+    def _normalize_tab_color(self, tab_color):
+        """
+        Convert openpyxl color objects into JSON-safe text.
+        """
+        if tab_color is None:
+            return "None"
+
+        for attr in ("rgb", "indexed", "theme", "auto", "type"):
+            value = getattr(tab_color, attr, None)
+            if value is not None:
+                return str(value)
+
+        return str(tab_color)
+
     def classify_sheet_role(self, ws):
         """
         Best-effort classification for sheets that act like lookups, validations, or configs.
@@ -1662,7 +1676,7 @@ class WorkbenchAnalyzer:
                     "tab": ws.title,
                     "visibility_state": self._normalize_visibility(ws.sheet_state),
                     "sheet_role": self.classify_sheet_role(ws),
-                    "tab_color": ws.sheet_properties.tabColor.rgb if ws.sheet_properties.tabColor else "None",
+                    "tab_color": self._normalize_tab_color(ws.sheet_properties.tabColor),
                 }
             )
 
@@ -1703,7 +1717,7 @@ class WorkbenchAnalyzer:
         sheet_name = ws.title
         visibility = self._normalize_visibility(ws.sheet_state)
         sheet_role = self.classify_sheet_role(ws)
-        tab_color = ws.sheet_properties.tabColor.rgb if ws.sheet_properties.tabColor else "None"
+        tab_color = self._normalize_tab_color(ws.sheet_properties.tabColor)
         field_inventory_enabled = self._output_enabled("Field Inventory.csv")
         dropdown_values_enabled = self._output_enabled("Dropdown Values.csv")
         calculated_fields_enabled = self._output_enabled("Calculated Fields.csv")
