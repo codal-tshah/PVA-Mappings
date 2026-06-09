@@ -13,7 +13,8 @@ from openpyxl.utils import column_index_from_string, get_column_letter, range_bo
 FILE_PATH = "/Users/tshah/Documents/PVA Mappings/gemini/Mixed Use Copy zip real.xlsm"  # Ensure this points to your file
 OUTPUT_DIR = "gpt_4_improvements_2"
 
-TARGET_TABS = [
+# Comment entries in these lists to narrow test runs without changing script logic.
+ALL_TARGET_TABS = [
     "File Info", "Settings", "Dates, Premises", "Contracts, History", "Scope",
     "Site", "Zoning", "Improvements", "Assessment", "Land Grid",
     "Land Valuation", "Land Comp Profiles", "Cost Approach Setup", "Sales Grid",
@@ -24,14 +25,44 @@ TARGET_TABS = [
     "DirectCapConclusion"
 ]
 
+TARGET_TABS = ALL_TARGET_TABS
+
+# Test-friendly filters:
+# - Comment items out of ALL_TARGET_TABS to process fewer sheets.
+# - Comment items out of SELECTED_OUTPUT_CSVS to write fewer CSVs during testing.
+# - Set SELECTED_OUTPUT_CSVS = None to write everything.
+SELECTED_OUTPUT_CSVS = [
+    "Tab Inventory.csv",
+    "Field Inventory.csv",
+    "Field Mapping.csv",
+    "Dropdown Values.csv",
+    "Calculated Fields.csv",
+    "Named Ranges.csv",
+    "Tab Relationships.csv",
+    "ShowHide Usage.csv",
+    "Notes Findings.csv",
+]
+
+ALL_CELL_BASED_OUTPUTS = [
+    "Field Inventory.csv",
+    "Field Mapping.csv",
+    "Calculated Fields.csv",
+    "Dropdown Values.csv",
+    "ShowHide Usage.csv",
+    "Tab Relationships.csv",
+]
+
+CELL_BASED_OUTPUTS = set(ALL_CELL_BASED_OUTPUTS)
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 class WorkbenchAnalyzer:
-    def __init__(self, filepath, target_tabs, out_dir):
+    def __init__(self, filepath, target_tabs, out_dir, selected_outputs=None):
         self.filepath = filepath
         self.target_tabs = target_tabs
         self.out_dir = out_dir
+        self.enabled_outputs = set(selected_outputs) if selected_outputs else None
         self.wb = None
 
         # Map "Sheet!A1" -> named range name
@@ -169,6 +200,9 @@ class WorkbenchAnalyzer:
             self.csv_writers[filename] = csv.writer(handle)
 
     def _append_to_csv(self, filename, row_data):
+        if self.enabled_outputs is not None and filename not in self.enabled_outputs:
+            return
+
         writer = self.csv_writers.get(filename)
         if writer is None:
             filepath = os.path.join(self.out_dir, filename)
@@ -187,6 +221,9 @@ class WorkbenchAnalyzer:
                 pass
         self.csv_handles.clear()
         self.csv_writers.clear()
+
+    def _output_enabled(self, filename):
+        return self.enabled_outputs is None or filename in self.enabled_outputs
 
     def load_workbook(self):
         logging.info(f"Loading workbook {self.filepath} (This may take several minutes)...")
@@ -1440,6 +1477,9 @@ class WorkbenchAnalyzer:
         return None
 
     def export_named_ranges(self):
+        if not self._output_enabled("Named Ranges.csv"):
+            return
+
         logging.info("Exporting Named Ranges...")
 
         for name, dn in self._iter_defined_names():
@@ -1486,7 +1526,8 @@ class WorkbenchAnalyzer:
 
             self.export_named_ranges()
             logging.info("Analysis complete! Generating final Tab Relationships...")
-            self._write_relationships()
+            if self._output_enabled("Tab Relationships.csv"):
+                self._write_relationships()
         finally:
             self._close_csv_handles()
 
@@ -1494,34 +1535,49 @@ class WorkbenchAnalyzer:
         sheet_name = ws.title
         visibility = ws.sheet_state
         tab_color = ws.sheet_properties.tabColor.rgb if ws.sheet_properties.tabColor else "None"
-
-        self._append_to_csv(
-            "Tab Inventory.csv",
-            [
-                sheet_name,
-                "Uncategorized",
-                "Auto-extracted",
-                "",
-                "",
-                visibility,
-                tab_color
-            ]
+        field_inventory_enabled = self._output_enabled("Field Inventory.csv")
+        dropdown_values_enabled = self._output_enabled("Dropdown Values.csv")
+        calculated_fields_enabled = self._output_enabled("Calculated Fields.csv")
+        field_mapping_enabled = self._output_enabled("Field Mapping.csv")
+        showhide_enabled = self._output_enabled("ShowHide Usage.csv")
+        tab_relationships_enabled = self._output_enabled("Tab Relationships.csv")
+        named_ranges_enabled = self._output_enabled("Named Ranges.csv")
+        needs_cell_scan = any(
+            self._output_enabled(filename) for filename in CELL_BASED_OUTPUTS
         )
 
-        dropdowns = {}
-        validations = getattr(ws.data_validations, "dataValidation", [])
+        if self._output_enabled("Tab Inventory.csv"):
+            self._append_to_csv(
+                "Tab Inventory.csv",
+                [
+                    sheet_name,
+                    "Uncategorized",
+                    "Auto-extracted",
+                    "",
+                    "",
+                    visibility,
+                    tab_color
+                ]
+            )
 
-        for dv in validations:
-            if dv.type == "list":
-                for cell_range in dv.sqref.ranges:
-                    for row in range(cell_range.min_row, cell_range.max_row + 1):
-                        for col in range(cell_range.min_col, cell_range.max_col + 1):
-                            coord = f"{get_column_letter(col)}{row}"
-                            dropdown_meta = self.resolve_dropdown_options(
-                                dv.formula1,
-                                current_sheet=sheet_name
-                            )
-                            dropdowns[coord] = dropdown_meta
+        if not needs_cell_scan:
+            return
+
+        dropdowns = {}
+        if dropdown_values_enabled or field_inventory_enabled:
+            validations = getattr(ws.data_validations, "dataValidation", [])
+
+            for dv in validations:
+                if dv.type == "list":
+                    for cell_range in dv.sqref.ranges:
+                        for row in range(cell_range.min_row, cell_range.max_row + 1):
+                            for col in range(cell_range.min_col, cell_range.max_col + 1):
+                                coord = f"{get_column_letter(col)}{row}"
+                                dropdown_meta = self.resolve_dropdown_options(
+                                    dv.formula1,
+                                    current_sheet=sheet_name
+                                )
+                                dropdowns[coord] = dropdown_meta
 
         max_r, max_c = ws.max_row, ws.max_column
         if max_r > 5000:
@@ -1564,37 +1620,38 @@ class WorkbenchAnalyzer:
 
                     notes_str = " | ".join(notes)
 
-                    named_range = self.get_named_range_for_cell(ws, row, col)
+                    named_range = self.get_named_range_for_cell(ws, row, col) if named_ranges_enabled else ""
                     if named_range:
                         self.record_named_range_usage(named_range, sheet_name, "Field Inventory.csv")
 
-                    formula_type = self.classify_formula(val) if is_formula else ""
-                    required_status = self.infer_required_status(
-                        cell,
-                        is_formula=is_formula,
-                        is_dropdown=is_dropdown,
-                        dropdown_meta=dropdowns.get(coord)
-                    )
-                    inferred_data_type = self.infer_data_type(cell, is_dropdown=is_dropdown)
+                    if field_inventory_enabled:
+                        formula_type = self.classify_formula(val) if is_formula else ""
+                        required_status = self.infer_required_status(
+                            cell,
+                            is_formula=is_formula,
+                            is_dropdown=is_dropdown,
+                            dropdown_meta=dropdowns.get(coord)
+                        )
+                        inferred_data_type = self.infer_data_type(cell, is_dropdown=is_dropdown)
 
-                    self._append_to_csv(
-                        "Field Inventory.csv",
-                        [
-                            sheet_name,
-                            label,
-                            named_range,
-                            "Yes" if not is_formula else "No",
-                            "Yes" if is_formula else "No",
-                            "Yes" if is_dropdown else "No",
-                            formula_type,
-                            inferred_data_type,
-                            required_status,
-                            notes_str,
-                            coord
-                        ]
-                    )
+                        self._append_to_csv(
+                            "Field Inventory.csv",
+                            [
+                                sheet_name,
+                                label,
+                                named_range,
+                                "Yes" if not is_formula else "No",
+                                "Yes" if is_formula else "No",
+                                "Yes" if is_dropdown else "No",
+                                formula_type,
+                                inferred_data_type,
+                                required_status,
+                                notes_str,
+                                coord
+                            ]
+                        )
 
-                    if is_dropdown:
+                    if is_dropdown and dropdown_values_enabled:
                         dropdown_meta = dropdowns[coord]
                         named_ranges = [
                             item.strip()
@@ -1620,13 +1677,14 @@ class WorkbenchAnalyzer:
                             ]
                         )
 
-                    if is_formula:
+                    if is_formula and calculated_fields_enabled:
                         source_fields = self.extract_source_field_dependencies(ws, val)
                         deps = self.extract_dependencies_from_formula(val)
                         named_deps = self.extract_named_range_dependencies(val)
                         relationship_type = self.infer_relationship_type(val)
-                        for named_dep in named_deps:
-                            self.record_named_range_usage(named_dep, sheet_name, "Calculated Fields.csv")
+                        if named_ranges_enabled:
+                            for named_dep in named_deps:
+                                self.record_named_range_usage(named_dep, sheet_name, "Calculated Fields.csv")
 
                         self._append_to_csv(
                             "Calculated Fields.csv",
@@ -1641,51 +1699,58 @@ class WorkbenchAnalyzer:
                         )
 
                         # ShowHide usage capture
-                        showhide_named_deps = [
-                            dep for dep in named_deps
-                            if "_SHOWHIDE" in dep.upper()
-                        ]
-                        if "_SHOWHIDE" in str(val).upper() or showhide_named_deps:
-                            if showhide_named_deps:
-                                for dep in showhide_named_deps:
-                                    self.record_named_range_usage(dep, sheet_name, "ShowHide Usage.csv")
+                        if showhide_enabled:
+                            showhide_named_deps = [
+                                dep for dep in named_deps
+                                if "_SHOWHIDE" in dep.upper()
+                            ]
+                            if "_SHOWHIDE" in str(val).upper() or showhide_named_deps:
+                                if showhide_named_deps:
+                                    for dep in showhide_named_deps:
+                                        self.record_named_range_usage(dep, sheet_name, "ShowHide Usage.csv")
+                                        self._append_to_csv(
+                                            "ShowHide Usage.csv",
+                                            [
+                                                sheet_name,
+                                                coord,
+                                                val,
+                                                dep
+                                            ]
+                                        )
+                                else:
                                     self._append_to_csv(
                                         "ShowHide Usage.csv",
                                         [
                                             sheet_name,
                                             coord,
                                             val,
-                                            dep
+                                            ""
                                         ]
                                     )
-                            else:
+
+                        if tab_relationships_enabled:
+                            for dep in deps:
+                                if dep != sheet_name:
+                                    self.add_relationship(dep, sheet_name, relationship_type)
+
+                        if field_mapping_enabled:
+                            for source_tab, source_field in self.extract_field_mappings_from_formula(ws, val):
+                                if source_tab != sheet_name and tab_relationships_enabled:
+                                    self.add_relationship(source_tab, sheet_name, relationship_type)
                                 self._append_to_csv(
-                                    "ShowHide Usage.csv",
+                                    "Field Mapping.csv",
                                     [
+                                        source_tab,
+                                        source_field,
                                         sheet_name,
-                                        coord,
-                                        val,
                                         ""
                                     ]
                                 )
 
-                        for dep in deps:
-                            if dep != sheet_name:
-                                self.add_relationship(dep, sheet_name, relationship_type)
-                        for source_tab, source_field in self.extract_field_mappings_from_formula(ws, val):
-                            if source_tab != sheet_name:
-                                self.add_relationship(source_tab, sheet_name, relationship_type)
-                            self._append_to_csv(
-                                "Field Mapping.csv",
-                                [
-                                    source_tab,
-                                    source_field,
-                                    sheet_name,
-                                    ""
-                                ]
-                            )
-
     def _write_relationships(self):
+        if not self._output_enabled("Tab Relationships.csv"):
+            return
+
         for source, target in sorted(self.relationships):
             relationship_types = ", ".join(sorted(self.relationships[(source, target)]))
             self._append_to_csv(
@@ -1700,5 +1765,5 @@ class WorkbenchAnalyzer:
 
 
 if __name__ == "__main__":
-    analyzer = WorkbenchAnalyzer(FILE_PATH, TARGET_TABS, OUTPUT_DIR)
+    analyzer = WorkbenchAnalyzer(FILE_PATH, TARGET_TABS, OUTPUT_DIR, SELECTED_OUTPUT_CSVS)
     analyzer.analyze()
