@@ -27,7 +27,7 @@ SERVICE_ACCOUNT_FILE = Path(
     r"/Users/tshah/Documents/PVA Mappings/service_account.json"
 )
 SPREADSHEET_ID = "1UkVoXcVWArr1s3gR73hU1DDL79XAV_ULWrhsEXS6UR0"
-INPUT_DIR = Path("/Users/tshah/Documents/PVA Mappings/gemini/colab_csv_files")
+INPUT_DIR = Path("/Users/tshah/Documents/PVA Mappings/gemini/colab_csv_2_improvement")
 
 # Google auth scopes for Sheets + Drive
 SCOPES = [
@@ -42,6 +42,10 @@ FREEZE_HEADER_ROW = True
 
 # Keep chunks reasonably small so API requests stay stable
 BATCH_ROWS = 2000
+
+# Google Sheets cell content limit is 50,000 characters.
+# Keep a small buffer below that limit to avoid API failures.
+MAX_CELL_CHARS = 49000
 
 # Conservative safety limit per worksheet.
 # If a CSV exceeds this, it will be split into multiple tabs.
@@ -65,6 +69,7 @@ TAB_STYLE_MAP = {
     "Tab Relationships": {"tab_color": (0.15, 0.62, 0.74), "header_color": (0.15, 0.62, 0.74)},
     "Named Ranges": {"tab_color": (0.58, 0.47, 0.20), "header_color": (0.58, 0.47, 0.20)},
     "Notes Findings": {"tab_color": (0.45, 0.45, 0.45), "header_color": (0.45, 0.45, 0.45)},
+    "WorkbookGraph": {"tab_color": (0.30, 0.30, 0.30), "header_color": (0.30, 0.30, 0.30)},
 }
 
 DEFAULT_STYLE = {"tab_color": (0.25, 0.58, 0.53), "header_color": (0.13, 0.59, 0.95)}
@@ -117,6 +122,13 @@ def unique_title(existing_titles: set[str], base_title: str) -> str:
         i += 1
 
 
+def a1_range(start_row: int, end_row: int, start_col: int = 1, end_col: int = 4) -> str:
+    """
+    Build an A1-style rectangular range string.
+    """
+    return f"{rowcol_to_a1(start_row, start_col)}:{rowcol_to_a1(end_row, end_col)}"
+
+
 def read_csv_file(filepath: Path) -> List[List[str]]:
     """
     Reads CSV preserving row order. UTF-8 BOM safe.
@@ -125,7 +137,7 @@ def read_csv_file(filepath: Path) -> List[List[str]]:
         return list(csv.reader(f))
 
 
-def normalize_matrix(matrix: Sequence[Sequence[str]]) -> List[List[str]]:
+def normalize_matrix(matrix: Sequence[Sequence[str]], sheet_title: str = "") -> List[List[str]]:
     """
     Pads all rows to the same width for cleaner sheet updates.
     """
@@ -134,8 +146,19 @@ def normalize_matrix(matrix: Sequence[Sequence[str]]) -> List[List[str]]:
 
     width = max(len(row) for row in matrix)
     normalized: List[List[str]] = []
-    for row in matrix:
-        normalized.append([str(cell) if cell is not None else "" for cell in row] + [""] * (width - len(row)))
+    for row_idx, row in enumerate(matrix, start=1):
+        normalized_row: List[str] = []
+        for col_idx, cell in enumerate(row, start=1):
+            text = str(cell) if cell is not None else ""
+            if len(text) > MAX_CELL_CHARS:
+                cell_ref = rowcol_to_a1(row_idx, col_idx)
+                logging.warning(
+                    f"Truncating oversized cell in {sheet_title or 'sheet'}!{cell_ref} "
+                    f"from {len(text)} to {MAX_CELL_CHARS} characters."
+                )
+                text = text[:MAX_CELL_CHARS]
+            normalized_row.append(text)
+        normalized.append(normalized_row + [""] * (width - len(row)))
     return normalized
 
 
@@ -292,14 +315,16 @@ def ensure_index_sheet(spreadsheet: gspread.Spreadsheet) -> None:
         ["Tab Relationships", "Sheet dependency graph", "", "Cyan"],
         ["Named Ranges", "Named range catalog and usage", "", "Gold"],
         ["Notes Findings", "Open questions and findings", "", "Gray"],
+        ["WorkbookGraph", "Workbook dependency graph export", "", "Slate"],
     ]
 
     with_retry(ws.clear)
     with_retry(ws.resize, rows=100, cols=8)
+    last_row = len(rows)
     with_retry(
         ws.update,
-        range_name="A1:D12",
-        values=normalize_matrix(rows),
+        range_name=a1_range(1, last_row, 1, 4),
+        values=normalize_matrix(rows, sheet_title=INDEX_SHEET_TITLE),
         value_input_option="USER_ENTERED"
     )
 
@@ -314,8 +339,8 @@ def ensure_index_sheet(spreadsheet: gspread.Spreadsheet) -> None:
                 backgroundColor=Color(0.18, 0.18, 0.18),
                 textFormat=TextFormat(bold=True, foregroundColor=Color(1, 1, 1))
             )
-            b.format_cell_range(ws, "A1:D1", title_format)
-            b.format_cell_range(ws, "A4:D4", header_format)
+            b.format_cell_range(ws, a1_range(1, 1, 1, 4), title_format)
+            b.format_cell_range(ws, a1_range(4, 4, 1, 4), header_format)
 
         with_retry(ws.freeze, rows=4)
         with_retry(ws.columns_auto_resize, 0, 4)
@@ -365,6 +390,7 @@ def refresh_index_sheet(spreadsheet: gspread.Spreadsheet) -> None:
         ("Tab Relationships", "Sheet dependency graph", "Cyan"),
         ("Named Ranges", "Named range catalog and usage", "Gold"),
         ("Notes Findings", "Open questions and findings", "Gray"),
+        ("WorkbookGraph", "Workbook dependency graph export", "Slate"),
     ]
 
     gid_by_title = {}
@@ -378,10 +404,11 @@ def refresh_index_sheet(spreadsheet: gspread.Spreadsheet) -> None:
 
     with_retry(ws.clear)
     with_retry(ws.resize, rows=100, cols=8)
+    last_row = len(rows)
     with_retry(
         ws.update,
-        range_name="A1:D12",
-        values=normalize_matrix(rows),
+        range_name=a1_range(1, last_row, 1, 4),
+        values=normalize_matrix(rows, sheet_title=INDEX_SHEET_TITLE),
         value_input_option="USER_ENTERED"
     )
 
@@ -399,9 +426,10 @@ def refresh_index_sheet(spreadsheet: gspread.Spreadsheet) -> None:
             link_format = CellFormat(
                 textFormat=TextFormat(bold=True, foregroundColor=Color(0.13, 0.59, 0.95))
             )
-            b.format_cell_range(ws, "A1:D1", title_format)
-            b.format_cell_range(ws, "A4:D4", header_format)
-            b.format_cell_range(ws, "C5:C12", link_format)
+            b.format_cell_range(ws, a1_range(1, 1, 1, 4), title_format)
+            b.format_cell_range(ws, a1_range(4, 4, 1, 4), header_format)
+            if last_row >= 5:
+                b.format_cell_range(ws, a1_range(5, last_row, 3, 3), link_format)
         with_retry(ws.freeze, rows=4)
         with_retry(ws.columns_auto_resize, 0, 4)
         with_retry(
@@ -436,7 +464,7 @@ def clear_and_upload_matrix(
         logging.info(f"Skipping empty tab: {sheet_title}")
         return
 
-    data = normalize_matrix(data)
+    data = normalize_matrix(data, sheet_title=sheet_title)
     rows = len(data)
     cols = max(len(r) for r in data) if data else 1
 
