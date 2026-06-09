@@ -6,7 +6,7 @@ from collections import defaultdict
 from datetime import date, datetime
 
 import openpyxl
-from openpyxl.utils import get_column_letter, range_boundaries
+from openpyxl.utils import column_index_from_string, get_column_letter, range_boundaries
 
 # --- CONFIGURATION ---
 FILE_PATH = "/Users/tshah/Documents/PVA Mappings/gemini/Mixed Use Copy zip real.xlsm"  # Ensure this points to your file
@@ -37,6 +37,7 @@ class WorkbenchAnalyzer:
         self.named_range_map = {}
         self.named_range_cell_map = {}
         self.named_range_usage = defaultdict(lambda: {"tabs": set(), "csvs": set()})
+        self.table_map = {}
         self.effective_value_cache = {}
         self.field_label_cache = {}
         self.merged_cell_lookup = {}
@@ -104,6 +105,11 @@ class WorkbenchAnalyzer:
                 "Field Name",
                 "All dropdown options",
                 "Named ranges",
+                "Dropdown Type",
+                "Source Formula",
+                "Referenced Cells",
+                "Source Ranges",
+                "Resolution Status",
                 "Cell Ref"
             ],
 
@@ -186,6 +192,7 @@ class WorkbenchAnalyzer:
         logging.info("Workbook loaded successfully.")
         self._build_merged_cell_lookup()
         self._build_named_range_map()
+        self._build_table_map()
 
     def _build_merged_cell_lookup(self):
         """
@@ -228,6 +235,22 @@ class WorkbenchAnalyzer:
 
         raw = getattr(dn, "value", None) or getattr(dn, "attr_text", None) or str(dn)
         raw = str(raw)
+
+        if any(token in raw.upper() for token in ["OFFSET(", "INDEX(", "INDIRECT(", "COUNTA(", "[", "!", ":"]):
+            try:
+                resolved_meta = self.resolve_dropdown_options(raw)
+                source_ranges = str(resolved_meta.get("source_ranges", "")).strip()
+                if source_ranges:
+                    for part in [p.strip() for p in source_ranges.split(",") if p.strip()]:
+                        match = re.fullmatch(r"(?:'([^']+)'|([^'!]+))!(.+)", part)
+                        if match:
+                            quoted_sheet, unquoted_sheet, coord = match.groups()
+                            sheet_name = quoted_sheet if quoted_sheet else unquoted_sheet
+                            if sheet_name and coord:
+                                yield sheet_name, coord
+                    return
+            except Exception:
+                pass
 
         # Handles:
         #   'Sheet Name'!$A$1
@@ -274,35 +297,426 @@ class WorkbenchAnalyzer:
 
         return [value for value in resolved_values if value != ""]
 
+    def _split_formula_args(self, arg_text):
+        parts = []
+        current = []
+        depth = 0
+        in_quotes = False
+
+        for char in arg_text:
+            if char == '"' and (not current or current[-1] != "\\"):
+                in_quotes = not in_quotes
+                current.append(char)
+                continue
+
+            if not in_quotes:
+                if char == "(":
+                    depth += 1
+                elif char == ")" and depth > 0:
+                    depth -= 1
+                elif char == "," and depth == 0:
+                    part = "".join(current).strip()
+                    if part:
+                        parts.append(part)
+                    current = []
+                    continue
+
+            current.append(char)
+
+        tail = "".join(current).strip()
+        if tail:
+            parts.append(tail)
+        return parts
+
+    def _extract_referenced_cells(self, formula_text):
+        """
+        Pull out direct cell references appearing in a formula string.
+        """
+        refs = set()
+        text = str(formula_text)
+
+        sheet_ref_pattern = r"(?:'([^']+)'|([A-Za-z0-9_ .\-]+))!\$?[A-Za-z]{1,3}\$?[0-9]+"
+        for quoted_sheet, unquoted_sheet in re.findall(sheet_ref_pattern, text):
+            sheet = quoted_sheet if quoted_sheet else unquoted_sheet
+            if sheet:
+                refs.add(sheet.strip())
+
+        cell_pattern = r"(?<![A-Z0-9_!])\$?[A-Z]{1,3}\$?[0-9]+(?![A-Z0-9_])"
+        for ref in re.findall(cell_pattern, text):
+            refs.add(ref.replace("$", ""))
+
+        return sorted(refs)
+
+    def _get_sheet_and_coord_from_ref(self, ref, current_sheet=None):
+        """
+        Parse a direct sheet/cell/range reference and return the target sheet plus coord.
+        """
+        if not ref:
+            return None, None
+
+        text = str(ref).strip().lstrip("=")
+
+        range_pattern = r"^(?:'([^']+)'|([^'!]+))!\$?([A-Za-z]{1,3})\$?([0-9]+)(?::\$?([A-Za-z]{1,3})\$?([0-9]+))?$"
+        match = re.fullmatch(range_pattern, text)
+        if match:
+            quoted_sheet, unquoted_sheet, c1, r1, c2, r2 = match.groups()
+            sheet_name = quoted_sheet if quoted_sheet else unquoted_sheet
+            coord = f"{c1}{r1}"
+            if c2 and r2:
+                coord = f"{coord}:{c2}{r2}"
+            return sheet_name.strip(), coord
+
+        local_range_pattern = r"^\$?([A-Za-z]{1,3})\$?([0-9]+)(?::\$?([A-Za-z]{1,3})\$?([0-9]+))?$"
+        match = re.fullmatch(local_range_pattern, text)
+        if match and current_sheet:
+            c1, r1, c2, r2 = match.groups()
+            coord = f"{c1}{r1}"
+            if c2 and r2:
+                coord = f"{coord}:{c2}{r2}"
+            return current_sheet, coord
+
+        return None, None
+
+    def _count_non_empty_cells_in_ref(self, ref, current_sheet=None):
+        """
+        Return COUNTA-like cell count for a direct reference if possible.
+        """
+        sheet_name, coord = self._get_sheet_and_coord_from_ref(ref, current_sheet=current_sheet)
+        if not sheet_name or not coord or sheet_name not in self.wb.sheetnames:
+            return None
+
+        ws = self.wb[sheet_name]
+        try:
+            if ":" in coord:
+                count = 0
+                for row in ws[coord]:
+                    for cell in row:
+                        if cell.value is not None and str(cell.value).strip() != "":
+                            count += 1
+                return count
+            value = ws[coord].value
+            return 1 if value is not None and str(value).strip() != "" else 0
+        except Exception:
+            return None
+
+    def _evaluate_numeric_expr(self, expr, current_sheet=None):
+        """
+        Resolve a small subset of numeric expressions used in validations.
+        """
+        text = str(expr).strip().lstrip("=")
+        if re.fullmatch(r"[+-]?\d+", text):
+            return int(text)
+
+        match = re.fullmatch(r"COUNTA\((.+)\)", text, re.IGNORECASE)
+        if match:
+            return self._count_non_empty_cells_in_ref(match.group(1), current_sheet=current_sheet)
+
+        return None
+
+    def _resolve_index_expression(self, expr, current_sheet=None):
+        """
+        Resolve a simple INDEX(range, row[, col]) expression to a single-cell reference.
+        """
+        text = str(expr).strip().lstrip("=")
+        match = re.fullmatch(r"INDEX\((.+)\)", text, re.IGNORECASE)
+        if not match:
+            return None
+
+        args = self._split_formula_args(match.group(1))
+        if len(args) < 2:
+            return None
+
+        range_ref = args[0]
+        row_expr = args[1]
+        col_expr = args[2] if len(args) > 2 else "1"
+
+        sheet_name, coord = self._get_sheet_and_coord_from_ref(range_ref, current_sheet=current_sheet)
+        if not sheet_name or sheet_name not in self.wb.sheetnames:
+            return None
+
+        row_idx = self._evaluate_numeric_expr(row_expr, current_sheet=current_sheet)
+        col_idx = self._evaluate_numeric_expr(col_expr, current_sheet=current_sheet)
+        if row_idx is None or col_idx is None:
+            return None
+
+        # Default to the top-left cell if a full range was supplied.
+        if ":" in coord:
+            min_col, min_row, _, _ = range_boundaries(coord)
+            base_row = min_row
+            base_col = min_col
+            resolved_row = base_row + row_idx - 1
+            resolved_col = base_col + col_idx - 1
+        else:
+            resolved_row = row_idx
+            resolved_col = col_idx
+
+        cell_ref = f"{get_column_letter(resolved_col)}{resolved_row}"
+        value = self.wb[sheet_name][cell_ref].value
+        if value is None or str(value).strip() == "":
+            return None
+
+        return {
+            "dropdown_type": "Dynamic Dropdown",
+            "options": str(value).strip(),
+            "named_ranges": "",
+            "source_formula": text,
+            "referenced_cells": ", ".join(self._extract_referenced_cells(text)),
+            "source_ranges": f"{sheet_name}!{cell_ref}",
+            "resolved": True,
+            "is_dynamic": True,
+        }
+
+    def _resolve_structured_reference(self, ref):
+        """
+        Resolve simple structured table references like Table_Properties[Type].
+        """
+        text = str(ref).strip().lstrip("=")
+        match = re.fullmatch(r"([A-Za-z_][\w.]*)\[(.+)\]", text)
+        if not match:
+            return None
+
+        table_name, body = match.groups()
+        info = self.table_map.get(table_name)
+        if not info:
+            return None
+
+        column_tokens = re.findall(r"\[([^\[\]]+)\]", body)
+        column_name = ""
+        for token in column_tokens:
+            token = token.strip()
+            if token and not token.startswith("#"):
+                column_name = token
+        if not column_name:
+            return None
+
+        sheet_name = info["sheet"]
+        if sheet_name not in self.wb.sheetnames:
+            return None
+
+        ws = self.wb[sheet_name]
+        min_col, min_row, max_col, max_row = range_boundaries(info["ref"])
+        columns = info["columns"] or []
+        target_offset = None
+        for idx, col_name in enumerate(columns):
+            if str(col_name).strip().lower() == column_name.lower():
+                target_offset = idx
+                break
+
+        if target_offset is None:
+            return None
+
+        target_col = min_col + target_offset
+        values = []
+        for row in range(min_row + 1, max_row + 1):
+            value = ws.cell(row=row, column=target_col).value
+            if value is not None and str(value).strip() != "":
+                values.append(str(value).strip())
+
+        if not values:
+            return None
+
+        coord = f"{get_column_letter(target_col)}{min_row + 1}:{get_column_letter(target_col)}{max_row}"
+        return {
+            "dropdown_type": "Structured Reference",
+            "options": ", ".join(values),
+            "named_ranges": "",
+            "source_formula": text,
+            "referenced_cells": "",
+            "source_ranges": f"{sheet_name}!{coord}",
+            "resolved": True,
+            "is_dynamic": False,
+        }
+
+    def _resolve_dynamic_target(self, ref, current_sheet=None):
+        """
+        Best-effort resolution for INDIRECT/OFFSET/INDEX-driven references.
+        """
+        text = str(ref).strip().lstrip("=")
+
+        # First, try to resolve the expression as a nested reference.
+        nested_sheet, nested_coord = self._get_sheet_and_coord_from_ref(text, current_sheet=current_sheet)
+        if nested_sheet and nested_coord and nested_sheet in self.wb.sheetnames:
+            values = self._resolve_cell_range_values(self.wb[nested_sheet], nested_coord)
+            if values:
+                return {
+                    "dropdown_type": "Dynamic Dropdown",
+                    "options": ", ".join(values),
+                    "named_ranges": "",
+                    "source_formula": text,
+                    "referenced_cells": ", ".join(self._extract_referenced_cells(text)),
+                    "source_ranges": f"{nested_sheet}!{nested_coord}",
+                    "resolved": True,
+                    "is_dynamic": True,
+                }
+
+        # If the dynamic target is a cell reference, read the cell and resolve what it points to.
+        sheet_name, coord = self._get_sheet_and_coord_from_ref(text, current_sheet=current_sheet)
+        if sheet_name and coord and sheet_name in self.wb.sheetnames:
+            cell_value = self.wb[sheet_name][coord].value
+            if cell_value is not None:
+                nested = self.resolve_dropdown_options(cell_value, current_sheet=sheet_name)
+                if nested.get("resolved"):
+                    nested["dropdown_type"] = "Dynamic Dropdown"
+                    nested["source_formula"] = text
+                    nested["referenced_cells"] = ", ".join(sorted(set(
+                        (nested.get("referenced_cells", "") + ", " + coord).replace(" ", "").split(",")
+                    )))
+                    nested["is_dynamic"] = True
+                    return nested
+
+        # Fallback: record lineage even if we cannot resolve.
+        named_ranges = []
+        for nr in set(self.named_range_map.values()):
+            if re.search(rf"(?<![A-Z0-9_]){re.escape(str(nr))}(?![A-Z0-9_])", text, re.IGNORECASE):
+                named_ranges.append(nr)
+
+        return {
+            "dropdown_type": "Dynamic Dropdown",
+            "options": "",
+            "named_ranges": ", ".join(sorted(set(named_ranges))),
+            "source_formula": text,
+            "referenced_cells": ", ".join(self._extract_referenced_cells(text)),
+            "source_ranges": "",
+            "resolved": False,
+            "is_dynamic": True,
+        }
+
     def resolve_dropdown_options(self, formula1, current_sheet=None):
         """
-        Resolve data validation list formulas into actual dropdown options.
+        Resolve data validation list formulas into dropdown metadata.
 
         Returns:
-            (resolved_options, named_range_source, is_resolved)
+            dict with dropdown lineage and resolution metadata.
         """
         if not formula1:
-            return "", "", False
+            return {
+                "dropdown_type": "Unresolved",
+                "options": "",
+                "named_ranges": "",
+                "source_formula": "",
+                "referenced_cells": "",
+                "source_ranges": "",
+                "resolved": False,
+                "is_dynamic": False,
+            }
 
         ref = str(formula1).strip().lstrip("=")
         if not ref:
-            return "", "", False
+            return {
+                "dropdown_type": "Unresolved",
+                "options": "",
+                "named_ranges": "",
+                "source_formula": "",
+                "referenced_cells": "",
+                "source_ranges": "",
+                "resolved": False,
+                "is_dynamic": False,
+            }
 
         # Hardcoded list validation, e.g. "A,B,C"
         if "!" not in ref and ("," in ref or '"' in ref):
-            return ref.replace('"', ""), "", True
+            return {
+                "dropdown_type": "Static List",
+                "options": ref.replace('"', ""),
+                "named_ranges": "",
+                "source_formula": ref,
+                "referenced_cells": "",
+                "source_ranges": "",
+                "resolved": True,
+                "is_dynamic": False,
+            }
 
-        # Dynamic cascaded dropdowns are intentionally skipped.
-        if "INDIRECT" in ref.upper():
-            return "", "", False
+        if "INDIRECT(" in ref.upper():
+            return self._resolve_dynamic_target(ref, current_sheet=current_sheet)
+
+        # OFFSET(start, rows, cols, height, width)
+        if ref.upper().startswith("OFFSET(") and ref.endswith(")"):
+            inner = ref[7:-1]
+            args = self._split_formula_args(inner)
+            if len(args) >= 4:
+                base_ref = args[0]
+                row_offset = args[1]
+                col_offset = args[2]
+                height_expr = args[3]
+                width_expr = args[4] if len(args) > 4 else "1"
+
+                base_sheet, base_coord = self._get_sheet_and_coord_from_ref(base_ref, current_sheet=current_sheet)
+                if base_sheet and base_coord and base_sheet in self.wb.sheetnames:
+                    try:
+                        if ":" in base_coord:
+                            min_col, min_row, _, _ = range_boundaries(base_coord)
+                            base_row = min_row
+                            base_col = min_col
+                        else:
+                            base_col = column_index_from_string(re.match(r"[A-Za-z]{1,3}", base_coord).group(0))
+                            base_row = int(re.search(r"\d+", base_coord).group(0))
+
+                        row_offset_val = self._evaluate_numeric_expr(row_offset, current_sheet=current_sheet)
+                        col_offset_val = self._evaluate_numeric_expr(col_offset, current_sheet=current_sheet)
+                        height_val = self._evaluate_numeric_expr(height_expr, current_sheet=current_sheet)
+                        width_val = self._evaluate_numeric_expr(width_expr, current_sheet=current_sheet)
+
+                        if None not in (row_offset_val, col_offset_val, height_val, width_val):
+                            start_row = base_row + row_offset_val
+                            start_col = base_col + col_offset_val
+                            end_row = start_row + height_val - 1
+                            end_col = start_col + width_val - 1
+                            coord = f"{get_column_letter(start_col)}{start_row}:{get_column_letter(end_col)}{end_row}"
+                            values = self._resolve_cell_range_values(self.wb[base_sheet], coord)
+                            if values:
+                                return {
+                                    "dropdown_type": "Dynamic Dropdown",
+                                    "options": ", ".join(values),
+                                    "named_ranges": "",
+                                    "source_formula": ref,
+                                    "referenced_cells": ", ".join(self._extract_referenced_cells(ref)),
+                                    "source_ranges": f"{base_sheet}!{coord}",
+                                    "resolved": True,
+                                    "is_dynamic": True,
+                                }
+                    except Exception:
+                        pass
+
+            return self._resolve_dynamic_target(ref, current_sheet=current_sheet)
+
+        # INDEX(range, n [, m]) used directly or inside a start:end expression.
+        if ref.upper().startswith("INDEX("):
+            # direct INDEX(range,row[,col]) -> resolve to a single cell reference when possible
+            resolved = self._resolve_index_expression(ref, current_sheet=current_sheet)
+            if resolved:
+                return resolved
+
+        if ":" in ref and "INDEX(" in ref.upper():
+            start_ref, end_ref = ref.split(":", 1)
+            end_resolved = self._resolve_index_expression(end_ref, current_sheet=current_sheet)
+            start_sheet, start_coord = self._get_sheet_and_coord_from_ref(start_ref, current_sheet=current_sheet)
+            if end_resolved and start_sheet and start_coord and start_sheet in self.wb.sheetnames:
+                end_text = end_resolved["source_ranges"].split("!", 1)[-1]
+                range_coord = f"{start_coord.split(':', 1)[0]}:{end_text}"
+                values = self._resolve_cell_range_values(self.wb[start_sheet], range_coord)
+                if values:
+                    return {
+                        "dropdown_type": "Dynamic Dropdown",
+                        "options": ", ".join(values),
+                        "named_ranges": "",
+                        "source_formula": ref,
+                        "referenced_cells": ", ".join(sorted(set(
+                            self._extract_referenced_cells(ref) + end_resolved.get("referenced_cells", "").split(", ")
+                        ))).strip(", "),
+                        "source_ranges": f"{start_sheet}!{range_coord}",
+                        "resolved": True,
+                        "is_dynamic": True,
+                    }
 
         # Named range validation.
         dn = self._get_defined_name(ref)
         if dn is not None:
             resolved_values = []
+            source_ranges = []
             try:
                 for sheet_name, coord in self._iter_defined_name_destinations(dn):
                     if sheet_name in self.wb.sheetnames:
+                        source_ranges.append(f"{sheet_name}!{coord}")
                         resolved_values.extend(
                             self._resolve_cell_range_values(self.wb[sheet_name], coord)
                         )
@@ -310,24 +724,58 @@ class WorkbenchAnalyzer:
                 resolved_values = []
 
             if resolved_values:
-                return ", ".join(resolved_values), ref, True
-            return "", ref, False
+                return {
+                    "dropdown_type": "Named Range",
+                    "options": ", ".join(resolved_values),
+                    "named_ranges": ref,
+                    "source_formula": ref,
+                    "referenced_cells": "",
+                    "source_ranges": ", ".join(source_ranges),
+                    "resolved": True,
+                    "is_dynamic": False,
+                }
+            return {
+                "dropdown_type": "Named Range",
+                "options": "",
+                "named_ranges": ref,
+                "source_formula": ref,
+                "referenced_cells": "",
+                "source_ranges": "",
+                "resolved": False,
+                "is_dynamic": False,
+            }
 
+        structured = self._resolve_structured_reference(ref)
+        if structured:
+            return structured
+
+        # Named range validation.
         # Direct sheet range reference, e.g. 'Sheet Name'!$A$1:$A$5
-        pattern = r"(?:'([^']+)'|([^'!]+))!\$?([A-Za-z]+)\$?([0-9]+)(?::\$?([A-Za-z]+)\$?([0-9]+))?"
-        match = re.fullmatch(pattern, ref)
-        if match:
-            quoted_sheet, unquoted_sheet, c1, r1, c2, r2 = match.groups()
-            sheet_name = quoted_sheet if quoted_sheet else unquoted_sheet
-            if sheet_name in self.wb.sheetnames:
-                coord = f"{c1}{r1}"
-                if c2 and r2:
-                    coord = f"{coord}:{c2}{r2}"
-                resolved_values = self._resolve_cell_range_values(self.wb[sheet_name], coord)
-                if resolved_values:
-                    return ", ".join(resolved_values), "", True
+        sheet_name, coord = self._get_sheet_and_coord_from_ref(ref, current_sheet=current_sheet)
+        if sheet_name and coord and sheet_name in self.wb.sheetnames:
+            resolved_values = self._resolve_cell_range_values(self.wb[sheet_name], coord)
+            if resolved_values:
+                return {
+                    "dropdown_type": "Direct Range",
+                    "options": ", ".join(resolved_values),
+                    "named_ranges": "",
+                    "source_formula": ref,
+                    "referenced_cells": "",
+                    "source_ranges": f"{sheet_name}!{coord}",
+                    "resolved": True,
+                    "is_dynamic": False,
+                }
 
-        return "", "", False
+        return {
+            "dropdown_type": "Unresolved",
+            "options": "",
+            "named_ranges": "",
+            "source_formula": ref,
+            "referenced_cells": ", ".join(self._extract_referenced_cells(ref)),
+            "source_ranges": "",
+            "resolved": False,
+            "is_dynamic": False,
+        }
 
     def _build_named_range_map(self):
         """Maps named ranges to cell coordinates (e.g., 'File Info!I13' -> 'Z_FileInfo_Date')."""
@@ -372,6 +820,21 @@ class WorkbenchAnalyzer:
                 continue
 
         logging.info(f"Named range index built: {len(self.named_range_map)} cell mappings found.")
+
+    def _build_table_map(self):
+        """
+        Cache workbook tables so structured references can be resolved.
+        """
+        self.table_map.clear()
+
+        for ws in self.wb.worksheets:
+            tables = getattr(ws, "tables", {})
+            for table_name, table in tables.items():
+                self.table_map[table_name] = {
+                    "sheet": ws.title,
+                    "ref": table.ref,
+                    "columns": [getattr(col, "name", "") for col in getattr(table, "tableColumns", [])],
+                }
 
     def get_named_range_for_cell(self, ws, row, col):
         coord_key = f"{ws.title}!{get_column_letter(col)}{row}"
@@ -859,15 +1322,11 @@ class WorkbenchAnalyzer:
                     for row in range(cell_range.min_row, cell_range.max_row + 1):
                         for col in range(cell_range.min_col, cell_range.max_col + 1):
                             coord = f"{get_column_letter(col)}{row}"
-                            resolved_options, named_range, is_resolved = self.resolve_dropdown_options(
+                            dropdown_meta = self.resolve_dropdown_options(
                                 dv.formula1,
                                 current_sheet=sheet_name
                             )
-                            dropdowns[coord] = {
-                                "all_dropdown_options": resolved_options,
-                                "named_ranges": named_range,
-                                "resolved": is_resolved
-                            }
+                            dropdowns[coord] = dropdown_meta
 
         max_r, max_c = ws.max_row, ws.max_column
         if max_r > 5000:
@@ -942,18 +1401,26 @@ class WorkbenchAnalyzer:
 
                     if is_dropdown:
                         dropdown_meta = dropdowns[coord]
-                        if not dropdown_meta["resolved"]:
-                            continue
-                        if dropdown_meta["named_ranges"]:
-                            self.record_named_range_usage(dropdown_meta["named_ranges"], sheet_name, "Dropdown Values.csv")
+                        named_ranges = [
+                            item.strip()
+                            for item in str(dropdown_meta.get("named_ranges", "")).split(",")
+                            if item.strip()
+                        ]
+                        for nr in named_ranges:
+                            self.record_named_range_usage(nr, sheet_name, "Dropdown Values.csv")
 
                         self._append_to_csv(
                             "Dropdown Values.csv",
                             [
                                 sheet_name,
                                 label,
-                                dropdown_meta["all_dropdown_options"],
-                                dropdown_meta["named_ranges"],
+                                dropdown_meta.get("options", ""),
+                                dropdown_meta.get("named_ranges", ""),
+                                dropdown_meta.get("dropdown_type", ""),
+                                dropdown_meta.get("source_formula", ""),
+                                dropdown_meta.get("referenced_cells", ""),
+                                dropdown_meta.get("source_ranges", ""),
+                                "Resolved" if dropdown_meta.get("resolved") else "Unresolved",
                                 coord
                             ]
                         )
