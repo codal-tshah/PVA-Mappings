@@ -1,5 +1,0 @@
-# PVA Workbench Analyzer — Dependencies
-pyxlsb>=1.0.10         # read .xlsb (Binary Excel)
-openpyxl>=3.1.0        # read/write .xlsx, data validation, named ranges
-gspread>=6.0.0         # Google Sheets API (optional)
-google-auth>=2.0.0     # Google service account auth (optional)

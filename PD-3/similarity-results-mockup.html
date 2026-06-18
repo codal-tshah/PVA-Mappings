@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PVA · Comp Relevance — POC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F2EA;          /* warm paper */
+    --paper-2:#FBF8F2;
+    --card:#FFFFFF;
+    --ink:#1B1E24;            /* near-black */
+    --ink-soft:#4A4F58;
+    --muted:#8A8E97;
+    --line:#E6DFD3;           /* warm hairline */
+    --line-2:#EFE9DE;
+    --accent:#0E6E5C;         /* deep emerald = relevance */
+    --accent-soft:#E2EFE9;
+    --clay:#B5613B;           /* warm secondary */
+    --amber:#C8902B;
+    --grey:#9AA0A6;
+    --shadow:0 1px 2px rgba(27,30,36,.05), 0 12px 30px -18px rgba(27,30,36,.28);
+    --shadow-lg:0 24px 60px -28px rgba(27,30,36,.45);
+    --r:14px;
+    --r-sm:9px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 88% -10%, rgba(14,110,92,.06), transparent 60%),
+      radial-gradient(900px 500px at -5% 110%, rgba(181,97,59,.06), transparent 55%),
+      var(--paper);
+    background-attachment:fixed;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;}
+
+  /* ---------- top bar ---------- */
+  header.topbar{
+    display:flex;align-items:center;gap:18px;
+    padding:14px 26px;
+    border-bottom:1px solid var(--line);
+    background:rgba(251,248,242,.86);
+    backdrop-filter:blur(8px);
+    position:sticky;top:0;z-index:50;
+  }
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand .mark{
+    font-family:"Fraunces",serif;font-weight:600;font-size:20px;letter-spacing:.2px;
+    color:var(--ink);
+  }
+  .brand .mark b{color:var(--accent);font-weight:600;}
+  .brand .sub{font-size:11.5px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;}
+  .ribbon{
+    margin-left:auto;
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+    color:var(--clay);
+    border:1px dashed rgba(181,97,59,.5);
+    padding:6px 12px;border-radius:999px;background:rgba(181,97,59,.06);
+  }
+
+  /* ---------- subject header ---------- */
+  .subject{
+    margin:22px 26px 0;
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow);
+    padding:18px 22px;
+    display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .subject .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+  .subject h1{
+    font-family:"Fraunces",serif;font-weight:600;font-size:23px;margin:2px 0 6px;letter-spacing:.1px;
+  }
+  .subject .facts{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--ink-soft);}
+  .subject .facts span b{color:var(--ink);font-weight:600;}
+  .subject .facts span{display:inline-flex;gap:6px;}
+  .views{margin-left:auto;display:flex;gap:4px;background:var(--paper-2);border:1px solid var(--line);padding:4px;border-radius:999px;}
+  .views button{
+    font-family:inherit;font-size:12.5px;font-weight:600;color:var(--ink-soft);
+    border:0;background:transparent;padding:8px 15px;border-radius:999px;cursor:pointer;transition:.18s;
+  }
+  .views button.active{background:var(--ink);color:#fff;box-shadow:0 4px 12px -6px rgba(27,30,36,.6);}
+  .views button:not(.active):hover{color:var(--ink);}
+
+  /* ---------- layout ---------- */
+  .wrap{display:grid;grid-template-columns:288px 1fr;gap:20px;padding:20px 26px 40px;}
+  @media (max-width:1080px){.wrap{grid-template-columns:1fr;}}
+
+  /* ---------- weights rail ---------- */
+  aside{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow);padding:18px;align-self:start;position:sticky;top:90px;
+  }
+  aside .rail-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;}
+  aside h2{font-family:"Fraunces",serif;font-size:16px;font-weight:600;margin:0;}
+  aside .profile{
+    margin:12px 0 6px;font-size:12.5px;
+  }
+  aside select{
+    width:100%;font-family:inherit;font-size:13px;color:var(--ink);
+    padding:9px 11px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--paper-2);
+    cursor:pointer;font-weight:600;
+  }
+  .reset{
+    font-family:inherit;font-size:11.5px;font-weight:600;color:var(--accent);
+    background:none;border:0;cursor:pointer;padding:0;letter-spacing:.02em;
+  }
+  .reset:hover{text-decoration:underline;}
+  .grouplabel{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px;}
+  .slider{margin-bottom:13px;}
+  .slider .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;}
+  .slider .name{font-size:13px;font-weight:600;color:var(--ink);}
+  .slider .wt{font-size:12px;color:var(--accent);font-weight:600;}
+  input[type=range]{
+    -webkit-appearance:none;appearance:none;width:100%;height:5px;border-radius:999px;
+    background:linear-gradient(90deg,var(--accent) var(--pct,30%),var(--line-2) var(--pct,30%));
+    cursor:pointer;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;
+    background:var(--card);border:2.5px solid var(--accent);box-shadow:0 2px 5px rgba(27,30,36,.25);cursor:pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:16px;height:16px;border-radius:50%;background:var(--card);border:2.5px solid var(--accent);cursor:pointer;
+  }
+  .normnote{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4;border-top:1px dashed var(--line);padding-top:10px;}
+
+  /* ---------- results ---------- */
+  main{min-width:0;}
+  .resbar{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+  .resbar .count{font-size:13px;color:var(--ink-soft);}
+  .resbar .count b{color:var(--ink);}
+  .resbar .sortby{margin-left:auto;font-size:12.5px;color:var(--ink-soft);display:flex;align-items:center;gap:8px;}
+  .resbar select{font-family:inherit;font-size:12.5px;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);font-weight:600;color:var(--ink);cursor:pointer;}
+
+  .split{display:grid;grid-template-columns:1fr;gap:18px;}
+  .split.map-on{grid-template-columns:1fr 0.92fr;}
+  @media (max-width:1280px){.split.map-on{grid-template-columns:1fr;}}
+
+  .list{display:flex;flex-direction:column;gap:12px;}
+
+  .comp{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);
+    padding:15px 16px 14px;display:grid;grid-template-columns:46px 1fr auto;gap:14px;align-items:start;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .25s, border-color .25s;
+  }
+  .comp:hover{border-color:#D8CFBE;box-shadow:var(--shadow-lg);transform:translateY(-1px);}
+  .rank{
+    font-family:"Fraunces",serif;font-size:24px;font-weight:600;color:var(--ink);
+    text-align:center;line-height:1;padding-top:3px;
+  }
+  .rank small{display:block;font-family:"IBM Plex Sans";font-size:9px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:4px;font-weight:600;}
+  .comp .addr{font-family:"Fraunces",serif;font-size:16.5px;font-weight:600;margin:0 0 3px;letter-spacing:.1px;}
+  .comp .meta{font-size:12.5px;color:var(--ink-soft);display:flex;gap:14px;flex-wrap:wrap;margin-bottom:9px;}
+  .comp .meta b{color:var(--ink);font-weight:600;}
+  .dist{color:var(--clay);font-weight:600;}
+
+  .subbadges{display:flex;gap:6px;flex-wrap:wrap;}
+  .sb{
+    font-size:10.5px;font-weight:600;color:var(--ink-soft);
+    background:var(--paper-2);border:1px solid var(--line-2);border-radius:7px;
+    padding:3px 7px;display:inline-flex;gap:5px;align-items:center;
+  }
+  .sb .dot{width:7px;height:7px;border-radius:50%;}
+  .sb i{font-style:normal;color:var(--muted);font-weight:500;}
+
+  /* score badge */
+  .score{
+    display:flex;flex-direction:column;align-items:center;gap:4px;min-width:78px;
+  }
+  .score .ring{
+    --val:90;
+    width:64px;height:64px;border-radius:50%;
+    background:conic-gradient(var(--sc,var(--accent)) calc(var(--val)*1%), var(--line-2) 0);
+    display:grid;place-items:center;position:relative;
+  }
+  .score .ring::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--card);}
+  .score .ring span{position:relative;font-family:"Fraunces",serif;font-weight:700;font-size:21px;z-index:1;}
+  .score .star{font-size:11px;color:var(--amber);letter-spacing:1px;}
+  .score .lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  .explain-btn{
+    grid-column:2/4;justify-self:start;margin-top:11px;
+    font-family:inherit;font-size:12px;font-weight:600;color:var(--accent);
+    background:none;border:0;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:6px;
+  }
+  .explain-btn .chev{transition:transform .25s;display:inline-block;}
+  .comp.open .explain-btn .chev{transform:rotate(90deg);}
+  .explain{
+    grid-column:1/4;overflow:hidden;max-height:0;transition:max-height .4s ease;
+    border-top:1px solid transparent;margin-top:0;
+  }
+  .comp.open .explain{max-height:520px;border-top:1px solid var(--line-2);margin-top:12px;padding-top:12px;}
+  .explain table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .explain caption{text-align:left;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;}
+  .explain th,.explain td{padding:5px 8px;text-align:right;}
+  .explain th:first-child,.explain td:first-child{text-align:left;color:var(--ink-soft);font-weight:500;}
+  .explain thead th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line-2);}
+  .explain tbody td{border-bottom:1px solid var(--line-2);}
+  .explain .barcell{width:120px;}
+  .minibar{height:6px;border-radius:999px;background:var(--line-2);overflow:hidden;}
+  .minibar i{display:block;height:100%;background:var(--accent);border-radius:999px;}
+  .explain tfoot td{font-weight:700;color:var(--ink);padding-top:9px;}
+  .explain .formula{font-size:11.5px;color:var(--muted);margin-bottom:10px;}
+  .skipped{opacity:.5;}
+  .skiptag{font-size:9.5px;color:var(--clay);font-weight:600;letter-spacing:.05em;}
+
+  /* map */
+  .mappane{
+    background:
+      linear-gradient(135deg, rgba(14,110,92,.04), rgba(181,97,59,.03)),
+      repeating-linear-gradient(0deg, transparent 0 23px, rgba(27,30,36,.035) 23px 24px),
+      repeating-linear-gradient(90deg, transparent 0 23px, rgba(27,30,36,.035) 23px 24px),
+      var(--paper-2);
+    border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);
+    position:relative;overflow:hidden;min-height:440px;align-self:stretch;
+  }
+  .mappane .tag{position:absolute;top:12px;left:14px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;z-index:3;}
+  .mappane .legend{position:absolute;bottom:12px;left:14px;font-size:10.5px;color:var(--muted);display:flex;gap:12px;align-items:center;z-index:3;background:rgba(251,248,242,.8);padding:5px 9px;border-radius:8px;border:1px solid var(--line-2);}
+  .mappane .legend .sw{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px;vertical-align:-1px;}
+  .pin{
+    position:absolute;transform:translate(-50%,-50%);z-index:4;
+    transition:left .5s cubic-bezier(.2,.7,.2,1), top .5s, background .3s;
+    width:30px;height:30px;border-radius:50% 50% 50% 2px;rotate:45deg;
+    display:grid;place-items:center;color:#fff;box-shadow:0 4px 10px -3px rgba(27,30,36,.5);
+    border:2px solid #fff;cursor:default;
+  }
+  .pin span{rotate:-45deg;font-family:"IBM Plex Mono";font-weight:600;font-size:12px;}
+  .pin.subject{
+    width:0;height:0;border-radius:0;rotate:0deg;background:none;border:0;box-shadow:none;
+  }
+  .pin.subject::before{
+    content:"★";position:absolute;transform:translate(-50%,-50%);font-size:24px;color:var(--clay);
+    text-shadow:0 2px 6px rgba(181,97,59,.4);
+  }
+  .pin.subject::after{
+    content:"SUBJECT";position:absolute;top:14px;left:50%;transform:translateX(-50%);
+    font-size:9px;letter-spacing:.12em;color:var(--clay);font-weight:700;white-space:nowrap;
+  }
+
+  /* grid view */
+  .gridview{display:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:0;overflow-x:auto;}
+  .gridview table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:680px;}
+  .gridview th,.gridview td{padding:10px 12px;border-bottom:1px solid var(--line-2);text-align:right;white-space:nowrap;}
+  .gridview thead th{background:var(--paper-2);position:sticky;top:0;font-family:"Fraunces",serif;font-size:13px;font-weight:600;color:var(--ink);text-align:right;}
+  .gridview thead th:first-child,.gridview td:first-child{text-align:left;position:sticky;left:0;background:var(--card);font-weight:600;color:var(--ink-soft);}
+  .gridview thead th:first-child{background:var(--paper-2);z-index:2;}
+  .gridview .scorerow td{font-weight:700;color:var(--accent);}
+  .gridview .subjcol{background:rgba(181,97,59,.05);}
+
+  footer{padding:18px 26px 40px;text-align:center;}
+  .poc-note{
+    display:inline-flex;align-items:center;gap:10px;font-size:11.5px;color:var(--clay);
+    border:1px dashed rgba(181,97,59,.45);padding:9px 16px;border-radius:999px;background:rgba(181,97,59,.05);
+    letter-spacing:.04em;
+  }
+  .reqref{font-size:11px;color:var(--muted);margin-top:12px;}
+  .hide{display:none !important;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="mark">PVA<b>·</b>Comp Relevance</span>
+    <span class="sub">Similarity Indexation · FR28.GAP4</span>
+  </div>
+  <span class="ribbon">POC · illustrative — not production scoring</span>
+</header>
+
+<section class="subject">
+  <div>
+    <div class="label">Subject Property</div>
+    <h1>20800 Homestead Road, Cupertino CA</h1>
+    <div class="facts">
+      <span><b>Multi-Family</b></span>
+      <span><b>248</b> units</span>
+      <span>Built <b>2019</b></span>
+      <span>Class <b>B</b></span>
+      <span>Submarket <b>Cupertino / West Valley</b></span>
+    </div>
+  </div>
+  <div class="views" id="views">
+    <button data-view="list" class="active">List</button>
+    <button data-view="map">Map + Summary</button>
+    <button data-view="grid">Adjustment Grid</button>
+  </div>
+</section>
+
+<div class="wrap">
+  <!-- weights rail -->
+  <aside>
+    <div class="rail-head">
+      <h2>Weight Profile</h2>
+      <button class="reset" id="reset">Reset defaults</button>
+    </div>
+    <div class="profile">
+      <select id="profile">
+        <option value="mf-sale">Multi-Family · Sale Comps</option>
+        <option value="mf-rent">Multi-Family · Unit-Rent Comps</option>
+        <option value="proximity">Proximity-first (tight market)</option>
+        <option value="size">Size-first</option>
+      </select>
+    </div>
+
+    <div class="grouplabel">Primary criteria</div>
+    <div id="primary"></div>
+    <div class="grouplabel">Secondary criteria</div>
+    <div id="secondary"></div>
+
+    <div class="normnote">
+      Weights are normalized to sum to 1.0 before scoring. Missing inputs drop out and the
+      remaining weights re-normalize — the comp is <b>not</b> penalized to zero. Drag a slider to
+      re-rank the list live.
+    </div>
+  </aside>
+
+  <!-- results -->
+  <main>
+    <div class="resbar">
+      <span class="count"><b id="ncount">7</b> eligible comps · ranked by <b>Relevance</b></span>
+      <span class="sortby">
+        Sort
+        <select id="sortsel">
+          <option value="relevance">★ Relevance (default)</option>
+          <option value="proximity">Proximity</option>
+          <option value="recency">Recency</option>
+          <option value="size">Size match</option>
+          <option value="price">Sale price</option>
+        </select>
+      </span>
+    </div>
+
+    <div class="split" id="split">
+      <div class="list" id="list"></div>
+      <div class="mappane hide" id="mappane">
+        <span class="tag">Map — pins styled & numbered by rank</span>
+        <div class="legend">
+          <span><span class="sw" style="background:var(--accent)"></span>High</span>
+          <span><span class="sw" style="background:var(--amber)"></span>Mid</span>
+          <span><span class="sw" style="background:var(--grey)"></span>Lower</span>
+        </div>
+        <div class="pin subject" style="left:50%;top:50%"></div>
+        <div id="pins"></div>
+      </div>
+    </div>
+
+    <div class="gridview" id="gridview"></div>
+  </main>
+</div>
+
+<footer>
+  <div class="poc-note">⚑ POC / illustrative only — sample data, client-side weighting. Not production scoring logic.</div>
+  <div class="reqref">Implements the presentation of FR28.GAP4 (Comp Ranking) over FR27.1 / FR27.2.1 / FR27.2.2 similarity indexation · See <i>Similarity-Score-Approach-Spike.md</i></div>
+</footer>
+
+<script>
+/* ---------------- criteria definitions ---------------- */
+const CRITERIA = [
+  {key:'proximity',   name:'Proximity',     group:'primary'},
+  {key:'size',        name:'Size match',    group:'primary'},
+  {key:'recency',     name:'Recency',       group:'primary'},
+  {key:'type',        name:'Property type', group:'primary'},
+  {key:'submarket',   name:'Submarket',     group:'secondary'},
+  {key:'quality',     name:'Quality / Class', group:'secondary'},
+  {key:'amenities',   name:'Amenities',     group:'secondary'},
+  {key:'completeness',name:'Data completeness', group:'secondary'},
+  {key:'prior',       name:'Prior usage',   group:'secondary'},
+];
+
+/* default weight profiles (raw; normalized at scoring time) */
+const PROFILES = {
+  'mf-sale':   {proximity:.25,size:.20,recency:.15,type:.15,submarket:.10,quality:.05,amenities:.05,completeness:.03,prior:.02},
+  'mf-rent':   {proximity:.20,size:.12,recency:.10,type:.10,submarket:.15,quality:.10,amenities:.15,completeness:.05,prior:.03},
+  'proximity': {proximity:.45,size:.12,recency:.12,type:.10,submarket:.12,quality:.03,amenities:.03,completeness:.02,prior:.01},
+  'size':      {proximity:.15,size:.40,recency:.12,type:.12,submarket:.08,quality:.05,amenities:.05,completeness:.02,prior:.01},
+};
+
+/* ---------------- sample comps (Cupertino MF) ---------------- */
+/* sub: each criterion's normalized [0,1] sub-score; null = missing input (drops out) */
+const COMPS = [
+  {id:1, addr:'1234 Stevens Creek Blvd, Cupertino', units:210, year:2019, cls:'B', price:42.5, dist:0.4, miles:0.4, x:46,y:44,
+   sub:{proximity:.92,size:.83,recency:1.00,type:1.00,submarket:1.00,quality:1.00,amenities:.85,completeness:.92,prior:.20}},
+  {id:2, addr:'88 Wolfe Road, Sunnyvale', units:230, year:2017, cls:'B', price:36.0, dist:1.1, miles:1.1, x:60,y:38,
+   sub:{proximity:.78,size:.92,recency:.92,type:1.00,submarket:.50,quality:1.00,amenities:.80,completeness:.88,prior:.40}},
+  {id:3, addr:'500 Forge Road, San Jose', units:188, year:2020, cls:'A', price:39.8, dist:3.2, miles:3.2, x:70,y:70,
+   sub:{proximity:.36,size:.72,recency:1.00,type:.85,submarket:.25,quality:.50,amenities:.90,completeness:.95,prior:.00}},
+  {id:4, addr:'720 De Anza Blvd, Cupertino', units:312, year:2015, cls:'B', price:51.2, dist:0.9, miles:0.9, x:44,y:58,
+   sub:{proximity:.82,size:.77,recency:.67,type:1.00,submarket:1.00,quality:1.00,amenities:.70,completeness:.80,prior:.60}},
+  {id:5, addr:'1450 Pruneridge Ave, Santa Clara', units:264, year:2018, cls:'B', price:47.0, dist:2.6, miles:2.6, x:64,y:60,
+   sub:{proximity:.48,size:.94,recency:.79,type:1.00,submarket:.50,quality:1.00,amenities:.82,completeness:.90,prior:.20}},
+  {id:6, addr:'9000 Tantau Ave, Cupertino', units:156, year:2012, cls:'C', price:24.3, dist:0.6, miles:0.6, x:52,y:46,
+   sub:{proximity:.88,size:.54,recency:.33,type:1.00,submarket:1.00,quality:.50,amenities:.55,completeness:.70,prior:.80}},
+  {id:7, addr:'300 Mathilda Ave, Sunnyvale', units:420, year:2021, cls:'A', price:88.0, dist:4.5, miles:4.5, x:30,y:28,
+   /* submarket input missing for this comp -> demonstrates re-normalization */
+   sub:{proximity:.10,size:.47,recency:1.00,type:.70,submarket:null,quality:.50,amenities:.95,completeness:.97,prior:.00}},
+];
+
+/* ---------------- state ---------------- */
+let weights = {...PROFILES['mf-sale']};
+let currentView = 'list';
+let sortBy = 'relevance';
+
+/* ---------------- scoring ---------------- */
+function scoreComp(c){
+  let wsum=0, acc=0; const terms=[];
+  for(const cr of CRITERIA){
+    const s = c.sub[cr.key];
+    const w = weights[cr.key] ?? 0;
+    if(s===null || s===undefined){ terms.push({...cr,w,s:null,prod:0,skipped:true}); continue; }
+    wsum += w; acc += w*s;
+    terms.push({...cr,w,s,prod:w*s,skipped:false});
+  }
+  const composite = wsum>0 ? Math.round(100*acc/wsum) : 0;
+  return {composite, terms, wsum};
+}
+function scoreColor(v){ return v>=85?'var(--accent)' : v>=70?'var(--amber)' : 'var(--grey)'; }
+
+/* ---------------- sliders ---------------- */
+function normalizedWeights(){
+  const sum = CRITERIA.reduce((a,cr)=>a+(weights[cr.key]||0),0) || 1;
+  const o={}; CRITERIA.forEach(cr=>o[cr.key]=(weights[cr.key]||0)/sum); return o;
+}
+function buildSliders(){
+  const nw = normalizedWeights();
+  ['primary','secondary'].forEach(grp=>{
+    const host=document.getElementById(grp); host.innerHTML='';
+    CRITERIA.filter(c=>c.group===grp).forEach(cr=>{
+      const pct=Math.round(nw[cr.key]*100);
+      const el=document.createElement('div'); el.className='slider';
+      el.innerHTML=`
+        <div class="top"><span class="name">${cr.name}</span><span class="wt mono" id="wt-${cr.key}">${pct}%</span></div>
+        <input type="range" min="0" max="50" step="1" value="${Math.round((weights[cr.key]||0)*100)}"
+               id="sl-${cr.key}" style="--pct:${pct}%">`;
+      host.appendChild(el);
+      el.querySelector('input').addEventListener('input',e=>{
+        weights[cr.key]=(+e.target.value)/100;
+        refresh(); updateSliderFills();
+      });
+    });
+  });
+}
+function updateSliderFills(){
+  const nw=normalizedWeights();
+  CRITERIA.forEach(cr=>{
+    const pct=Math.round(nw[cr.key]*100);
+    const wt=document.getElementById('wt-'+cr.key); if(wt) wt.textContent=pct+'%';
+    const sl=document.getElementById('sl-'+cr.key); if(sl) sl.style.setProperty('--pct',pct+'%');
+  });
+}
+
+/* ---------------- render: list + map ---------------- */
+function rankedComps(){
+  const scored = COMPS.map(c=>({c,...scoreComp(c)}));
+  const cmp = {
+    relevance:(a,b)=>b.composite-a.composite,
+    proximity:(a,b)=>b.c.sub.proximity-a.c.sub.proximity,
+    recency:(a,b)=>b.c.sub.recency-a.c.sub.recency,
+    size:(a,b)=>b.c.sub.size-a.c.sub.size,
+    price:(a,b)=>b.c.price-a.c.price,
+  }[sortBy];
+  scored.sort(cmp);
+  return scored;
+}
+
+function render(){
+  const ranked = rankedComps();
+  document.getElementById('ncount').textContent = COMPS.length;
+
+  /* keep which cards are open */
+  const open = new Set([...document.querySelectorAll('.comp.open')].map(n=>n.dataset.id));
+
+  const list=document.getElementById('list'); list.innerHTML='';
+  ranked.forEach((r,i)=>{
+    const c=r.c, col=scoreColor(r.composite);
+    const badges = CRITERIA.filter(cr=>cr.group==='primary'||['submarket','quality'].includes(cr.key))
+      .map(cr=>{
+        const s=c.sub[cr.key];
+        if(s===null||s===undefined) return `<span class="sb skipped">${cr.name.split(' ')[0]} <i>n/a</i></span>`;
+        const v=Math.round(s*100);
+        const dc = v>=85?'var(--accent)':v>=65?'var(--amber)':'var(--grey)';
+        return `<span class="sb"><span class="dot" style="background:${dc}"></span>${cr.name.split(' ')[0]} <i>${v}</i></span>`;
+      }).join('');
+
+    const card=document.createElement('div');
+    card.className='comp'+(open.has(String(c.id))?' open':'');
+    card.dataset.id=c.id;
+    card.innerHTML=`
+      <div class="rank">${i+1}<small>rank</small></div>
+      <div>
+        <div class="addr">${c.addr}</div>
+        <div class="meta">
+          <span class="dist">${c.miles} mi</span>
+          <span>Multi-Family</span>
+          <span><b>${c.units}</b> units</span>
+          <span>Built <b>${c.year}</b></span>
+          <span>Class <b>${c.cls}</b></span>
+          <span><b>$${c.price.toFixed(1)}M</b></span>
+        </div>
+        <div class="subbadges">${badges}</div>
+      </div>
+      <div class="score">
+        <div class="ring" style="--val:${r.composite};--sc:${col}"><span>${r.composite}</span></div>
+        <div class="star">★★★★★</div>
+        <div class="lbl">Relevance</div>
+      </div>
+      <button class="explain-btn"><span class="chev">›</span> Explain this score</button>
+      <div class="explain">${explainTable(r)}</div>
+    `;
+    card.querySelector('.explain-btn').addEventListener('click',()=>card.classList.toggle('open'));
+    list.appendChild(card);
+  });
+
+  renderMap(ranked);
+  if(currentView==='grid') renderGrid(ranked);
+}
+
+function explainTable(r){
+  const rows = r.terms.map(t=>{
+    if(t.skipped){
+      return `<tr class="skipped"><td>${t.name}</td><td>—</td><td class="mono">${Math.round(t.w*100)}%</td>
+        <td class="barcell"><span class="skiptag">input missing → dropped</span></td><td class="mono">—</td></tr>`;
+    }
+    const wpct = r.wsum>0 ? (t.w/r.wsum) : 0; /* normalized share among active */
+    return `<tr>
+      <td>${t.name}</td>
+      <td class="mono">${t.s.toFixed(2)}</td>
+      <td class="mono">${Math.round(wpct*100)}%</td>
+      <td class="barcell"><span class="minibar"><i style="width:${Math.round(t.s*100)}%"></i></span></td>
+      <td class="mono">${(wpct*t.s).toFixed(3)}</td>
+    </tr>`;
+  }).join('');
+  return `
+    <div class="formula mono">RelevanceScore = 100 × Σ ( wᵢ × subScoreᵢ ) ÷ Σ wᵢ  &nbsp;(active criteria only)</div>
+    <table>
+      <caption>Per-criterion decomposition · weights re-normalized over criteria with data present</caption>
+      <thead><tr><th>Criterion</th><th>subScore</th><th>weight</th><th class="barcell">sub-score</th><th>w × sub</th></tr></thead>
+      <tbody>${rows}</tbody>
+      <tfoot><tr><td>Composite</td><td></td><td></td><td></td><td class="mono">★ ${r.composite}/100</td></tr></tfoot>
+    </table>`;
+}
+
+function renderMap(ranked){
+  const pins=document.getElementById('pins'); pins.innerHTML='';
+  ranked.forEach((r,i)=>{
+    const c=r.c, col=scoreColor(r.composite);
+    const p=document.createElement('div'); p.className='pin';
+    p.style.left=c.x+'%'; p.style.top=c.y+'%'; p.style.background=col;
+    p.title=`#${i+1} · ${c.addr} · ★${r.composite}`;
+    p.innerHTML=`<span>${i+1}</span>`;
+    pins.appendChild(p);
+  });
+}
+
+function renderGrid(ranked){
+  const gv=document.getElementById('gridview');
+  const rowsDef=[
+    ['Distance', r=>r.c.miles+' mi'],
+    ['Units', r=>r.c.units],
+    ['Year built', r=>r.c.year],
+    ['Class', r=>r.c.cls],
+    ['Sale price', r=>'$'+r.c.price.toFixed(1)+'M'],
+    ['$ / unit', r=>'$'+Math.round(r.c.price*1e6/r.c.units/1000)+'k'],
+  ];
+  let head=`<th>Field</th><th class="subjcol">Subject</th>`+ranked.map((r,i)=>`<th>#${i+1}</th>`).join('');
+  const subj={miles:'—',units:248,year:2019,cls:'B',price:'—'};
+  let body='';
+  body+=`<tr class="scorerow"><td>★ Relevance</td><td class="subjcol">—</td>`+ranked.map(r=>`<td>${r.composite}</td>`).join('')+`</tr>`;
+  rowsDef.forEach(([label,fn])=>{
+    let subjVal = label==='Distance'?'—':label==='Units'?248:label==='Year built'?2019:label==='Class'?'B':'—';
+    body+=`<tr><td>${label}</td><td class="subjcol">${subjVal}</td>`+ranked.map(r=>`<td>${fn(r)}</td>`).join('')+`</tr>`;
+  });
+  gv.innerHTML=`<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+
+/* ---------------- view switching ---------------- */
+function setView(v){
+  currentView=v;
+  document.querySelectorAll('#views button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));
+  const split=document.getElementById('split'), map=document.getElementById('mappane'),
+        list=document.getElementById('list'), grid=document.getElementById('gridview');
+  if(v==='grid'){ split.classList.add('hide'); grid.style.display='block'; }
+  else{ split.classList.remove('hide'); grid.style.display='none';
+    if(v==='map'){ split.classList.add('map-on'); map.classList.remove('hide'); }
+    else{ split.classList.remove('map-on'); map.classList.add('hide'); }
+  }
+  render();
+}
+
+/* ---------------- wire-up ---------------- */
+function refresh(){ render(); }
+document.getElementById('profile').addEventListener('change',e=>{
+  weights={...PROFILES[e.target.value]}; buildSliders(); render();
+});
+document.getElementById('reset').addEventListener('click',()=>{
+  const p=document.getElementById('profile').value; weights={...PROFILES[p]}; buildSliders(); render();
+});
+document.getElementById('sortsel').addEventListener('change',e=>{ sortBy=e.target.value; render(); });
+document.querySelectorAll('#views button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+
+buildSliders();
+render();
+</script>
+</body>
+</html>

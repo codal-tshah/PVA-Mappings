@@ -1,0 +1,78 @@
+Spike: Define Similarity Score Approach for Comp Search
+
+
+
+
+Key details
+Description
+
+Description
+
+P0 requires the platform to rank comparable records using a similarity indexation / relevance score.
+
+This spike is to define how the similarity score should work across P0-supported property types ( All of the current Property types )  and comp types. The spike should cover how the score is calculated, how it is stored, and how it is presented to appraisers.
+
+The goal is not to implement production scoring logic yet, but to define the approach and identify the open questions that need PVA/appraiser validation.
+
+Relevant P0 Requirements: 
+
+FR27.1
+FR27.2.1
+FR27.2.2
+FR28.GAP4
+
+Scope
+
+Review the latest P0 requirements related to comp search, suggested comps, ranking, relevance score, and similarity indexation.
+
+Define the recommended approach for calculating the similarity score.
+
+Identify candidate scoring inputs, such as proximity, submarket, property type, size, recency, quality/class, amenities, data completeness, and prior usage.
+
+Identify which fields should be used to filter results versus rank results.
+
+Document if certain property types or comp types need specific scoring inputs.
+
+Define how the score should be stored, including whether to store composite score, score breakdown, scoring version, selected comp score, and user overrides.
+
+Define how the score should be presented to appraisers, such as a single relevance score, score breakdown, reason codes, sorting, or ranking explanation.
+
+Expected Output
+
+Recommended similarity scoring approach
+
+Candidate scoring inputs
+
+Filtering vs ranking fields
+
+Property-type or comp-type specific considerations
+
+How the score is calculated
+
+How the score is stored for audit/debugging
+
+How the score is displayed to users
+
+Open questions for PVA/appraiser validation
+
+Acceptance Criteria
+
+P0 similarity/ranking requirements are reviewed.
+
+Candidate scoring inputs are documented.
+
+Filtering vs ranking fields are identified.
+
+Initial calculation approach is recommended.
+
+Storage/audit approach is documented.
+
+UI presentation approach is documented.
+
+Property-type and comp-type specific considerations are documented.
+
+Open questions for PVA validation are documented.
+
+POC
+
+Show an example of how the final similarity score results would display to the user (Does not need to include programatic calculations).
